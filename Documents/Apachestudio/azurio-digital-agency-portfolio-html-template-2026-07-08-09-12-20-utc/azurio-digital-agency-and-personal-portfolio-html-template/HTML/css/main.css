@@ -20902,3 +20902,32 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Block - Images Grid End */
 /* ------------------------------------------------*/
+/* === Apache Studio: menu visibility overrides === */
+.mxd-menu__contain {
+  mix-blend-mode: normal !important;
+}
+.mxd-menu__toggle {
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  background-color: rgba(15, 15, 15, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.mxd-menu__toggle:hover {
+  background-color: rgba(15, 15, 15, 0.8);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.mxd-menu__hamburger .hamburger__line {
+  height: 0.3rem;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.mxd-menu.active .mxd-menu__toggle,
+body.menu-active .mxd-menu__toggle {
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
