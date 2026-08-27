@@ -28,8 +28,6 @@ const pages = [
   "servicios/social-media/index.html",
   "servicios/ecosistema-digital/index.html",
   "servicios/mantenimiento-web/index.html",
-  "casos-de-exito/index.html",
-  "casos-de-exito/oxxo/index.html",
   "planes/index.html",
   "nosotros/index.html",
   "nuestra-historia/index.html",
