@@ -56,16 +56,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://apachestudio.mx/casos-de-exito/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://apachestudio.mx/casos-de-exito/oxxo/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://apachestudio.mx/planes/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -77,11 +67,6 @@
   </url>
   <url>
     <loc>https://apachestudio.mx/nuestra-historia/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://apachestudio.mx/equipo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

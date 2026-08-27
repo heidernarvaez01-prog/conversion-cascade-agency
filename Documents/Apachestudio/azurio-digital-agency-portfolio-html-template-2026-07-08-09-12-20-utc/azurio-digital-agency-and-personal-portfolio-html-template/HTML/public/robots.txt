@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /casos-de-exito/
+Disallow: /equipo/
 
 Sitemap: https://apachestudio.mx/sitemap.xml
