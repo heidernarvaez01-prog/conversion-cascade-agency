@@ -3457,6 +3457,10 @@ p.t-accent-bright span {
   height: 2rem;
   background-color: var(--nl-white);
 }
+/* image-only cursor (no text pill): keep the dot invisible so only the image shows */
+.mxd-cursor__dot.expand:not(.active):not(.active-opposite):not(.active-accent):not(.active-permanent):not(.cursor-btn-link) {
+  background-color: transparent;
+}
 
 .mxd-cursor__text {
   position: absolute;
