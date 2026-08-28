@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import fs from "node:fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -44,11 +45,37 @@ const pages = [
   "blog/performance-marketing/index.html",
 ];
 
+// Static folders referenced with absolute paths (/img/..., /css/...) in the
+// HTML. Vite does not process those, so they must be copied into dist or the
+// published site loses every image, video, stylesheet and script.
+const STATIC_DIRS = ["css", "js", "img", "video", "fonts"];
+
+function copyStaticDirs(outDir: string) {
+  return {
+    name: "copy-template-static-dirs",
+    apply: "build" as const,
+    closeBundle() {
+      for (const dir of STATIC_DIRS) {
+        const from = path.resolve(templateDir, dir);
+        if (!fs.existsSync(from)) continue;
+        fs.cpSync(from, path.resolve(outDir, dir), { recursive: true });
+      }
+      const htaccess = path.resolve(templateDir, ".htaccess");
+      if (fs.existsSync(htaccess)) {
+        fs.copyFileSync(htaccess, path.resolve(outDir, ".htaccess"));
+      }
+    },
+  };
+}
+
+const OUT_DIR = path.resolve(__dirname, "dist");
+
 export default defineConfig({
+  plugins: [copyStaticDirs(OUT_DIR)],
   root: TEMPLATE_ROOT,
   server: { host: "::", port: 8080 },
   build: {
-    outDir: "../../../../../dist",
+    outDir: OUT_DIR,
     emptyOutDir: true,
     rollupOptions: {
       input: Object.fromEntries(
