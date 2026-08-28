@@ -8146,7 +8146,8 @@ form textarea:required:valid {
 .mxd-hero-02__cover-img {
   will-change: transform;
 }
-.mxd-hero-02__cover-img img {
+.mxd-hero-02__cover-img img,
+.mxd-hero-02__cover-img video {
   display: block;
   width: 100%;
   height: 100%;
