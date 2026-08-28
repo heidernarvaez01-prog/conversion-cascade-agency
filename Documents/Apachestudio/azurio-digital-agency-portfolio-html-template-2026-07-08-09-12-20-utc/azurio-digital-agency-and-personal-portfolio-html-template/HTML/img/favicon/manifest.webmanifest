@@ -1,11 +1,11 @@
 {
-  "name": "Azurio - Digital Agency & Personal Portfolio HTML Template",
-  "short_name": "Azurio",
+  "name": "Apache Studio - Agencia de Marketing Digital",
+  "short_name": "Apache Studio",
   "icons": [
     { "src": "/img/favicon/android-icon-192.png", "type": "image/png", "sizes": "192x192" },
     { "src": "/img/favicon/android-icon-512.png", "type": "image/png", "sizes": "512x512" }
   ],
-  "theme_color": "#efefef",
-  "background_color": "#efefef",
+  "theme_color": "#EEEAE8",
+  "background_color": "#EEEAE8",
   "display": "standalone"
 }
