@@ -1617,6 +1617,9 @@ function mxdHoverSlideshow() {
     mainImage.style.opacity = "1";
     images.forEach(img => img.style.opacity = 0);
 
+    // no extra images to cycle through: keep the main image as a static tile
+    if (!images.length) return;
+
     item.addEventListener('mouseenter', () => {
       mainImage.style.opacity = 0;
 
