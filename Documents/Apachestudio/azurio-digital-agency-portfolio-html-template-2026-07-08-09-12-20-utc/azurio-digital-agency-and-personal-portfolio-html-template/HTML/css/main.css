@@ -1937,6 +1937,15 @@ html.lenis, html.lenis body {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -moz-transition: -moz-transform var(--_animspeed-medium) var(--_animbezier);
+  transition: transform var(--_animspeed-medium) var(--_animbezier);
+}
+.no-touch .mxd-img-anim:hover img.mxd-img-anim__main {
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .mxd-img-anim .mxd-img-anim__absolute {
   height: 100%;
