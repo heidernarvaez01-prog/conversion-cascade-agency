@@ -15888,6 +15888,9 @@ form textarea:required:valid {
 .mxd-clients__logo {
   width: 100%;
   height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mxd-clients__logo img,
 .mxd-clients__logo svg {
