@@ -13631,6 +13631,13 @@ form textarea:required:valid {
   transition: transform var(--_animspeed-medium) var(--_animbezier), -webkit-transform var(--_animspeed-medium) var(--_animbezier), -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
 
+.mxd-project-item__excerpt {
+  max-width: 62rem;
+}
+.mxd-project-item__excerpt p {
+  color: var(--t-medium);
+}
+
 .mxd-project-item__tags {
   display: -webkit-box;
   display: -moz-box;
