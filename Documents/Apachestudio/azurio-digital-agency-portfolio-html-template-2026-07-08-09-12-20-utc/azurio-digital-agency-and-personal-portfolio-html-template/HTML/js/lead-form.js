@@ -5,6 +5,8 @@
   var SUPABASE_URL = "https://thacqstjbzgddhezgdfo.supabase.co";
   var SUPABASE_KEY =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRoYWNxc3RqYnpnZGRoZXpnZGZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzcwNTMsImV4cCI6MjA4MTIxMzA1M30.fJogbKxVFfGsOJmKu96tmpWYjSvSE7NSKsa5GkvtC18";
+  var SHEETS_WEBHOOK =
+    "https://script.google.com/macros/s/AKfycbzxUJYUyUrzF5UUNbVt0W4ggTqZjFDtXWNwdXnjOre5nYY_ZWiyDGnUgK5gsOakoLj8sw/exec";
 
   function val(form, name) {
     var el = form.querySelector('[name="' + name + '"]');
@@ -43,6 +45,18 @@
 
     var btn = form.querySelector('button[type="submit"]');
     if (btn) btn.disabled = true;
+
+    // Copia hacia Google Sheets (Apps Script). No bloquea el envio principal.
+    try {
+      fetch(SHEETS_WEBHOOK, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload)
+      }).catch(function () {});
+    } catch (e) {}
+
+
 
     fetch(SUPABASE_URL + "/rest/v1/leads", {
       method: "POST",
