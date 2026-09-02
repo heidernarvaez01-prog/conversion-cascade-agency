@@ -44,6 +44,18 @@
     var btn = form.querySelector('button[type="submit"]');
     if (btn) btn.disabled = true;
 
+    // Copia hacia Google Sheets (Apps Script). No bloquea el envio principal.
+    try {
+      fetch(SHEETS_WEBHOOK, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload)
+      }).catch(function () {});
+    } catch (e) {}
+
+
+
     fetch(SUPABASE_URL + "/rest/v1/leads", {
       method: "POST",
       headers: {
