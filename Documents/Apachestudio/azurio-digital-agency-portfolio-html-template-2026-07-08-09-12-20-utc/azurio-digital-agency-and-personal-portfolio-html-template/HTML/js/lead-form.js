@@ -31,15 +31,49 @@
     event.preventDefault();
     event.stopPropagation();
 
+    var name = val(form, "Name");
+    var email = val(form, "E-mail");
+    var phone = val(form, "Phone") || "No proporcionado";
+    var company = val(form, "Company") || null;
+    var message = val(form, "Message") || null;
+
     var payload = {
-      full_name: val(form, "Name"),
-      email: val(form, "E-mail"),
-      phone: val(form, "Phone") || "No proporcionado",
-      brand_name: val(form, "Company") || null,
-      problem: val(form, "Message") || null,
+      full_name: name,
+      email: email,
+      phone: phone,
+      brand_name: company,
+      problem: message,
       source: "web_form",
       page_path: window.location.pathname
     };
+
+    // n8n (flujo "Notificación Lead - Diagnóstico Digital"): el nodo Sheets
+    // mapea body.Name / body.Company / body["E-mail"] / body.Phone / body.Message
+    // y el nodo de email usa body.full_name / body.brand_name / etc.
+    // Se envían ambos formatos para cubrir los dos nodos.
+    var n8nPayload = {
+      Name: name,
+      "E-mail": email,
+      Phone: phone,
+      Company: company,
+      Message: message,
+      full_name: name,
+      email: email,
+      phone: phone,
+      brand_name: company,
+      problem: message,
+      source: "web_form",
+      page_path: window.location.pathname
+    };
+
+    // Envío complementario a n8n: si falla, el registro principal se mantiene.
+    fetch(N8N_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(n8nPayload)
+    }).catch(function (err) {
+      console.warn("n8n webhook error:", err);
+    });
 
     var btn = form.querySelector('button[type="submit"]');
     if (btn) btn.disabled = true;
