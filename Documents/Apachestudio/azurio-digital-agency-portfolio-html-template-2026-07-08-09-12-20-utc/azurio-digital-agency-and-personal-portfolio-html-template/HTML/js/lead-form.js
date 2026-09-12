@@ -6,6 +6,9 @@
   var SUPABASE_KEY =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRoYWNxc3RqYnpnZGRoZXpnZGZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzcwNTMsImV4cCI6MjA4MTIxMzA1M30.fJogbKxVFfGsOJmKu96tmpWYjSvSE7NSKsa5GkvtC18";
 
+  var N8N_WEBHOOK_URL =
+    "https://n8n-huou.srv1971812.hstgr.cloud/webhook/diagnostico-lead";
+
   function val(form, name) {
     var el = form.querySelector('[name="' + name + '"]');
     return el && el.value ? el.value.trim() : "";
