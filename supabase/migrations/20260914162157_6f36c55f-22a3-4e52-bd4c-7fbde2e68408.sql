@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "Public can insert articulos" ON public.articulos;
