@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      articulos: {
+        Row: {
+          contenido: string
+          estado: string | null
+          fecha_publicacion: string | null
+          id: string
+          imagen_portada: string | null
+          resumen: string | null
+          slug: string
+          titulo: string
+        }
+        Insert: {
+          contenido: string
+          estado?: string | null
+          fecha_publicacion?: string | null
+          id?: string
+          imagen_portada?: string | null
+          resumen?: string | null
+          slug: string
+          titulo: string
+        }
+        Update: {
+          contenido?: string
+          estado?: string | null
+          fecha_publicacion?: string | null
+          id?: string
+          imagen_portada?: string | null
+          resumen?: string | null
+          slug?: string
+          titulo?: string
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           brand_name: string | null
