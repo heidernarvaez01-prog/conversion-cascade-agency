@@ -70,7 +70,7 @@ function svgPortada(lineas: { texto: string; destacada?: boolean }[], subtitulo:
   let y = 230
   for (const l of lineas.slice(0, 7)) {
     const t = (l.texto || '').toUpperCase()
-    const w = Math.min(W - M * 2, widthOf(t, FS, 0.66) + PAD * 2)
+    const w = Math.min(W - M * 2, widthOf(t, FS, 0.76) + PAD * 2)
     const bg = l.destacada ? BLUE : CREAM
     const fg = l.destacada ? '#FFFFFF' : '#0F0F0F'
     blocks.push(
@@ -101,7 +101,7 @@ function svgIdea(numero: number, texto1: string, texto2: string) {
   const BOX_H = 112
   const PAD = 26
   const label = `NÚMERO ${numero}`
-  const boxW = Math.min(W - M * 2, widthOf(label, FS, 0.66) + PAD * 2)
+  const boxW = Math.min(W - M * 2, widthOf(label, FS, 0.76) + PAD * 2)
   let y = 300
   const head =
     `<text x="${M}" y="${y}" font-family="Archivo Black" font-size="${FS}" fill="#FFFFFF">IDEA</text>` +
