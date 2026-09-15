@@ -1,3 +1,3 @@
 # Roadmap
-- [ ] generar-slide: probar render PNG (portada/idea) y desplegar; dar URL al usuario
-- [ ] Menú: añadir enlaces a Privacy Policy y Términos y Condiciones en el sitio
+- [x] generar-slide: render PNG probado y función desplegada; URL entregada
+- [x] Menú: enlaces a Aviso de Privacidad y Términos y Condiciones añadidos (menú + footer, 28 páginas, sitemap y build)
