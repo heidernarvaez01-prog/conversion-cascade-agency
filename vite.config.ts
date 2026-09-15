@@ -43,6 +43,8 @@ const pages = [
   "blog/dashboard-de-marketing-digital/index.html",
   "blog/implementacion-tecnica/index.html",
   "blog/performance-marketing/index.html",
+  "aviso-de-privacidad/index.html",
+  "terminos-y-condiciones/index.html",
 ];
 
 // Static folders referenced with absolute paths (/img/..., /css/...) in the
