@@ -36,6 +36,7 @@ const pages = [
   "preguntas-frecuentes/index.html",
   "contacto/index.html",
   "blog/index.html",
+  "blog/articulo/index.html",
   "blog/que-es-apache-360/index.html",
   "blog/analitica-de-marketing-digital/index.html",
   "blog/ai-en-marketing-digital/index.html",
