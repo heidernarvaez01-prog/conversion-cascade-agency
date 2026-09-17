@@ -41,6 +41,12 @@
   function imagenDe(a) {
     var img = (a.imagen_portada || '').trim();
     if (img) return img;
+    var txt = (' ' + (a.titulo || '') + ' ' + (a.resumen || '') + ' ' + (a.slug || '') + ' ').toLowerCase();
+    for (var i = 0; i < TEMAS.length; i++) {
+      for (var j = 0; j < TEMAS[i].claves.length; j++) {
+        if (txt.indexOf(TEMAS[i].claves[j]) !== -1) return TEMAS[i].img;
+      }
+    }
     return POOL[hash(a.slug || a.titulo || '') % POOL.length];
   }
 
