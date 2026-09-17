@@ -5,6 +5,14 @@
   var API = 'https://thacqstjbzgddhezgdfo.supabase.co/rest/v1/articulos';
   var KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRoYWNxc3RqYnpnZGRoZXpnZGZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzcwNTMsImV4cCI6MjA4MTIxMzA1M30.fJogbKxVFfGsOJmKu96tmpWYjSvSE7NSKsa5GkvtC18';
 
+  // Portadas por tematica: se elige segun palabras clave del titulo/resumen
+  var TEMAS = [
+    { img: '/img/real/blog/cover-social.jpg', claves: ['instagram', 'tiktok', 'social', 'creador', 'influencer', 'reels', 'facebook', 'linkedin', 'youtube', 'contenido', 'redes'] },
+    { img: '/img/real/blog/cover-ia.jpg', claves: [' ia ', 'inteligencia artificial', 'chatgpt', 'openai', 'gemini', 'claude', 'automatiz', 'algoritmo', 'machine learning', 'bot'] },
+    { img: '/img/real/blog/cover-negocios.jpg', claves: ['accion', 'trading', 'financ', 'inversi', 'mercado', 'ingreso', 'monetiz', 'ventas', 'ecommerce', 'precio'] },
+    { img: '/img/real/blog/cover-marketing.jpg', claves: ['marketing', 'campana', 'campaña', 'anuncio', 'ads', 'seo', 'funnel', 'lead', 'conversion', 'roas', 'dashboard', 'analitica', 'analítica'] }
+  ];
+
   // Pool de imagenes del sitio para complementar articulos sin imagen propia
   var POOL = [
     '/img/real/blog/dashboard-marketing-pillar.png',
