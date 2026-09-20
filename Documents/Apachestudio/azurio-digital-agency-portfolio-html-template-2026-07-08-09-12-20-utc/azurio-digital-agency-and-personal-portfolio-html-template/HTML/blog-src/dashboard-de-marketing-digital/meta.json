@@ -1,0 +1,32 @@
+{
+  "slug": "dashboard-de-marketing-digital",
+  "title": "Dashboard de marketing digital: guía con Looker Studio",
+  "h1": "Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio",
+  "description": "Qué es un dashboard de marketing digital, qué KPIs incluir según tu objetivo y cómo armarlo paso a paso en Looker Studio, con errores comunes y checklist.",
+  "keywords": "dashboard de marketing digital, looker studio, KPIs de marketing digital, cómo hacer un dashboard en looker studio, dashboard vs reporte, ROAS, validación de datos",
+  "section": "Analítica",
+  "tags": [
+    "Dashboards",
+    "Looker Studio",
+    "KPIs",
+    "Analítica"
+  ],
+  "published": "2026-08-26",
+  "modified": "2026-09-19",
+  "lead": "Qué debe incluir un tablero de marketing para que sirva de verdad, cómo armarlo en Looker Studio sin caer en los errores habituales y en qué momento conviene automatizarlo.",
+  "hero": {
+    "src": "/img/real/blog/dashboard-marketing-digital-hero.jpg",
+    "alt": "Esquema ilustrativo de un dashboard de marketing con tarjetas de indicadores, gráfica de tendencia y desglose por canal",
+    "caption": "Esquema ilustrativo, sin datos reales."
+  },
+  "related": [
+    "automatizacion-de-marketing",
+    "implementacion-tecnica",
+    "ai-en-marketing-digital"
+  ],
+  "about": [
+    "Dashboard de marketing digital",
+    "Looker Studio"
+  ],
+  "author": "heider-narvaez"
+}

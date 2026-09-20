@@ -1,0 +1,32 @@
+{
+  "slug": "que-es-apache-360",
+  "title": "Qué es Apache 360 y cómo centraliza tus datos de marketing",
+  "h1": "Qué es Apache 360 y cómo centraliza tus datos de marketing",
+  "description": "Qué es Apache 360 y cómo centraliza los datos de marketing de tu negocio en un solo dashboard con IA, alertas y reportes diarios.",
+  "keywords": "Apache 360, dashboard de marketing, centralizar datos de marketing, reportes automáticos, alertas con IA",
+  "section": "Apache 360",
+  "tags": [
+    "Apache 360",
+    "Analítica",
+    "IA"
+  ],
+  "published": "2026-08-26",
+  "modified": "2026-09-19",
+  "lead": "La mayoría de los equipos de marketing trabaja con datos incompletos: Google Ads por un lado, Meta por otro y un Excel a mano para el resto. Apache 360 nace para resolver ese problema y centralizar todo en un solo lugar.",
+  "hero": {
+    "src": "/img/real/blog/dashboard-efectivo-pillar.png",
+    "alt": "Dashboard Apache 360",
+    "caption": ""
+  },
+  "related": [
+    "dashboard-de-marketing-digital",
+    "analitica-de-marketing-digital",
+    "automatizacion-de-marketing"
+  ],
+  "about": [
+    "Apache 360",
+    "Dashboard de marketing"
+  ],
+  "author": "heider-narvaez",
+  "crumb": "Qué es Apache 360"
+}

@@ -443,3 +443,26 @@
 .ed-blog .ed-fig .arrow { fill: currentColor; opacity: .5; }
 .ed-blog .ed-fig text.on-acc { fill: #fff; opacity: 1; }
 .ed-blog .ed-fig svg rect.acc + text.on-acc { fill: #fff; }
+
+/* ---------- autor: foto y enlace a LinkedIn ---------- */
+.ed-blog .widget .textwidget img.author-photo--lg {
+  display: block; width: 8rem; height: 8rem; max-width: 8rem; aspect-ratio: 1 / 1; margin: 0 0 1.6rem;
+  border-radius: 50%; object-fit: cover; object-position: center; background: var(--base-tint); border: 1px solid var(--ed-rule);
+}
+.ed-blog .author-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin: 0; }
+.ed-blog a.author-social {
+  display: inline-flex; align-items: center; gap: .7rem; padding: .6rem 1.3rem .6rem 1rem;
+  border: 1px solid var(--ed-rule); border-radius: 99px; font-size: 1.3rem; font-weight: 600; line-height: 1;
+  color: var(--t-bright);
+}
+.ed-blog a.author-social i { font-size: 1.9rem; color: #0a66c2; }
+.ed-blog a.author-social:hover { color: #0a66c2; border-color: #0a66c2; }
+[color-scheme="dark"] .ed-blog a.author-social i { color: #71b7fb; }
+[color-scheme="dark"] .ed-blog a.author-social:hover { color: #71b7fb; border-color: #71b7fb; }
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme="light"]) .ed-blog a.author-social i { color: #71b7fb; }
+}
+
+/* ---------- figuras con imagen o video (artículos migrados) ---------- */
+.ed-blog .ed-fig img,
+.ed-blog .ed-fig video { display: block; width: 100%; height: auto; }

@@ -1,0 +1,32 @@
+{
+  "slug": "implementacion-tecnica",
+  "title": "Implementación técnica de marketing: GTM, GA4 y tracking",
+  "h1": "Implementación técnica de marketing: GTM, GA4 y tracking",
+  "description": "Guía de implementación técnica para marketing digital: Google Tag Manager, GA4, API de conversiones, server-side tracking y data layer.",
+  "keywords": "implementación técnica marketing digital, Google Tag Manager, GA4, server-side tracking, API de conversiones, data layer",
+  "section": "Tracking técnico",
+  "tags": [
+    "GTM",
+    "GA4",
+    "Tracking"
+  ],
+  "published": "2026-08-26",
+  "modified": "2026-09-19",
+  "lead": "La implementación técnica es la base invisible de todo marketing digital exitoso. Sin tracking correcto, tus dashboards mienten, tus campañas desperdician presupuesto y tus decisiones son incorrectas.",
+  "hero": {
+    "src": "/img/real/blog/server-side-tracking.png",
+    "alt": "Implementación técnica de marketing digital con GTM, GA4 y server-side tracking",
+    "caption": ""
+  },
+  "related": [
+    "analitica-de-marketing-digital",
+    "automatizacion-de-marketing",
+    "dashboard-de-marketing-digital"
+  ],
+  "about": [
+    "Google Tag Manager",
+    "Google Analytics 4",
+    "Server-side tracking"
+  ],
+  "author": "heider-narvaez"
+}

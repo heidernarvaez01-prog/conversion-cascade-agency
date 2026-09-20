@@ -1,0 +1,32 @@
+{
+  "slug": "performance-marketing",
+  "title": "Performance marketing: maximiza ROAS y reduce CAC",
+  "h1": "Performance marketing: guía para maximizar ROAS y reducir CAC",
+  "description": "Guía de performance marketing: cómo maximizar el ROAS, reducir el CAC, escalar campañas rentables y detectar desperdicio publicitario.",
+  "keywords": "performance marketing, ROAS, CAC, escalar campañas, desperdicio publicitario, auditoría de campañas",
+  "section": "Performance",
+  "tags": [
+    "ROAS",
+    "CAC",
+    "Performance"
+  ],
+  "published": "2026-08-26",
+  "modified": "2026-09-19",
+  "lead": "Performance marketing no es gastar más, es gastar mejor. Aprende a maximizar el retorno de cada peso invertido, reducir costos de adquisición y escalar campañas sin perder rentabilidad.",
+  "hero": {
+    "src": "/img/real/blog/dashboard-marketing-ejemplos-visual.png",
+    "alt": "Performance marketing dashboard con métricas de ROAS, CAC y rendimiento de campañas",
+    "caption": ""
+  },
+  "related": [
+    "analitica-de-marketing-digital",
+    "dashboard-de-marketing-digital",
+    "automatizacion-de-marketing"
+  ],
+  "about": [
+    "Performance marketing",
+    "ROAS",
+    "CAC"
+  ],
+  "author": "heider-narvaez"
+}

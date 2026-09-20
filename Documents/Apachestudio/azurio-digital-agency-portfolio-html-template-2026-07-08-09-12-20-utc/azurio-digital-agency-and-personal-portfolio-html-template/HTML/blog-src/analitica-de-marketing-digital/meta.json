@@ -1,0 +1,31 @@
+{
+  "slug": "analitica-de-marketing-digital",
+  "title": "Analítica de marketing digital: guía completa",
+  "h1": "Analítica de marketing digital: guía completa",
+  "description": "Guía de analítica de marketing digital: qué es, qué KPIs medir, cómo calcular el ROI y qué errores comunes distorsionan tus decisiones.",
+  "keywords": "analítica de marketing digital, KPIs de marketing, medir ROI de marketing, métricas de marketing digital, errores de analítica",
+  "section": "Analítica",
+  "tags": [
+    "Analítica",
+    "KPIs",
+    "ROI"
+  ],
+  "published": "2026-08-26",
+  "modified": "2026-09-19",
+  "lead": "La analítica de marketing digital transforma datos dispersos en inteligencia accionable. Aprende a medir correctamente, identificar los KPIs que importan y tomar decisiones que generan ROI real.",
+  "hero": {
+    "src": "/img/real/blog/data-marketing-historia.png",
+    "alt": "Analítica de marketing digital con framework de datos a decisiones",
+    "caption": ""
+  },
+  "related": [
+    "dashboard-de-marketing-digital",
+    "performance-marketing",
+    "implementacion-tecnica"
+  ],
+  "about": [
+    "Analítica de marketing digital",
+    "KPIs de marketing"
+  ],
+  "author": "heider-narvaez"
+}

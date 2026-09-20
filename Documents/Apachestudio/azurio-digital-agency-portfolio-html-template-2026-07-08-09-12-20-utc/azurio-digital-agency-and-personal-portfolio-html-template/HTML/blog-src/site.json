@@ -1,0 +1,44 @@
+{
+  "base_url": "https://apachestudio.mx",
+  "name": "Apache Studio",
+  "locale_og": "es_MX",
+  "language": "es-MX",
+  "logo": "/img/favicon/icon.svg",
+  "default_og": "/img/og-image.jpg",
+  "blog_name": "Blog de Apache Studio",
+  "same_as": [
+    "https://www.linkedin.com/company/118984525/",
+    "https://www.facebook.com/profile.php?id=61584792540737",
+    "https://www.instagram.com/apachestudio.mx/"
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/118984525/",
+    "facebook": "https://www.facebook.com/profile.php?id=61584792540737",
+    "instagram": "https://www.instagram.com/apachestudio.mx/"
+  },
+  "cta": {
+    "title": "¿Hablamos de tu medición?",
+    "text": "Revisamos tu medición y te decimos qué falta antes de invertir más en campañas o dashboards.",
+    "label": "Agendar llamada",
+    "url": "https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0"
+  },
+  "authors": {
+    "heider-narvaez": {
+      "name": "Heider Narváez",
+      "role": "Business Intelligence · Analítica de marketing",
+      "bio": "Máster en Business Intelligence con más de 6 años de experiencia en recolección, consolidación, validación (QA) y automatización de reportería para campañas de marketing digital multicanal.",
+      "bio2": "Trabaja con Google Analytics 4, Google Tag Manager, DV360, Campaign Manager, Google Ads, LinkedIn Ads y Meta Ads, con Excel avanzado (Power Query, Power Pivot, VBA) y Looker Studio, y automatiza reportes con Power Automate, n8n e integración de APIs.",
+      "linkedin": "https://www.linkedin.com/in/heider-narvaez",
+      "photo": "/img/real/blog/authors/heider-narvaez.jpg",
+      "photo_alt": "Retrato en blanco y negro de Heider Narváez",
+      "knows_about": [
+        "Business Intelligence",
+        "Looker Studio",
+        "Google Analytics 4",
+        "Google Tag Manager",
+        "Automatización de reportería",
+        "Analítica de marketing digital"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "automatizacion-de-marketing",
+  "title": "Automatización de marketing: guía completa",
+  "h1": "Automatización de marketing: guía completa",
+  "description": "Guía de automatización de marketing: email, workflows, CRM, chatbots, integraciones y lead nurturing, con pasos para implementarla sin perder control.",
+  "keywords": "automatización de marketing, workflows de marketing, CRM, lead nurturing, chatbots, email marketing automatizado",
+  "section": "Automatización",
+  "tags": [
+    "Automatización",
+    "Workflows",
+    "CRM"
+  ],
+  "published": "2026-08-26",
+  "modified": "2026-09-19",
+  "lead": "La automatización de marketing no es solo programar emails. Es construir sistemas inteligentes que nutren leads, cierran ventas y escalan operaciones sin multiplicar tu equipo.",
+  "hero": {
+    "src": "/img/real/blog/workflows-marketing.png",
+    "alt": "Automatización de marketing digital con workflows, email y CRM integrados",
+    "caption": ""
+  },
+  "related": [
+    "implementacion-tecnica",
+    "ai-en-marketing-digital",
+    "dashboard-de-marketing-digital"
+  ],
+  "about": [
+    "Automatización de marketing",
+    "CRM"
+  ],
+  "author": "heider-narvaez"
+}
