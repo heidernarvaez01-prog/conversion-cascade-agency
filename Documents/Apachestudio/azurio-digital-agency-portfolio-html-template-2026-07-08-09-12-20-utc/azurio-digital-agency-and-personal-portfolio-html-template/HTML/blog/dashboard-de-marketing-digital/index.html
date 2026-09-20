@@ -13,12 +13,13 @@
     <meta charset="UTF-8">
 
     <!-- Page Title -->
-    <title>Dashboard de Marketing Digital: Guia Definitiva</title>
+    <title>Dashboard de marketing digital: guía con Looker Studio</title>
 
     <!-- Meta Tags -->
-    <meta name="description" content="Guia completa sobre dashboards de marketing digital: que contiene, ejemplos por objetivo, como crearlo y por que Looker Studio supera a Excel.">
-    <meta name="keywords" content="marketing digital, analitica, dashboards, automatizacion, agencia AI-Driven, Apache Studio">
-    <meta name="author" content="apache_studio">
+    <meta name="description" content="Qué es un dashboard de marketing digital, qué KPIs incluir según tu objetivo y cómo armarlo paso a paso en Looker Studio, con errores comunes y checklist.">
+    <meta name="keywords" content="dashboard de marketing digital, looker studio, KPIs de marketing digital, cómo hacer un dashboard en looker studio, dashboard vs reporte, ROAS, validación de datos">
+    <meta name="author" content="Heider Narváez">
+    <meta name="robots" content="index, follow, max-image-preview:large">
 
     <!-- Viewport Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,6 +39,7 @@
     <link rel="stylesheet" type="text/css" href="/css/loader.css">
     <link rel="stylesheet" type="text/css" href="/css/plugins.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/editor-blog.css">
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
@@ -52,18 +54,202 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Apache Studio">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:title" content="Dashboard de Marketing Digital: Guia Definitiva">
-    <meta property="og:description" content="Guia completa sobre dashboards de marketing digital: que contiene, ejemplos por objetivo, como crearlo y por que Looker Studio supera a Excel.">
+    <meta property="og:title" content="Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio">
+    <meta property="og:description" content="Qué es un dashboard de marketing digital, qué KPIs incluir según tu objetivo y cómo armarlo paso a paso en Looker Studio, con errores comunes y checklist.">
     <meta property="og:url" content="https://apachestudio.mx/blog/dashboard-de-marketing-digital/">
-    <meta property="og:image" content="https://apachestudio.mx/img/og-image.jpg">
+    <meta property="og:image" content="https://apachestudio.mx/img/real/blog/og/dashboard-de-marketing-digital.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio">
+    <meta property="article:published_time" content="2026-08-26">
+    <meta property="article:modified_time" content="2026-09-19">
+    <meta property="article:author" content="Heider Narváez">
+    <meta property="article:section" content="Analítica">
+    <meta property="article:tag" content="Dashboards">
+    <meta property="article:tag" content="Looker Studio">
+    <meta property="article:tag" content="KPIs">
+    <meta property="article:tag" content="Analítica">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dashboard de Marketing Digital: Guia Definitiva">
-    <meta name="twitter:description" content="Guia completa sobre dashboards de marketing digital: que contiene, ejemplos por objetivo, como crearlo y por que Looker Studio supera a Excel.">
-    <meta name="twitter:image" content="https://apachestudio.mx/img/og-image.jpg">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://apachestudio.mx/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://apachestudio.mx/blog/"}, {"@type": "ListItem", "position": 3, "name": "Dashboard de Marketing Digital: Guia Definitiva", "item": "https://apachestudio.mx/blog/dashboard-de-marketing-digital/"}]}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Dashboard de Marketing Digital: Guia Definitiva", "description": "Guia completa sobre dashboards de marketing digital: que contiene, ejemplos por objetivo, como crearlo y por que Looker Studio supera a Excel.", "url": "https://apachestudio.mx/blog/dashboard-de-marketing-digital/", "inLanguage": "es", "author": {"@type": "Organization", "name": "Apache Studio"}, "publisher": {"@type": "Organization", "name": "Apache Studio", "logo": {"@type": "ImageObject", "url": "https://apachestudio.mx/img/favicon/icon.svg"}}}</script>
+    <meta name="twitter:title" content="Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio">
+    <meta name="twitter:description" content="Qué es un dashboard de marketing digital, qué KPIs incluir según tu objetivo y cómo armarlo paso a paso en Looker Studio, con errores comunes y checklist.">
+    <meta name="twitter:image" content="https://apachestudio.mx/img/real/blog/og/dashboard-de-marketing-digital.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://apachestudio.mx/#organization",
+      "name": "Apache Studio",
+      "url": "https://apachestudio.mx/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://apachestudio.mx/img/favicon/icon.svg"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/118984525/",
+        "https://www.facebook.com/profile.php?id=61584792540737",
+        "https://www.instagram.com/apachestudio.mx/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://apachestudio.mx/#website",
+      "url": "https://apachestudio.mx/",
+      "name": "Apache Studio",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://apachestudio.mx/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://apachestudio.mx/nosotros/#heider-narvaez",
+      "name": "Heider Narváez",
+      "description": "Máster en Business Intelligence con más de 6 años de experiencia en recolección, consolidación, validación (QA) y automatización de reportería para campañas de marketing digital multicanal.",
+      "url": "https://apachestudio.mx/nosotros/",
+      "worksFor": {
+        "@id": "https://apachestudio.mx/#organization"
+      },
+      "knowsAbout": [
+        "Business Intelligence",
+        "Looker Studio",
+        "Google Analytics 4",
+        "Google Tag Manager",
+        "Automatización de reportería",
+        "Analítica de marketing digital"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://apachestudio.mx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://apachestudio.mx/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio",
+          "item": "https://apachestudio.mx/blog/dashboard-de-marketing-digital/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://apachestudio.mx/blog/dashboard-de-marketing-digital/#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://apachestudio.mx/blog/dashboard-de-marketing-digital/"
+      },
+      "headline": "Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio",
+      "description": "Qué es un dashboard de marketing digital, qué KPIs incluir según tu objetivo y cómo armarlo paso a paso en Looker Studio, con errores comunes y checklist.",
+      "inLanguage": "es",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://apachestudio.mx/img/real/blog/og/dashboard-de-marketing-digital.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://apachestudio.mx/img/real/blog/dashboard-marketing-digital-hero.jpg",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "datePublished": "2026-08-26",
+      "dateModified": "2026-09-19",
+      "author": {
+        "@id": "https://apachestudio.mx/nosotros/#heider-narvaez"
+      },
+      "publisher": {
+        "@id": "https://apachestudio.mx/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://apachestudio.mx/#website"
+      },
+      "articleSection": "Analítica",
+      "keywords": "dashboard de marketing digital, looker studio, KPIs de marketing digital, cómo hacer un dashboard en looker studio, dashboard vs reporte, ROAS, validación de datos",
+      "wordCount": 2241,
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Dashboard de marketing digital"
+        },
+        {
+          "@type": "Thing",
+          "name": "Looker Studio"
+        }
+      ],
+      "citation": [
+        "https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness",
+        "https://docs.cloud.google.com/looker/docs/studio/how-blends-work-in-looker-studio",
+        "https://docs.cloud.google.com/looker/docs/studio/looker-studio-pro-subscription-overview",
+        "https://docs.cloud.google.com/looker/docs/studio/about-data-sources",
+        "https://support.google.com/drive/answer/37603",
+        "https://support.microsoft.com/en-us/excel/excel-specifications-and-limits",
+        "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-facts-how-customer-analytics-boosts-corporate-performance"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://apachestudio.mx/blog/dashboard-de-marketing-digital/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Looker Studio es gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, existe una versión gratuita con la que puedes crear y compartir tableros. Looker Studio Pro es una suscripción de pago con funciones para organizaciones. Algunos conectores de terceros para plataformas que no son de Google pueden tener costo aparte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cada cuánto se actualizan los datos de un dashboard en Looker Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la fuente. Google Ads, Google Analytics y Search Console se actualizan cada 12 horas y no se puede cambiar. Google Sheets se actualiza por defecto cada 15 minutos y admite intervalos mayores, y BigQuery permite configurar desde 1 minuto hasta 12 horas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos KPIs debe tener un dashboard de marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay un número oficial. Como criterio de trabajo, entre 4 y 8 indicadores principales por página; si necesitas más, suele ser señal de que estás mezclando dos objetivos en un mismo tablero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo conectar Meta Ads o TikTok Ads a Looker Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, normalmente mediante conectores de socios o exportando antes los datos a Google Sheets o BigQuery. Revisa el costo y la frecuencia de actualización de cada conector antes de depender de él."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre un dashboard y un reporte de marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El dashboard es una vista interactiva y actualizada para monitorear y decidir; el reporte es un documento periódico que explica qué pasó y por qué, con análisis y recomendaciones. Lo ideal es que el reporte se apoye en el tablero."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
   </head>
 
   <body>
@@ -416,7 +602,7 @@
                         <span>
                           <a class="mxd-scramble" href="/blog/">Blog</a>
                         </span>
-                        <span class="current-item">Dashboard de Marketing Digital: Guia Definitiva</span>
+                        <span class="current-item">Dashboard de marketing digital</span>
                       </div>
                     </div>
                   </div>
@@ -426,333 +612,439 @@
           </div>
           <!-- Block - Inner Headline Breadcrumbs End -->
 
-          <div class="mxd-article-area">
+          <div class="ed-blog">
+            <div class="ed-layout">
 
-            <!-- Article Container Start -->
-            <div class="mxd-article-container mxd-grid-item">
+              <!-- primary -->
+              <div id="primary" class="content-area with-sidebar">
+                <article class="hentry post blog-single">
 
-              <!-- Article Start -->
-              <div class="mxd-article loading-wrap">
-
-                <!-- Article Headline Start -->
-                <div class="mxd-article__headline">
-                  <div class="mxd-article__tags loading-item">
-                    <a href="/blog/">
-                      <span class="tag tag-m meta-tag comma-tag mxd-scramble">Dashboards</span>
-                    </a>
-                    <a href="/blog/">
-                      <span class="tag tag-m meta-tag comma-tag mxd-scramble">Looker Studio</span>
-                    </a>
-                    <a href="/blog/">
-                      <span class="tag tag-m meta-tag mxd-scramble">KPIs</span>
-                    </a>
-                  </div>
-                  <div class="mxd-article__title">
-                    <h1 class="small loading-split">Dashboard de Marketing Digital: Guia Definitiva</h1>
-                  </div>
-                  <div class="mxd-article__meta loading-item">
-                    <div class="mxd-article__data">
-                      <span class="tag tag-m meta-tag slash-tag">15 Enero, 2024</span>
-                      <span class="tag tag-m meta-tag">12min read</span>
+                  <header class="entry-header">
+                    <h1 class="entry-title">Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio</h1>
+                    <div class="entry-meta">
+                      <span class="entry-date">Publicado <time datetime="2026-08-26">26 agosto 2026</time></span>
+                      <span class="entry-updated">Actualizado <time datetime="2026-09-19">19 septiembre 2026</time></span>
+                      <span class="read-time">12 min de lectura</span>
+                      <span class="cat-links"><a href="/blog/" rel="category tag">Analítica</a></span>
                     </div>
-                  </div>
-                </div>
-                <!-- Article Headline End -->
+                    <p class="entry-lead">Qué debe incluir un tablero de marketing para que sirva de verdad, cómo armarlo en Looker Studio sin caer en los errores habituales y en qué momento conviene automatizarlo.</p>
+                  </header>
 
-                <!-- Article Thumb Start -->
-                <div class="mxd-article__thumb loading-item">
-                  <img src="/img/real/blog/dashboard-marketing-pillar.png" alt="Dashboard de marketing digital completo mostrando metricas de campanas, trafico y conversiones en Looker Studio">
-                </div>
-                <!-- Article Thumb End -->
+                  <figure class="featured-image">
+                    <img src="/img/real/blog/dashboard-marketing-digital-hero.jpg" width="1600" height="900" alt="Esquema ilustrativo de un dashboard de marketing con tarjetas de indicadores, gráfica de tendencia y desglose por canal" fetchpriority="high">
+                    <figcaption>Esquema ilustrativo, sin datos reales.</figcaption>
+                  </figure>
 
-                <!-- Article Content Start -->
-                <div class="mxd-article__content">
-                  <div class="mxd-article__block">
-                    <p class="mxd-article__excerpt">Un dashboard de marketing digital centraliza y visualiza los datos clave de tu negocio en tiempo real. <span>Descubre que contiene, ejemplos practicos y como crear uno profesional usando Looker Studio, sin depender de Excel.</span></p>
-                    <p class="mxd-article__normal">En esta guia repasamos que tipos de dashboard existen, que metricas debe incluir cada uno segun el objetivo, y por que la mayoria de los dashboards de marketing fallan por exceso de datos en vez de falta de ellos.</p>
-                  </div>
-                  <div class="mxd-article__block block-table-of-contents">
-                    <p class="table-of-contents__title">/ Contenido:</p>
-                    <ul class="table-of-contents__nav">
-                      <li><a href="#chapter-01">¿Qué es un dashboard de marketing digital?</a></li>
-                      <li><a href="#chapter-02">Tipos de dashboards: operativo vs estratégico vs ejecutivo</a></li>
-                      <li><a href="#chapter-03">¿Qué contiene un dashboard de marketing efectivo?</a></li>
-                      <li><a href="#chapter-04">Dashboards de marketing digital: ejemplos prácticos</a></li>
-                      <li><a href="#chapter-05">Cómo hacer un dashboard digital paso a paso</a></li>
-                      <li><a href="#chapter-06">Dashboard en Excel vs Looker Studio</a></li>
-                      <li><a href="#chapter-07">Por qué usar dashboards personalizados en Looker Studio</a></li>
-                      <li><a href="#chapter-09">Preguntas frecuentes</a></li>
-                    </ul>
-                  </div>
-                  <div id="chapter-01" class="mxd-article__block">
-                    <h3>¿Qué es un dashboard de marketing digital?</h3>
-                    <p class="mxd-article__normal">Un <strong>dashboard de marketing digital</strong> es una herramienta de visualización que centraliza todas las métricas y KPIs de tus campañas de marketing en un solo lugar. En lugar de revisar múltiples plataformas —Google Analytics, Meta Ads, Google Ads, CRM, etc.— un dashboard bien diseñado te muestra qué está funcionando, qué no y dónde tomar decisiones.</p>
-                  <h4>Beneficios de un dashboard de marketing digital</h4>
-                  <p class="mxd-article__normal">Un dashboard efectivo te permite:</p>
-                  <ul class="article-ul"><li>Tomar decisiones en tiempo real basadas en datos actualizados</li><li>Identificar oportunidades de optimización rápidamente</li><li>Ahorrar horas de trabajo manual generando reportes</li><li>Comunicar resultados de forma clara a directivos y clientes</li><li>Detectar problemas antes de que impacten tus resultados</li></ul>
-                  <h4>¿Para quién es ideal?</h4>
-                  <p class="mxd-article__normal">Los dashboards de marketing digital son esenciales para:</p>
-                  <ul class="article-ul"><li>Directores de marketing que necesitan visibilidad del rendimiento</li><li>Agencias que reportan a múltiples clientes</li><li>E-commerce que miden ventas y ROI publicitario</li><li>Startups que optimizan con presupuestos limitados</li><li>Empresas B2B que rastrean leads y pipeline de ventas</li></ul>
-                  </div>
-                  <div id="chapter-02" class="mxd-article__block">
-                    <h3>Tipos de dashboards: operativo vs estratégico vs ejecutivo</h3>
-                    <p class="mxd-article__normal">No todos los dashboards son iguales. Antes de construir uno, define qué tipo necesitas:</p>
-                  <ul class="article-ul"><li><strong>Reporte</strong> &mdash; Documentar resultados históricos &middot; Mensual/Trimestral</li><li><strong>Dashboard Operativo</strong> &mdash; Monitorear día a día &middot; Diario</li><li><strong>Dashboard Estratégico</strong> &mdash; Tomar decisiones de negocio &middot; Semanal</li></ul>
-                  <p class="mxd-article__normal">El error más común es mezclar todo en un solo dashboard. El resultado: un monstruo con 50 métricas que nadie revisa. <strong>Un buen dashboard responde máximo 3-5 preguntas clave.</strong></p>
-                  </div>
-                  <div class="mxd-article__block block-image">
-                    <div class="block-image__container">
-                      <video class="video" style="display:block;width:100%;height:auto;" autoplay muted loop playsinline preload="auto" poster="/img/real/blog/dashboard-marketing-pillar.png">
-                        <source type="video/mp4" src="/video/real/dashboards-video.mp4">
-                      </video>
-                      <div class="block-image__tags">
-                        <span class="tag tag-m tag-bg permanent">Video: dashboard en accion</span>
+                  <div class="entry-content">
+<p class="drop-cap">La mayoría de los tableros de marketing no fallan por falta de información, sino por exceso. Alguien conecta Google Analytics, Google Ads y Meta, arrastra todos los gráficos que encuentra y termina con una pantalla que nadie mira porque no responde ninguna pregunta. Un dashboard útil hace lo contrario: reduce todo lo medible a lo que necesitas para decidir qué mover esta semana.</p>
+
+<p>Esta guía explica qué es realmente un dashboard de marketing digital, qué indicadores incluir según tu objetivo, cómo armarlo paso a paso en Looker Studio y en qué punto un tablero manual deja de ser suficiente. Lo que afirma se apoya en la documentación oficial de Google y Microsoft (al final están las fuentes); lo que es criterio de trabajo lo verás señalado como recomendación.</p>
+
+<nav class="ed-toc" aria-label="Contenido del artículo">
+  <p class="ed-toc__title">Contenido</p>
+  <ol>
+    <li><a href="#que-es">Qué es (y qué no es) un dashboard de marketing</a></li>
+    <li><a href="#anatomia">Anatomía: las cinco zonas de un buen tablero</a></li>
+    <li><a href="#kpis">Qué KPIs incluir según tu objetivo</a></li>
+    <li><a href="#paso-a-paso">Cómo armarlo en Looker Studio, paso a paso</a></li>
+    <li><a href="#looker-vs-excel">Looker Studio, Excel y Google Sheets: cuándo usar cada uno</a></li>
+    <li><a href="#errores">Siete errores que arruinan un dashboard</a></li>
+    <li><a href="#checklist">Checklist antes de compartirlo</a></li>
+    <li><a href="#automatizacion">Cuándo un tablero manual ya no alcanza</a></li>
+    <li><a href="#faq">Preguntas frecuentes</a></li>
+    <li><a href="#fuentes">Fuentes</a></li>
+  </ol>
+</nav>
+
+<h2 id="que-es">Qué es (y qué no es) un dashboard de marketing</h2>
+<p>Un <strong>dashboard de marketing digital</strong> es una vista única y actualizada de los indicadores que determinan si tu inversión en marketing funciona: cuánto gastas, cuántos contactos o ventas generas, a qué costo y con qué tendencia. Su trabajo no es mostrar datos, es acelerar una decisión.</p>
+<p>Por eso conviene separarlo del <em>reporte</em>. Se parecen visualmente, pero responden a preguntas distintas:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Diferencias prácticas entre dashboard y reporte (criterio de trabajo, no una norma).</caption>
+    <thead><tr><th scope="col">&nbsp;</th><th scope="col">Dashboard</th><th scope="col">Reporte</th></tr></thead>
+    <tbody>
+      <tr><td>Pregunta que responde</td><td>¿Cómo vamos y qué debo revisar hoy?</td><td>¿Qué pasó en el periodo y por qué?</td></tr>
+      <tr><td>Frecuencia</td><td>Consulta continua (diaria o semanal)</td><td>Entrega periódica (mensual, trimestral)</td></tr>
+      <tr><td>Formato</td><td>Interactivo, con filtros y comparativos</td><td>Narrativo, con análisis y recomendaciones</td></tr>
+      <tr><td>Quién lo usa</td><td>Quien opera las campañas y quien decide presupuesto</td><td>Dirección, cliente o comité</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<blockquote>Un tablero no sirve para mostrar todo lo que puedes medir, sino para decidir qué haces el lunes.
+  <cite>Apache Studio</cite>
+</blockquote>
+
+<p>La analítica de clientes tiene respaldo empírico en general: un estudio de McKinsey de 2014 encontró que las empresas que la usaban de forma intensiva tenían 23 veces más probabilidad de superar claramente a sus competidores en captación de clientes. Es una asociación observada en encuestas, no una garantía de que instalar un dashboard produzca ese efecto; el valor está en <em>cómo</em> usas los datos, no en tener la pantalla.</p>
+
+<h2 id="anatomia">Anatomía: las cinco zonas de un buen tablero</h2>
+<p>Los tableros que se usan comparten una estructura simple. Lo que sigue es una recomendación de diseño, la misma que aplicamos al armar los nuestros:</p>
+
+<figure class="ed-fig" id="fig-anatomia">
+  <svg viewBox="0 0 760 420" role="img" aria-labelledby="fa-t fa-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fa-t">Anatomía de un dashboard de marketing</title>
+    <desc id="fa-d">Esquema con cinco zonas numeradas: 1 contexto y filtros, 2 indicadores principales, 3 tendencia en el tiempo, 4 desglose por canal y 5 tabla de detalle por campaña.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="418" rx="10"/>
+    <!-- 1 contexto -->
+    <rect class="f2" x="16" y="16" width="728" height="44" rx="6"/>
+    <text x="30" y="43">Marketing · Últimos 28 días vs. periodo anterior</text>
+    <rect class="f3" x="520" y="28" width="58" height="20" rx="10"/><rect class="f3" x="586" y="28" width="58" height="20" rx="10"/><rect class="f3" x="652" y="28" width="58" height="20" rx="10"/>
+    <!-- 2 KPIs -->
+    <g>
+      <rect class="f2" x="16" y="72" width="170" height="78" rx="6"/><text x="28" y="92">Inversión</text><rect class="acc" x="28" y="102" width="70" height="16" rx="3"/><rect class="f3" x="28" y="128" width="46" height="9" rx="4"/>
+      <rect class="f2" x="200" y="72" width="170" height="78" rx="6"/><text x="212" y="92">Leads / ventas</text><rect class="acc" x="212" y="102" width="70" height="16" rx="3"/><rect class="f3" x="212" y="128" width="46" height="9" rx="4"/>
+      <rect class="f2" x="384" y="72" width="170" height="78" rx="6"/><text x="396" y="92">Costo por resultado</text><rect class="acc" x="396" y="102" width="70" height="16" rx="3"/><rect class="f3" x="396" y="128" width="46" height="9" rx="4"/>
+      <rect class="f2" x="568" y="72" width="176" height="78" rx="6"/><text x="580" y="92">ROAS o conversión</text><rect class="acc" x="580" y="102" width="70" height="16" rx="3"/><rect class="f3" x="580" y="128" width="46" height="9" rx="4"/>
+    </g>
+    <!-- 3 tendencia -->
+    <rect class="f2" x="16" y="162" width="440" height="140" rx="6"/>
+    <text x="30" y="182">Tendencia diaria</text>
+    <line class="s1" x1="34" y1="196" x2="34" y2="286"/><line class="s1" x1="34" y1="286" x2="440" y2="286"/>
+    <polyline class="acc-s" points="34,262 80,250 126,258 172,228 218,236 264,210 310,222 356,196 402,204 440,186"/>
+    <polyline class="dash-s" points="34,270 80,266 126,262 172,254 218,250 264,244 310,240 356,234 402,232 440,226"/>
+    <!-- 4 desglose -->
+    <rect class="f2" x="468" y="162" width="276" height="140" rx="6"/>
+    <text x="482" y="182">Desglose por canal</text>
+    <text x="482" y="208">Canal A</text><rect class="acc" x="540" y="198" width="170" height="12" rx="3"/>
+    <text x="482" y="234">Canal B</text><rect class="acc" x="540" y="224" width="120" height="12" rx="3"/>
+    <text x="482" y="260">Canal C</text><rect class="acc" x="540" y="250" width="78" height="12" rx="3"/>
+    <text x="482" y="286">Canal D</text><rect class="acc" x="540" y="276" width="44" height="12" rx="3"/>
+    <!-- 5 detalle -->
+    <rect class="f2" x="16" y="314" width="728" height="92" rx="6"/>
+    <text x="30" y="334">Detalle por campaña</text>
+    <rect class="f3" x="30" y="344" width="700" height="1.5"/>
+    <rect class="f3" x="30" y="356" width="150" height="8" rx="4"/><rect class="f3" x="300" y="356" width="90" height="8" rx="4"/><rect class="f3" x="480" y="356" width="90" height="8" rx="4"/><rect class="f3" x="640" y="356" width="80" height="8" rx="4"/>
+    <rect class="f3" x="30" y="374" width="120" height="8" rx="4"/><rect class="f3" x="300" y="374" width="70" height="8" rx="4"/><rect class="f3" x="480" y="374" width="100" height="8" rx="4"/><rect class="f3" x="640" y="374" width="60" height="8" rx="4"/>
+    <rect class="f3" x="30" y="392" width="170" height="8" rx="4"/><rect class="f3" x="300" y="392" width="80" height="8" rx="4"/><rect class="f3" x="480" y="392" width="70" height="8" rx="4"/><rect class="f3" x="640" y="392" width="90" height="8" rx="4"/>
+    <!-- pins -->
+    <g class="pins">
+      <circle class="pin" cx="728" cy="38" r="11"/><text class="pin-t" x="728" y="42" text-anchor="middle">1</text>
+      <circle class="pin" cx="728" cy="84" r="11"/><text class="pin-t" x="728" y="88" text-anchor="middle">2</text>
+      <circle class="pin" cx="440" cy="176" r="11"/><text class="pin-t" x="440" y="180" text-anchor="middle">3</text>
+      <circle class="pin" cx="728" cy="176" r="11"/><text class="pin-t" x="728" y="180" text-anchor="middle">4</text>
+      <circle class="pin" cx="728" cy="328" r="11"/><text class="pin-t" x="728" y="332" text-anchor="middle">5</text>
+    </g>
+  </svg>
+  <figcaption>Esquema de referencia: cada zona responde una pregunta distinta. Los valores son deliberadamente genéricos.</figcaption>
+</figure>
+
+<ol>
+  <li><strong>Contexto.</strong> Título, periodo y filtros (fecha, canal, campaña). Siempre con comparación contra el periodo anterior o el mismo periodo del año pasado: una cifra sin referencia no dice nada.</li>
+  <li><strong>Indicadores principales.</strong> Entre 4 y 8 tarjetas con lo que decide presupuesto. Si necesitas más de ocho, probablemente estás mezclando dos tableros.</li>
+  <li><strong>Tendencia.</strong> Una serie en el tiempo para distinguir un mal día de un cambio real.</li>
+  <li><strong>Desglose.</strong> El mismo indicador partido por canal, campaña o audiencia, para saber <em>dónde</em> está el problema o la oportunidad.</li>
+  <li><strong>Detalle.</strong> Una tabla ordenable por campaña o anuncio, para bajar a la acción concreta.</li>
+</ol>
+
+<div class="ed-callout">
+  <span class="ed-callout__label">Idea clave</span>
+  <p>Cada gráfico debe poder responder «¿y qué hago con esto?». Si no cambia ninguna decisión, sobra.</p>
+</div>
+
+<h2 id="kpis">Qué KPIs incluir según tu objetivo</h2>
+<p>No existe una lista universal. Parte del objetivo del negocio y elige pocos indicadores que lo reflejen. Esta tabla resume los más usados y la fórmula estándar de cada uno:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Fórmulas estándar. La fuente de cada dato depende de tu configuración de medición.</caption>
+    <thead><tr><th scope="col">Objetivo</th><th scope="col">KPIs</th><th scope="col">Cómo se calcula</th><th scope="col">De dónde suele salir</th></tr></thead>
+    <tbody>
+      <tr><td>Generar contactos (B2B, servicios)</td><td>Costo por lead (CPL)<br>Tasa de conversión<br>% de leads calificados</td><td>Inversión ÷ leads<br>Conversiones ÷ sesiones<br>Leads calificados ÷ leads</td><td>Plataformas de anuncios, GA4, CRM o Sheets</td></tr>
+      <tr><td>Vender online (e-commerce)</td><td>ROAS<br>Costo de adquisición (CAC)<br>Ticket promedio</td><td>Ingresos atribuidos ÷ inversión<br>Inversión en adquisición ÷ clientes nuevos<br>Ingresos ÷ pedidos</td><td>GA4 o la tienda, más las plataformas de anuncios</td></tr>
+      <tr><td>Crecer en búsqueda orgánica</td><td>Clics, impresiones y CTR<br>Sesiones orgánicas<br>Conversiones desde orgánico</td><td>CTR = clics ÷ impresiones</td><td>Search Console y GA4</td></tr>
+      <tr><td>Redes sociales</td><td>Alcance<br>Tasa de interacción<br>Clics al sitio</td><td>Interacciones ÷ alcance (o ÷ seguidores; define cuál usarás)</td><td>Cada red social o su exportación</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Un ejemplo con números <strong>hipotéticos</strong> muestra por qué el ROAS solo no basta. Si inviertes $10,000 MXN y las ventas atribuidas son $35,000 MXN, tu ROAS es 3.5. Pero si tu margen bruto es de 25 %, esas ventas dejan $8,750 MXN antes de cualquier otro costo: no cubren la inversión. El ROAS mínimo para no perder es 1 ÷ margen bruto (aquí, 4). Por eso el mejor tablero de e-commerce muestra ROAS <em>y</em> margen.</p>
+
+<blockquote class="alignleft">Un KPI sin una acción asociada es decoración.
+  <cite>Apache Studio</cite>
+</blockquote>
+
+<p>Recomendación de trabajo: define por escrito qué significa cada indicador (ventana de atribución, qué cuenta como lead, qué se excluye) y guárdalo junto al tablero. La mayoría de las discusiones sobre «los números no cuadran» son en realidad diferencias de definición.</p>
+
+<h2 id="paso-a-paso">Cómo armarlo en Looker Studio, paso a paso</h2>
+<p>Looker Studio es la herramienta gratuita de Google para visualizar datos. Existe una versión de pago, Looker Studio Pro, con capacidades para organizaciones (se licencia por usuario), pero para el uso descrito aquí la versión gratuita es suficiente.</p>
+
+<figure class="ed-fig" id="fig-flujo">
+  <svg viewBox="0 0 760 210" role="img" aria-labelledby="ff-t ff-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="ff-t">Del dato a la decisión</title>
+    <desc id="ff-d">Flujo de cinco etapas: fuentes de datos, conexión, modelo de datos, dashboard y decisión.</desc>
+    <defs><marker id="ff-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <g>
+      <rect class="f2" x="0" y="20" width="128" height="170" rx="8"/><text class="h" x="64" y="44" text-anchor="middle">1 · Fuentes</text>
+      <text x="64" y="76" text-anchor="middle">Google Analytics 4</text><text x="64" y="98" text-anchor="middle">Google Ads</text><text x="64" y="120" text-anchor="middle">Search Console</text><text x="64" y="142" text-anchor="middle">Meta Ads, TikTok…</text><text x="64" y="164" text-anchor="middle">CRM o Sheets</text>
+      <rect class="f2" x="158" y="20" width="128" height="170" rx="8"/><text class="h" x="222" y="44" text-anchor="middle">2 · Conexión</text>
+      <text x="222" y="76" text-anchor="middle">Conectores de Google</text><text x="222" y="98" text-anchor="middle">Conectores de socios</text><text x="222" y="120" text-anchor="middle">o exportación a</text><text x="222" y="142" text-anchor="middle">Sheets / BigQuery</text>
+      <rect class="f2" x="316" y="20" width="128" height="170" rx="8"/><text class="h" x="380" y="44" text-anchor="middle">3 · Modelo</text>
+      <text x="380" y="76" text-anchor="middle">Nombres y UTM</text><text x="380" y="98" text-anchor="middle">consistentes</text><text x="380" y="120" text-anchor="middle">Campos calculados</text><text x="380" y="142" text-anchor="middle">Combinaciones</text><text x="380" y="164" text-anchor="middle">(máx. 5 tablas)</text>
+      <rect class="f2" x="474" y="20" width="128" height="170" rx="8"/><text class="h" x="538" y="44" text-anchor="middle">4 · Dashboard</text>
+      <text x="538" y="76" text-anchor="middle">Indicadores</text><text x="538" y="98" text-anchor="middle">Tendencia</text><text x="538" y="120" text-anchor="middle">Desglose</text><text x="538" y="142" text-anchor="middle">Detalle</text>
+      <rect class="acc" x="632" y="20" width="128" height="170" rx="8"/><text class="h on-acc" x="696" y="44" text-anchor="middle">5 · Decisión</text>
+      <text class="on-acc" x="696" y="76" text-anchor="middle">Mover presupuesto</text><text class="on-acc" x="696" y="98" text-anchor="middle">Pausar o escalar</text><text class="on-acc" x="696" y="120" text-anchor="middle">Corregir medición</text>
+    </g>
+    <g class="arrows">
+      <line class="s1 arrow-l" x1="130" y1="105" x2="156" y2="105" marker-end="url(#ff-ar)"/>
+      <line class="s1 arrow-l" x1="288" y1="105" x2="314" y2="105" marker-end="url(#ff-ar)"/>
+      <line class="s1 arrow-l" x1="446" y1="105" x2="472" y2="105" marker-end="url(#ff-ar)"/>
+      <line class="s1 arrow-l" x1="604" y1="105" x2="630" y2="105" marker-end="url(#ff-ar)"/>
+    </g>
+  </svg>
+  <figcaption>El dashboard es solo la cuarta etapa: la calidad del resultado se decide en las etapas 2 y 3.</figcaption>
+</figure>
+
+<ol>
+  <li><strong>Define la decisión y al lector.</strong> Escribe en una frase qué decisión debe permitir el tablero y quién lo usará. Una página, una pregunta.</li>
+  <li><strong>Inventaría las fuentes y asigna un responsable a cada una.</strong> Google Analytics 4, Google Ads, Search Console, plataformas sociales, CRM u hojas de cálculo. Si nadie es responsable de una fuente, nadie notará cuando se rompa.</li>
+  <li><strong>Conecta.</strong> Google ofrece conectores propios para Google Ads, Google Analytics, Search Console, Google Sheets y BigQuery, entre otros. Plataformas como Meta o TikTok normalmente se conectan mediante conectores de socios (creados con el programa de conectores de comunidad de Google), que suelen ser de pago, o exportando primero a Google Sheets o BigQuery.</li>
+  <li><strong>Normaliza antes de graficar.</strong> Convención de nombres de campaña y parámetros UTM consistente, misma moneda, misma zona horaria y los campos calculados que necesites (por ejemplo, CPL). Arreglar esto después, dentro de los gráficos, es mucho más caro.</li>
+  <li><strong>Combina fuentes con cuidado.</strong> Looker Studio permite combinar hasta cinco tablas en una sola combinación (<em>blend</em>). La clave de unión, normalmente fecha más campaña, debe existir y estar escrita igual en ambas fuentes. Si necesitas más, consolida los datos antes en BigQuery o Sheets.</li>
+  <li><strong>Diseña con jerarquía.</strong> Lo más importante arriba a la izquierda, comparación contra el periodo anterior en cada indicador, un solo color de énfasis y color semántico (verde/rojo) únicamente para estados.</li>
+  <li><strong>Conoce la frescura real de tus datos.</strong> Según la documentación de Google, los productos de marketing y medición de Google (Google Ads, Google Analytics, Search Console, Campaign Manager 360, YouTube Analytics y otros) se actualizan cada 12 horas y ese intervalo no se puede cambiar. Google Sheets se actualiza por defecto cada 15 minutos y permite intervalos mayores; BigQuery permite configurar desde 1 minuto hasta 12 horas. Consecuencia práctica: no prometas «tiempo real» si tus fuentes principales son de Google.</li>
+  <li><strong>Valida antes de compartir (QA).</strong> Compara al menos tres cifras del tablero con la interfaz nativa de cada plataforma para el mismo periodo. Si difieren, identifica si es una regla de atribución, una zona horaria o un error de conexión, y documéntalo.</li>
+  <li><strong>Comparte y fija un ritmo de revisión.</strong> Un tablero sin fecha de revisión termina siendo un adorno. Define quién lo abre, cuándo y qué decisiones salen de ahí.</li>
+</ol>
+
+<h2 id="looker-vs-excel">Looker Studio, Excel y Google Sheets: cuándo usar cada uno</h2>
+<p>La pregunta «¿Looker Studio o Excel?» está mal planteada, porque hacen trabajos distintos. Excel y Sheets son excelentes para consolidar, limpiar y calcular; Looker Studio es una capa de presentación conectada a fuentes. Muchos equipos usan las dos cosas: la hoja hace el trabajo pesado y el tablero lo muestra.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Datos de capacidad según la documentación de Google y Microsoft (ver fuentes).</caption>
+    <thead><tr><th scope="col">&nbsp;</th><th scope="col">Looker Studio</th><th scope="col">Excel</th><th scope="col">Google Sheets</th></tr></thead>
+    <tbody>
+      <tr><td>Uso principal</td><td>Visualización y tableros compartibles</td><td>Cálculo, modelado y análisis</td><td>Cálculo colaborativo y consolidación</td></tr>
+      <tr><td>Costo</td><td>Versión gratuita; Pro de pago por licencia</td><td>Licencia de Microsoft</td><td>Gratis con cuenta de Google</td></tr>
+      <tr><td>Capacidad</td><td>Depende de la fuente conectada</td><td>1,048,576 filas × 16,384 columnas por hoja</td><td>Hasta 10 millones de celdas por archivo</td></tr>
+      <tr><td>Actualización</td><td>Automática, según la fuente (ver paso 7)</td><td>Manual o programada, según la configuración</td><td>Fórmulas en vivo; importaciones según su configuración</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Cuándo conviene cada opción: si tu volumen es pequeño y solo tú lo lees, una hoja bien hecha alcanza. Si varias personas deben consultarlo, con filtros y sin pedirte un archivo nuevo cada semana, un tablero conectado ahorra tiempo. Y cuando los datos superan lo que una hoja maneja con comodidad, el paso siguiente suele ser BigQuery como capa intermedia.</p>
+
+<h2 id="errores">Siete errores que arruinan un dashboard</h2>
+<ol>
+  <li><strong>Medir todo.</strong> Más gráficos no significan más claridad; significan más ruido.</li>
+  <li><strong>Priorizar métricas de vanidad.</strong> Seguidores o impresiones pueden acompañar, pero no deben ocupar el lugar de leads, ventas o costo por resultado.</li>
+  <li><strong>Sumar plataformas y esperar que cuadre.</strong> Cada plataforma atribuye conversiones con sus propias reglas; por eso la suma de lo que reporta cada una casi nunca coincide con las ventas reales. Decide una fuente de verdad (por ejemplo, tu CRM o tu tienda) y usa las plataformas para comparar canales.</li>
+  <li><strong>No documentar las definiciones.</strong> Sin glosario, cada persona interpreta «conversión» a su manera.</li>
+  <li><strong>Publicar sin validar.</strong> Un solo dato incorrecto que un directivo detecta destruye la confianza en todo el tablero.</li>
+  <li><strong>No tener dueño.</strong> Las conexiones fallan, las campañas cambian de nombre y las cuentas se reconfiguran. Alguien debe mantenerlo.</li>
+  <li><strong>Prometer tiempo real.</strong> Como se vio arriba, varias fuentes se actualizan cada 12 horas. Comunícalo en el propio tablero («datos al corte de…»).</li>
+</ol>
+
+<h2 id="checklist">Checklist antes de compartirlo</h2>
+<ul class="ed-checklist">
+  <li>Está escrita la decisión que debe permitir y quién lo usa.</li>
+  <li>Cada indicador tiene definición, fórmula y fuente documentadas.</li>
+  <li>Hay comparación contra el periodo anterior en los indicadores principales.</li>
+  <li>Se validaron al menos tres cifras contra la plataforma de origen.</li>
+  <li>Los nombres de campaña y UTM siguen una convención única.</li>
+  <li>Se indica la fecha y hora de corte de los datos.</li>
+  <li>Hay un responsable de mantenimiento y una fecha de revisión.</li>
+  <li>Cabe en una pantalla por página y carga sin esperas largas.</li>
+</ul>
+
+<h2 id="automatizacion">Cuándo un tablero manual ya no alcanza</h2>
+<p>Un tablero armado a mano funciona bien hasta que aparecen estas señales: consolidas datos de cuatro o más plataformas cada semana, copias y pegas cifras entre archivos, tus reportes llegan tarde o con errores, o necesitas enterarte cuando algo se sale de rango sin abrir nada. Ahí ya no falta un mejor gráfico: falta medición confiable y un flujo automático que mueva los datos.</p>
+<p>Ese es el trabajo que hacemos en Apache Studio: dejar bien instalada la medición (<a href="/servicios/implementacion-tecnica/">implementación técnica con Google Tag Manager y GA4</a>) y construir los <a href="/servicios/dashboards-y-reportes/">dashboards y reportes automatizados</a> sobre esa base. Si quieres revisar tu caso, puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a>. Para el paso previo, también te puede servir la <a href="/blog/analitica-de-marketing-digital/">guía de analítica de marketing digital</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Looker Studio es gratis?</h3>
+  <p>Sí, existe una versión gratuita con la que puedes crear y compartir tableros. Looker Studio Pro es una suscripción de pago con funciones para organizaciones. Algunos conectores de terceros para plataformas que no son de Google pueden tener costo aparte.</p>
+  <h3>¿Cada cuánto se actualizan los datos de un dashboard en Looker Studio?</h3>
+  <p>Depende de la fuente. Google Ads, Google Analytics y Search Console se actualizan cada 12 horas y no se puede cambiar. Google Sheets se actualiza por defecto cada 15 minutos y admite intervalos mayores, y BigQuery permite configurar desde 1 minuto hasta 12 horas.</p>
+  <h3>¿Cuántos KPIs debe tener un dashboard de marketing?</h3>
+  <p>No hay un número oficial. Como criterio de trabajo, entre 4 y 8 indicadores principales por página; si necesitas más, suele ser señal de que estás mezclando dos objetivos en un mismo tablero.</p>
+  <h3>¿Puedo conectar Meta Ads o TikTok Ads a Looker Studio?</h3>
+  <p>Sí, normalmente mediante conectores de socios o exportando antes los datos a Google Sheets o BigQuery. Revisa el costo y la frecuencia de actualización de cada conector antes de depender de él.</p>
+  <h3>¿Qué diferencia hay entre un dashboard y un reporte de marketing?</h3>
+  <p>El dashboard es una vista interactiva y actualizada para monitorear y decidir; el reporte es un documento periódico que explica qué pasó y por qué, con análisis y recomendaciones. Lo ideal es que el reporte se apoye en el tablero.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Cloud — <a href="https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness" rel="noopener">Manage data freshness (Looker Studio)</a>.</li>
+    <li>Google Cloud — <a href="https://docs.cloud.google.com/looker/docs/studio/how-blends-work-in-looker-studio" rel="noopener">How blends work in Looker Studio</a> (combinaciones de hasta cinco tablas).</li>
+    <li>Google Cloud — <a href="https://docs.cloud.google.com/looker/docs/studio/looker-studio-pro-subscription-overview" rel="noopener">Looker Studio Pro subscription overview</a>.</li>
+    <li>Google Cloud — <a href="https://docs.cloud.google.com/looker/docs/studio/about-data-sources" rel="noopener">About data sources (conectores de Google y de socios)</a>.</li>
+    <li>Google Drive Help — <a href="https://support.google.com/drive/answer/37603" rel="noopener">Files you can store in Google Drive</a> (límite de celdas en Google Sheets).</li>
+    <li>Microsoft Support — <a href="https://support.microsoft.com/en-us/excel/excel-specifications-and-limits" rel="noopener">Excel specifications and limits</a>.</li>
+    <li>McKinsey &amp; Company — <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-facts-how-customer-analytics-boosts-corporate-performance" rel="noopener">Five facts: How customer analytics boosts corporate performance</a> (2014).</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Las herramientas cambian: si encuentras algo desactualizado, escríbenos.</p>
+</div>
+
+                    <div class="post-tags tagcloud">
+          <a href="/blog/" rel="tag">Dashboards</a>
+          <a href="/blog/" rel="tag">Looker Studio</a>
+          <a href="/blog/" rel="tag">KPIs</a>
+          <a href="/blog/" rel="tag">Analítica</a>
+                    </div>
+
+                    <div class="share-links">
+                      <h3>Compartir</h3>
+                      <div class="share-links__list">
+                        <a rel="nofollow noopener" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fapachestudio.mx%2Fblog%2Fdashboard-de-marketing-digital%2F" title="Compartir en LinkedIn" aria-label="Compartir en LinkedIn"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i></a>
+                        <a rel="nofollow noopener" target="_blank" href="https://twitter.com/intent/tweet?text=Dashboard%20de%20marketing%20digital%3A%20qu%C3%A9%20medir%20y%20c%C3%B3mo%20armarlo%20en%20Looker%20Studio&amp;url=https%3A%2F%2Fapachestudio.mx%2Fblog%2Fdashboard-de-marketing-digital%2F" title="Compartir en X" aria-label="Compartir en X"><i class="pw-icon-twitter" aria-hidden="true"></i></a>
+                        <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapachestudio.mx%2Fblog%2Fdashboard-de-marketing-digital%2F" title="Compartir en Facebook" aria-label="Compartir en Facebook"><i class="pw-icon-facebook" aria-hidden="true"></i></a>
+                        <a rel="nofollow noopener" target="_blank" href="https://wa.me/?text=Dashboard%20de%20marketing%20digital%3A%20qu%C3%A9%20medir%20y%20c%C3%B3mo%20armarlo%20en%20Looker%20Studio%20https%3A//apachestudio.mx/blog/dashboard-de-marketing-digital/" title="Compartir por WhatsApp" aria-label="Compartir por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.4 11.4 0 0 0 2.2 17.3L1 23l5.8-1.5A11.4 11.4 0 1 0 20.5 3.5zm-8.6 17.6a9.4 9.4 0 0 1-4.8-1.3l-.3-.2-3.4.9.9-3.3-.2-.3a9.4 9.4 0 1 1 7.8 4.2zm5.2-7c-.3-.1-1.7-.8-1.9-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a7.6 7.6 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5a.6.6 0 0 0 0-.5l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.4 3.4 14.5 14.5 0 0 0 5.6 4.9c2.1.9 2.9 1 3.9.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.4z"/></svg></a>
+                        <a href="mailto:?subject=Dashboard%20de%20marketing%20digital%3A%20qu%C3%A9%20medir%20y%20c%C3%B3mo%20armarlo%20en%20Looker%20Studio&amp;body=Te%20comparto%20este%20art%C3%ADculo%3A%20https%3A//apachestudio.mx/blog/dashboard-de-marketing-digital/" title="Enviar por correo" aria-label="Enviar por correo"><i class="pw-icon-mail" aria-hidden="true"></i></a>
+                        <button type="button" data-copy-link="https://apachestudio.mx/blog/dashboard-de-marketing-digital/" title="Copiar enlace" aria-label="Copiar enlace"><i class="pw-icon-link" aria-hidden="true"></i></button>
                       </div>
                     </div>
-                  </div>
-                  <div id="chapter-03" class="mxd-article__block">
-                    <h3>¿Qué contiene un dashboard de marketing efectivo?</h3>
-                    <p class="mxd-article__normal">Un dashboard de marketing efectivo debe mostrar solo las métricas que impulsan decisiones. Evita la sobrecarga de datos y enfócate en lo que realmente importa.</p>
-                  <h4>KPIs de tráfico y adquisición</h4>
-                  <p class="mxd-article__normal">El primer bloque debe responder: ¿de dónde viene mi audiencia?</p>
-                  <ul class="article-ul"><li>Sesiones y usuarios únicos: volumen total de visitas</li><li>Fuentes de tráfico: orgánico, pagado, social, directo, referral</li><li>Nuevos vs recurrentes: retención de audiencia</li><li>Páginas por sesión: engagement del usuario</li><li>Tasa de rebote: calidad del tráfico</li></ul>
-                  <h4>Métricas de campañas publicitarias</h4>
-                  <p class="mxd-article__normal">Para campañas de paid media (Google Ads, Meta Ads, LinkedIn Ads):</p>
-                  <ul class="article-ul"><li>Impresiones y alcance: visibilidad de tus anuncios</li><li>CTR (Click-Through Rate): efectividad creativa</li><li>CPC (Costo por Clic): eficiencia del gasto</li><li>CPM (Costo por Mil): costo de visibilidad</li><li>ROAS (Return on Ad Spend): retorno de inversión publicitaria</li><li>Frecuencia: control de saturación de audiencia</li></ul>
-                  <h4>Leads, ventas y conversiones</h4>
-                  <p class="mxd-article__normal">El bloque más importante para medir resultados de negocio:</p>
-                  <ul class="article-ul"><li>Tasa de conversión: porcentaje de visitantes que convierten</li><li>Leads generados: total de contactos captados</li><li>Costo por Lead (CPL): eficiencia de adquisición</li><li>Ventas cerradas: revenue generado</li><li>Valor promedio de orden: para e-commerce</li></ul>
-                  <h4>Inversión vs retorno</h4>
-                  <p class="mxd-article__normal">Métricas financieras que justifican el presupuesto de marketing:</p>
-                  <ul class="article-ul"><li>Inversión total por canal: distribución del presupuesto</li><li>ROI por fuente: retorno de cada canal</li><li>CAC (Costo de Adquisición de Cliente): cuánto cuesta un cliente nuevo</li><li>LTV (Lifetime Value): valor de un cliente en el tiempo</li><li>Ratio LTV:CAC: salud del modelo de adquisición</li></ul>
-                  </div>
-                  <div id="chapter-04" class="mxd-article__block">
-                    <h3>Dashboards de marketing digital: ejemplos prácticos</h3>
-                    <p class="mxd-article__normal">Cada negocio necesita un dashboard diferente.</p>
-                  <h4>Dashboard de Paid Media</h4>
-                  <p class="mxd-article__normal"><strong>Objetivo</strong>: optimizar rendimiento publicitario y ROAS. <strong>Métricas clave</strong>: gasto diario vs presupuesto, ROAS por campaña y ad set, CTR y tasa de conversión por creatividad, frecuencia y CPM por audiencia.</p>
-                  <h4>Dashboard de SEO</h4>
-                  <p class="mxd-article__normal"><strong>Objetivo</strong>: monitorear posicionamiento y crecimiento orgánico. <strong>Métricas clave</strong>: sesiones orgánicas y tendencia, posiciones de keywords principales, CTR en resultados de búsqueda, páginas con mayor tráfico.</p>
-                  <h4>Dashboard Ejecutivo</h4>
-                  <p class="mxd-article__normal"><strong>Objetivo</strong>: vista ejecutiva de rendimiento general para CMO y directivos. <strong>Métricas clave</strong>: revenue atribuido a marketing, CAC y LTV por canal, pipeline de ventas, ROI de marketing consolidado.</p>
-                  <h4>Dashboard para Agencias</h4>
-                  <p class="mxd-article__normal"><strong>Objetivo</strong>: reportar resultados a múltiples clientes de forma eficiente. <strong>Características clave</strong>: selector de cliente, resumen ejecutivo automatizado, comparativo vs periodo anterior, sección de insights y recomendaciones.</p>
-                  </div>
-                  <div class="mxd-article__block block-image">
-                    <div class="block-image__container">
-                      <img src="/img/real/blog/looker-vs-excel-comparison.png" alt="Dashboard ejecutivo">
-                      <div class="block-image__tags">
-                        <span class="tag tag-m tag-bg permanent">Dashboard ejecutivo</span>
+
+                    <nav class="nav-single" aria-label="Artículos anterior y siguiente">
+                      <div class="nav-previous">
+                        <h4>Anterior</h4>
+                        <a href="/blog/analitica-de-marketing-digital/" rel="prev"><span class="meta-nav">←</span>Analítica de marketing digital: guía completa</a>
                       </div>
-                    </div>
-                  </div>
-                  <div id="chapter-05" class="mxd-article__block">
-                    <h3>Cómo hacer un dashboard digital paso a paso</h3>
-                    <p class="mxd-article__normal">Crear un dashboard digital profesional requiere planificación.</p>
-                  <ol class="article-ol"><li>Definir objetivos: antes de diseñar, responde qué decisiones necesitas tomar, quién lo va a usar y con qué frecuencia se revisará</li><li>Seleccionar KPIs: elige máximo 10-12 métricas principales; si una métrica no genera acción, no pertenece al dashboard</li><li>Conectar fuentes de datos: las fuentes más comunes son Google Analytics 4, Google Ads / Meta Ads, CRM, Google Sheets, bases de datos</li><li>Diseñar visualizaciones claras: jerarquía visual, consistencia, contexto, claridad</li><li>Automatizar actualizaciones: configura conexiones en tiempo real, alertas y reportes automáticos</li></ol>
-                  </div>
-                  <div id="chapter-06" class="mxd-article__block">
-                    <h3>Dashboard en Excel vs Looker Studio</h3>
-                    <p class="mxd-article__normal">Muchos empiezan con Excel, pero tiene limitaciones importantes.</p>
-                  <h4>Limitaciones de Excel</h4>
-                  <ul class="article-ul"><li>Datos desactualizados: requiere copiar y pegar manualmente</li><li>Errores humanos: fórmulas rotas, datos mal pegados</li><li>Sin colaboración: versiones diferentes, archivos perdidos</li><li>Visualizaciones básicas: gráficos poco profesionales</li><li>No escalable: se vuelve lento con mucha data</li></ul>
-                  <h4>Ventajas de Looker dashboards automatizados</h4>
-                  <p class="mxd-article__normal"><strong>Looker Studio</strong> ofrece: gratuito, conexión directa con 600+ fuentes, datos en tiempo real, colaboración en la nube, visualizaciones profesionales, filtros dinámicos.</p>
-                  </div>
-                  <div id="chapter-07" class="mxd-article__block">
-                    <h3>Por qué usar dashboards personalizados en Looker Studio</h3>
-                    <p class="mxd-article__normal">Un dashboard personalizado en Looker Studio no es solo un reporte bonito. Es una herramienta estratégica para tu negocio.</p>
-                  <ul class="article-ul"><li>Escalabilidad: crece contigo sin limitaciones</li><li>Automatización completa: elimina horas de trabajo manual</li><li>Acceso 24/7: desde cualquier dispositivo</li><li>Toma de decisiones basada en datos: decisiones estratégicas, no intuitivas</li><li>Profesionalismo: proyecta confianza hacia clientes</li></ul>
-                  <p class="mxd-article__normal">¿Listo para transformar tus datos en decisiones? <a href="/servicios/dashboards-y-reportes/">Solicita tu dashboard personalizado</a> y deja de perder tiempo con reportes que no sirven.</p>
-                  </div>
-                  <div id="chapter-09" class="mxd-article__block">
-                    <h3>Preguntas frecuentes</h3>
-                    <h4>¿Qué es un dashboard de marketing digital?</h4>
-                  <p class="mxd-article__normal">Es una herramienta de visualización que centraliza todas las métricas y KPIs de tus campañas de marketing en un solo lugar, permitiendo tomar decisiones basadas en datos en tiempo real.</p>
-                  <h4>¿Qué debe contener un dashboard de marketing efectivo?</h4>
-                  <p class="mxd-article__normal">Debe incluir KPIs de tráfico, métricas de campañas publicitarias (CTR, CPC, ROAS), leads y conversiones, inversión vs retorno (ROI, CAC), y comparativos por periodo.</p>
-                  <h4>¿Cuál es mejor: Excel o Looker Studio para dashboards?</h4>
-                  <p class="mxd-article__normal">Looker Studio es superior para dashboards de marketing porque ofrece conexión en tiempo real, automatización, colaboración en la nube y visualizaciones interactivas, mientras Excel requiere actualización manual.</p>
-                  <h4>¿Cada cuánto debo revisar mi dashboard de marketing?</h4>
-                  <p class="mxd-article__normal">Las métricas operativas (gasto, conversiones) se revisan diariamente. Las métricas estratégicas (ROI, CAC, LTV) se revisan semanal o mensualmente. Lo ideal es tener alertas automáticas para anomalías.</p>
-                  <h4>¿Por qué la mayoría de los dashboards de marketing no funcionan?</h4>
-                  <p class="mxd-article__normal">Porque se enfocan en mostrar muchos datos en lugar de responder preguntas específicas de negocio. Un dashboard efectivo prioriza la toma de decisiones sobre la cantidad de métricas.</p>
-                  </div>
-                </div>
-                <!-- Article Content End -->
+                      <div class="nav-next">
+                        <h4>Siguiente</h4>
+                        <a href="/blog/performance-marketing/" rel="next">Performance marketing: guía para maximizar ROAS y reducir CAC<span class="meta-nav">→</span></a>
+                      </div>
+                    </nav>
 
-              </div>
-              <!-- Article End -->
-
-              <!-- Article Author Start -->
-              <div class="mxd-article-author">
-                <div class="mxd-article-author__data">
-                  <a class="mxd-article-author__avatar" href="/nosotros/">
-                    <img src="/img/demo/trail/02_trail.webp" alt="Avatar">
-                  </a>
-                  <div class="mxd-article-author__info">
-                    <h4 class="mxd-article-author__name">
-                      <a href="/nosotros/">Equipo Apache Studio</a>
-                      <small class="mxd-article-author__position">Agencia Digital</small>
-                    </h4>
-                    <div class="mxd-article-author__socials">
-                      <a class="tag tag-m tag-bg default mxd-scramble" href="https://www.linkedin.com/company/118984525/">LinkedIn</a>
-                      <a class="tag tag-m tag-bg default mxd-scramble" href="https://www.facebook.com/profile.php?id=61584792540737">Facebook</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mxd-article-author__quote">
-                  <p class="mxd-article__normal">El equipo detras de Apache Studio: estrategas, analistas de datos y desarrolladores que
-                    implementan estrategias de marketing digital basadas en datos todos los dias con clientes reales.</p>
-                </div>
-              </div>
-              <!-- Article Author End -->
-
-              <!-- Article Comments Start -->
-              <div class="mxd-article-comments">
-                <div class="mxd-article-comments__respond">
-                  <h3>&iquest;Qu&eacute; te pareci&oacute;?</h3>
-                  <p class="mxd-article__normal">D&eacute;janos tu comentario o pregunta. Tu correo no ser&aacute; publicado. Campos
-                    obligatorios marcados con *</p>
-                  <div class="comments-respond__form">
-                    <form class="form">
-                      <div class="container-fluid p-0">
-                        <div class="row gx-5 comments-respond__row">
-                          <div class="col-12 col-md-6 mxd-grid-item no-margin">
-                            <input type="text" name="Name" placeholder="Tu nombre*" required>
-                          </div>
-                          <div class="col-12 col-md-6 mxd-grid-item no-margin">
-                            <input type="email" name="Email" placeholder="Tu correo*">
-                          </div>
-                          <div class="col-12 mxd-grid-item">
-                            <textarea name="Message" placeholder="Mensaje*" required></textarea>
-                          </div>
-                          <div class="col-12 mxd-grid-item">
-                            <button class="btn btn-default-icon btn-default-accent slide-right" type="submit">
-                              <span class="btn-caption mxd-scramble">Enviar Comentario</span>
-                              <i class="btn-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                                  <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
-                                </svg>
-                              </i>
-                            </button>
-                          </div>
+                    <aside class="about-author">
+                      <h3 class="section-title">Escrito por</h3>
+                      <div class="author-bio">
+                        <div class="author-img"><div class="author-initials" aria-hidden="true">HN</div></div>
+                        <div class="author-info">
+                          <h4 class="author-name">Heider Narváez</h4>
+                          <span class="author-role">Business Intelligence · Analítica de marketing</span>
+                          <p>Máster en Business Intelligence con más de 6 años de experiencia en recolección, consolidación, validación (QA) y automatización de reportería para campañas de marketing digital multicanal.</p>
+                          <p>Trabaja con Google Analytics 4, Google Tag Manager, DV360, Campaign Manager, Google Ads, LinkedIn Ads y Meta Ads, con Excel avanzado (Power Query, Power Pivot, VBA) y Looker Studio, y automatiza reportes con Power Automate, n8n e integración de APIs.</p>
+                          <p><a href="/nosotros/">Conoce Apache Studio</a></p>
                         </div>
                       </div>
-                    </form>
+                    </aside>
+
+                    <div class="yarpp-related">
+                      <h3>Te puede interesar</h3>
+                      <div class="yarpp-thumbnails-horizontal">
+                        <a class="yarpp-thumbnail" href="/blog/automatizacion-de-marketing/">
+                          <span class="yarpp-thumbnail-default"><img src="/img/real/blog/workflows-marketing.png" width="1920" height="1080" loading="lazy" alt="Flujos de trabajo de automatización de marketing"></span>
+                          <span class="yarpp-thumbnail-title">Automatización de marketing digital</span>
+                        </a>
+                        <a class="yarpp-thumbnail" href="/blog/implementacion-tecnica/">
+                          <span class="yarpp-thumbnail-default"><img src="/img/real/blog/server-side-tracking.png" width="1920" height="1080" loading="lazy" alt="Esquema de seguimiento del lado del servidor"></span>
+                          <span class="yarpp-thumbnail-title">Implementación técnica de marketing digital</span>
+                        </a>
+                        <a class="yarpp-thumbnail" href="/blog/ai-en-marketing-digital/">
+                          <span class="yarpp-thumbnail-default"><img src="/img/real/blog/ia-de-google.jpg" width="1024" height="1024" loading="lazy" alt="Inteligencia artificial aplicada al marketing digital"></span>
+                          <span class="yarpp-thumbnail-title">IA en marketing digital</span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="ed-question" id="pregunta">
+                      <h3 class="section-title">Pregunta sobre este artículo</h3>
+                      <p class="comment-notes">¿Algo no quedó claro o quieres aplicarlo a tu caso? Escríbenos y te respondemos por correo. Tu correo no se publica. Los campos con <span class="required">*</span> son obligatorios.</p>
+                      <form id="blog-question-form" data-source="blog_question" data-context="Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio">
+                        <div>
+                          <label for="bq-name">Nombre <span class="required">*</span></label>
+                          <input id="bq-name" name="Name" type="text" autocomplete="name" required>
+                        </div>
+                        <div>
+                          <label for="bq-email">Correo <span class="required">*</span></label>
+                          <input id="bq-email" name="E-mail" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="is-wide">
+                          <label for="bq-message">Tu pregunta <span class="required">*</span></label>
+                          <textarea id="bq-message" name="Message" rows="6" required></textarea>
+                        </div>
+                        <div class="hp-field" aria-hidden="true">
+                          <label for="bq-website">No llenar este campo</label>
+                          <input id="bq-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="is-wide">
+                          <button class="button" type="submit">Enviar pregunta</button>
+                        </div>
+                        <p class="form-status is-wide" role="status" aria-live="polite"></p>
+                      </form>
+                    </div>
+
                   </div>
-                </div>
+                </article>
               </div>
-              <!-- Article Comments End -->
+              <!-- primary -->
+
+              <!-- secondary -->
+              <div id="secondary" class="widget-area sidebar" role="complementary">
+
+                <aside class="widget widget_text">
+                  <h3 class="widget-title">Sobre el autor</h3>
+                  <div class="textwidget">
+                    <div class="author-initials author-initials--lg" aria-hidden="true">HN</div>
+                    <p>Máster en Business Intelligence con más de 6 años de experiencia en recolección, consolidación, validación (QA) y automatización de reportería para campañas de marketing digital multicanal.</p>
+                  </div>
+                </aside>
+
+                <aside class="widget widget_text">
+                  <h3 class="widget-title">Síguenos</h3>
+                  <div class="textwidget">
+                    <ul class="social">
+                      <li><a href="https://www.linkedin.com/company/118984525/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i></a></li>
+                      <li><a href="https://www.facebook.com/profile.php?id=61584792540737" target="_blank" rel="noopener" aria-label="Facebook"><i class="pw-icon-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="https://www.instagram.com/apachestudio.mx/" target="_blank" rel="noopener" aria-label="Instagram"><i class="pw-icon-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                </aside>
+
+                <aside class="widget widget_categories">
+                  <h3 class="widget-title">Categorías</h3>
+                  <ul>
+                    <li class="cat-item"><a href="/blog/">Analítica</a></li>
+                    <li class="cat-item"><a href="/blog/">Tracking técnico</a></li>
+                    <li class="cat-item"><a href="/blog/">Automatización</a></li>
+                    <li class="cat-item"><a href="/blog/">Performance</a></li>
+                  </ul>
+                </aside>
+
+                <aside class="widget widget_widget_tptn_pop">
+                  <h3 class="widget-title">Lecturas recomendadas</h3>
+                  <div class="tptn_posts tptn_posts_widget">
+                    <ul>
+                      <li>
+                        <a href="/blog/analitica-de-marketing-digital/" class="tptn_link"><img src="/img/real/blog/data-marketing-historia.png" width="82" height="70" loading="lazy" alt="Analítica de marketing digital"></a>
+                        <span class="tptn_after_thumb"><a href="/blog/analitica-de-marketing-digital/" class="tptn_link"><span class="tptn_title">Analítica de marketing digital: guía completa</span></a><span class="tptn_date">Analítica</span></span>
+                      </li>
+                      <li>
+                        <a href="/blog/performance-marketing/" class="tptn_link"><img src="/img/real/blog/dashboard-marketing-ejemplos-visual.png" width="82" height="70" loading="lazy" alt="Performance marketing"></a>
+                        <span class="tptn_after_thumb"><a href="/blog/performance-marketing/" class="tptn_link"><span class="tptn_title">Performance marketing: ROAS y CAC</span></a><span class="tptn_date">Performance</span></span>
+                      </li>
+                      <li>
+                        <a href="/blog/implementacion-tecnica/" class="tptn_link"><img src="/img/real/blog/server-side-tracking.png" width="82" height="70" loading="lazy" alt="Implementación técnica de medición"></a>
+                        <span class="tptn_after_thumb"><a href="/blog/implementacion-tecnica/" class="tptn_link"><span class="tptn_title">Implementación técnica de marketing digital</span></a><span class="tptn_date">Tracking técnico</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                </aside>
+
+                <aside class="widget widget_text">
+                  <h3 class="widget-title">¿Hablamos de tu tablero?</h3>
+                  <div class="ed-cta-card">
+                    <p>Revisamos tu medición y te decimos qué falta antes de construir el dashboard.</p>
+                    <a class="ed-cta-card__btn" href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" target="_blank" rel="noopener">Agendar llamada</a>
+                  </div>
+                </aside>
+
+              </div>
+              <!-- secondary -->
 
             </div>
-            <!-- Article Container End -->
-
           </div>
+
         </div>
       </div>
       <!-- Section - Blog Article End -->
-
-      <!-- Section - More on Topic Start -->
-      <div class="mxd-section blur-section pinned-section padding-top-subtitle-mobile padding-bottom-preview">
-        <div class="pinned-section__inner">
-          <div class="mxd-container grid-l-container">
-
-            <!-- Block - Section Title v03 Start -->
-            <div class="mxd-block">
-              <div class="mxd-section-title pre-subtitle-s">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 d-flex flex-column-reverse flex-xl-row">
-                    <div class="col-12 col-xl-8 mxd-grid-item">
-                      <div class="mxd-section-title__title">
-                        <h2 class="reveal-type">Más sobre el tema</h2>
-                      </div>
-                    </div>
-                    <div class="col-12 col-xl-4 mxd-grid-item">
-                      <div class="mxd-section-title__data top-controls">
-                        <div class="mxd-section-title__controls pre-title justify-end anim-uni-in-up">
-                          <a class="btn btn-line btn-line-default" href="/blog/">
-                            <span class="btn-caption mxd-scramble">Ver Blog</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Block - Section Title v03 End -->
-
-            <!-- Block - Blog Preview Grid x3 Start -->
-            <div class="mxd-block">
-              <div class="mxd-blog-grid">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 mxd-blog-grid__gallery">
-                    <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">28 Enero, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Leer Articulo" href="/blog/implementacion-tecnica/">
-                        <img class="" src="/img/real/blog/server-side-tracking.png" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-m" href="/blog/implementacion-tecnica/">Implementacion Tecnica de Marketing Digital: Guia Definitiva</a>
-                        </div>
-                        <div class="mxd-blog-item__tags">
-                          <span class="tag tag-s tag-medium mxd-scramble">GTM</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">GA4</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">Tracking</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">20 Enero, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Leer Articulo" href="/blog/automatizacion-de-marketing/">
-                        <img class="" src="/img/real/blog/workflows-marketing.png" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-m" href="/blog/automatizacion-de-marketing/">Automatizacion de Marketing Digital: Guia Completa</a>
-                        </div>
-                        <div class="mxd-blog-item__tags">
-                          <span class="tag tag-s tag-medium mxd-scramble">Automatizacion</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">Workflows</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">CRM</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-4 mxd-blog-item animate-card-3">
-                      <div class="mxd-blog-item__date">
-                        <span class="meta-date">15 Enero, 2026</span>
-                      </div>
-                      <a class="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Leer Articulo" href="/blog/analitica-de-marketing-digital/">
-                        <img class="" src="/img/real/blog/data-marketing-historia.png" alt="Blog Preview Image">
-                      </a>
-                      <div class="mxd-blog-item__caption">
-                        <div class="mxd-blog-item__title">
-                          <a class="blog-name-m" href="/blog/analitica-de-marketing-digital/">Analitica de Marketing Digital: Guia Completa</a>
-                        </div>
-                        <div class="mxd-blog-item__tags">
-                          <span class="tag tag-s tag-medium mxd-scramble">Analitica</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">KPIs</span>
-                          <span class="tag tag-s tag-medium mxd-scramble">ROI</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                        <!-- Block - Blog Preview Grid x3 End -->
-
-          </div>
-          <div class="pinned-section__trigger"></div>
-        </div>
-      </div>
-      <!-- Section - More on Topic End -->
       
       <!-- Section - CTA with Marquee Start -->
       <div class="mxd-section blur-section bg-color-opposite">
@@ -1086,6 +1378,8 @@
     <!-- Load Scripts Start -->
     <script src="/js/libs.min.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/lead-form.js"></script>
+    <script src="/js/blog-article.js" defer></script>
     <!-- Load Scripts End -->
     
   </body>

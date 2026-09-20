@@ -15,6 +15,16 @@
   }
 
   function showReply(form) {
+    // Formulario de preguntas del blog: mensaje en línea, sin ocultar el formulario.
+    if (form.id === "blog-question-form") {
+      var status = form.querySelector(".form-status");
+      if (status) {
+        status.setAttribute("data-state", "ok");
+        status.textContent = "Gracias. Recibimos tu pregunta y te respondemos por correo.";
+      }
+      form.reset();
+      return;
+    }
     var block = form.closest(".contact") || document;
     var reply = block.querySelector(".form__reply");
     form.classList.add("is-hidden");
@@ -28,17 +38,24 @@
 
   function handle(event) {
     var form = event.target;
-    if (!form || form.id !== "contact-form") return;
+    if (!form || (form.id !== "contact-form" && form.id !== "blog-question-form")) return;
 
     // Evita que el handler antiguo (mail.php) se ejecute.
     event.preventDefault();
     event.stopPropagation();
 
+    // Honeypot del formulario del blog: si un bot lo llena, se descarta en silencio.
+    if (val(form, "website")) return;
+
+    var source = form.getAttribute("data-source") || "web_form";
     var name = val(form, "Name");
     var email = val(form, "E-mail");
     var phone = val(form, "Phone") || "No proporcionado";
     var company = val(form, "Company") || null;
     var message = val(form, "Message") || null;
+    // Las preguntas del blog llevan el título del artículo para tener contexto.
+    var context = form.getAttribute("data-context");
+    if (context && message) message = "[Pregunta sobre «" + context + "»] " + message;
 
     var payload = {
       full_name: name,
@@ -46,7 +63,7 @@
       phone: phone,
       brand_name: company,
       problem: message,
-      source: "web_form",
+      source: source,
       page_path: window.location.pathname
     };
 
@@ -65,7 +82,7 @@
       phone: phone,
       brand_name: company,
       problem: message,
-      source: "web_form",
+      source: source,
       page_path: window.location.pathname
     };
 
@@ -94,13 +111,15 @@
       .then(function (res) {
         if (!res.ok) return res.text().then(function (t) { throw new Error(t); });
         if (window.dataLayer) {
-          window.dataLayer.push({ event: "lead_form_submit", form_source: "web_form" });
+          window.dataLayer.push({ event: "lead_form_submit", form_source: source });
         }
         showReply(form);
       })
       .catch(function (err) {
         console.error("Lead form error:", err);
-        alert("No pudimos enviar tu mensaje. Escríbenos por WhatsApp o a contacto@apachestudio.mx");
+        var msg = "No pudimos enviar tu mensaje. Escríbenos por WhatsApp o a contacto@apachestudio.mx";
+        var st = form.querySelector(".form-status");
+        if (st) { st.setAttribute("data-state", "error"); st.textContent = msg; } else { alert(msg); }
       })
       .finally(function () {
         if (btn) btn.disabled = false;
