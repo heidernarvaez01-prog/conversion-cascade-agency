@@ -1,0 +1,20 @@
+{
+  "slug": "[[slug-del-articulo]]",
+  "title": "[[Título SEO, máx. 60 caracteres]]",
+  "h1": "[[Título visible del artículo]]",
+  "description": "[[Descripción de 120 a 160 caracteres con la palabra clave principal]]",
+  "keywords": "[[palabra clave principal, secundaria 1, secundaria 2]]",
+  "section": "[[Categoría: Analítica | Performance | Tracking técnico | Automatización | Inteligencia artificial | ...]]",
+  "tags": ["[[Etiqueta 1]]", "[[Etiqueta 2]]", "[[Etiqueta 3]]"],
+  "published": "AAAA-MM-DD",
+  "modified": "AAAA-MM-DD",
+  "lead": "[[Bajada de 1 o 2 frases que resuma qué resuelve el artículo]]",
+  "hero": {
+    "src": "/img/real/blog/[[imagen-16x9.jpg]]",
+    "alt": "[[Descripción real de la imagen]]",
+    "caption": "Ilustración."
+  },
+  "related": ["[[slug-relacionado-1]]", "[[slug-relacionado-2]]", "[[slug-relacionado-3]]"],
+  "about": ["[[Tema principal]]", "[[Tema secundario]]"],
+  "author": "heider-narvaez"
+}

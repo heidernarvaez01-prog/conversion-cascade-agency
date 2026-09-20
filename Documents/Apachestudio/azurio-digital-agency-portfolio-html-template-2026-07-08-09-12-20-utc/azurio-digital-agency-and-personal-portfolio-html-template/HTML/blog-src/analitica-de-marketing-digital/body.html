@@ -1,58 +1,195 @@
-<p class="drop-cap">Cubrimos el framework completo de analítica (recopilación, organización, análisis y acción), que métricas priorizar según tu objetivo de negocio, y las herramientas esenciales para empezar sin gastar de más.</p>
+<p class="drop-cap">Casi todas las empresas miden algo: visitas, clics, seguidores, leads. Lo que pocas hacen es conectar esos números con una decisión de negocio, y por eso los reportes se acumulan sin cambiar nada. La analítica de marketing digital es justamente esa conexión: recolectar datos confiables, entenderlos y convertirlos en acciones que mueven ventas.</p>
 
-<h2 id="que-es-la-analitica-de-marketing-digital">¿Qué es la analítica de marketing digital?</h2>
-<p>La <strong>analítica de marketing digital</strong> es la disciplina que recopila, mide, analiza e interpreta datos generados por todas las acciones de marketing de una empresa para tomar decisiones estratégicas basadas en evidencia.</p>
-<p>No se trata solo de instalar Google Analytics o revisar las métricas de Meta Ads. Es construir un sistema completo de inteligencia que conecta cada dato con una decisión de negocio.</p>
-<h3>¿Por qué la analítica importa más que nunca?</h3>
-<ul><li>Sin una medición confiable no sabes qué parte de tu inversión funciona, y terminas decidiendo por intuición</li><li>Un estudio de <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-facts-how-customer-analytics-boosts-corporate-performance" rel="noopener">McKinsey (2014)</a> encontró que las empresas que usaban intensivamente la analítica de clientes tenían 23 veces más probabilidad de superar claramente a sus competidores en captación de clientes; es una asociación observada, no una garantía</li><li>El costo de no medir es mayor que el costo de medir: cada peso mal invertido es un peso perdido</li></ul>
+<p>Esta guía explica qué es (y qué no es) la analítica, cómo se ve un ciclo de trabajo completo, qué medir según tu objetivo, cómo armar un plan de medición antes de instalar nada, cómo funciona la atribución y qué errores distorsionan los números con más frecuencia. Los datos técnicos vienen de la documentación oficial de Google y Meta (las fuentes están al final); lo que es criterio de trabajo está señalado como tal.</p>
 
-<h2 id="los-pilares-de-una-analitica-efectiva">Los pilares de una analítica efectiva</h2>
-<h3>1. KPIs correctos</h3>
-<p>El error más común es medir todo. Los KPIs de analítica de marketing deben ser alineados con objetivos de negocio, accionables (si cambian, sabes qué hacer), medibles (con datos confiables disponibles) y limitados (máximo 5-8 KPIs principales).</p>
-<h3>2. Medición de ROI</h3>
-<p>Saber cuánto retorno genera cada peso invertido es la esencia de la analítica, con modelos de atribución y cálculos prácticos.</p>
-<h3>3. Evitar errores comunes</h3>
-<p>Los errores más comunes en analítica de marketing incluyen confundir correlación con causalidad, medir métricas de vanidad y no validar los datos de tracking.</p>
-<h3>4. Herramientas y plantillas</h3>
-<p>Una buena plantilla de seguimiento de campañas te ayuda a organizar, comparar y optimizar tus esfuerzos de marketing de forma estructurada.</p>
+<h2 id="que-es">Qué es (y qué no es) la analítica de marketing digital</h2>
+<p>La <strong>analítica de marketing digital</strong> es el proceso de recolectar, organizar y analizar datos de tus canales (sitio web, campañas, redes, correo, CRM) para responder preguntas concretas: ¿qué canal trae clientes y cuál solo trae tráfico?, ¿cuánto cuesta conseguir un cliente?, ¿qué parte del embudo se está rompiendo?</p>
+<p>No es lo mismo que instalar Google Analytics, ni que armar un reporte bonito. Son tres cosas distintas que suelen confundirse:</p>
 
-<figure class="ed-fig">
-  <img loading="lazy" src="/img/real/blog/looker-vs-excel.png" alt="Framework de analitica">
-  <figcaption>Framework de analítica</figcaption>
-</figure>
-
-<h2 id="framework-de-analitica-del-dato-a-la-decision">Framework de analítica: del dato a la decisión</h2>
-<h3>Nivel 1: Recopilación</h3>
-<p>Configurar correctamente todas las fuentes de datos: Google Analytics 4 para comportamiento web, plataformas publicitarias para métricas de campaña, CRM para datos de leads y ventas, Google Sheets o bases de datos para consolidación.</p>
-<h3>Nivel 2: Organización</h3>
-<p>Centralizar los datos en un sistema unificado: <a href="/blog/dashboard-de-marketing-digital/">dashboards de marketing</a> para visualización en tiempo real, data warehouses para análisis histórico, naming conventions para consistencia.</p>
-<h3>Nivel 3: Análisis</h3>
-<p>Convertir datos en insights: análisis de tendencias y patrones, segmentación de audiencias por comportamiento, identificación de canales rentables vs costosos, detección de anomalías y oportunidades.</p>
-<h3>Nivel 4: Acción</h3>
-<p>Traducir insights en decisiones: reasignación de presupuesto basada en ROI, optimización de campañas con datos reales, predicción de resultados y forecasting, reporting ejecutivo para stakeholders.</p>
-
-<h2 id="metricas-clave-por-objetivo">Métricas clave por objetivo</h2>
-<h3>Si tu objetivo es crecimiento</h3>
-<p>Tráfico total y por fuente, nuevos usuarios vs recurrentes, tasa de crecimiento mensual, costo por lead (CPL).</p>
-<h3>Si tu objetivo es rentabilidad</h3>
-<p>ROAS por canal y campaña, CAC (Costo de Adquisición de Cliente), LTV (Lifetime Value), ratio LTV:CAC.</p>
-<h3>Si tu objetivo es retención</h3>
-<p>Churn rate, NPS (Net Promoter Score), tasa de recompra, engagement por canal.</p>
-
-<h2 id="herramientas-esenciales-de-analitica">Herramientas esenciales de analítica</h2>
-<ul><li><strong>Google Analytics 4</strong> &mdash; Analítica web &middot; Gratis</li><li><strong>Looker Studio</strong> &mdash; Dashboards &middot; Gratis</li><li><strong>Google Tag Manager</strong> &mdash; Tracking &middot; Gratis</li><li><strong>Google Sheets</strong> &mdash; Consolidación &middot; Gratis</li><li><strong>Semrush</strong> &mdash; SEO analytics &middot; Desde $129/mes</li><li><strong>HubSpot</strong> &mdash; CRM + Analytics &middot; Desde gratis</li></ul>
-
-<h2 id="conclusion">Conclusión</h2>
-<p>La analítica de marketing digital no es un lujo — es la base de toda estrategia rentable. Sin datos confiables, cada decisión es una apuesta.</p>
-<p>¿Necesitas implementar un sistema de analítica completo? En Apache Studio construimos <a href="/servicios/dashboards-y-reportes/">sistemas de inteligencia de datos</a> que transforman métricas en decisiones estratégicas.</p>
-
-<div class="ed-faq" id="faq">
-<h2>Preguntas frecuentes</h2>
-<h3>¿Qué es la analítica de marketing digital?</h3>
-<p>Es la disciplina que recopila, mide y analiza datos de todas las acciones de marketing para tomar decisiones estratégicas basadas en evidencia, no en intuición.</p>
-<h3>¿Cuáles son los KPIs más importantes de marketing?</h3>
-<p>Depende de tus objetivos. Para crecimiento: tráfico, CPL y tasa de conversión. Para rentabilidad: ROAS, CAC y LTV. Para retención: churn rate, NPS y tasa de recompra.</p>
-<h3>¿Cómo empiezo a implementar analítica de marketing?</h3>
-<p>Empieza por configurar Google Analytics 4 y Google Tag Manager correctamente. Luego define 5-8 KPIs alineados con tus objetivos. Finalmente, crea un dashboard en Looker Studio para visualizar y actuar sobre los datos.</p>
+<div class="ed-table-wrap">
+  <table>
+    <caption>Diferencias prácticas entre medir, reportar y analizar (criterio de trabajo, no una norma).</caption>
+    <thead><tr><th scope="col">&nbsp;</th><th scope="col">Medición</th><th scope="col">Reportería</th><th scope="col">Analítica</th></tr></thead>
+    <tbody>
+      <tr><td>Qué hace</td><td>Captura datos (eventos, conversiones, costos)</td><td>Presenta los datos de forma periódica</td><td>Interpreta los datos y propone qué hacer</td></tr>
+      <tr><td>Pregunta que responde</td><td>¿Qué pasó?</td><td>¿Cómo vamos?</td><td>¿Por qué pasó y qué cambiamos?</td></tr>
+      <tr><td>Herramientas típicas</td><td>GA4, Google Tag Manager, píxeles</td><td>Looker Studio, Excel, Sheets</td><td>Las anteriores más criterio de negocio</td></tr>
+      <tr><td>Si falla</td><td>Los números están mal</td><td>Nadie mira el reporte</td><td>Se decide por intuición</td></tr>
+    </tbody>
+  </table>
 </div>
 
+<blockquote>Medir sin decidir es archivar. Decidir sin medir es apostar.<cite>Apache Studio</cite></blockquote>
+
+<p>La evidencia disponible favorece a quienes usan bien los datos, aunque con matices: un estudio de McKinsey de 2014 encontró que las empresas que usaban de forma intensiva la analítica de clientes tenían 23 veces más probabilidad de superar claramente a sus competidores en captación de clientes. Es una asociación observada en encuestas, no prueba que instalar analítica produzca ese efecto.</p>
+<p>Un marco muy usado para ordenar el trabajo distingue cuatro niveles de análisis: <em>descriptivo</em> (qué pasó), <em>diagnóstico</em> (por qué pasó), <em>predictivo</em> (qué podría pasar) y <em>prescriptivo</em> (qué conviene hacer). La mayoría de los equipos se queda en el primero; el valor aparece a partir del segundo.</p>
+
+<h2 id="ciclo">El ciclo: recolectar, organizar, analizar, actuar</h2>
+<p>La analítica no es un proyecto que se termina, es un ciclo. Cada vuelta deja mejores datos y mejores decisiones que la anterior:</p>
+
+<figure class="ed-fig" id="fig-ciclo">
+  <svg viewBox="0 0 760 210" role="img" aria-labelledby="fc-t fc-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fc-t">Ciclo de la analítica de marketing</title>
+    <desc id="fc-d">Cuatro etapas en secuencia: recolectar, organizar, analizar y actuar, con una flecha que regresa de actuar a recolectar.</desc>
+    <defs><marker id="fc-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="f2" x="0" y="10" width="166" height="150" rx="8"/><text class="h" x="83" y="38" text-anchor="middle">1 · Recolectar</text>
+    <text x="83" y="68" text-anchor="middle">Etiquetas y eventos</text><text x="83" y="90" text-anchor="middle">Plataformas de anuncios</text><text x="83" y="112" text-anchor="middle">CRM y ventas</text><text x="83" y="134" text-anchor="middle">Consentimiento</text>
+    <rect class="f2" x="198" y="10" width="166" height="150" rx="8"/><text class="h" x="281" y="38" text-anchor="middle">2 · Organizar</text>
+    <text x="281" y="68" text-anchor="middle">Nombres y UTM únicos</text><text x="281" y="90" text-anchor="middle">Definiciones de KPI</text><text x="281" y="112" text-anchor="middle">Calidad de datos (QA)</text><text x="281" y="134" text-anchor="middle">Un solo repositorio</text>
+    <rect class="f2" x="396" y="10" width="166" height="150" rx="8"/><text class="h" x="479" y="38" text-anchor="middle">3 · Analizar</text>
+    <text x="479" y="68" text-anchor="middle">Tendencias y cohortes</text><text x="479" y="90" text-anchor="middle">Comparativos</text><text x="479" y="112" text-anchor="middle">Embudo y atribución</text><text x="479" y="134" text-anchor="middle">Hipótesis</text>
+    <rect class="acc" x="594" y="10" width="166" height="150" rx="8"/><text class="h on-acc" x="677" y="38" text-anchor="middle">4 · Actuar</text>
+    <text class="on-acc" x="677" y="68" text-anchor="middle">Mover presupuesto</text><text class="on-acc" x="677" y="90" text-anchor="middle">Probar cambios</text><text class="on-acc" x="677" y="112" text-anchor="middle">Corregir la medición</text><text class="on-acc" x="677" y="134" text-anchor="middle">Documentar</text>
+    <g class="s1"><path d="M166,85 L196,85" marker-end="url(#fc-ar)"/><path d="M364,85 L394,85" marker-end="url(#fc-ar)"/><path d="M562,85 L592,85" marker-end="url(#fc-ar)"/><path d="M677,160 L677,190 L83,190 L83,164" marker-end="url(#fc-ar)"/></g>
+  </svg>
+  <figcaption>Ciclo de trabajo: lo que aprendes al actuar mejora la siguiente recolección.</figcaption>
+</figure>
+
+<p>El error más común es saltarse el paso 2. Sin nombres consistentes, definiciones claras y validación, los pasos 3 y 4 se apoyan en datos que nadie puede defender frente a dirección.</p>
+
+<h2 id="que-medir">Qué medir según tu objetivo</h2>
+<p>No existe una lista universal de KPIs. Parte del objetivo del negocio y elige pocos indicadores que lo reflejen; cada uno con su fórmula escrita:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Indicadores habituales por objetivo. Las fórmulas son estándar; los umbrales «buenos» dependen de tu margen y tu sector.</caption>
+    <thead><tr><th scope="col">Objetivo</th><th scope="col">Indicadores</th><th scope="col">Cómo se calcula</th><th scope="col">Pregunta que responde</th></tr></thead>
+    <tbody>
+      <tr><td>Generar contactos (servicios, B2B)</td><td>CPL, tasa de conversión, % de leads calificados</td><td>Inversión ÷ leads · Leads ÷ sesiones · Calificados ÷ leads</td><td>¿Cuánto cuesta un contacto que sí compra?</td></tr>
+      <tr><td>Vender en línea</td><td>ROAS, CAC, ticket promedio, tasa de compra</td><td>Ingresos por anuncios ÷ inversión · Inversión ÷ clientes nuevos</td><td>¿Cada peso invertido regresa con margen?</td></tr>
+      <tr><td>Crecer en búsqueda orgánica</td><td>Clics, impresiones, CTR, sesiones orgánicas</td><td>Clics ÷ impresiones</td><td>¿Nos encuentran más personas por lo que vendemos?</td></tr>
+      <tr><td>Retener clientes</td><td>Recompra, churn, valor de vida (LTV)</td><td>Clientes que repiten ÷ clientes · Ingreso medio × vida útil</td><td>¿Cuánto vale un cliente a lo largo del tiempo?</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ed-callout">
+  <span class="ed-callout__label">Métrica útil vs. métrica de vanidad</span>
+  <p>Una métrica es útil si al subir o bajar te haría cambiar una decisión (presupuesto, mensaje, canal). Los seguidores o las impresiones por sí solos casi nunca lo hacen; el costo por cliente sí.</p>
+</div>
+
+<h2 id="plan-de-medicion">Plan de medición: antes de instalar nada</h2>
+<p>Un plan de medición es un documento corto que responde, por escrito, qué vas a medir y para qué. Evita el patrón clásico: instalar etiquetas primero y descubrir meses después que faltan las que importaban. Como mínimo debe incluir:</p>
+<ol>
+  <li><strong>Objetivos de negocio</strong> (por ejemplo, «aumentar solicitudes de cotización») y quién decide con esos datos.</li>
+  <li><strong>KPIs</strong> con definición y fórmula, y una meta o referencia para cada uno.</li>
+  <li><strong>Eventos y conversiones</strong> a registrar: envío de formulario, clic en WhatsApp, compra, llamada.</li>
+  <li><strong>Dimensiones</strong> con las que vas a segmentar: canal, campaña, dispositivo, país.</li>
+  <li><strong>Convención de nombres y UTM</strong> que todo el equipo respete.</li>
+  <li><strong>Responsables y fechas de revisión</strong>: quién mantiene la medición y cada cuánto se valida.</li>
+</ol>
+
+<h2 id="herramientas">Herramientas base y límites que conviene conocer</h2>
+<p>Para la mayoría de negocios el punto de partida es el ecosistema gratuito de Google. Estos son los papeles de cada pieza y algunos límites documentados que suelen sorprender:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Fuentes: documentación oficial de Google (enlaces al final).</caption>
+    <thead><tr><th scope="col">Herramienta</th><th scope="col">Para qué sirve</th><th scope="col">Dato a tener presente</th></tr></thead>
+    <tbody>
+      <tr><td>Google Analytics 4</td><td>Medir comportamiento en sitio y app mediante eventos</td><td>La retención de datos a nivel de evento es de 2 o 14 meses en propiedades estándar; después, ya no puedes explorar esos datos con detalle.</td></tr>
+      <tr><td>Google Tag Manager</td><td>Instalar y mantener etiquetas sin tocar el código cada vez</td><td>Es donde se controlan disparadores, variables y consentimiento.</td></tr>
+      <tr><td>Looker Studio</td><td>Visualizar y compartir tableros</td><td>Los datos de Google Ads y GA se actualizan cada 12 horas; no es tiempo real.</td></tr>
+      <tr><td>Search Console</td><td>Ver cómo aparece tu sitio en Google</td><td>Complementa GA4: informa impresiones y consultas que GA4 no ve.</td></tr>
+      <tr><td>BigQuery</td><td>Guardar y consultar datos en bruto</td><td>La exportación diaria de GA4 en propiedades estándar tiene un límite de 1 millón de eventos.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>La consecuencia práctica de la retención es que <strong>si quieres comparar contra hace más de 14 meses, necesitas exportar los datos</strong> a BigQuery o a tu propio almacén desde el principio. No se puede recuperar hacia atrás.</p>
+<p>También conviene saber que GA4 llama <em>eventos clave</em> a lo que antes llamaba conversiones; en Google Ads, «conversión» quedó reservado para las acciones que usas para optimizar campañas. Marcar un evento como clave en GA4 no lo convierte automáticamente en objetivo de puja: hay que importarlo en Google Ads.</p>
+
+<h2 id="atribucion">Atribución sin mitos</h2>
+<p>La atribución decide a qué canal se le da el crédito de una venta cuando el cliente tuvo varios contactos. En GA4 hoy hay tres modelos disponibles para los informes de atribución; los modelos de primer clic, lineal, con decaimiento temporal y basado en posición dejaron de estar disponibles en noviembre de 2023.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Modelos de atribución disponibles en GA4 según la documentación de Google.</caption>
+    <thead><tr><th scope="col">Modelo</th><th scope="col">Cómo reparte el crédito</th><th scope="col">Cuándo tiene sentido</th></tr></thead>
+    <tbody>
+      <tr><td>Basado en datos (recomendado)</td><td>Usa los datos de tu cuenta para estimar la contribución de cada interacción</td><td>Cuando hay volumen suficiente de conversiones</td></tr>
+      <tr><td>Último clic pago y orgánico</td><td>Da el 100 % al último canal en el que el usuario hizo clic, ignorando el tráfico directo</td><td>Cuando quieres una regla simple y explicable</td></tr>
+      <tr><td>Último clic de canales pagos de Google</td><td>Da el 100 % al último canal de Google Ads con clic; si no hay, cae al modelo anterior</td><td>Para evaluar solo el aporte de Google Ads</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Tres ideas evitan la mayoría de los malentendidos:</p>
+<ul>
+  <li><strong>El modelo cambia el reparto del crédito, no la realidad.</strong> Si cambias de modelo, un canal sube y otro baja, pero no vendiste más.</li>
+  <li><strong>Las plataformas no coinciden entre sí</strong> (Meta, Google Ads y GA4 usan ventanas y reglas distintas). Es normal que la suma de conversiones reportadas supere las ventas reales; la referencia final es tu CRM o tu caja.</li>
+  <li><strong>La atribución es una estimación.</strong> Úsala para comparar y decidir, no como contabilidad.</li>
+</ul>
+
+<h2 id="roi">ROI y ROAS sin engañarte</h2>
+<p>Se confunden con frecuencia. El <strong>ROAS</strong> mide ingresos por cada peso invertido en anuncios; el <strong>ROI</strong> mide la ganancia respecto a lo invertido y por eso necesita el costo del producto y otros gastos. Un ejemplo con cifras ilustrativas (no son datos reales de ningún cliente):</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Ejemplo ilustrativo con números inventados para mostrar la diferencia entre ROAS y ROI.</caption>
+    <thead><tr><th scope="col">Concepto</th><th scope="col">Valor</th><th scope="col">Cálculo</th></tr></thead>
+    <tbody>
+      <tr><td>Inversión en anuncios</td><td>$20,000</td><td>—</td></tr>
+      <tr><td>Ingresos atribuidos</td><td>$80,000</td><td>—</td></tr>
+      <tr><td>ROAS</td><td>4.0</td><td>80,000 ÷ 20,000</td></tr>
+      <tr><td>Margen bruto del producto</td><td>40 %</td><td>Dato del negocio</td></tr>
+      <tr><td>Utilidad bruta generada</td><td>$32,000</td><td>80,000 × 0.40</td></tr>
+      <tr><td>ROI sobre la inversión en anuncios</td><td>60 %</td><td>(32,000 − 20,000) ÷ 20,000</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Un ROAS de 4 suena excelente, pero con ese margen la ganancia es de 60 % sobre lo invertido, y sin contar sueldos ni herramientas. Por eso el ROAS «bueno» no existe en abstracto: <strong>es el que supera tu punto de equilibrio</strong> (1 ÷ margen: con 40 % de margen, ROAS de 2.5).</p>
+
+<h2 id="errores">Siete errores que distorsionan tus números</h2>
+<ol>
+  <li><strong>Empezar sin plan de medición.</strong> Terminas con datos que no responden a ninguna pregunta.</li>
+  <li><strong>Eventos duplicados.</strong> Etiquetas instaladas dos veces (en el código y en Tag Manager) inflan las conversiones.</li>
+  <li><strong>UTM inconsistentes.</strong> «Facebook», «facebook» y «fb» aparecen como tres fuentes distintas.</li>
+  <li><strong>No excluir tráfico interno.</strong> Tu equipo y tus proveedores contaminan las visitas y el embudo.</li>
+  <li><strong>Comparar plataformas esperando cifras idénticas.</strong> Cada una mide con reglas propias; concilia contra ventas reales.</li>
+  <li><strong>Ignorar el consentimiento.</strong> Sin un banner bien configurado pierdes datos o te expones a problemas de cumplimiento (consulta a tu asesor legal por normativa aplicable).</li>
+  <li><strong>No validar (QA).</strong> Nadie compara tres cifras del tablero contra la plataforma original hasta que dirección detecta el error.</li>
+</ol>
+
+<h2 id="checklist">Checklist de una medición sana</h2>
+<ul class="ed-checklist">
+  <li>Existe un plan de medición por escrito con objetivos, KPIs y responsables.</li>
+  <li>Cada KPI tiene definición, fórmula y fuente documentadas.</li>
+  <li>Las conversiones importantes están marcadas como eventos clave y probadas una por una.</li>
+  <li>Los nombres de campaña y UTM siguen una convención única.</li>
+  <li>Se excluye el tráfico interno y se revisa la retención de datos configurada.</li>
+  <li>Los datos se exportan a un almacén propio si necesitas historial largo.</li>
+  <li>El banner de consentimiento funciona y está conectado a las etiquetas.</li>
+  <li>Se concilia mensualmente contra ventas reales del CRM o contabilidad.</li>
+</ul>
+
+<h2 id="siguiente-paso">Cuándo conviene dar el siguiente paso</h2>
+<p>Si ya mides bien pero pasas horas cada semana armando reportes, es momento de un tablero: te sugerimos leer cómo construirlo en nuestra <a href="/blog/dashboard-de-marketing-digital/">guía de dashboard de marketing digital</a> o conocer el servicio de <a href="/servicios/dashboards-y-reportes/">dashboards y reportes</a>. Si sospechas que las cifras no cuadran, primero revisa la base con el servicio de <a href="/servicios/implementacion-tecnica/">implementación técnica</a>. También puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a> para revisar tu caso.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Qué es la analítica de marketing digital?</h3>
+  <p>Es el proceso de recolectar, organizar y analizar datos de tus canales digitales (sitio, campañas, redes, correo y CRM) para entender qué funciona y decidir dónde invertir. Se diferencia de la reportería en que no solo presenta cifras: explica por qué cambian y qué hacer.</p>
+  <h3>¿Cuánto tiempo guarda datos Google Analytics 4?</h3>
+  <p>En propiedades estándar puedes elegir que los datos a nivel de evento se conserven 2 o 14 meses. Los informes agregados estándar no se ven afectados, pero las exploraciones con detalle sí. Si necesitas historial más largo, exporta los datos a BigQuery desde el inicio.</p>
+  <h3>¿Qué diferencia hay entre ROI y ROAS?</h3>
+  <p>El ROAS divide los ingresos atribuidos a anuncios entre la inversión en anuncios. El ROI mide la ganancia respecto a lo invertido, por lo que necesita el margen y otros costos. Puedes tener un ROAS alto y un ROI bajo si el margen es pequeño.</p>
+  <h3>¿Qué modelo de atribución debo usar en GA4?</h3>
+  <p>Google recomienda el modelo basado en datos cuando hay suficiente volumen de conversiones. Si tienes poco volumen o necesitas una regla fácil de explicar, el último clic pago y orgánico es una opción razonable. Lo importante es usar el mismo modelo al comparar periodos.</p>
+  <h3>¿Por qué no coinciden las conversiones de Meta, Google Ads y GA4?</h3>
+  <p>Porque cada plataforma cuenta con sus propias reglas: ventanas de atribución, tipos de conversión y tratamiento del tráfico directo. Es esperable que difieran; la cifra de referencia debe salir de tus ventas reales.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Analytics Help — <a href="https://support.google.com/analytics/answer/7667196" rel="noopener">Data retention</a> (retención de 2 y 14 meses).</li>
+    <li>Google Analytics Help — <a href="https://support.google.com/analytics/answer/10596866" rel="noopener">Get started with attribution</a> y <a href="https://support.google.com/analytics/answer/10597962" rel="noopener">Select attribution settings</a> (modelos disponibles).</li>
+    <li>Google Analytics Help — <a href="https://support.google.com/analytics/answer/13965727" rel="noopener">Conversions vs. key events in Google Analytics</a>.</li>
+    <li>Google Analytics Help — <a href="https://support.google.com/analytics/answer/9358801" rel="noopener">BigQuery Export</a> (límite de 1 millón de eventos en la exportación diaria estándar).</li>
+    <li>Google Cloud — <a href="https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness" rel="noopener">Manage data freshness (Looker Studio)</a>.</li>
+    <li>McKinsey &amp; Company — <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-facts-how-customer-analytics-boosts-corporate-performance" rel="noopener">Five facts: How customer analytics boosts corporate performance</a> (2014): asociación entre analítica intensiva y desempeño superior en captación de clientes.</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Las herramientas cambian: si encuentras algo desactualizado, escríbenos.</p>
+</div>

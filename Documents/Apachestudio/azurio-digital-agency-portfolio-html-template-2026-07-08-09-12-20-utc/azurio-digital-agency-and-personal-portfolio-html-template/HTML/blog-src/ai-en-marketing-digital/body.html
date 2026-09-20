@@ -1,65 +1,159 @@
-<p class="drop-cap"><strong>Respuesta corta:</strong> empieza por los datos (GTM y GA4 bien medidos), activa los quick wins que ya vienen incluidos en Google Ads y Meta (Smart Bidding, Advantage+, send-time optimization) y solo después escala a modelos predictivos como lead scoring o predicción de churn. A continuación desglosamos los 3 niveles de madurez, los casos de uso que sí mueven la aguja y las herramientas para cada etapa.</p>
+<p class="drop-cap">Si administras campañas en Google o Meta, ya usas inteligencia artificial aunque nunca hayas escrito un prompt: las pujas se ajustan solas, las audiencias se amplían solas y hasta los creativos se combinan solos. La pregunta útil ya no es «¿implemento IA?», sino «¿qué dejo en manos de la plataforma, qué hago yo y cómo verifico que no está optimizando hacia la señal equivocada?».</p>
 
-<p><strong>Empieza por aquí (3 quick wins reales):</strong></p>
+<p>Esta guía ordena el tema en tres niveles de madurez, explica qué ya viene incluido en Google Ads y Meta, qué datos necesitas antes de activar cada cosa, cómo usar IA generativa sin exponer información sensible ni inventar cifras, y cómo medir si realmente aporta. Los datos sobre plataformas provienen de su documentación oficial (fuentes al final); las recomendaciones de proceso son nuestro criterio de trabajo.</p>
 
-<p><strong>Antes de activarlos, verifica:</strong> eventos de conversión únicos y deduplicados en GTM, GA4 recibiendo datos sin muestreo raro, al menos 30 conversiones al mes por campaña y un <a href="/blog/dashboard-de-marketing-digital/">dashboard</a> donde compares antes y después. Sin esos cuatro puntos, la IA optimiza hacia la señal equivocada.</p>
-
-<p><strong>Errores que cuestan presupuesto:</strong> activar automatización con conversiones duplicadas, cambiar pujas u objetivos durante la fase de aprendizaje, juzgar resultados con menos de 14 días de datos y delegar el copy completo a un modelo sin revisión humana.</p>
-
-<h2 id="que-es-el-ai-en-marketing-digital">¿Qué es el AI en marketing digital?</h2>
-<p>El <strong>AI en marketing digital</strong> es la aplicación de inteligencia artificial y machine learning para automatizar, optimizar y personalizar las estrategias de marketing a una escala imposible de lograr manualmente.</p>
-<p>No se trata de reemplazar marketeros con robots. Se trata de potenciar la creatividad y la estrategia humana con la capacidad de procesamiento, análisis de patrones y predicción de la IA.</p>
-<h3>La evolución del marketing digital</h3>
-<ul><li>Marketing 1.0: intuición y experiencia → "Creo que esto funciona"</li><li>Marketing 2.0: datos y analítica → "Los datos dicen que esto funciona"</li><li>Marketing 3.0: AI-Driven → "La IA predice qué funcionará y optimiza en tiempo real"</li></ul>
-
-<h2 id="los-3-niveles-de-ai-en-marketing">Los 3 niveles de AI en marketing</h2>
-<h3>Nivel 1: Automatización inteligente</h3>
-<p>La automatización inteligente de marketing va más allá de reglas simples (if/then). Usa machine learning para enviar emails en el momento óptimo para cada usuario, ajustar pujas publicitarias en tiempo real, segmentar audiencias por comportamiento predictivo y personalizar contenido dinámicamente.</p>
-<h3>Nivel 2: Optimización con IA</h3>
-<p>La optimización de campañas con IA utiliza algoritmos para pacing inteligente de presupuesto, detección de anomalías en métricas, atribución multi-canal basada en datos y predicción de rendimiento de campañas.</p>
-<h3>Nivel 3: Cultura AI-Driven</h3>
-<p>El nivel más avanzado transforma la organización completa. No es solo usar herramientas de IA, sino que la inteligencia de datos guíe cada decisión de marketing.</p>
-
-<figure class="ed-fig">
-  <img loading="lazy" src="/img/real/blog/claude-ia-guia.jpg" alt="Optimizacion de campanas con IA">
-  <figcaption>Optimización de campañas con IA</figcaption>
-</figure>
-
-<h2 id="casos-de-uso-practicos-de-ai-en-marketing">Casos de uso prácticos de AI en marketing</h2>
-<h3>Optimización de campañas publicitarias</h3>
-<p>Smart Bidding de Google ajusta pujas por subasta usando señales contextuales. Advantage+ de Meta optimiza audiencias y creativos automáticamente. El pacing inteligente permite control de presupuesto diario con predicción de rendimiento.</p>
-<h3>Personalización de contenido</h3>
-<p>Emails dinámicos con contenido que cambia según el perfil del destinatario, landing pages adaptativas con experiencias diferentes por segmento, y recomendaciones de producto tipo "los clientes que compraron X también compraron Y".</p>
-<h3>Análisis predictivo</h3>
-<p>Predicción de churn para identificar clientes en riesgo antes de que se vayan, forecasting de ventas con proyecciones basadas en tendencias históricas, y lead scoring predictivo para calificar leads por probabilidad de conversión.</p>
-<h3>Generación de contenido</h3>
-<p>Copy asistido por IA para variaciones de anuncios y emails, análisis de sentimiento para monitorear la percepción de marca, y SEO inteligente para identificar oportunidades de contenido con IA.</p>
-
-<h2 id="como-implementar-ai-en-tu-marketing">Cómo implementar AI en tu marketing</h2>
-<h3>Paso 1: Asegura la base de datos</h3>
-<p>La IA necesita datos de calidad. Antes de implementar herramientas de AI, asegúrate de tener tracking correcto (GTM + GA4), datos centralizados en un <a href="/blog/dashboard-de-marketing-digital/">dashboard</a>, e historial suficiente (mínimo 3-6 meses).</p>
-<h3>Paso 2: Empieza con quick wins</h3>
-<p>No intentes implementar todo a la vez. Quick wins de AI: activar Smart Bidding en Google Ads, usar Advantage+ audiences en Meta, implementar send-time optimization en emails, configurar alertas automáticas de anomalías.</p>
-<h3>Paso 3: Escala con estrategia</h3>
-<p>Una vez validados los quick wins: implementar lead scoring predictivo, personalización dinámica de contenido, modelos de atribución data-driven, forecasting y planificación asistida.</p>
-
-<h2 id="herramientas-de-ai-para-marketing">Herramientas de AI para marketing</h2>
-<ul><li><strong>Google Smart Bidding</strong> &mdash; Optimización de pujas &middot; Básico</li><li><strong>Meta Advantage+</strong> &mdash; Optimización de campañas &middot; Básico</li><li><strong>ChatGPT / Claude</strong> &mdash; Generación de contenido &middot; Básico</li><li><strong>HubSpot AI</strong> &mdash; CRM y automatización &middot; Intermedio</li><li><strong>Jasper</strong> &mdash; Copy para ads y emails &middot; Intermedio</li><li><strong>Modelos de ML a medida</strong> &mdash; Predicción y scoring &middot; Avanzado</li></ul>
-
-<h2 id="el-futuro-del-ai-en-marketing">El futuro del AI en marketing</h2>
-<p>La inteligencia artificial está transformando el marketing de formas que apenas empezamos a ver: agentes de AI que ejecutan estrategias completas autónomamente, hyper-personalización con experiencias únicas para cada usuario, marketing predictivo que anticipa necesidades antes de que el usuario las exprese, y creative AI para generación de creativos optimizados automáticamente.</p>
-
-<h2 id="conclusion">Conclusión</h2>
-<p>El AI en marketing no es opcional — es la ventaja competitiva que separa a las empresas que lideran de las que siguen. La pregunta no es si implementar AI, sino qué tan rápido puedes hacerlo.</p>
-<p>¿Listo para transformar tu marketing con inteligencia artificial? En Apache Studio implementamos cultura AI-Driven que conecta datos, automatización e inteligencia para resultados reales.</p>
-
-<div class="ed-faq" id="faq">
-<h2>Preguntas frecuentes</h2>
-<h3>¿Qué es el marketing AI-Driven?</h3>
-<p>Es un enfoque donde la inteligencia artificial y los datos guían cada decisión de marketing, desde la optimización de campañas hasta la personalización de contenido, en lugar de depender de intuición o experiencia subjetiva.</p>
-<h3>¿Necesito ser técnico para implementar AI en marketing?</h3>
-<p>No necesariamente. Muchas herramientas como Smart Bidding de Google y Advantage+ de Meta ya integran AI. Para implementaciones avanzadas (modelos predictivos, scoring), sí necesitas apoyo técnico o un partner especializado.</p>
-<h3>¿El AI va a reemplazar a los marketeros?</h3>
-<p>No. La IA reemplaza tareas repetitivas y análisis manual. Los marketeros se enfocan en estrategia, creatividad y relaciones humanas — habilidades que la IA no puede replicar.</p>
+<div class="ed-callout">
+  <span class="ed-callout__label">Respuesta corta</span>
+  <p>Primero arregla la medición. Después activa lo que ya trae tu plataforma (pujas automáticas, campañas automatizadas) con una prueba controlada. Solo cuando eso funcione, considera modelos propios como calificación de leads o predicción de abandono.</p>
 </div>
 
+<h2 id="que-es">Qué es (y qué no es) la IA en marketing digital</h2>
+<p>Bajo la etiqueta «IA» conviven tres cosas muy distintas que conviene no mezclar, porque cada una tiene riesgos y requisitos propios:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Tres formas de IA en marketing (clasificación de trabajo, no una norma).</caption>
+    <thead><tr><th scope="col">Tipo</th><th scope="col">Qué hace</th><th scope="col">Ejemplos</th><th scope="col">Riesgo principal</th></tr></thead>
+    <tbody>
+      <tr><td>Automatización dentro de plataformas</td><td>Aprendizaje automático que optimiza pujas, audiencias y combinaciones de anuncios</td><td>Smart Bidding, Performance Max, Advantage+</td><td>Optimizar hacia una conversión mal medida</td></tr>
+      <tr><td>IA generativa</td><td>Produce texto, imágenes o resúmenes a partir de instrucciones</td><td>Asistentes de texto, herramientas de creatividad</td><td>Errores presentados con seguridad y filtración de datos</td></tr>
+      <tr><td>Modelos propios</td><td>Predicen algo específico de tu negocio con tus datos</td><td>Calificación de leads, predicción de abandono, pronóstico de ventas</td><td>Datos insuficientes o sesgados; mantenimiento</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<blockquote>La IA no corrige una mala medición: la escala.<cite>Apache Studio</cite></blockquote>
+
+<p>Tampoco se trata de reemplazar a las personas. La IA es buena para procesar volumen y encontrar patrones; la estrategia, la oferta, el criterio de marca y la responsabilidad por los resultados siguen siendo humanas.</p>
+
+<h2 id="plataformas">Lo que ya viene incluido en Google y Meta</h2>
+<p>Antes de contratar herramientas nuevas, revisa lo que tus plataformas ya ofrecen. Estas son las principales, según su documentación:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Funciones de automatización de las plataformas. Los nombres y opciones cambian con frecuencia; confirma en la plataforma.</caption>
+    <thead><tr><th scope="col">Función</th><th scope="col">Qué automatiza</th><th scope="col">Qué debes aportar</th><th scope="col">Qué vigilar</th></tr></thead>
+    <tbody>
+      <tr><td>Smart Bidding (Google Ads)</td><td>Ajusta pujas en cada subasta para cumplir un objetivo (conversiones, valor, CPA, ROAS)</td><td>Conversiones bien medidas y, si aplica, con valor</td><td>Que el objetivo refleje tu rentabilidad real</td></tr>
+      <tr><td>Performance Max (Google Ads)</td><td>Un solo tipo de campaña con acceso a YouTube, Display, Búsqueda, Discover, Gmail y Maps</td><td>Objetivos de conversión claros, activos creativos y datos de audiencia</td><td>Dónde se gasta y qué conversiones aporta cada parte</td></tr>
+      <tr><td>Advantage+ (Meta)</td><td>En campañas de ventas, automatiza creativos, audiencia, optimización, presupuesto y destino</td><td>Un catálogo o una oferta clara, creativos variados y el píxel o la API de conversiones bien configurados</td><td>Calidad de las ventas y de las audiencias nuevas frente a las de siempre</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Estas herramientas son potentes, pero <strong>optimizan exactamente lo que les pides medir</strong>. Si una campaña cuenta como conversión el clic en un botón que no lleva a ninguna venta, la IA aprenderá a conseguir más de esos clics.</p>
+
+<figure class="ed-fig alignright">
+  <img src="/img/real/dashboards/capability-insights-ia.jpg" width="1440" height="960" loading="lazy" alt="Ilustración de paneles con recomendaciones e insights generados con IA">
+  <figcaption>Ilustración: insights asistidos por IA.</figcaption>
+</figure>
+
+<h2 id="datos">Datos primero: qué necesitas antes de activar nada</h2>
+<p>Las plataformas publican referencias sobre cuántas señales necesitan para optimizar con estabilidad. No son garantías, pero sirven para decidir si estás listo:</p>
+<ul>
+  <li><strong>Google Ads:</strong> para usar ROAS objetivo en Search y Shopping, la documentación pide al menos 15 conversiones en los últimos 30 días. Google también recomienda registrar valores durante unas 4 semanas o 1–2 ciclos de conversión antes de fijar el objetivo.</li>
+  <li><strong>Meta:</strong> el aprendizaje de un conjunto se estabiliza con alrededor de 50 eventos de optimización en 7 días, y ciertas ediciones (pausar, cambiar el evento de optimización, la audiencia o el creativo) reinician esa fase.</li>
+  <li><strong>Medición limpia:</strong> eventos únicos y deduplicados, conversiones que representen ventas o leads reales y una forma de comparar contra tus ventas en el CRM.</li>
+  <li><strong>Historial:</strong> como criterio de trabajo, conviene tener varios meses de datos para comparar (nosotros buscamos al menos 3 meses).</li>
+</ul>
+<p>Si algo de esto falla, empieza por ahí: nuestra guía de <a href="/blog/implementacion-tecnica/">implementación técnica</a> explica cómo dejar la medición en orden y la de <a href="/blog/analitica-de-marketing-digital/">analítica de marketing digital</a> cómo definir qué contar.</p>
+
+<h2 id="niveles">Tres niveles de madurez</h2>
+<p>Recomendamos avanzar en orden. Saltarse un nivel suele terminar en herramientas caras que nadie sabe evaluar:</p>
+
+<figure class="ed-fig" id="fig-niveles">
+  <svg viewBox="0 0 760 250" role="img" aria-labelledby="fn-t fn-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fn-t">Tres niveles de madurez en IA aplicada al marketing</title>
+    <desc id="fn-d">Escalera de tres peldaños: automatización dentro de las plataformas, IA generativa en el trabajo diario y modelos propios con tus datos.</desc>
+    <rect class="f2" x="0" y="150" width="250" height="100" rx="8"/><text class="h" x="16" y="180">Nivel 1 · Plataformas</text><text x="16" y="204">Smart Bidding, PMax,</text><text x="16" y="224">Advantage+ con buena medición</text>
+    <rect class="f3" x="255" y="90" width="250" height="160" rx="8"/><text class="h" x="271" y="120">Nivel 2 · IA generativa</text><text x="271" y="144">Variantes de copy, resúmenes,</text><text x="271" y="164">clasificación de mensajes,</text><text x="271" y="184">apoyo en análisis</text><text x="271" y="220">Siempre con revisión humana</text>
+    <rect class="acc" x="510" y="20" width="250" height="230" rx="8"/><text class="h on-acc" x="526" y="50">Nivel 3 · Modelos propios</text><text class="on-acc" x="526" y="74">Calificación de leads,</text><text class="on-acc" x="526" y="94">predicción de abandono,</text><text class="on-acc" x="526" y="114">pronóstico de ventas</text><text class="on-acc" x="526" y="150">Requiere datos limpios</text><text class="on-acc" x="526" y="170">y mantenimiento continuo</text>
+  </svg>
+  <figcaption>Cada nivel depende de que el anterior funcione y se pueda medir.</figcaption>
+</figure>
+
+<h2 id="casos">Casos de uso y cómo controlarlos</h2>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Casos de uso frecuentes y el control humano recomendado.</caption>
+    <thead><tr><th scope="col">Caso</th><th scope="col">Cómo se usa</th><th scope="col">Control humano</th></tr></thead>
+    <tbody>
+      <tr><td>Optimización de campañas</td><td>Pujas automáticas y campañas automatizadas</td><td>Revisar conversiones, exclusiones y calidad de las ventas cada semana</td></tr>
+      <tr><td>Contenido y creatividad</td><td>Variantes de anuncios, asuntos de correo, ideas de piezas</td><td>Revisar tono, promesas y cifras antes de publicar</td></tr>
+      <tr><td>Análisis</td><td>Resúmenes de reportes, detección de anomalías, hipótesis</td><td>Verificar cada cifra contra la fuente original</td></tr>
+      <tr><td>Atención y ventas</td><td>Chat que responde preguntas frecuentes y califica</td><td>Vía siempre disponible a una persona; revisar conversaciones</td></tr>
+      <tr><td>Predicción</td><td>Calificar leads, anticipar abandono, pronosticar ventas</td><td>Validar el modelo contra resultados reales antes de usarlo para decidir</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="generativa">IA generativa en el trabajo diario: reglas que aplicamos</h2>
+<p>Las herramientas de texto ahorran tiempo, pero introducen dos riesgos que hay que gestionar de forma explícita:</p>
+<ol>
+  <li><strong>No inventes datos: verifícalos.</strong> Un modelo puede redactar con seguridad una cifra o una fuente que no existe. Toda estadística que salga en un artículo, un anuncio o un reporte debe rastrearse a su fuente original.</li>
+  <li><strong>Cuida la información.</strong> No pegues datos personales de clientes ni información confidencial en una herramienta sin haber revisado sus términos de uso y las opciones de privacidad de tu plan. Anonimiza cuando sea posible.</li>
+  <li><strong>Mantén una guía de voz de marca</strong> y úsala como contexto; el resultado suena más a tu empresa y menos a un texto genérico.</li>
+  <li><strong>Deja constancia:</strong> guarda las instrucciones que funcionan y quién revisó cada pieza.</li>
+</ol>
+
+<h2 id="privacidad">Privacidad y cumplimiento</h2>
+<p>Cuando conectas datos de clientes a una plataforma o a un modelo, tratas datos personales. Asegúrate de contar con aviso de privacidad, con el consentimiento que corresponda y con un proveedor cuyos términos permitan ese uso. La normativa varía por país (México, Colombia, la Unión Europea), así que confirma los requisitos con tu asesor legal antes de automatizar decisiones con datos de personas.</p>
+
+<h2 id="errores">Errores que cuestan presupuesto</h2>
+<ul>
+  <li><strong>Activar automatización sobre conversiones duplicadas o de poco valor.</strong> La IA aprende a repetir el error.</li>
+  <li><strong>Cambiar objetivos, audiencias o creativos sin parar</strong> durante el aprendizaje: cada edición significativa reinicia el proceso.</li>
+  <li><strong>Juzgar resultados demasiado pronto.</strong> Con pocos datos, las variaciones son ruido; espera a acumular las conversiones que la plataforma necesita.</li>
+  <li><strong>Delegar el copy completo sin revisión.</strong> Aparecen promesas que no puedes cumplir o afirmaciones sin sustento.</li>
+  <li><strong>Evaluar solo con las métricas de la plataforma.</strong> Contrasta siempre con ventas reales.</li>
+  <li><strong>Automatizar sin un responsable.</strong> Alguien debe poder pausar la campaña o el flujo si algo se sale de rango.</li>
+</ul>
+
+<h2 id="plan">Plan de 30 días para empezar</h2>
+<ol>
+  <li><strong>Semana 1 · Medición.</strong> Audita eventos y conversiones, elimina duplicados y confirma que coinciden con tus ventas.</li>
+  <li><strong>Semana 2 · Un solo caso.</strong> Elige uno (por ejemplo, pujas automáticas en una campaña) y anota tu línea base: costo por resultado, volumen y calidad.</li>
+  <li><strong>Semana 3 · Prueba controlada.</strong> Actívalo en una parte de la inversión y mantén el resto como comparación. Evita ediciones adicionales.</li>
+  <li><strong>Semana 4 · Evaluación.</strong> Compara contra la línea base y contra las ventas reales; decide si escalas, ajustas o desactivas, y documenta lo aprendido.</li>
+</ol>
+
+<h2 id="medir">Cómo medir el impacto real</h2>
+<p>La forma más confiable es comparar contra un grupo que no recibió el cambio (una campaña de control o una región) durante un periodo equivalente. Si no puedes dividir, compara periodos con estacionalidad similar y anota todo lo demás que cambió. Mide costo por resultado, volumen y <strong>calidad</strong> (leads calificados o margen de las ventas), no solo la cifra que reporta la plataforma.</p>
+
+<h2 id="checklist">Checklist antes de activar IA</h2>
+<ul class="ed-checklist">
+  <li>Las conversiones son únicas, están deduplicadas y representan ventas o leads reales.</li>
+  <li>Tienes el volumen mínimo de conversiones que pide la plataforma para ese objetivo.</li>
+  <li>Definiste una línea base y un criterio de éxito antes de activar.</li>
+  <li>Habrá una revisión humana de creativos, textos y cifras antes de publicar.</li>
+  <li>Sabes qué datos personales se usan, con qué consentimiento y en qué herramienta.</li>
+  <li>Hay un responsable y una fecha de evaluación.</li>
+</ul>
+
+<p>Si quieres revisar tu caso, cuéntanos en una <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">llamada</a>. Y para conocer cómo se conectan estas piezas con tus campañas, lee la guía de <a href="/blog/performance-marketing/">performance marketing</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Qué es el marketing AI-driven?</h3>
+  <p>Es un enfoque en el que los datos y la inteligencia artificial informan decisiones de marketing (optimización de campañas, personalización, predicción) con supervisión humana. No significa delegar la estrategia a una herramienta, sino apoyarte en ella con controles y métricas claras.</p>
+  <h3>¿Necesito ser técnico para usar IA en marketing?</h3>
+  <p>No para el primer nivel: muchas funciones ya vienen dentro de Google Ads y Meta. Para modelos propios (calificación de leads, predicción) sí necesitas apoyo técnico y datos limpios; conviene empezar por lo más simple y validar antes de invertir más.</p>
+  <h3>¿La IA va a reemplazar a los profesionales de marketing?</h3>
+  <p>Automatiza tareas repetitivas y de análisis de volumen, y cambia el tipo de trabajo. La estrategia, la definición de la oferta, el criterio de marca y la responsabilidad sobre los resultados siguen requiriendo personas.</p>
+  <h3>¿Es seguro usar asistentes de IA con datos de clientes?</h3>
+  <p>Depende del proveedor y del plan. Revisa los términos de uso y las opciones de privacidad, evita incluir datos personales o confidenciales cuando no sea imprescindible y define una política interna. Consulta a tu asesor legal si tratas datos sensibles.</p>
+  <h3>¿Cuánto tiempo debo esperar antes de evaluar los resultados?</h3>
+  <p>Hasta que la plataforma acumule las señales que necesita. En Meta, alrededor de 50 eventos de optimización en 7 días tras la última edición significativa; en Google, unas 4 semanas de historial de valores o 1–2 ciclos de conversión antes de fijar un ROAS objetivo. Con menos datos, las variaciones son ruido.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/7065882" rel="noopener">About Smart Bidding</a> y <a href="https://support.google.com/google-ads/answer/6268637" rel="noopener">About Target ROAS bidding</a> (historial mínimo de conversiones y periodo recomendado).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/10724817" rel="noopener">About Performance Max campaigns</a> (canales incluidos).</li>
+    <li>Meta for Business — <a href="https://www.facebook.com/business/ads/meta-advantage-plus/sales-campaigns" rel="noopener">Advantage+ sales campaigns</a> (elementos que automatiza).</li>
+    <li>Meta Business Help Center — <a href="https://www.facebook.com/business/help/112167992830700/" rel="noopener">About the learning phase</a> y <a href="https://www.facebook.com/business/help/316478108955072" rel="noopener">Significant edits and learning phase</a>.</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Las plataformas cambian nombres y reglas con frecuencia: si encuentras algo desactualizado, escríbenos.</p>
+</div>

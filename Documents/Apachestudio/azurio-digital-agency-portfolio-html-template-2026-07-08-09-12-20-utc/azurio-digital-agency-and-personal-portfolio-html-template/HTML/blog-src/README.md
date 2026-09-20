@@ -11,7 +11,10 @@ python scripts/make_og.py [slug]        # imagen Open Graph 1200x630 (Pillow + S
 
 ## Artículo nuevo
 
-1. Crea `blog-src/<slug>/meta.json` (copia uno existente): `title` (≤ 60), `h1`, `description` (120–160),
+`python scripts/new_post.py <slug>` copia `blog-src/_plantilla/` a `blog-src/<slug>/` y agrega el slug a `posts.json`.
+Reemplaza todos los `[[...]]` (el build avisa si quedan). Detalle de campos:
+
+1. `blog-src/<slug>/meta.json`: `title` (≤ 60), `h1`, `description` (120–160),
    `keywords`, `section`, `tags`, `published`/`modified` (AAAA-MM-DD), `lead`, `hero {src, alt, caption}`,
    `related` (3 slugs), `about`, `author` (clave de `site.json`), `crumb` opcional.
 2. Escribe `blog-src/<slug>/body.html` (solo el cuerpo):

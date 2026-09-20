@@ -1,63 +1,152 @@
-<p class="drop-cap">En este artículo te contamos qué es Apache 360, cómo funciona por dentro, cuánto tarda en implementarse y para qué tipo de negocio está pensado. Nada de teoría abstracta: es el mismo sistema que usamos con nuestros clientes todos los días.</p>
+<p class="drop-cap">Un lunes cualquiera: Google Ads en una pestaña, Meta en otra, TikTok en una tercera, un Excel a medio actualizar y un correo de la agencia con cifras que no coinciden con ninguna. Armar el reporte de la semana toma horas, y para cuando está listo, la oportunidad de corregir el gasto de la campaña que se desvió ya pasó. Apache 360 es la respuesta que construimos a ese problema: un solo lugar donde se juntan los datos, se vigila el presupuesto y se avisa cuando algo se sale de rango.</p>
+
+<p>En este artículo explicamos qué es Apache 360, cómo funciona por dentro, qué límites tiene, para quién tiene sentido y cuándo conviene otra alternativa. Los datos técnicos de Google que mencionamos están verificados contra su documentación (fuentes al final); las funciones del sistema son las que describimos en nuestra página del servicio.</p>
 
 <h2 id="el-problema-datos-dispersos">El problema: datos dispersos</h2>
-<p>Muchos equipos de marketing toman decisiones con datos incompletos. Google Ads, Meta Ads, TikTok Ads, GA4, Google Sheets: cada plataforma vive en su propia burbuja, y armar un reporte completo puede tomar horas cada semana. Para cuando el reporte está listo, la oportunidad de actuar a tiempo ya pasó.</p>
+<p>Cuando la información vive en cada plataforma por separado, aparecen los mismos síntomas en casi todos los equipos:</p>
+<ul>
+  <li><strong>Reportes manuales</strong> que consumen horas cada semana y se desactualizan al terminar.</li>
+  <li><strong>Cifras distintas</strong> según quién arme el reporte y de qué plataforma copie.</li>
+  <li><strong>Alertas tardías:</strong> un gasto que se dispara se descubre al cierre del mes, no el mismo día.</li>
+  <li><strong>Decisiones con información vieja</strong> porque nadie tuvo tiempo de consolidar.</li>
+</ul>
 
 <blockquote>No se trata de tener más datos. Se trata de tener los datos correctos, en un solo lugar, a tiempo para actuar.<cite>Apache Studio</cite></blockquote>
 
-<p>Apache 360 nació de esa frustración. Trabajamos con agencias y equipos in-house que gestionaban entre 5 y 15 plataformas distintas, y en cada una veíamos el mismo patrón: horas de reportería manual, alertas que llegaban tarde y decisiones que se tomaban con información vieja.</p>
+<p>Apache 360 nació de esa frustración: trabajamos con agencias y equipos internos que gestionaban muchas plataformas distintas, y en cada una veíamos el mismo patrón de horas de reportería manual, alertas que llegaban tarde y decisiones tomadas con información vieja.</p>
 
-<h2 id="lo-que-descubrimos-al-centralizarlos">Lo que descubrimos al centralizar los datos</h2>
-<p>Estas son las tres cosas que cambian cuando tus datos viven en un solo lugar:</p>
+<h2 id="que-es">Qué es Apache 360</h2>
+<p><strong>Apache 360</strong> es un sistema de control y reportería de marketing construido sobre una hoja de cálculo de Google que centraliza las métricas de tus plataformas de anuncios, analítica, comercio electrónico y CRM. Sobre esa base agrega seguimiento de presupuesto, alertas de gasto, un reporte diario por correo con recomendaciones y una capa de análisis asistida por IA.</p>
+
+<figure class="ed-fig" id="fig-apache360">
+  <svg viewBox="0 0 760 250" role="img" aria-labelledby="fa3-t fa3-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fa3-t">Cómo se conecta Apache 360</title>
+    <desc id="fa3-d">Las plataformas de anuncios y analítica envían sus métricas a una hoja central de Google Sheets, de la que salen el dashboard, las alertas de gasto y el reporte diario por correo.</desc>
+    <defs><marker id="fa3-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="f2" x="0" y="20" width="180" height="210" rx="8"/><text class="h" x="90" y="48" text-anchor="middle">Plataformas</text>
+    <text x="90" y="80" text-anchor="middle">Google Ads</text><text x="90" y="104" text-anchor="middle">Meta Ads</text><text x="90" y="128" text-anchor="middle">TikTok Ads</text><text x="90" y="152" text-anchor="middle">LinkedIn Ads</text><text x="90" y="176" text-anchor="middle">GA4 · Search Console</text><text x="90" y="200" text-anchor="middle">Ecommerce · CRM</text>
+    <rect class="acc" x="290" y="60" width="180" height="130" rx="8"/><text class="h on-acc" x="380" y="100" text-anchor="middle">Hoja central</text><text class="on-acc" x="380" y="126" text-anchor="middle">Google Sheets</text><text class="on-acc" x="380" y="150" text-anchor="middle">Métricas consolidadas</text><text class="on-acc" x="380" y="172" text-anchor="middle">y presupuesto</text>
+    <rect class="f2" x="580" y="0" width="180" height="70" rx="8"/><text class="h" x="670" y="30" text-anchor="middle">Dashboard</text><text x="670" y="52" text-anchor="middle">Vista general y campañas</text>
+    <rect class="f2" x="580" y="90" width="180" height="70" rx="8"/><text class="h" x="670" y="120" text-anchor="middle">Alertas de gasto</text><text x="670" y="142" text-anchor="middle">Umbral configurable</text>
+    <rect class="f2" x="580" y="180" width="180" height="70" rx="8"/><text class="h" x="670" y="210" text-anchor="middle">Reporte diario</text><text x="670" y="232" text-anchor="middle">Por correo, 5 AM</text>
+    <g class="s1"><path d="M180,125 L288,125" marker-end="url(#fa3-ar)"/><path d="M470,105 L578,40" marker-end="url(#fa3-ar)"/><path d="M470,125 L578,125" marker-end="url(#fa3-ar)"/><path d="M470,150 L578,212" marker-end="url(#fa3-ar)"/></g>
+  </svg>
+  <figcaption>Las plataformas alimentan una hoja central; de ahí salen el dashboard, las alertas y el reporte diario.</figcaption>
+</figure>
+
+<h2 id="funciones">Qué incluye</h2>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Funciones de Apache 360, según la descripción del servicio.</caption>
+    <thead><tr><th scope="col">Función</th><th scope="col">Qué hace</th><th scope="col">Para qué sirve</th></tr></thead>
+    <tbody>
+      <tr><td>Centralización multicanal</td><td>Reúne las métricas de tus plataformas de anuncios, analítica, comercio electrónico y CRM en un solo lugar</td><td>Una sola versión de los números</td></tr>
+      <tr><td>Control de presupuesto por fechas</td><td>Muestra gasto acumulado, ritmo esperado frente al real y balance restante</td><td>Evitar excesos y subejecución</td></tr>
+      <tr><td>Alertas de gasto</td><td>Avisa cuando el gasto supera el umbral configurado (por ejemplo, ±15 % respecto a lo planeado)</td><td>Corregir a tiempo, no al cierre del mes</td></tr>
+      <tr><td>Reporte diario por correo</td><td>Envía un resumen ejecutivo con alertas, oportunidades y recomendaciones</td><td>Empezar el día con lo importante</td></tr>
+      <tr><td>Insights con IA</td><td>Analiza métricas, gasto y rendimiento con instrucciones personalizables</td><td>Recomendaciones que luego revisa una persona</td></tr>
+      <tr><td>Multi-cliente</td><td>Permite duplicar la plantilla para cada cliente o marca</td><td>Escalar sin empezar de cero</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<figure class="ed-fig">
+  <img src="/img/real/dashboards/dashboard-overview.png" width="1920" height="1077" loading="lazy" alt="Vista general de un dashboard de marketing con métricas de alcance, impresiones y costo">
+  <figcaption>Vista general de un dashboard construido con datos de muestra.</figcaption>
+</figure>
+
+<h2 id="como-funciona">Cómo funciona</h2>
+<h3>1. Conexión de plataformas</h3>
+<p>Conectamos Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads, GA4 y otras fuentes con la hoja central. Cada API tiene sus propios permisos y límites, así que la primera integración requiere más cuidado que las siguientes.</p>
+<h3>2. Organización de los datos</h3>
+<p>Se unifican nombres de campañas, monedas y periodos para que las cifras sean comparables. Aquí se define también qué métricas importan para tu negocio; no todos necesitan las mismas.</p>
+<h3>3. Presupuesto y alertas</h3>
+<p>Se registra el presupuesto por periodo y se configuran los umbrales. Si el gasto de una campaña se aleja del ritmo planeado más allá del umbral, el sistema lo señala el mismo día.</p>
+<h3>4. Reporte diario</h3>
+<p>Cada mañana llega un resumen por correo con lo más importante de las últimas 24 horas, para que nadie tenga que armar un reporte a mano.</p>
+
+<figure class="ed-fig">
+  <img src="/img/real/dashboards/dashboard-campaigns.png" width="1920" height="1076" loading="lazy" alt="Tabla de campañas con métricas de resultados, impresiones y gasto en un dashboard oscuro">
+  <figcaption>Control de campañas: cada fila resume el rendimiento y el gasto.</figcaption>
+</figure>
+
+<figure class="ed-fig">
+  <video width="1600" height="900" autoplay muted loop playsinline preload="auto" poster="/img/real/blog/dashboard-efectivo-pillar.png"><source type="video/mp4" src="/video/real/apache360-como-funciona.mp4"></video>
+  <figcaption>Video: cómo funciona Apache 360.</figcaption>
+</figure>
+
+<h2 id="cambios">Lo que cambia cuando los datos viven en un solo lugar</h2>
 <ol>
-<li><strong>Las decisiones se toman más rápido.</strong> El reporte diario llega a las 5 AM, no cuando alguien tiene tiempo de armarlo, y las alertas de gasto llegan el mismo día, no la semana siguiente.</li>
-<li><strong>No todo se puede automatizar al 100%.</strong> Cada cliente tiene su propia mezcla de plataformas y métricas relevantes, así que los dashboards se personalizan: no son una plantilla genérica.</li>
-<li><strong>Escala sin agregar más horas de trabajo.</strong> Un equipo que atendía 5 clientes puede atender más sin duplicar personal, porque el tiempo que antes iba a reportería ahora va a estrategia.</li>
+  <li><strong>Las decisiones se toman más rápido.</strong> El reporte llega temprano, sin esperar a que alguien lo arme, y las alertas de gasto llegan el mismo día.</li>
+  <li><strong>No todo se puede automatizar al 100 %.</strong> Cada cliente tiene su propia mezcla de plataformas y métricas relevantes, así que los dashboards se personalizan: no son una plantilla genérica.</li>
+  <li><strong>El equipo escala sin sumar horas.</strong> El tiempo que iba a reportería se dedica a estrategia, pruebas y análisis.</li>
 </ol>
 
-<figure class="ed-fig">
-  <img loading="lazy" src="/img/real/blog/que-contiene-dashboard.png" alt="Dashboard Apache 360">
-  <figcaption>Vista general del tablero</figcaption>
+<figure class="ed-fig alignright">
+  <img src="/img/real/dashboards/capability-dashboard-personalizado.jpg" width="1440" height="960" loading="lazy" alt="Ilustración de un dashboard personalizado con distintos módulos">
+  <figcaption>Ilustración: dashboards a la medida de cada negocio.</figcaption>
 </figure>
 
-<h2 id="como-funciona-apache-360">Cómo funciona Apache 360</h2>
-<p>Apache 360 no reemplaza a tu equipo, se integra a él. Así funciona:</p>
-<h3>Centralización multicanal</h3>
-<p>Conectamos Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads, GA4 y hasta hojas de cálculo en un solo dashboard. Sin exportar CSV a mano, sin copiar y pegar entre plataformas.</p>
-<h3>Alertas inteligentes</h3>
-<p>Si el gasto de una campaña se desvía más de un 15% de lo planeado, el sistema te avisa el mismo día, no al cierre del mes. Eso te da tiempo real de reaccionar.</p>
-<h3>Reporte diario automático</h3>
-<p>Cada mañana a las 5 AM llega un resumen ejecutivo por correo con lo más importante de las últimas 24 horas. Cero horas de reportería manual por parte de tu equipo.</p>
-
-<figure class="ed-fig">
-  <img loading="lazy" src="/img/real/dashboards/dashboard-campaigns.png" alt="Dashboard de campañas de Apache 360">
-  <figcaption>Control de campañas</figcaption>
-</figure>
-
-<figure class="ed-fig">
-  <video width="1600" height="900" autoplay muted loop playsinline preload="auto" poster="/img/real/blog/dashboard-efectivo-pillar.png"> <source type="video/mp4" src="/video/real/apache360-como-funciona.mp4"> </video>
-  <figcaption>Video: cómo funciona Apache 360</figcaption>
-</figure>
-
-<h2 id="los-retos-de-implementarlo">Los retos de implementarlo</h2>
+<h2 id="para-quien">Para quién tiene sentido</h2>
 <ul>
-<li><strong>Conexión inicial de plataformas.</strong> Cada API tiene sus propios permisos y límites; la primera integración toma más cuidado que las siguientes.</li>
-<li><strong>Definir qué alertas importan.</strong> No todos los negocios necesitan las mismas métricas monitoreadas de cerca.</li>
-<li><strong>Adopción del equipo.</strong> Dejar de revisar seis pestañas distintas es un cambio de hábito, no solo de herramienta.</li>
+  <li><strong>Agencias de marketing</strong> que atienden varios clientes y necesitan replicar una misma estructura.</li>
+  <li><strong>Equipos in-house</strong> que gestionan su inversión y quieren visibilidad diaria sin depender de un analista para cada consulta.</li>
+  <li><strong>Empresas en crecimiento</strong> que invierten en varios canales y necesitan control de presupuesto.</li>
+  <li><strong>Servicios de performance</strong> que deben justificar cada peso invertido con datos.</li>
 </ul>
 
-<h2 id="por-que-seguimos-invirtiendo-en-esto">Por qué seguimos invirtiendo en esto</h2>
-<p>Plataformas como Google Analytics y Looker Studio no reemplazan a tu equipo de marketing. Apache 360 las conecta y las pone a trabajar juntas:</p>
+<h2 id="limites">Límites y cuándo conviene otra alternativa</h2>
+<p>Ser honestos con lo que una herramienta no hace evita malas decisiones:</p>
 <ul>
-<li>Elimina las horas perdidas copiando datos entre plataformas.</li>
-<li>Detecta desviaciones de presupuesto antes de que se vuelvan un problema.</li>
-<li>Libera tiempo del equipo para enfocarse en estrategia, no en reportería.</li>
+  <li><strong>No arregla una medición rota.</strong> Si las conversiones están duplicadas o mal configuradas, el sistema las mostrará tal cual. Por eso la <a href="/blog/implementacion-tecnica/">implementación técnica</a> va primero.</li>
+  <li><strong>No reemplaza a tu equipo.</strong> Las recomendaciones automáticas son un punto de partida; alguien debe revisarlas y decidir.</li>
+  <li><strong>Depende de las fuentes.</strong> Las alertas son tan oportunas como la frecuencia de actualización de cada conexión.</li>
+  <li><strong>Hay límites de la hoja de cálculo.</strong> Google Sheets admite hasta 10 millones de celdas por archivo; con volúmenes muy grandes conviene un almacén de datos como BigQuery y una capa de visualización como Looker Studio.</li>
 </ul>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Comparativo de criterio; ninguna opción es mejor en todos los casos.</caption>
+    <thead><tr><th scope="col">Opción</th><th scope="col">Cuándo encaja</th><th scope="col">Limitación</th></tr></thead>
+    <tbody>
+      <tr><td>Hoja manual</td><td>Pocos canales y una sola persona que lo lee</td><td>Se desactualiza y depende de quien la arma</td></tr>
+      <tr><td>Looker Studio propio</td><td>Tienes quien lo construya y mantenga</td><td>Los datos de Google se actualizan cada 12 horas; requiere mantenimiento</td></tr>
+      <tr><td>Apache 360</td><td>Varias plataformas, control de presupuesto y reporte diario sin armado manual</td><td>Límites de la hoja de cálculo; requiere una configuración inicial</td></tr>
+      <tr><td>BI a la medida</td><td>Grandes volúmenes o requisitos muy específicos</td><td>Mayor costo y tiempo de desarrollo</td></tr>
+    </tbody>
+  </table>
+</div>
 
 <h2 id="conclusion">Conclusión</h2>
-<p>Apache 360 está pensado para agencias, equipos in-house y empresas en crecimiento que ya manejan varias plataformas. Si te identificas con alguno de estos casos:</p>
+<p>Apache 360 está pensado para agencias, equipos internos y empresas en crecimiento que ya manejan varias plataformas. Si te identificas con alguno de estos casos, un buen punto de partida es este:</p>
 <ul>
-<li><strong>Revisa tu configuración actual:</strong> cuántas plataformas usas y cuántas horas dedicas a reportería cada semana.</li>
-<li><strong>Empieza con lo esencial:</strong> centraliza primero las plataformas que más gasto manejan.</li>
-<li><strong>Agenda una configuración gratis:</strong> te mostramos cómo se ve tu dashboard antes de decidir.</li>
+  <li><strong>Revisa tu situación actual:</strong> cuántas plataformas usas y cuántas horas dedicas a reportería cada semana.</li>
+  <li><strong>Empieza con lo esencial:</strong> centraliza primero las plataformas donde más gastas.</li>
+  <li><strong>Valida los datos de origen:</strong> confirma que las conversiones se miden bien antes de conectarlas.</li>
+  <li><strong>Pide una configuración:</strong> te mostramos cómo se ve tu dashboard antes de decidir.</li>
 </ul>
+<p>Puedes escribirnos desde la página de <a href="/contacto/">contacto</a> o <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a>. Si prefieres construir tu propio tablero, lee la <a href="/blog/dashboard-de-marketing-digital/">guía de dashboards con Looker Studio</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Qué es Apache 360?</h3>
+  <p>Es un sistema de control y reportería de marketing construido sobre Google Sheets que centraliza las métricas de tus plataformas, vigila el presupuesto, envía alertas de gasto y entrega un reporte diario por correo.</p>
+  <h3>¿Necesito saber programar para usarlo?</h3>
+  <p>No. La configuración inicial la hacemos nosotros y el uso diario es a través de la hoja, el dashboard y el correo. Si quieres personalizar métricas, alertas o instrucciones para la IA, lo definimos contigo.</p>
+  <h3>¿Cómo funcionan las alertas de gasto?</h3>
+  <p>Comparan el gasto real con el ritmo planeado y avisan cuando la diferencia supera el umbral configurado. Como referencia usamos ±15 %, pero el valor se ajusta a tu negocio.</p>
+  <h3>¿Sirve para varias marcas o clientes?</h3>
+  <p>Sí. La plantilla se puede duplicar para cada cliente o marca, lo que facilita mantener la misma estructura entre cuentas.</p>
+  <h3>¿En qué se diferencia de un dashboard en Looker Studio?</h3>
+  <p>Looker Studio es una capa de visualización; Apache 360 incluye además el seguimiento de presupuesto, las alertas y el reporte diario. Son complementarios: puedes visualizar los datos consolidados en Looker Studio si lo prefieres.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Drive Help — <a href="https://support.google.com/drive/answer/37603" rel="noopener">Files you can store in Google Drive</a> (límite de 10 millones de celdas en Google Sheets).</li>
+    <li>Google Cloud — <a href="https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness" rel="noopener">Manage data freshness (Looker Studio)</a> (actualización cada 12 horas para productos de marketing de Google).</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Las herramientas cambian: si encuentras algo desactualizado, escríbenos.</p>
+</div>

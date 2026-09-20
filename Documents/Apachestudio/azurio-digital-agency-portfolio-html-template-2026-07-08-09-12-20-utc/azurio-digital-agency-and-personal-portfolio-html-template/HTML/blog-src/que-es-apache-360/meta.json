@@ -11,12 +11,12 @@
     "IA"
   ],
   "published": "2026-08-26",
-  "modified": "2026-09-19",
+  "modified": "2026-09-20",
   "lead": "La mayoría de los equipos de marketing trabaja con datos incompletos: Google Ads por un lado, Meta por otro y un Excel a mano para el resto. Apache 360 nace para resolver ese problema y centralizar todo en un solo lugar.",
   "hero": {
     "src": "/img/real/blog/dashboard-efectivo-pillar.png",
-    "alt": "Dashboard Apache 360",
-    "caption": ""
+    "alt": "Persona frente a pantallas con paneles de datos de marketing",
+    "caption": "Imagen ilustrativa."
   },
   "related": [
     "dashboard-de-marketing-digital",

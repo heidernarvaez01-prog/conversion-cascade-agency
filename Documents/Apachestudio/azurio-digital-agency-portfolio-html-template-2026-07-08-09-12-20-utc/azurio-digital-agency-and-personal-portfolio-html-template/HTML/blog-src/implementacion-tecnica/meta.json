@@ -11,12 +11,12 @@
     "Tracking"
   ],
   "published": "2026-08-26",
-  "modified": "2026-09-19",
+  "modified": "2026-09-20",
   "lead": "La implementación técnica es la base invisible de todo marketing digital exitoso. Sin tracking correcto, tus dashboards mienten, tus campañas desperdician presupuesto y tus decisiones son incorrectas.",
   "hero": {
-    "src": "/img/real/blog/server-side-tracking.png",
-    "alt": "Implementación técnica de marketing digital con GTM, GA4 y server-side tracking",
-    "caption": ""
+    "src": "/img/real/services/technical-illustration.jpg",
+    "alt": "Ilustración de un diagrama con ventanas de código, servidores, engranajes y bases de datos conectados",
+    "caption": "Ilustración."
   },
   "related": [
     "analitica-de-marketing-digital",

@@ -11,12 +11,12 @@
     "CRM"
   ],
   "published": "2026-08-26",
-  "modified": "2026-09-19",
+  "modified": "2026-09-20",
   "lead": "La automatización de marketing no es solo programar emails. Es construir sistemas inteligentes que nutren leads, cierran ventas y escalan operaciones sin multiplicar tu equipo.",
   "hero": {
-    "src": "/img/real/blog/workflows-marketing.png",
-    "alt": "Automatización de marketing digital con workflows, email y CRM integrados",
-    "caption": ""
+    "src": "/img/real/illustrations/futuristic-data-interface-poster.jpg",
+    "alt": "Interfaz de datos futurista con paneles numéricos sobre fondo oscuro",
+    "caption": "Imagen ilustrativa."
   },
   "related": [
     "implementacion-tecnica",

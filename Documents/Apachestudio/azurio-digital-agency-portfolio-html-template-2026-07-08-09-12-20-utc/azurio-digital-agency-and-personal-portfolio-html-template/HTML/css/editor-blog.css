@@ -466,3 +466,26 @@
 /* ---------- figuras con imagen o video (artículos migrados) ---------- */
 .ed-blog .ed-fig img,
 .ed-blog .ed-fig video { display: block; width: 100%; height: auto; }
+
+/* ---------- figuras flotantes (imagen con texto envolvente) ---------- */
+@media (min-width: 768px) {
+  .ed-blog .ed-fig.alignright { float: right; width: 44%; max-width: 44%; margin: .6rem 0 1.6rem 3rem; clear: none; }
+  .ed-blog .ed-fig.alignleft { float: left; width: 44%; max-width: 44%; margin: .6rem 3rem 1.6rem 0; clear: none; }
+}
+@media (max-width: 767px) {
+  .ed-blog .ed-fig.alignright,
+  .ed-blog .ed-fig.alignleft { float: none; width: 100%; max-width: 100%; margin: 2.4rem 0; }
+}
+.ed-blog .ed-fig.alignright img,
+.ed-blog .ed-fig.alignleft img { aspect-ratio: 16 / 10; object-fit: cover; }
+
+/* ---------- imagen destacada siempre 16:9 ---------- */
+.ed-blog .featured-image img { aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* ---------- bloques de código ---------- */
+.ed-blog pre {
+  margin: 2.4rem 0 3rem; padding: 1.8rem 2rem; overflow-x: auto; clear: both;
+  background: var(--base-tint); border: 1px solid var(--ed-rule); border-radius: 4px;
+  font-family: var(--_font-accent); font-size: 1.3rem; line-height: 1.7; color: var(--t-bright); tab-size: 2;
+}
+.ed-blog pre code { padding: 0; font-size: inherit; background: none; border: 0; }

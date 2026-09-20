@@ -1,73 +1,184 @@
-<p class="drop-cap">Aquí repasamos los 5 pilares técnicos (GTM, GA4, Conversion API, server-side tracking y data layer), el proceso de implementación en 5 fases, y los errores más comunes que distorsionan tus datos sin que lo notes.</p>
+<p class="drop-cap">Detrás de casi todo reporte que «no cuadra» hay un problema técnico que nadie vio: una etiqueta duplicada, un evento que se dispara antes de tiempo, un banner de cookies que no está conectado a nada. La implementación técnica es la capa invisible que decide si tus datos son confiables. Si esa base falla, los dashboards muestran una realidad falsa y las campañas se optimizan con información incorrecta.</p>
 
-<h2 id="que-es-la-implementacion-tecnica-de-marketing-di">¿Qué es la implementación técnica de marketing digital?</h2>
-<p>La <strong>implementación técnica de marketing digital</strong> es el proceso de configurar, validar y mantener todas las herramientas de medición que capturan datos de tus campañas y sitio web. Es la infraestructura invisible que hace posible tomar decisiones basadas en datos reales.</p>
-<p>Sin una implementación técnica correcta, tus <a href="/blog/dashboard-de-marketing-digital/">dashboards de marketing</a> mostrarán datos incompletos o erróneos, y cada decisión basada en esos datos será potencialmente incorrecta.</p>
-<h3>¿Por qué es tan importante?</h3>
-<ul><li>Datos correctos = decisiones correctas: si el tracking falla, los reportes muestran una realidad incompleta</li><li>Ahorro de presupuesto: con un tracking incorrecto optimizas campañas con datos que no son reales y el gasto se desperdicia</li><li>Compliance: las regulaciones de privacidad exigen implementaciones técnicas correctas</li><li>Escalabilidad: una buena base técnica permite crecer sin reconstruir</li></ul>
+<p>En esta guía recorremos, de punta a punta, cómo se implementa la medición de un sitio: Google Tag Manager (GTM), data layer, GA4, consentimiento, píxeles y APIs de conversión, y server-side tagging. Verificamos los detalles técnicos contra la documentación oficial de Google y Meta (las fuentes están al final); las recomendaciones de proceso son nuestro criterio de trabajo.</p>
 
-<h2 id="los-pilares-de-la-implementacion-tecnica">Los pilares de la implementación técnica</h2>
-<h3>1. Google Tag Manager (GTM)</h3>
-<p>GTM es el hub central de tu tracking. En lugar de insertar código directamente en tu sitio, GTM te permite gestionar todas las etiquetas desde una interfaz visual.</p>
-<p><strong>Elementos clave</strong>: Tags (píxeles de Meta, Google Ads, LinkedIn, TikTok), Triggers (eventos que disparan los tags: clics, scroll, formularios), Variables (datos que se capturan: URL, título, valor de compra), Data Layer (la capa de datos que conecta tu sitio con GTM).</p>
-<h3>2. Google Analytics 4 (GA4)</h3>
-<p>GA4 es la plataforma de analítica de Google basada en eventos. A diferencia de Universal Analytics, GA4 mide interacciones individuales, no solo pageviews.</p>
-<p><strong>Configuración crítica</strong>: eventos recomendados y personalizados, conversiones correctamente definidas, audiencias para remarketing, conexión con Google Ads, Enhanced Measurement activado correctamente.</p>
-<h3>3. Conversion API (CAPI)</h3>
-<p>Las Conversion APIs envían datos de conversión directamente desde tu servidor a las plataformas publicitarias, evitando las limitaciones de los navegadores y ad blockers.</p>
-<h3>4. Server-Side Tracking</h3>
-<p>El tracking server-side mueve la recopilación de datos del navegador del usuario a tu propio servidor. Esto mejora la precisión de los datos, la velocidad del sitio y el cumplimiento de privacidad.</p>
-<h3>5. Data Layer para E-commerce</h3>
-<p>El data layer es la estructura de datos que tu sitio web expone para que GTM y otras herramientas puedan capturar información de productos, carritos, compras y comportamiento del usuario.</p>
+<h2 id="capas">Las cuatro capas de una medición confiable</h2>
+<p>Conviene pensar la implementación como cuatro capas que dependen una de otra. Si una falla, las siguientes heredan el error:</p>
+<ol>
+  <li><strong>Captura:</strong> qué ocurre en el sitio y cómo se registra (eventos, data layer, formularios, compras).</li>
+  <li><strong>Distribución:</strong> quién recibe cada dato (GA4, Google Ads, Meta, CRM) y en qué condiciones.</li>
+  <li><strong>Consentimiento:</strong> qué se puede medir según lo que el usuario aceptó.</li>
+  <li><strong>Calidad:</strong> validación continua para detectar duplicados, huecos y desvíos.</li>
+</ol>
 
-<figure class="ed-fig">
-  <img loading="lazy" src="/img/real/blog/data-layer-ecommerce.png" alt="Estructura de tags en GTM">
-  <figcaption>Estructura de tags en GTM</figcaption>
+<figure class="ed-fig" id="fig-arquitectura">
+  <svg viewBox="0 0 760 250" role="img" aria-labelledby="fa-t fa-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fa-t">Arquitectura de medición</title>
+    <desc id="fa-d">El sitio envía eventos al data layer; Google Tag Manager los distribuye en el navegador o a un contenedor de servidor, que los reenvía a GA4, Google Ads y Meta.</desc>
+    <defs><marker id="fa-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="f2" x="0" y="20" width="150" height="90" rx="8"/><text class="h" x="75" y="52" text-anchor="middle">Sitio web</text><text x="75" y="76" text-anchor="middle">Formularios, compras,</text><text x="75" y="94" text-anchor="middle">clics y páginas</text>
+    <rect class="f2" x="190" y="20" width="150" height="90" rx="8"/><text class="h" x="265" y="52" text-anchor="middle">Data layer</text><text x="265" y="76" text-anchor="middle">Eventos con datos</text><text x="265" y="94" text-anchor="middle">estructurados</text>
+    <rect class="acc" x="380" y="20" width="150" height="90" rx="8"/><text class="h on-acc" x="455" y="52" text-anchor="middle">Google Tag Manager</text><text class="on-acc" x="455" y="76" text-anchor="middle">Etiquetas, reglas</text><text class="on-acc" x="455" y="94" text-anchor="middle">y consentimiento</text>
+    <rect class="f2" x="570" y="0" width="190" height="60" rx="8"/><text class="h" x="665" y="26" text-anchor="middle">Desde el navegador</text><text x="665" y="46" text-anchor="middle">GA4 · Google Ads · píxeles</text>
+    <rect class="f2" x="570" y="80" width="190" height="60" rx="8"/><text class="h" x="665" y="106" text-anchor="middle">Contenedor de servidor</text><text x="665" y="126" text-anchor="middle">valida y reenvía</text>
+    <rect class="f3" x="570" y="170" width="190" height="70" rx="8"/><text class="h" x="665" y="196" text-anchor="middle">Plataformas</text><text x="665" y="216" text-anchor="middle">GA4 · Google Ads · Meta CAPI</text>
+    <g class="s1"><path d="M150,65 L188,65" marker-end="url(#fa-ar)"/><path d="M340,65 L378,65" marker-end="url(#fa-ar)"/><path d="M530,50 L568,32" marker-end="url(#fa-ar)"/><path d="M530,80 L568,108" marker-end="url(#fa-ar)"/><path d="M665,140 L665,168" marker-end="url(#fa-ar)"/></g>
+  </svg>
+  <figcaption>Flujo de datos: el navegador puede enviar directo a las plataformas o pasar por un contenedor de servidor.</figcaption>
 </figure>
 
-<h2 id="proceso-de-implementacion-tecnica">Proceso de implementación técnica</h2>
-<h3>Fase 1: Auditoría actual</h3>
-<p>Antes de implementar, necesitas saber dónde estás. Una auditoría de tracking revela tags que disparan incorrectamente, eventos duplicados o faltantes, configuraciones de GA4 incompletas, y problemas de consentimiento y privacidad.</p>
-<h3>Fase 2: Planificación del measurement plan</h3>
-<p>Define exactamente qué necesitas medir: objetivos de negocio → KPIs → eventos → implementación, matriz de tracking por plataforma, naming conventions para campañas y eventos, requisitos de privacidad y consentimiento.</p>
-<h3>Fase 3: Implementación</h3>
-<p>Configuración técnica de todas las herramientas: GTM como hub central, GA4 con eventos y conversiones, píxeles de plataformas publicitarias, Conversion APIs donde sea necesario, data layer para e-commerce.</p>
-<h3>Fase 4: QA y validación</h3>
-<p>Testing exhaustivo: validación de cada evento en cada página, testing de conversiones end-to-end, verificación de datos en las plataformas de destino, documentación técnica completa.</p>
-<h3>Fase 5: Monitoreo continuo</h3>
-<p>La implementación no es un proyecto de una vez: alertas de anomalías en los datos, revisión periódica de configuraciones, actualización ante cambios de plataformas, adaptación a nuevas regulaciones de privacidad.</p>
+<h2 id="gtm">Google Tag Manager: el centro de control</h2>
+<p><strong>Google Tag Manager</strong> permite instalar y actualizar etiquetas (GA4, Google Ads, Meta, LinkedIn) sin editar el código del sitio cada vez. Se organiza en tres piezas que conviene tener claras:</p>
 
-<h2 id="errores-comunes-en-la-implementacion-tecnica">Errores comunes en la implementación técnica</h2>
-<h3>1. No usar GTM</h3>
-<p>Insertar código directamente en el sitio es frágil, difícil de mantener y propenso a errores. GTM centraliza todo.</p>
-<h3>2. Tracking duplicado</h3>
-<p>El error más común: disparar el mismo evento dos veces. Causa datos inflados y decisiones incorrectas.</p>
-<h3>3. Ignorar el consentimiento</h3>
-<p>Sin un sistema de consentimiento configurado correctamente, puedes perder datos legítimos y violar regulaciones.</p>
-<h3>4. No validar los datos</h3>
-<p>Implementar sin hacer QA es como construir sin revisar los planos. Los errores se acumulan silenciosamente.</p>
-<h3>5. Configuración de GA4 incompleta</h3>
-<p>Muchas empresas migran a GA4 pero no configuran eventos, conversiones ni audiencias. GA4 por defecto captura muy poco.</p>
-
-<figure class="ed-fig">
-  <img loading="lazy" src="/img/real/blog/implementar-ga4.png" alt="Configuracion de eventos GA4">
-  <figcaption>Configuración de eventos GA4</figcaption>
-</figure>
-
-<h2 id="herramientas-esenciales">Herramientas esenciales</h2>
-<ul><li><strong>Google Tag Manager</strong> &mdash; Hub central de tags &middot; Crítica</li><li><strong>Google Analytics 4</strong> &mdash; Analítica web &middot; Crítica</li><li><strong>Meta Conversion API</strong> &mdash; Tracking server-side Meta &middot; Alta</li><li><strong>Google Ads Tag</strong> &mdash; Conversiones Google Ads &middot; Alta</li><li><strong>Tag Assistant</strong> &mdash; Debugging de tags &middot; Alta</li><li><strong>GTM Preview Mode</strong> &mdash; Testing de configuraciones &middot; Alta</li></ul>
-
-<h2 id="conclusion">Conclusión</h2>
-<p>La implementación técnica es la base de todo marketing digital basado en datos. Sin ella, tus dashboards mienten, tus campañas desperdician presupuesto y tus decisiones son incorrectas.</p>
-<p>¿Necesitas una implementación técnica profesional? En Apache Studio somos especialistas en <a href="/servicios/implementacion-tecnica/">implementación técnica avanzada</a> con GTM, GA4, Conversion API y server-side tracking.</p>
-
-<div class="ed-faq" id="faq">
-<h2>Preguntas frecuentes</h2>
-<h3>¿Qué es la implementación técnica de marketing digital?</h3>
-<p>Es el proceso de configurar y mantener todas las herramientas de medición (GTM, GA4, píxeles, APIs) que capturan datos de tus campañas y sitio web para tomar decisiones basadas en datos reales.</p>
-<h3>¿Por qué necesito Google Tag Manager?</h3>
-<p>GTM centraliza la gestión de todos los tags de tracking en una sola interfaz, sin necesidad de modificar el código del sitio. Esto reduce errores, facilita el mantenimiento y permite implementar cambios rápidamente.</p>
-<h3>¿Qué es server-side tracking y por qué importa?</h3>
-<p>Es una técnica que mueve la recopilación de datos del navegador a tu servidor. Mejora la precisión de los datos (evita ad blockers), la velocidad del sitio y el cumplimiento de regulaciones de privacidad.</p>
+<div class="ed-table-wrap">
+  <table>
+    <caption>Las tres piezas de un contenedor de Google Tag Manager.</caption>
+    <thead><tr><th scope="col">Pieza</th><th scope="col">Qué es</th><th scope="col">Ejemplo</th></tr></thead>
+    <tbody>
+      <tr><td>Etiqueta (tag)</td><td>Lo que se envía a una plataforma</td><td>Evento de GA4 «generate_lead»</td></tr>
+      <tr><td>Activador (trigger)</td><td>La condición que la dispara</td><td>Envío correcto del formulario de contacto</td></tr>
+      <tr><td>Variable</td><td>Un dato que la etiqueta o el activador usan</td><td>Valor de la compra, ID de transacción, URL</td></tr>
+    </tbody>
+  </table>
 </div>
 
+<p>Buenas prácticas de orden que ahorran horas de depuración:</p>
+<ul>
+  <li><strong>Convención de nombres</strong> (por ejemplo, «GA4 – evento – generate_lead») para que cualquiera entienda qué hace cada pieza.</li>
+  <li><strong>Un espacio de trabajo por cambio grande</strong> y versiones con notas: si algo se rompe, sabes a cuál regresar.</li>
+  <li><strong>Modo de vista previa siempre</strong> antes de publicar, y prueba también en producción después.</li>
+  <li><strong>Permisos mínimos:</strong> quien no publica no necesita el rol de publicación.</li>
+</ul>
+
+<figure class="ed-fig alignright">
+  <img src="/img/real/implementacion-tecnica/gtm.jpg" width="1400" height="875" loading="lazy" alt="Logotipo de Google Tag Manager sobre fondo oscuro">
+  <figcaption>Google Tag Manager centraliza las etiquetas del sitio.</figcaption>
+</figure>
+
+<h2 id="data-layer">El data layer: datos estructurados desde el sitio</h2>
+<p>El <strong>data layer</strong> es una lista de objetos que tu sitio va llenando con lo que ocurre (una compra, un formulario enviado) para que GTM la lea. Es más estable que «raspar» el texto de la página, porque no se rompe cuando cambia el diseño. Un evento de compra de ecommerce se ve así:</p>
+
+<pre><code>dataLayer.push({ ecommerce: null });  // limpia el objeto ecommerce anterior
+dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+    transaction_id: "T-10482",
+    value: 1450.00,
+    currency: "MXN",
+    items: [{ item_id: "SKU-001", item_name: "Producto", price: 1450.00, quantity: 1 }]
+  }
+});</code></pre>
+
+<p>Dos detalles que evitan errores frecuentes. Primero, la documentación de Google para GTM recomienda limpiar el objeto <code>ecommerce</code> antes de cada evento nuevo para que no se contaminen datos entre eventos. Segundo, el <code>transaction_id</code> debe ser único por compra: es lo que evita contar dos veces la misma venta cuando el usuario recarga la página de confirmación.</p>
+
+<figure class="ed-fig alignleft">
+  <img src="/img/real/implementacion-tecnica/data-layer.jpg" width="1400" height="1077" loading="lazy" alt="Fotografía de código de programación en una pantalla">
+  <figcaption>Imagen ilustrativa de código.</figcaption>
+</figure>
+
+<h2 id="ga4">GA4: eventos, eventos clave y depuración</h2>
+<p>En Google Analytics 4 todo es un evento. Conviene usar los nombres recomendados por Google cuando existen (por ejemplo <code>generate_lead</code>, <code>add_to_cart</code>, <code>purchase</code>), porque activan informes y funciones automáticas. Estos son los pasos mínimos:</p>
+<ol>
+  <li><strong>Define qué eventos importan</strong> según tu plan de medición y márcalos como <em>eventos clave</em> (antes llamados conversiones).</li>
+  <li><strong>Prueba cada uno con DebugView</strong> de GA4 y la vista previa de GTM antes de publicar.</li>
+  <li><strong>Excluye el tráfico interno</strong> con un filtro por IP para que tu equipo no contamine los datos.</li>
+  <li><strong>Configura la retención de datos</strong>: en propiedades estándar puedes elegir 2 o 14 meses para los datos a nivel de evento; conviene elegir 14 meses y exportar a BigQuery si necesitas historial.</li>
+  <li><strong>Vincula Google Ads y Search Console</strong> para completar el cuadro.</li>
+</ol>
+
+<div class="ed-callout">
+  <span class="ed-callout__label">Advertencia</span>
+  <p>No envíes información personal identificable (correo, teléfono, nombre) como parámetro de un evento de Google Analytics: sus políticas lo prohíben. Si necesitas ese dato para mejorar la medición de conversiones, usa las funciones diseñadas para eso (conversiones mejoradas), que lo envían con hash.</p>
+</div>
+
+<h2 id="consentimiento">Consentimiento: el modo de consentimiento de Google</h2>
+<p>El <strong>modo de consentimiento</strong> (consent mode) permite que las etiquetas de Google ajusten su comportamiento según lo que el usuario aceptó en tu banner. En su versión 2 se agregaron dos parámetros, <code>ad_user_data</code> y <code>ad_personalization</code>, a los que ya existían para almacenamiento de anuncios y de analítica. Para usuarios del Espacio Económico Europeo, Google exige recopilar el consentimiento y compartir esas señales para mantener medición y personalización de anuncios.</p>
+<p>Para negocios en México y Colombia el marco legal es otro (protección de datos personales locales), pero la práctica técnica es la misma: <strong>un aviso de privacidad claro, un banner que realmente controle las etiquetas y ninguna etiqueta que se dispare antes del consentimiento cuando este sea necesario</strong>. Confirma los requisitos exactos con tu asesor legal.</p>
+
+<h2 id="pixeles-apis">Píxeles y APIs de conversión</h2>
+<p>Los píxeles del navegador pierden datos por bloqueadores, restricciones de cookies y navegación entre dispositivos. Por eso las plataformas ofrecen enviar la conversión también desde el servidor:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Mecanismos complementarios al píxel, según la documentación de cada plataforma.</caption>
+    <thead><tr><th scope="col">Plataforma</th><th scope="col">Mecanismo</th><th scope="col">Detalle técnico documentado</th></tr></thead>
+    <tbody>
+      <tr><td>Meta</td><td>API de conversiones (CAPI)</td><td>Si envías el mismo evento por píxel y por servidor, debes compartir <code>event_name</code> y <code>event_id</code> para que Meta los deduplique; un <code>event_id</code> incorrecto puede eliminar conversiones válidas.</td></tr>
+      <tr><td>Google Ads</td><td>Conversiones mejoradas</td><td>Envían datos propios del cliente (correo, teléfono, nombre, dirección) con hash SHA-256, previamente normalizados (sin espacios y en minúsculas, teléfonos en formato E.164).</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<figure class="ed-fig alignright">
+  <img src="/img/real/implementacion-tecnica/pixels.jpg" width="1400" height="1077" loading="lazy" alt="Etiquetas de colores sobre tela de mezclilla">
+  <figcaption>Imagen ilustrativa: etiquetas y píxeles.</figcaption>
+</figure>
+
+<h2 id="server-side">Server-side tagging: cuándo vale la pena</h2>
+<p>El <strong>etiquetado del lado del servidor</strong> mueve parte de la medición del navegador a un contenedor que tú controlas (en Google Cloud u otra plataforma). Google señala como beneficios principales: menor carga en el navegador, posibilidad de filtrar o modificar las solicitudes antes de reenviarlas (por ejemplo, eliminar información personal) y mejor control de la calidad de los datos. Además, con un dominio propio se opera en contexto de primera parte.</p>
+<p>No es obligatorio ni gratuito: implica infraestructura, mantenimiento y una implementación más cuidadosa. Nuestro criterio: <strong>vale la pena cuando invierten en publicidad de forma constante, dependen de conversiones para optimizar y ya tienen la medición del navegador bien resuelta</strong>. Antes de eso, la prioridad es corregir la base.</p>
+
+<figure class="ed-fig alignleft">
+  <img src="/img/real/implementacion-tecnica/server-side.jpg" width="1400" height="875" loading="lazy" alt="Servidores en un centro de datos con luces de color">
+  <figcaption>Imagen ilustrativa: infraestructura de servidor.</figcaption>
+</figure>
+
+<h2 id="proceso">Proceso de implementación en cinco fases</h2>
+<ol>
+  <li><strong>Auditoría inicial.</strong> Qué etiquetas existen, cuáles se duplican y qué falta.</li>
+  <li><strong>Plan de medición.</strong> Eventos, parámetros, conversiones y convención de nombres, acordados por escrito.</li>
+  <li><strong>Implementación.</strong> GTM, data layer, GA4, consentimiento y píxeles o APIs, en un entorno de pruebas primero.</li>
+  <li><strong>QA.</strong> Verificar cada evento con vista previa, DebugView y las herramientas de cada plataforma; comparar contra datos reales.</li>
+  <li><strong>Documentación y monitoreo.</strong> Un documento vivo con lo instalado y alertas para detectar caídas o picos anormales.</li>
+</ol>
+
+<h2 id="errores">Errores frecuentes que distorsionan tus datos</h2>
+<ul>
+  <li><strong>Etiquetas duplicadas</strong> (en el código y en GTM), que inflan conversiones.</li>
+  <li><strong>Falta de <code>transaction_id</code></strong> o valor incorrecto, que duplica o distorsiona ingresos.</li>
+  <li><strong>No limpiar el objeto ecommerce</strong> entre eventos, que arrastra datos de un evento a otro.</li>
+  <li><strong>Etiquetas que se disparan antes del consentimiento.</strong></li>
+  <li><strong>Datos personales en URLs o parámetros</strong> enviados a analítica.</li>
+  <li><strong>No probar en producción</strong> después de publicar cambios.</li>
+  <li><strong>Sin documentación:</strong> cuando cambia el equipo, nadie sabe qué hace cada etiqueta.</li>
+</ul>
+
+<h2 id="checklist">Checklist técnica antes de dar por buena la medición</h2>
+<ul class="ed-checklist">
+  <li>Hay un solo contenedor de GTM instalado y sin etiquetas duplicadas en el código.</li>
+  <li>Cada evento clave se probó en vista previa, en DebugView y después en producción.</li>
+  <li>Las compras incluyen <code>transaction_id</code>, valor, moneda e ítems, y no se cuentan dos veces.</li>
+  <li>El banner de consentimiento controla las etiquetas de forma verificable.</li>
+  <li>Los píxeles y APIs de conversión comparten <code>event_id</code> para deduplicar.</li>
+  <li>El tráfico interno está excluido y la retención de datos configurada.</li>
+  <li>Existe documentación de lo instalado y alertas de monitoreo.</li>
+</ul>
+
+<p>Si quieres que revisemos tu caso, conoce nuestro servicio de <a href="/servicios/implementacion-tecnica/">implementación técnica</a> o <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agenda una llamada</a>. Y si ya tienes la medición lista y necesitas visualizarla, lee la <a href="/blog/dashboard-de-marketing-digital/">guía de dashboards con Looker Studio</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Qué es la implementación técnica de marketing digital?</h3>
+  <p>Es el proceso de configurar y mantener las herramientas de medición (Google Tag Manager, GA4, píxeles, APIs de conversión y consentimiento) que capturan los datos de tu sitio y campañas. Su objetivo es que las cifras sean confiables para decidir.</p>
+  <h3>¿Por qué necesito Google Tag Manager?</h3>
+  <p>Porque centraliza las etiquetas en una sola interfaz y permite instalarlas, probarlas y actualizarlas sin modificar el código del sitio cada vez. Reduce errores y acelera los cambios, siempre que se use con convención de nombres, vista previa y control de versiones.</p>
+  <h3>¿Qué es el server-side tracking y cuándo conviene?</h3>
+  <p>Es mover parte de la medición del navegador a un contenedor de servidor. Google señala como beneficios menor carga en el navegador y más control sobre los datos que se reenvían. Conviene cuando ya tienes una base sólida y una inversión constante en publicidad, porque implica costo de infraestructura y mantenimiento.</p>
+  <h3>¿Qué es la API de conversiones de Meta y por qué necesita event_id?</h3>
+  <p>Es una forma de enviar eventos a Meta desde tu servidor, además del píxel. Si el mismo evento llega por ambas vías, Meta usa event_name y event_id para deduplicarlos; sin un identificador correcto podrías contar dos veces o perder conversiones válidas.</p>
+  <h3>¿Es obligatorio el modo de consentimiento?</h3>
+  <p>Google lo exige para medición y personalización de anuncios con usuarios del Espacio Económico Europeo. Para otras regiones depende de la normativa local y de tus políticas; en cualquier caso es una buena práctica que el banner controle realmente las etiquetas. Consulta con tu asesor legal.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google for Developers — <a href="https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm" rel="noopener">Measure ecommerce (GA4, Google Tag Manager)</a>.</li>
+    <li>Google for Developers — <a href="https://developers.google.com/tag-platform/security/guides/consent" rel="noopener">Set up consent mode on websites</a> y Google Ads Help — <a href="https://support.google.com/google-ads/answer/13695607" rel="noopener">Updates to consent mode for traffic in the EEA</a>.</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/9888656" rel="noopener">About enhanced conversions</a>.</li>
+    <li>Google for Developers — <a href="https://developers.google.com/tag-platform/tag-manager/server-side/overview" rel="noopener">Server-side tagging overview</a>.</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/" rel="noopener">Handling duplicate Pixel and Conversions API events</a>.</li>
+    <li>Google Analytics Help — <a href="https://support.google.com/analytics/answer/7667196" rel="noopener">Data retention</a>.</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Las plataformas cambian: si encuentras algo desactualizado, escríbenos.</p>
+</div>

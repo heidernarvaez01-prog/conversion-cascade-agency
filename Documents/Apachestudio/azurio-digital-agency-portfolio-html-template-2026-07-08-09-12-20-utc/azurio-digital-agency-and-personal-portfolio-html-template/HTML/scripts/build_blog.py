@@ -450,6 +450,10 @@ def build(slug, write=True):
         warn(slug, f"title de {len(post['title'])} caracteres (ideal ≤ 60)")
     if len(post["h1"]) > 110:
         warn(slug, "h1 supera 110 caracteres (límite recomendado del headline)")
+    if "[[" in body or "[[" in json.dumps(post, ensure_ascii=False):
+        warn(slug, "quedan marcadores [[...]] de la plantilla sin reemplazar")
+    if re.search(r"\d+\s?%", strip_tags(body)) and 'class="ed-sources"' not in body:
+        warn(slug, "hay cifras con % pero no hay sección de fuentes (.ed-sources)")
     if len(re.findall(r'<h2[ >]', body)) < 3:
         warn(slug, "menos de 3 h2")
     ids = re.findall(r'\bid="([^"]+)"', body)

@@ -11,12 +11,12 @@
     "ROI"
   ],
   "published": "2026-08-26",
-  "modified": "2026-09-19",
+  "modified": "2026-09-20",
   "lead": "La analítica de marketing digital transforma datos dispersos en inteligencia accionable. Aprende a medir correctamente, identificar los KPIs que importan y tomar decisiones que generan ROI real.",
   "hero": {
-    "src": "/img/real/blog/data-marketing-historia.png",
-    "alt": "Analítica de marketing digital con framework de datos a decisiones",
-    "caption": ""
+    "src": "/img/real/blog/cover-negocios.jpg",
+    "alt": "Ilustración de barras crecientes con monedas y una flecha ascendente sobre fondo azul",
+    "caption": "Ilustración."
   },
   "related": [
     "dashboard-de-marketing-digital",

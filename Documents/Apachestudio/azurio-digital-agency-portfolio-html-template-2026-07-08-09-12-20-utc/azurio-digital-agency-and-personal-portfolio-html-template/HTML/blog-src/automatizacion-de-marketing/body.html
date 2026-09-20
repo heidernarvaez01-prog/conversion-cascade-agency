@@ -1,65 +1,186 @@
-<p class="drop-cap">Repasamos los 6 pilares de la automatización (email, workflows, CRM, chatbots, integraciones y lead nurturing), cómo implementarla paso a paso, y los errores que convierten la automatización en caos en vez de eficiencia.</p>
+<p class="drop-cap">Un lead llena tu formulario un viernes por la tarde y nadie lo ve hasta el lunes. Otro recibe cuatro correos iguales porque estaba en dos listas. Un tercero pidió cotización, pero su información quedó en una hoja que nadie actualiza. Ninguno de estos problemas es de talento: son de proceso. La automatización de marketing existe para que lo repetitivo ocurra siempre, a tiempo y sin errores, y para que tu equipo dedique su energía a lo que sí requiere criterio.</p>
 
-<h2 id="que-es-la-automatizacion-de-marketing-digital">¿Qué es la automatización de marketing digital?</h2>
-<p>La <strong>automatización de marketing digital</strong> es el uso de tecnología para ejecutar tareas repetitivas de marketing de forma automática, basándose en reglas, comportamientos y datos del usuario. Va mucho más allá de programar publicaciones: es construir un sistema que trabaja 24/7 nutriendo leads y generando ventas.</p>
-<h3>¿Por qué automatizar tu marketing?</h3>
-<ul><li>Escala sin equipo: un workflow automatizado puede nutrir 10,000 leads igual que 10</li><li>Consistencia: cada lead recibe la misma experiencia de alta calidad</li><li>Velocidad: responde en segundos, no en horas</li><li>Personalización: contenido adaptado al comportamiento real del usuario</li><li>Medición: datos exactos de qué funciona y qué no</li></ul>
+<p>Esta guía explica qué es realmente la automatización de marketing, cuándo conviene (y cuándo no), qué casos de uso dan resultados, cómo diseñar un flujo sin perder el control, qué reglas técnicas debes cumplir en correo y WhatsApp, y cómo medir si funciona. Los detalles técnicos de plataformas vienen de su documentación oficial (fuentes al final); el resto es criterio de trabajo.</p>
 
-<h2 id="los-6-pilares-de-la-automatizacion-de-marketing">Los 6 pilares de la automatización de marketing</h2>
-<h3>1. Email marketing automatizado</h3>
-<p>El email marketing automatizado es la base de cualquier estrategia de automatización. Las secuencias de emails nutren leads desde el primer contacto hasta la compra.</p>
-<p><strong>Secuencias esenciales</strong>: welcome series para nuevos suscriptores, nurturing para leads que descargaron contenido, carrito abandonado para e-commerce, re-engagement para contactos inactivos, post-compra para retención y upsell.</p>
-<h3>2. Workflows de marketing</h3>
-<p>Los workflows de marketing son flujos de trabajo automatizados que conectan múltiples acciones y decisiones basadas en el comportamiento del usuario.</p>
-<h3>3. CRM y automatización</h3>
-<p>La integración CRM + automatización permite que marketing y ventas trabajen con los mismos datos, automatizando el lead scoring, la asignación y el seguimiento.</p>
-<h3>4. Chatbots y marketing conversacional</h3>
-<p>Los chatbots de marketing capturan y califican leads 24/7, responden preguntas frecuentes y derivan oportunidades al equipo de ventas automáticamente.</p>
-<h3>5. Integraciones entre herramientas</h3>
-<p>Las integraciones con Zapier y herramientas similares conectan tu stack de marketing para que los datos fluyan automáticamente entre plataformas.</p>
-<h3>6. Lead nurturing automatizado</h3>
-<p>El lead nurturing convierte prospectos fríos en clientes calificados mediante secuencias personalizadas basadas en comportamiento y perfil.</p>
+<h2 id="que-es">Qué es (y qué no es) la automatización de marketing</h2>
+<p>La <strong>automatización de marketing</strong> es el uso de software para ejecutar tareas repetitivas a partir de reglas: «cuando ocurre X, si se cumple Y, hacer Z». Puede ser tan simple como un correo de bienvenida o tan amplia como un sistema que califica leads, los asigna a un vendedor y avisa cuando un cliente deja de comprar.</p>
+<p>No es lo mismo que enviar correos masivos ni que «poner un chatbot». Automatizar no significa quitar a las personas, sino asegurar que cada contacto reciba el mensaje correcto en el momento correcto, y que el equipo intervenga cuando aporta valor.</p>
 
-<figure class="ed-fig">
-  <img loading="lazy" src="/img/real/blog/crm-automatizacion.png" alt="Workflow de automatizacion">
-  <figcaption>Workflow de automatización</figcaption>
-</figure>
+<blockquote>Automatiza lo repetitivo para que tu equipo pueda dedicarse a lo que solo una persona sabe hacer.<cite>Apache Studio</cite></blockquote>
 
-<h2 id="como-implementar-automatizacion-paso-a-paso">Cómo implementar automatización paso a paso</h2>
-<h3>Fase 1: Mapear procesos actuales</h3>
-<p>Antes de automatizar, documenta: ¿Qué tareas repite tu equipo todos los días? ¿Cuánto tiempo toma cada proceso manual? ¿Dónde se pierden leads o se olvidan seguimientos? ¿Qué datos necesitas capturar?</p>
-<h3>Fase 2: Priorizar por impacto</h3>
-<p>No automatices todo a la vez. Empieza por:</p>
-<ol><li>Lo que más tiempo consume</li><li>Lo que más impacto tiene en revenue</li><li>Lo que es más fácil de implementar</li></ol>
-<h3>Fase 3: Elegir herramientas</h3>
-<p>El stack ideal depende de tu tamaño y necesidades: básico (Mailchimp + Zapier + CRM gratuito), intermedio (ActiveCampaign + Zapier + HubSpot), avanzado (HubSpot Enterprise + integraciones a medida).</p>
-<h3>Fase 4: Construir y probar</h3>
-<p>Implementa un workflow a la vez. Prueba con un grupo pequeño. Mide resultados. Itera. Escala.</p>
-<h3>Fase 5: Optimizar continuamente</h3>
-<p>La automatización no es "configurar y olvidar": revisa métricas semanalmente, haz A/B testing de emails y secuencias, ajusta lead scoring según resultados reales, actualiza contenido periódicamente.</p>
+<h2 id="cuando">Cuándo conviene automatizar (y cuándo esperar)</h2>
+<p>Nuestro criterio es simple: <strong>primero funciona a mano, después se automatiza</strong>. Un proceso que aún no produce resultados no mejora por ejecutarse más rápido; solo comete errores más rápido.</p>
 
-<h2 id="metricas-de-automatizacion-que-importan">Métricas de automatización que importan</h2>
-<ul><li><strong>Tasa de apertura</strong> &mdash; Engagement de emails &middot; 20-30%</li><li><strong>CTR de emails</strong> &mdash; Interés en contenido &middot; 3-5%</li><li><strong>Leads calificados/mes</strong> &mdash; Efectividad de nurturing &middot; +20% vs manual</li><li><strong>Tiempo de respuesta</strong> &mdash; Velocidad de atención &middot; &lt;5 min</li><li><strong>Conversión de lead a cliente</strong> &mdash; ROI de automatización &middot; 2-5%</li></ul>
-
-<h2 id="errores-comunes-en-automatizacion">Errores comunes en automatización</h2>
-<h3>Automatizar sin estrategia</h3>
-<p>La herramienta no es la estrategia. Primero define objetivos, luego automatiza.</p>
-<h3>Falta de personalización</h3>
-<p>Enviar el mismo contenido a todos anula el beneficio de la automatización.</p>
-<h3>No medir resultados</h3>
-<p>Si no mides, no sabes si la automatización funciona o destruye valor.</p>
-<h3>Complejidad excesiva</h3>
-<p>Workflows de 50 pasos que nadie entiende. Empieza simple, complejiza con datos.</p>
-
-<h2 id="conclusion">Conclusión</h2>
-<p>La automatización de marketing es la diferencia entre escalar con eficiencia o crecer con caos. No se trata de reemplazar personas, sino de potenciar su impacto.</p>
-<p>¿Listo para automatizar tu marketing? En Apache Studio implementamos automatización inteligente que conecta datos, herramientas y estrategia para escalar tu operación.</p>
-
-<div class="ed-faq" id="faq">
-<h2>Preguntas frecuentes</h2>
-<h3>¿Qué es la automatización de marketing?</h3>
-<p>Es el uso de tecnología para ejecutar tareas repetitivas de marketing de forma automática, como envío de emails, calificación de leads y seguimiento de prospectos, basándose en reglas y comportamientos del usuario.</p>
-<h3>¿La automatización reemplaza al equipo de marketing?</h3>
-<p>No. La automatización potencia al equipo eliminando tareas repetitivas. Tu equipo se enfoca en estrategia, creatividad y relaciones — las máquinas hacen la ejecución repetitiva.</p>
+<div class="ed-table-wrap">
+  <table>
+    <caption>Criterio de trabajo para decidir si automatizar un proceso.</caption>
+    <thead><tr><th scope="col">Automatiza cuando…</th><th scope="col">Espera cuando…</th></tr></thead>
+    <tbody>
+      <tr><td>La tarea se repite todas las semanas con las mismas reglas</td><td>Aún no está claro cuál es el proceso correcto</td></tr>
+      <tr><td>Un retraso o un olvido cuesta ventas (respuesta a leads, seguimiento)</td><td>El volumen es tan bajo que hacerlo a mano toma minutos</td></tr>
+      <tr><td>Ya validaste manualmente que el mensaje o la oferta funciona</td><td>No tienes datos limpios de contactos ni un CRM ordenado</td></tr>
+      <tr><td>Hay un responsable que puede vigilar el flujo</td><td>Nadie mantendrá el flujo cuando cambien las reglas o las herramientas</td></tr>
+    </tbody>
+  </table>
 </div>
 
+<h2 id="casos">Casos de uso que suelen dar resultado</h2>
+<p>Estos son los flujos con los que empezamos casi siempre, porque son sencillos de medir. Cada uno tiene un disparador, una acción y una métrica que dice si funcionó:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Flujos de automatización habituales. Los resultados dependen de tu oferta y tus datos; mide siempre contra tu línea base.</caption>
+    <thead><tr><th scope="col">Flujo</th><th scope="col">Disparador</th><th scope="col">Acción</th><th scope="col">Cómo saber si funciona</th></tr></thead>
+    <tbody>
+      <tr><td>Aviso interno de nuevo lead</td><td>Envío de formulario</td><td>Notificación al equipo y registro en el CRM</td><td>Tiempo hasta el primer contacto</td></tr>
+      <tr><td>Respuesta inicial al lead</td><td>Envío de formulario</td><td>Correo o mensaje de confirmación con los siguientes pasos</td><td>Tasa de respuesta, citas agendadas</td></tr>
+      <tr><td>Bienvenida y nutrición</td><td>Suscripción o descarga</td><td>Secuencia de correos con contenido útil</td><td>Clics, respuestas, leads calificados</td></tr>
+      <tr><td>Carrito abandonado</td><td>Carrito sin compra</td><td>Recordatorio con el producto</td><td>Compras recuperadas</td></tr>
+      <tr><td>Reactivación</td><td>Cliente sin actividad</td><td>Oferta o recordatorio personalizado</td><td>Recompra</td></tr>
+      <tr><td>Reporte automático</td><td>Horario fijo</td><td>Resumen por correo con los KPIs clave</td><td>Horas de reportería ahorradas</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="ejemplo">Un ejemplo real: el flujo de leads de este sitio</h2>
+<p>Para que no quede en teoría, este es el flujo que corre en el formulario de contacto de Apache Studio. Cuando alguien envía el formulario, el lead se guarda en una base de datos y, en paralelo, un flujo construido en n8n recibe los datos por webhook y envía una notificación por correo al equipo. Es un flujo pequeño, pero resuelve el problema del viernes por la tarde: nadie tiene que acordarse de revisar una bandeja.</p>
+
+<figure class="ed-fig" id="fig-flujo-leads">
+  <svg viewBox="0 0 760 190" role="img" aria-labelledby="fl-t fl-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fl-t">Flujo de un lead nuevo</title>
+    <desc id="fl-d">Un formulario envía los datos a una base de datos y a un webhook de n8n, que dispara un correo de aviso al equipo, quien da seguimiento.</desc>
+    <defs><marker id="fl-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="f2" x="0" y="55" width="150" height="80" rx="8"/><text class="h" x="75" y="88" text-anchor="middle">Formulario</text><text x="75" y="110" text-anchor="middle">Nombre, correo, mensaje</text>
+    <rect class="f2" x="210" y="0" width="170" height="70" rx="8"/><text class="h" x="295" y="30" text-anchor="middle">Base de datos</text><text x="295" y="52" text-anchor="middle">Registro del lead</text>
+    <rect class="acc" x="210" y="120" width="170" height="70" rx="8"/><text class="h on-acc" x="295" y="150" text-anchor="middle">Flujo en n8n</text><text class="on-acc" x="295" y="172" text-anchor="middle">Recibe por webhook</text>
+    <rect class="f2" x="440" y="120" width="150" height="70" rx="8"/><text class="h" x="515" y="150" text-anchor="middle">Correo de aviso</text><text x="515" y="172" text-anchor="middle">Al equipo</text>
+    <rect class="f3" x="640" y="55" width="120" height="80" rx="8"/><text class="h" x="700" y="88" text-anchor="middle">Seguimiento</text><text x="700" y="110" text-anchor="middle">Persona</text>
+    <g class="s1"><path d="M150,85 L208,40" marker-end="url(#fl-ar)"/><path d="M150,105 L208,150" marker-end="url(#fl-ar)"/><path d="M380,155 L438,155" marker-end="url(#fl-ar)"/><path d="M590,150 L638,110" marker-end="url(#fl-ar)"/></g>
+  </svg>
+  <figcaption>El flujo automatiza el aviso y el registro; la conversación sigue siendo humana.</figcaption>
+</figure>
+
+<h2 id="disenar">Cómo diseñar un flujo sin perder el control</h2>
+<p>Un flujo bien hecho se documenta antes de construirse. Esta es la estructura que usamos:</p>
+<ol>
+  <li><strong>Disparador:</strong> qué evento inicia el flujo (envío de formulario, compra, fecha).</li>
+  <li><strong>Condiciones:</strong> qué reglas deben cumplirse (país, producto, si ya es cliente).</li>
+  <li><strong>Acciones:</strong> qué ocurre y en qué orden (guardar, notificar, enviar, etiquetar).</li>
+  <li><strong>Salida o final:</strong> cuándo un contacto sale del flujo (compra, responde, se da de baja).</li>
+  <li><strong>Manejo de errores:</strong> qué pasa si falla un paso; avisar a una persona es mejor que fallar en silencio.</li>
+  <li><strong>Métrica y responsable:</strong> cómo sabes que funciona y quién lo revisa.</li>
+</ol>
+
+<figure class="ed-fig alignright">
+  <img src="/img/real/blog/workflows-marketing.png" width="1920" height="1080" loading="lazy" alt="Diagrama ilustrativo de un flujo de automatización de marketing con decisiones y acciones">
+  <figcaption>Ilustración: un flujo tiene decisiones y acciones.</figcaption>
+</figure>
+
+<h2 id="correo">Correo: las reglas técnicas que no puedes ignorar</h2>
+<p>Automatizar correo sin cuidar la entregabilidad termina en la carpeta de spam. Gmail publicó requisitos vigentes desde el 1 de febrero de 2024:</p>
+<ul>
+  <li><strong>Todos los remitentes</strong> deben autenticar con SPF o DKIM y mantener la tasa de spam por debajo de 0.3 %; Google recomienda mantenerla por debajo de 0.10 %.</li>
+  <li><strong>Remitentes masivos</strong> (más de 5,000 mensajes al día a cuentas de Gmail) deben implementar SPF, DKIM y DMARC.</li>
+  <li><strong>Baja con un clic:</strong> obligatoria para remitentes masivos, con el encabezado correspondiente y un enlace de baja visible en el mensaje.</li>
+</ul>
+<p>Aunque no llegues a ese volumen, es buena práctica configurar los tres registros, incluir siempre una forma clara de darse de baja y enviar solo a personas que aceptaron recibir tus mensajes. Además, evita basar la evaluación de un flujo solo en las «aperturas»: algunas funciones de privacidad de los clientes de correo pueden inflarlas. Los clics y las respuestas son más confiables.</p>
+
+<figure class="ed-fig alignleft">
+  <img src="/img/real/blog/automatizar-email.png" width="1920" height="1080" loading="lazy" alt="Ilustración de un flujo de automatización de correo con disparadores y mensajes personalizados">
+  <figcaption>Ilustración: automatización de correo.</figcaption>
+</figure>
+
+<h2 id="whatsapp">WhatsApp y chatbots</h2>
+<p>En Latinoamérica muchas conversaciones comerciales ocurren en WhatsApp. Si usas la plataforma oficial (WhatsApp Business Platform), hay una regla que cambia el diseño de tus flujos: solo puedes enviar mensajes libres mientras esté abierta la <strong>ventana de atención al cliente de 24 horas</strong> (se abre cuando el usuario te escribe). Fuera de esa ventana, solo puedes enviar <strong>mensajes de plantilla</strong> aprobadas.</p>
+<p>Un chatbot bien diseñado resuelve preguntas frecuentes, califica al contacto y lo pasa a una persona con el contexto ya capturado. Uno mal diseñado atrapa al usuario en un menú sin salida. Regla de criterio: <strong>siempre ofrece una vía a una persona</strong> y mide cuántas conversaciones terminan resueltas sin fricción.</p>
+
+<figure class="ed-fig alignright">
+  <img src="/img/real/blog/chatbots-marketing.png" width="1920" height="1080" loading="lazy" alt="Ilustración de un chatbot de marketing conversando con un usuario">
+  <figcaption>Ilustración: chatbot de marketing.</figcaption>
+</figure>
+
+<h2 id="crm">CRM: la base de todo lo demás</h2>
+<p>Sin un CRM ordenado, la automatización se apoya en datos incompletos. Antes de automatizar, define:</p>
+<ul>
+  <li><strong>Campos mínimos:</strong> nombre, correo, teléfono, origen (canal y campaña) y etapa.</li>
+  <li><strong>Etapas del embudo</strong> con criterios claros (por ejemplo: nuevo, contactado, calificado, propuesta, ganado, perdido).</li>
+  <li><strong>Una regla de calificación simple:</strong> puntos por perfil (cargo, tamaño) y por comportamiento (visitó precios, respondió). Empieza sencillo y ajusta con resultados.</li>
+  <li><strong>Higiene de datos:</strong> duplicados, correos inválidos y bajas actualizadas en todas las herramientas.</li>
+</ul>
+
+<figure class="ed-fig alignleft">
+  <img src="/img/real/blog/crm-automatizacion.png" width="1920" height="1080" loading="lazy" alt="Ilustración de un embudo de CRM con etapas y seguimientos automáticos">
+  <figcaption>Ilustración: etapas de un CRM.</figcaption>
+</figure>
+
+<h2 id="herramientas">Qué herramienta elegir</h2>
+<p>La herramienta importa menos que el diseño del flujo. Como orientación general:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Categorías de herramientas y criterio de elección; verifica siempre precios y límites vigentes con cada proveedor.</caption>
+    <thead><tr><th scope="col">Categoría</th><th scope="col">Sirve para</th><th scope="col">Cuándo encaja</th></tr></thead>
+    <tbody>
+      <tr><td>CRM con automatización (por ejemplo, HubSpot)</td><td>Contactos, etapas, correos y seguimiento en un solo lugar</td><td>Equipos comerciales que necesitan un registro único</td></tr>
+      <tr><td>Plataformas de flujos entre aplicaciones (por ejemplo, n8n, Make, Zapier)</td><td>Conectar formularios, bases de datos, correo y APIs</td><td>Cuando el proceso cruza varias herramientas</td></tr>
+      <tr><td>Correo y mensajería</td><td>Campañas y secuencias por correo o WhatsApp</td><td>Nutrición y recordatorios con reglas de consentimiento</td></tr>
+      <tr><td>Programación a medida</td><td>Casos con lógica propia o integraciones especiales</td><td>Cuando las herramientas estándar ya no alcanzan</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="metricas">Métricas: cómo saber si la automatización funciona</h2>
+<p>No hay porcentajes «normales» que valgan para todos: tu línea base es la de tu negocio. Mide antes y después de cada flujo:</p>
+<ul>
+  <li><strong>Tiempo hasta el primer contacto</strong> con un lead nuevo.</li>
+  <li><strong>Tasa de clic y de respuesta</strong> de los mensajes (más confiables que las aperturas).</li>
+  <li><strong>Leads calificados</strong> y citas o ventas asociadas al flujo.</li>
+  <li><strong>Horas ahorradas</strong> por tu equipo en tareas manuales.</li>
+  <li><strong>Bajas y quejas</strong>, para detectar mensajes que molestan.</li>
+</ul>
+
+<h2 id="errores">Errores que vemos con más frecuencia</h2>
+<ol>
+  <li><strong>Automatizar un proceso que no funciona.</strong> Se multiplica el problema.</li>
+  <li><strong>Demasiada frecuencia.</strong> La misma persona recibe mensajes de tres flujos distintos.</li>
+  <li><strong>Sin salida del flujo.</strong> Alguien que ya compró sigue recibiendo ofertas de compra.</li>
+  <li><strong>Datos sucios.</strong> Duplicados y campos vacíos rompen la personalización.</li>
+  <li><strong>Sin consentimiento ni baja fácil.</strong> Riesgo legal y de reputación de tu dominio.</li>
+  <li><strong>Fallar en silencio.</strong> Un flujo que se cae sin avisar puede perder leads durante semanas.</li>
+</ol>
+
+<h2 id="checklist">Checklist antes de activar un flujo</h2>
+<ul class="ed-checklist">
+  <li>El proceso ya funciona de forma manual y está documentado.</li>
+  <li>Hay disparador, condiciones, acciones y salida definidos.</li>
+  <li>Los datos de contacto son consistentes y sin duplicados.</li>
+  <li>El correo tiene SPF, DKIM y DMARC configurados y enlace de baja visible.</li>
+  <li>Existe una vía a una persona en chatbots y mensajes automáticos.</li>
+  <li>Hay alerta si un paso falla y un responsable que lo revisa.</li>
+  <li>Definiste la métrica y la línea base para evaluar el resultado.</li>
+</ul>
+
+<p>Si quieres automatizar tu proceso de leads o tus reportes, cuéntanos tu caso: puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a>. Y para asegurarte de que los datos que alimentan tus flujos sean confiables, empieza por la <a href="/blog/implementacion-tecnica/">implementación técnica de la medición</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Qué se puede automatizar en marketing digital?</h3>
+  <p>Avisos internos de leads, respuestas iniciales, secuencias de nutrición por correo, recordatorios de carrito, reactivación de clientes, asignación de leads a vendedores, reportes periódicos y preguntas frecuentes en chat. Lo que no conviene automatizar es lo que requiere criterio humano: negociación, casos complejos y quejas.</p>
+  <h3>¿Cuánto tarda en implementarse un flujo?</h3>
+  <p>Depende de la complejidad y del estado de tus datos. Un aviso de nuevo lead puede quedar listo en poco tiempo; una secuencia completa con CRM, calificación y reportes requiere más diseño y pruebas. Lo más lento suele ser ordenar los datos y definir las reglas, no la herramienta.</p>
+  <h3>¿Cómo evito que mis correos automáticos caigan en spam?</h3>
+  <p>Autentica tu dominio (SPF, DKIM y DMARC), envía solo a quienes aceptaron recibirlos, incluye una baja clara, mantén la tasa de spam muy baja (Google pide menos de 0.3 % y recomienda menos de 0.10 %) y evita contenido engañoso. Si superas 5,000 mensajes diarios a Gmail, aplican requisitos adicionales.</p>
+  <h3>¿Puedo enviar mensajes automáticos por WhatsApp?</h3>
+  <p>Con la plataforma oficial, sí, pero con reglas: los mensajes libres solo se pueden enviar dentro de la ventana de 24 horas desde el último mensaje del usuario; fuera de ella solo puedes usar plantillas aprobadas. Revisa además las políticas y precios vigentes de Meta.</p>
+  <h3>¿La automatización reemplaza a mi equipo?</h3>
+  <p>No. Reemplaza tareas repetitivas y reduce olvidos, para que el equipo dedique su tiempo a estrategia, conversaciones de venta y creatividad. Un buen flujo siempre define cuándo interviene una persona.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Workspace Admin Help — <a href="https://support.google.com/a/answer/81126" rel="noopener">Email sender guidelines</a> (requisitos de Gmail desde febrero de 2024).</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/send-messages" rel="noopener">WhatsApp Business Platform: service messages</a> (ventana de atención de 24 horas y mensajes de plantilla).</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Las plataformas cambian sus reglas y precios: si encuentras algo desactualizado, escríbenos.</p>
+</div>
