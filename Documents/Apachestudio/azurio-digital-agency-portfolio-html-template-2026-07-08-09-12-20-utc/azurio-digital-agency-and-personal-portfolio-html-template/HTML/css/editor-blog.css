@@ -512,3 +512,17 @@
 /* ---------- fila de iconos (plataformas) ---------- */
 .ed-blog .ed-icon-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.6rem; margin: 1.6rem 0 2.4rem; clear: both; }
 .ed-blog .ed-icon-row img { width: 5.2rem; height: 5.2rem; object-fit: contain; }
+
+/* ---------- notas dinámicas (Supabase): bloque de enlace al artículo completo ---------- */
+.ed-blog .ed-fullcta { margin: 2.4rem 0 0; text-align: center; }
+.ed-blog .ed-fullcta a {
+  display: inline-flex; align-items: center; gap: .8rem; padding: 1.2rem 2.4rem; border-radius: 99px;
+  background: var(--ed-link); color: #fff; font-weight: 700; font-size: 1.5rem; letter-spacing: .01em;
+}
+.ed-blog .ed-fullcta a:hover { background: var(--ed-link-hover); color: #fff; }
+[color-scheme="dark"] .ed-blog .ed-fullcta a { color: #0f0f0f; }
+.ed-blog .entry-content .articulo-completo {
+  margin: 3.2rem 0; padding: 2rem 2.4rem; background: var(--base-tint); border: 1px solid var(--ed-rule);
+  border-left: 3px solid #f73e9b; font-size: 1.7rem; line-height: 1.6;
+}
+.ed-blog .entry-content .articulo-completo a { font-weight: 700; }
