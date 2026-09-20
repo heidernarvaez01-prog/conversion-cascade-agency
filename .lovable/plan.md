@@ -1,18 +1,37 @@
-# Mejoras SEO de la portada
+# Mejora editorial y SEO de artículos nuevos
 
-Optimizar los elementos señalados en las capturas sin cambiar el diseño visual ni ampliar el alcance a otras páginas.
+## Objetivo
+Convertir los ocho artículos recientes en piezas útiles, creíbles y con voz de especialista, evitando estructuras repetitivas o frases que suenen generadas automáticamente.
 
-## Cambios
+## Trabajo propuesto
+1. **Auditar y consolidar**
+   - Revisar hechos, intención de búsqueda y solapamiento entre publicaciones.
+   - Consolidar los dos artículos casi idénticos sobre WhatsApp: conservar la URL más sólida y convertir la otra en una pieza complementaria, sin borrar contenido ni dejar enlaces rotos.
 
-- Mantener el título actual, que ya tiene una longitud correcta y comunica el servicio principal.
-- Reducir la descripción de 181 a aproximadamente 150 caracteres, incorporando marketing digital, analítica, automatización, SEO y desarrollo web.
-- Hacer que el H1 describa claramente la oferta: agencia de marketing digital basada en datos.
-- Corregir acentos y textos de encabezados, incluido “Últimas noticias”, evitando que el analizador concatene palabras.
-- Mantener un solo H1 y la jerarquía existente de H2 y H3.
-- No añadir `robots` ni `X-Robots-Tag`: la portada ya es indexable y la auditoría confirma que no está bloqueada.
+2. **Reescribir con criterio experto**
+   - Sustituir las fórmulas repetidas (“¿Qué pasó?”, “¿Por qué importa?”, “Cierre”) por aperturas y estructuras propias de cada tema.
+   - Añadir contexto, decisiones prácticas, ejemplos, criterios de medición y advertencias relevantes para negocios de México y Colombia.
+   - Eliminar afirmaciones imprecisas, exageradas o no verificables.
 
-## Verificación
+3. **Optimizar para búsquedas sin forzar el texto**
+   - Asignar una palabra clave principal y variantes semánticas por artículo.
+   - Mejorar título, resumen, subtítulos y primeros párrafos según la intención de búsqueda.
+   - Mantener una lectura natural y evitar repetición artificial de términos.
+   - Añadir enlaces internos contextuales hacia servicios y guías pertinentes del sitio.
 
-- Confirmar título, descripción, canonical y encabezados en la página renderizada.
-- Comprobar que la descripción quede dentro del rango recomendado.
-- Ejecutar la revisión SEO de fundamentos y confirmar que metadatos, rastreo y sitemap continúan aprobados.
+4. **Mejorar la presentación editorial**
+   - Mantener o asignar una imagen temática adecuada a cada publicación.
+   - Incorporar listas, tablas o bloques de decisión solo cuando ayuden a comprender el tema.
+   - Cerrar con una recomendación concreta, no con conclusiones genéricas.
+
+5. **Validar**
+   - Comprobar que los artículos siguen publicados, cargan correctamente y conservan HTML válido.
+   - Revisar títulos, resúmenes, enlaces internos, extensión, legibilidad y ausencia de duplicados evidentes.
+
+## Criterio de calidad
+Cada artículo debe responder una consulta concreta, aportar experiencia aplicable y sonar escrito por un profesional que conoce campañas, analítica y operación real; no por una plantilla.
+
+## Detalles técnicos
+- La edición se hará directamente sobre los registros recientes de `articulos`.
+- No se cambiará el diseño general del blog.
+- Se mantendrán los slugs existentes salvo que una consolidación requiera enlazar una pieza con la otra.
