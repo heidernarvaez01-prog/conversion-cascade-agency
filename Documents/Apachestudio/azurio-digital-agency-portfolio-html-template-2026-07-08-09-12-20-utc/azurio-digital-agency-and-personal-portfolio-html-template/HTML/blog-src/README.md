@@ -35,3 +35,14 @@ español con acentos.
 - `site.json`: marca, redes, CTA de la barra lateral y autores (foto, bio, LinkedIn).
 - `_page.html`: loader, menú, footer y GTM (`@@META@@`, `@@SOCIAL@@`, `@@ARTICLE@@` son los huecos).
 - `../css/editor-blog.css` y `../js/blog-article.js`: estilos (todo bajo `.ed-blog`) y comportamiento.
+
+## Imágenes
+
+- Fotos y iconos 3D vienen de `OneDrive/Documents/Paginas web/azurio-apache-preview/img/Imagenes adicionales/`
+  (Fotos de Relleno, Iconos Business, Iconos Redes Sociales). Los originales pesan de 8 a 30 MB: **no se suben**;
+  se recortan y optimizan (fotos 1600×900 o 1200×750 en JPG ~100 KB, iconos 320×320 en WebP ~15 KB) y se guardan en
+  `img/real/blog/photos/` e `img/real/blog/icons/`.
+- Cada foto se usa una sola vez en todo el blog. Toda foto lleva `alt` descriptivo y caption «Foto ilustrativa».
+- Componentes disponibles en el cuerpo: `figure.ed-fig.alignright|alignleft` (foto con texto envolvente),
+  `div.ed-cards` (+ `.cols-4`) con `.ed-card` (icono 3D, título y texto), `div.ed-callout.has-icon` (icono a la izquierda),
+  `div.ed-icon-row` (fila de iconos de plataformas) y `<pre><code>` para bloques de código.
