@@ -1,0 +1,32 @@
+{
+  "slug": "pinterest-nvidia-busqueda-visual-ia",
+  "published": "2026-09-20",
+  "modified": "2026-09-20",
+  "title": "Pinterest y Nvidia: IA visual y qué cambia para tu marca",
+  "h1": "Pinterest y Nvidia: qué significa la nueva capa de IA para el descubrimiento y las compras",
+  "description": "Qué anunció Pinterest con Nvidia, qué cifras son de infraestructura y cómo preparar catálogo, imágenes y medición para el descubrimiento visual con IA.",
+  "keywords": "Pinterest, Nvidia, búsqueda visual con IA, catálogo de productos, publicidad en Pinterest, compras con IA",
+  "section": "Redes sociales",
+  "tags": [
+    "Pinterest",
+    "IA",
+    "Catálogo"
+  ],
+  "lead": "Detrás del anuncio de GPUs hay una señal útil: el descubrimiento y la compra guiados por IA visual. Cómo prepararte sin gastar de más.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-pinterest-tablero.jpg",
+    "alt": "Tablero de corcho cubierto de carteles y anuncios de colores superpuestos",
+    "caption": "Foto ilustrativa."
+  },
+  "related": [
+    "ai-en-marketing-digital",
+    "performance-marketing",
+    "implementacion-tecnica"
+  ],
+  "about": [
+    "Pinterest",
+    "Búsqueda visual con IA"
+  ],
+  "crumb": "Pinterest y Nvidia",
+  "author": "heider-narvaez"
+}

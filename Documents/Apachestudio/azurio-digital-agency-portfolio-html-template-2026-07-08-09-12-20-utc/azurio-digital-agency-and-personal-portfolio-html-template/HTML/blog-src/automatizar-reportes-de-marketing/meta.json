@@ -1,0 +1,33 @@
+{
+  "slug": "automatizar-reportes-de-marketing",
+  "published": "2026-09-20",
+  "modified": "2026-09-20",
+  "title": "Cómo automatizar tus reportes de marketing: guía práctica",
+  "h1": "Cómo automatizar tus reportes de marketing y ahorrar horas cada mes",
+  "description": "Tres niveles para automatizar reportes de marketing: envío programado en Looker Studio, datos consolidados y flujos con n8n, con frecuencias reales de actualización.",
+  "keywords": "automatizar reportes de marketing, reportes automáticos, Looker Studio envío programado, n8n, dashboard de marketing",
+  "section": "Automatización",
+  "tags": [
+    "Reportes",
+    "Looker Studio",
+    "n8n"
+  ],
+  "lead": "Del envío programado a un flujo con alertas: qué automatizar primero, qué frecuencia de actualización esperar de cada fuente y qué errores evitar.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-reportes-automaticos.jpg",
+    "alt": "Plan de marketing recortado en papel con gráficas circulares, engranajes y la palabra Marketing plan",
+    "caption": "Foto ilustrativa."
+  },
+  "related": [
+    "dashboard-de-marketing-digital",
+    "automatizacion-de-marketing",
+    "analitica-de-marketing-digital"
+  ],
+  "about": [
+    "Reportes de marketing",
+    "Looker Studio",
+    "Automatización"
+  ],
+  "crumb": "Automatizar reportes",
+  "author": "heider-narvaez"
+}

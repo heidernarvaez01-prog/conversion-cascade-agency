@@ -54,6 +54,8 @@ def load_post(slug):
     meta = json.loads((SRC / slug / "meta.json").read_text(encoding="utf-8"))
     body = (SRC / slug / "body.html").read_text(encoding="utf-8")
     meta["body"] = body
+    # Autor por temática: meta.author > site.section_authors[sección] > site.default_author
+    meta.setdefault("author", SITE.get("section_authors", {}).get(meta["section"], SITE.get("default_author", "heider-narvaez")))
     return meta
 
 
@@ -493,7 +495,9 @@ def update_sitemap():
     for slug, post in POSTS.items():
         loc = f"<loc>{BASE}/blog/{slug}/</loc>"
         if loc not in s:
-            warn(slug, "no está en sitemap.xml")
+            entry = ("  <url>\n    " + loc + "\n    <lastmod>" + post["modified"] + "</lastmod>\n"
+                     "    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n")
+            s = s.replace("</urlset>", entry + "</urlset>", 1)
             continue
         pat = re.compile(re.escape(loc) + r"(\s*<lastmod>[^<]*</lastmod>)?")
         s = pat.sub(lambda m: loc + f"\n    <lastmod>{post['modified']}</lastmod>", s, count=1)

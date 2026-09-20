@@ -1,0 +1,154 @@
+<p class="drop-cap">El reporte mensual de marketing suele pasar por el mismo ritual: entrar a cada plataforma, exportar cifras, pegarlas en una hoja, ajustar formatos y enviar un PDF que, para cuando llega, ya está desactualizado. Lo curioso es que casi nada de eso requiere criterio: es transporte de datos. Automatizarlo libera horas cada mes y, sobre todo, hace que las cifras lleguen sin depender de que alguien se acuerde.</p>
+
+<p>Esta guía explica tres niveles para automatizar reportes (del más simple al más completo), qué frecuencia de actualización esperar de cada fuente, cómo se ve un flujo automático con n8n, y qué errores evitar. Las capacidades de Looker Studio y n8n vienen de su documentación oficial; el resto es criterio de trabajo.</p>
+
+<h2 id="costo">Cuánto cuesta reportar a mano</h2>
+<p>Antes de elegir herramienta conviene medir lo que hoy se te va en reportes. Un cálculo simple, con cifras ilustrativas (no son datos de ningún cliente):</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Ejemplo ilustrativo con números inventados; sustituye por los de tu equipo.</caption>
+    <thead><tr><th scope="col">Dato</th><th scope="col">Valor</th><th scope="col">Cálculo</th></tr></thead>
+    <tbody>
+      <tr><td>Horas semanales armando reportes</td><td>6 h</td><td>Dato del equipo</td></tr>
+      <tr><td>Horas al mes</td><td>24 h</td><td>6 × 4 semanas</td></tr>
+      <tr><td>Costo por hora del equipo</td><td>$250</td><td>Dato del negocio</td></tr>
+      <tr><td>Costo mensual de reportar a mano</td><td>$6,000</td><td>24 × 250</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Ese costo no incluye el más importante: el <strong>costo de decidir tarde</strong>. Un gasto que se desvía y se descubre al cierre del mes ya no se puede corregir.</p>
+
+<h2 id="niveles">Tres niveles de automatización</h2>
+<div class="ed-cards">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-chart.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Nivel 1 · Envío programado</h3>
+    <p>Un tablero de Looker Studio que se envía solo por correo con la frecuencia que definas.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/networking.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Nivel 2 · Datos consolidados</h3>
+    <p>Los datos de varias plataformas llegan solos a una hoja o base; el reporte se arma sobre esa fuente única.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/notification.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Nivel 3 · Flujo con alertas</h3>
+    <p>Un flujo revisa los datos, resume lo importante y avisa cuando algo sale de rango.</p>
+  </div>
+</div>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Comparativo de niveles (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Nivel</th><th scope="col">Qué necesitas</th><th scope="col">Ventaja</th><th scope="col">Límite</th></tr></thead>
+    <tbody>
+      <tr><td>1 · Envío programado</td><td>Un tablero de Looker Studio ya hecho</td><td>Se implementa en minutos</td><td>Es una foto del tablero; no analiza ni alerta</td></tr>
+      <tr><td>2 · Datos consolidados</td><td>Conectores o exportaciones automáticas hacia una hoja o base</td><td>Una sola versión de los números</td><td>Requiere ordenar nombres, monedas y periodos</td></tr>
+      <tr><td>3 · Flujo con alertas</td><td>Una herramienta de flujos (por ejemplo n8n) y reglas claras</td><td>Avisos oportunos y resúmenes personalizados</td><td>Necesita mantenimiento y un responsable</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="nivel-1">Nivel 1: envío programado desde Looker Studio</h2>
+<p>Looker Studio permite programar la entrega automática de un reporte por correo. Según su documentación, el mensaje incluye un PDF adjunto, una vista previa de la primera página y un enlace al reporte completo. Se configura desde <em>Compartir → Programar entrega</em> y admite los siguientes ajustes:</p>
+<ul>
+  <li><strong>Destinatarios:</strong> hasta 50 direcciones; tú siempre estás incluido.</li>
+  <li><strong>Páginas:</strong> puedes elegir cuáles del reporte se incluyen.</li>
+  <li><strong>Frecuencia:</strong> inicio, repetición y horarios personalizados (por ejemplo, martes y jueves).</li>
+  <li><strong>Múltiples programaciones:</strong> con Looker Studio Pro, distintos destinatarios con distinta cadencia.</li>
+</ul>
+<p>Si ya tienes un tablero, este es el primer paso más barato. Si aún no lo tienes, empieza por nuestra guía de <a href="/blog/dashboard-de-marketing-digital/">dashboard de marketing digital con Looker Studio</a>.</p>
+
+<h2 id="frescura">Qué frecuencia de actualización esperar</h2>
+<p>Un error común es prometer «datos en tiempo real». En la práctica cada fuente tiene su propio ritmo:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Frecuencias de actualización según la documentación de Looker Studio (revisada en septiembre de 2026).</caption>
+    <thead><tr><th scope="col">Fuente</th><th scope="col">Actualización</th></tr></thead>
+    <tbody>
+      <tr><td>Productos de marketing de Google (Google Ads, GA, Search Console)</td><td>Cada 12 horas; no se puede cambiar</td></tr>
+      <tr><td>Google Sheets</td><td>Por defecto cada 15 minutos; se puede configurar</td></tr>
+      <tr><td>BigQuery</td><td>Configurable desde 1 minuto hasta 12 horas</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>La consecuencia práctica: un reporte que sale a las 8:00 con datos de Google Ads puede mostrar cifras de hace hasta 12 horas. Indica siempre la fecha y hora de corte en el reporte.</p>
+
+<h2 id="nivel-3">Nivel 3: un flujo con n8n</h2>
+<p>Cuando el reporte debe hacer algo más que reenviar un tablero (resumir, comparar contra la meta, avisar), una herramienta de flujos como n8n permite programarlo y conectar varias fuentes. Su nodo <em>Schedule Trigger</em> ejecuta un flujo en intervalos o con expresiones cron, y puedes conectarlo a tus fuentes, a un paso de resumen y a un correo.</p>
+
+<figure class="ed-fig" id="fig-reporte-n8n">
+  <svg viewBox="0 0 760 190" role="img" aria-labelledby="rn-t rn-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="rn-t">Flujo automático de reporte</title>
+    <desc id="rn-d">Un disparador programado consulta las fuentes de datos, calcula comparativos, arma el resumen y envía un correo con alertas.</desc>
+    <defs><marker id="rn-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="f2" x="0" y="35" width="130" height="110" rx="8"/><text class="h" x="65" y="70" text-anchor="middle">Horario</text><text x="65" y="94" text-anchor="middle">Schedule Trigger</text><text x="65" y="114" text-anchor="middle">(diario o semanal)</text>
+    <rect class="f2" x="165" y="35" width="130" height="110" rx="8"/><text class="h" x="230" y="70" text-anchor="middle">Fuentes</text><text x="230" y="94" text-anchor="middle">Hojas, APIs,</text><text x="230" y="114" text-anchor="middle">bases de datos</text>
+    <rect class="acc" x="330" y="35" width="130" height="110" rx="8"/><text class="h on-acc" x="395" y="70" text-anchor="middle">Reglas</text><text class="on-acc" x="395" y="94" text-anchor="middle">Comparativos y</text><text class="on-acc" x="395" y="114" text-anchor="middle">umbrales de alerta</text>
+    <rect class="f2" x="495" y="35" width="130" height="110" rx="8"/><text class="h" x="560" y="70" text-anchor="middle">Resumen</text><text x="560" y="94" text-anchor="middle">Texto con lo</text><text x="560" y="114" text-anchor="middle">más importante</text>
+    <rect class="f3" x="660" y="35" width="100" height="110" rx="8"/><text class="h" x="710" y="70" text-anchor="middle">Correo</text><text x="710" y="94" text-anchor="middle">Al equipo</text>
+    <g class="s1"><path d="M130,90 L163,90" marker-end="url(#rn-ar)"/><path d="M295,90 L328,90" marker-end="url(#rn-ar)"/><path d="M460,90 L493,90" marker-end="url(#rn-ar)"/><path d="M625,90 L658,90" marker-end="url(#rn-ar)"/></g>
+  </svg>
+  <figcaption>Un flujo programado convierte datos en un resumen con alertas, sin intervención manual.</figcaption>
+</figure>
+
+<p>Un paso de resumen puede apoyarse en IA, siempre con una regla: <strong>las cifras las calcula el flujo, no el modelo</strong>, y una persona revisa las recomendaciones antes de tomar decisiones. Es el mismo enfoque que usamos en nuestro flujo de <a href="/blog/automatizacion-de-marketing/">automatización de marketing</a>.</p>
+
+<h2 id="pasos">Pasos para implementarlo</h2>
+<ol>
+  <li><strong>Define las decisiones,</strong> no los gráficos: qué revisas cada semana y qué te haría actuar.</li>
+  <li><strong>Elige 5–8 indicadores</strong> con fórmula y fuente documentadas.</li>
+  <li><strong>Consolida las fuentes</strong> en un solo lugar con nombres y periodos consistentes.</li>
+  <li><strong>Construye el reporte una vez</strong> (tablero o plantilla) y valídalo contra las plataformas de origen.</li>
+  <li><strong>Programa el envío</strong> con la frecuencia que corresponde a cada audiencia (dirección, operación).</li>
+  <li><strong>Agrega alertas</strong> solo para lo que exige acción rápida (gasto fuera de rango, caída de conversiones).</li>
+  <li><strong>Revisa y ajusta</strong> cada trimestre: qué se lee, qué no y qué falta.</li>
+</ol>
+
+<h2 id="errores">Errores frecuentes al automatizar reportes</h2>
+<ul>
+  <li><strong>No definir qué datos hacen falta.</strong> Se automatiza un reporte enorme que nadie lee.</li>
+  <li><strong>Prometer tiempo real.</strong> Cada fuente tiene su frecuencia; indica la hora de corte.</li>
+  <li><strong>Elegir herramientas que no conectan</strong> con tus fuentes y terminar copiando datos a mano.</li>
+  <li><strong>No validar contra las plataformas de origen</strong> antes de enviar a dirección.</li>
+  <li><strong>Enviar el mismo reporte a todos.</strong> Dirección necesita 5 indicadores; operación necesita el detalle.</li>
+  <li><strong>Sin responsable.</strong> Cuando cambia una conexión o una cuenta, el envío falla y nadie se entera.</li>
+</ul>
+
+<h2 id="checklist">Checklist antes de activar el envío automático</h2>
+<ul class="ed-checklist">
+  <li>Cada indicador tiene definición, fórmula y fuente.</li>
+  <li>El reporte indica la fecha y hora de corte de los datos.</li>
+  <li>Se validaron al menos tres cifras contra la plataforma de origen.</li>
+  <li>Los destinatarios y la frecuencia se definieron por audiencia.</li>
+  <li>Hay una alerta si el envío o la conexión falla.</li>
+  <li>Existe un responsable y una fecha de revisión.</li>
+</ul>
+
+<p>Si quieres automatizar tus reportes sin armar todo desde cero, conoce nuestro servicio de <a href="/servicios/dashboards-y-reportes/">dashboards y reportes</a> o <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agenda una llamada</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Cómo programo el envío de un reporte de Looker Studio?</h3>
+  <p>Abre el reporte, elige Compartir y luego Programar entrega. Define los destinatarios (hasta 50), las páginas que se incluyen y la frecuencia. El correo lleva un PDF adjunto, una vista previa de la primera página y un enlace al reporte completo.</p>
+  <h3>¿Los reportes automáticos muestran datos en tiempo real?</h3>
+  <p>No necesariamente. Los productos de marketing de Google se actualizan en Looker Studio cada 12 horas, Google Sheets cada 15 minutos por defecto y BigQuery puede configurarse entre 1 minuto y 12 horas. Indica la hora de corte en el reporte.</p>
+  <h3>¿Qué herramientas necesito para automatizar reportes?</h3>
+  <p>Para empezar basta un tablero de Looker Studio con envío programado. Si quieres consolidar varias plataformas o recibir alertas, puedes sumar una hoja de cálculo o base de datos y una herramienta de flujos como n8n.</p>
+  <h3>¿Cuánto tiempo ahorro?</h3>
+  <p>Depende de cuánto tardes hoy. Mide tus horas actuales en reportes y compáralas después de automatizar; el mayor beneficio suele ser recibir las cifras a tiempo para decidir, no solo las horas ahorradas.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Cloud — <a href="https://cloud.google.com/looker/docs/studio/schedule-automatic-report-delivery" rel="noopener">Schedule automatic report delivery (Looker Studio)</a>.</li>
+    <li>Google Cloud — <a href="https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness" rel="noopener">Manage data freshness (Looker Studio)</a>.</li>
+    <li>n8n Docs — <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger" rel="noopener">Schedule Trigger</a>.</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Las herramientas cambian sus funciones y límites: si encuentras algo desactualizado, escríbenos.</p>
+</div>
