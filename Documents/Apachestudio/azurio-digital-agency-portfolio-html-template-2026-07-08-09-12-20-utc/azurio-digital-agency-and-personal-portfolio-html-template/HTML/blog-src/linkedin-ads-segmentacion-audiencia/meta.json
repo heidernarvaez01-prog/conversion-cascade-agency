@@ -1,0 +1,32 @@
+{
+  "slug": "linkedin-ads-segmentacion-audiencia",
+  "published": "2026-09-20",
+  "modified": "2026-09-20",
+  "author": "heider-narvaez",
+  "title": "LinkedIn Ads: tamaño de audiencia y segmentación B2B",
+  "h1": "LinkedIn Ads: cómo segmentar tu audiencia según las recomendaciones oficiales",
+  "description": "LinkedIn recomienda audiencias de 50 mil a 300 mil miembros según el formato. Cómo segmentar campañas B2B sin quedarte con una audiencia demasiado estrecha.",
+  "keywords": "LinkedIn Ads segmentación, tamaño de audiencia LinkedIn, Campaign Manager, publicidad B2B, Sponsored Content",
+  "section": "Performance",
+  "tags": [
+    "LinkedIn Ads",
+    "B2B",
+    "Segmentación"
+  ],
+  "lead": "Las cifras oficiales de tamaño de audiencia, un ejemplo de cómo ampliar una audiencia estrecha y un plan de prueba de cuatro semanas.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-linkedin-b2b.jpg",
+    "alt": "Equipo trabajando con laptops alrededor de una mesa en una terraza",
+    "caption": "Foto ilustrativa."
+  },
+  "related": [
+    "performance-marketing",
+    "analitica-de-marketing-digital",
+    "google-data-manager-datos-propios"
+  ],
+  "about": [
+    "LinkedIn Ads",
+    "Publicidad B2B"
+  ],
+  "crumb": "LinkedIn Ads"
+}

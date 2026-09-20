@@ -61,6 +61,12 @@ def load_post(slug):
 
 POSTS = {slug: load_post(slug) for slug in ORDER}
 
+# Uso de fotos: cada foto de img/real/blog/photos/ debe aparecer en un solo artículo.
+PHOTO_USE = {}
+for _slug, _p in POSTS.items():
+    for _m in set(re.findall(r"/img/real/blog/photos/([\w.-]+)", _p["body"] + json.dumps(_p["hero"]))):
+        PHOTO_USE.setdefault(_m, set()).add(_slug)
+
 
 def img_size(path_url, fallback=(1600, 900)):
     p = ROOT / path_url.lstrip("/")
@@ -456,6 +462,12 @@ def build(slug, write=True):
         warn(slug, "quedan marcadores [[...]] de la plantilla sin reemplazar")
     if re.search(r"\d+\s?%", strip_tags(body)) and 'class="ed-sources"' not in body:
         warn(slug, "hay cifras con % pero no hay sección de fuentes (.ed-sources)")
+    for _m, _arts in PHOTO_USE.items():
+        if slug in _arts and len(_arts) > 1:
+            warn(slug, f"la foto {_m} se usa también en: {', '.join(sorted(_arts - {slug}))}")
+    for _tag in re.findall(r'<img[^>]*/img/real/blog/photos/[^>]*>', body):
+        if not re.search(r'alt="[^"]{8,}"', _tag):
+            warn(slug, "una foto del cuerpo no tiene alt descriptivo")
     if len(re.findall(r'<h2[ >]', body)) < 3:
         warn(slug, "menos de 3 h2")
     ids = re.findall(r'\bid="([^"]+)"', body)

@@ -46,3 +46,10 @@ español con acentos.
 - Componentes disponibles en el cuerpo: `figure.ed-fig.alignright|alignleft` (foto con texto envolvente),
   `div.ed-cards` (+ `.cols-4`) con `.ed-card` (icono 3D, título y texto), `div.ed-callout.has-icon` (icono a la izquierda),
   `div.ed-icon-row` (fila de iconos de plataformas) y `<pre><code>` para bloques de código.
+
+## Imágenes nuevas (biblioteca)
+
+`python scripts/imagenes.py sync` procesa lo nuevo de la carpeta de origen (fotos a 1600×1000 JPG ~100 KB, iconos a WebP 320 px) y lo
+registra en `blog-src/imagenes.json` con `"alt": ""`: describe cada foto antes de usarla. `python scripts/imagenes.py libres` lista las
+fotos sin usar y `python scripts/imagenes.py usos` detecta repetidas; `build_blog.py` avisa si una foto se usa en dos artículos o
+si falta el alt.

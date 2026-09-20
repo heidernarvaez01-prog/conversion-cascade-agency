@@ -1,0 +1,32 @@
+{
+  "slug": "meta-business-agent-whatsapp",
+  "published": "2026-09-20",
+  "modified": "2026-09-20",
+  "author": "heider-narvaez",
+  "title": "Meta Business Agent: IA en WhatsApp para tu negocio",
+  "h1": "Meta Business Agent en WhatsApp: qué hace, cómo configurarlo y qué vigilar",
+  "description": "El agente de IA de WhatsApp Business responde, recomienda productos y agenda citas. Cómo configurarlo, qué modos ofrece y qué errores evitar en la atención.",
+  "keywords": "Meta Business Agent, WhatsApp Business IA, atención al cliente con IA, chatbot WhatsApp, automatización de atención",
+  "section": "Automatización",
+  "tags": [
+    "WhatsApp",
+    "IA",
+    "Atención al cliente"
+  ],
+  "lead": "Qué puede hacer el agente, cómo activarlo por etapas y cómo mantener a una persona en la conversación cuando importa.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-whatsapp-agente-ia.jpg",
+    "alt": "Manos alrededor de una mesa usando teléfonos con íconos de reacciones flotando",
+    "caption": "Foto ilustrativa."
+  },
+  "related": [
+    "automatizacion-de-marketing",
+    "ai-en-marketing-digital",
+    "automatizar-reportes-de-marketing"
+  ],
+  "about": [
+    "WhatsApp Business",
+    "Meta Business Agent"
+  ],
+  "crumb": "Meta Business Agent"
+}

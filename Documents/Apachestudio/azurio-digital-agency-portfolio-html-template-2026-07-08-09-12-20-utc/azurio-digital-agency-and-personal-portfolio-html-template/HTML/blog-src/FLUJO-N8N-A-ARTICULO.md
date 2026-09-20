@@ -60,24 +60,29 @@ Cada autor necesita: nombre, rol, bio verificable (2 líneas), foto (B/N, cuadra
 
 | Nota en Supabase (`slug`) | Artículo completo | Estado |
 |---|---|---|
-| `decision-judicial-csam-marketing-digital` | `/blog/contenido-ia-menores-fallo-septimo-circuito/` | publicado en repo |
-| `pinterest-nvidia-alianza-potenciar-descubrimiento-ai` | `/blog/pinterest-nvidia-busqueda-visual-ia/` | publicado en repo |
-| `nuevas-herramientas-creacion-gafas-ia-meta` | `/blog/gafas-ia-meta-herramientas-creacion-instagram/` | publicado en repo |
-| `automatizar-reportes-marketing-260919` | `/blog/automatizar-reportes-de-marketing/` | publicado en repo |
-| `meta-nuevo-dispositivo-realidad-virtual` | — | pendiente |
-| `threads-meta-superar-x` | — | pendiente |
-| `influencia-youtube-cultura-popular` | — | pendiente |
-| `mejoras-plataforma-data-manager-google` | — | pendiente |
-| `tiktok-celebra-mes-herencia-hispana` | — | pendiente |
-| `x-incorpora-comercio-acciones`, `x-incorpora-trading-acciones` (duplicadas) | — | pendiente (un solo artículo) |
-| `colaboraciones-creadores-instagram`, `colaboraciones-creadores-instagram-260919` (duplicadas) | — | pendiente (un solo artículo) |
-| `facebook-pages-limita-publicaciones-enlaces` | — | pendiente |
-| `mejora-atencion-clientes-whatsapp`, `facilita-atencion-cliente-ia-whatsapp` (duplicadas) | — | pendiente (un solo artículo) |
-| `mejorar-segmentacion-empresa-linkedin-260919` | — | pendiente |
-| `guia-planificacion-festividades-2026-meta-260919` | — | pendiente |
-| `guia-reddit-planificacion-ventas-260919` | — | pendiente |
+| `automatizar-reportes-marketing-260919` | `/blog/automatizar-reportes-de-marketing/` | nota mejorada y enlazada |
+| `decision-judicial-csam-marketing-digital` | `/blog/contenido-ia-menores-fallo-septimo-circuito/` | construido |
+| `pinterest-nvidia-alianza-potenciar-descubrimiento-ai` | `/blog/pinterest-nvidia-busqueda-visual-ia/` | construido |
+| `nuevas-herramientas-creacion-gafas-ia-meta` | `/blog/gafas-ia-meta-herramientas-creacion-instagram/` | construido |
+| `meta-nuevo-dispositivo-realidad-virtual` | `/blog/visor-realidad-mixta-meta-phoenix/` | construido |
+| `threads-meta-superar-x` | `/blog/threads-vs-x-audiencia-marcas/` | construido |
+| `influencia-youtube-cultura-popular` | `/blog/youtube-cultura-mainstream-microtendencias/` | construido |
+| `mejoras-plataforma-data-manager-google` | `/blog/google-data-manager-datos-propios/` | construido |
+| `tiktok-celebra-mes-herencia-hispana` | `/blog/tiktok-mes-herencia-hispana-marcas/` | construido |
+| `x-incorpora-comercio-acciones` | `/blog/x-cashtags-trading-redes-sociales/` | construido |
+| `x-incorpora-trading-acciones` | `/blog/x-cashtags-trading-redes-sociales/` | construido |
+| `colaboraciones-creadores-instagram` | `/blog/colaboraciones-creadores-instagram-emplifi/` | construido |
+| `colaboraciones-creadores-instagram-260919` | `/blog/colaboraciones-creadores-instagram-emplifi/` | construido |
+| `facebook-pages-limita-publicaciones-enlaces` | `/blog/facebook-limite-enlaces-meta-one/` | construido |
+| `mejora-atencion-clientes-whatsapp` | `/blog/meta-business-agent-whatsapp/` | construido |
+| `facilita-atencion-cliente-ia-whatsapp` | `/blog/meta-business-agent-whatsapp/` | construido |
+| `mejorar-segmentacion-empresa-linkedin-260919` | `/blog/linkedin-ads-segmentacion-audiencia/` | construido |
+| `guia-planificacion-festividades-2026-meta-260919` | `/blog/meta-festividades-2026-plan/` | construido |
+| `guia-reddit-planificacion-ventas-260919` | `/blog/reddit-festividades-2026-guia/` | construido |
 
-## 6. Investigación ya verificada para los pendientes (septiembre de 2026)
+El SQL para añadir los enlaces está en `blog-src/supabase/enlaces-a-articulos-completos.sql`. Las notas duplicadas apuntan al mismo artículo.
+
+## 6. Investigación usada en los artículos (septiembre de 2026)
 
 - **Threads vs X:** entrevista de Zuckerberg con *Sources* (13 sep 2026): «Threads es más grande que X o está por serlo»; Threads llegó a 500 M de usuarios activos mensuales en junio de 2026; el conteo de X no es comparable (Social Media Today, `/news/threads-might-be-bigger-than-x-says-zuckerberg/830236/`). Ángulo: importa la audiencia específica, no el tamaño total.
 - **Visor de Meta (Project Phoenix):** filtraciones (no anuncio oficial) de un visor ligero con procesador externo; Meta Connect 23–24 sep 2026; lanzamiento apuntado a la primera mitad de 2027 (Road to VR, TechRadar). Escribir como rumor, después de Connect.

@@ -1,0 +1,32 @@
+{
+  "slug": "google-data-manager-datos-propios",
+  "published": "2026-09-20",
+  "modified": "2026-09-20",
+  "author": "heider-narvaez",
+  "title": "Google Data Manager: usar datos propios en campañas",
+  "h1": "Google Data Manager: qué anunció y cómo preparar tus datos propios para tus campañas",
+  "description": "Novedades de Google Data Manager de septiembre de 2026: integraciones, métrica de aporte de datos y Meridian. Qué es de Google, qué probar y cómo prepararte.",
+  "keywords": "Google Data Manager, datos propios, conversiones mejoradas, Meridian, Google Ads, ROAS incremental",
+  "section": "Analítica",
+  "tags": [
+    "Google Ads",
+    "Datos propios",
+    "Medición"
+  ],
+  "lead": "Integraciones, una métrica nueva y auditoría de datos con IA: qué se anunció, qué cifras son de Google y qué necesitas tener listo.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-google-data-manager.jpg",
+    "alt": "Manos sosteniendo una tablet con la página de búsqueda de Google",
+    "caption": "Foto ilustrativa."
+  },
+  "related": [
+    "implementacion-tecnica",
+    "analitica-de-marketing-digital",
+    "performance-marketing"
+  ],
+  "about": [
+    "Google Data Manager",
+    "Datos propios"
+  ],
+  "crumb": "Google Data Manager"
+}
