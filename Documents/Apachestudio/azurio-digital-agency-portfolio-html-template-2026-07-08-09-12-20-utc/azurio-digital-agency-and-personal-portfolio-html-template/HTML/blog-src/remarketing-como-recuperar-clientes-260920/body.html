@@ -1,36 +1,107 @@
-<p class="drop-cap">Una persona entra a tu sitio, mira una página de servicio, compara dos opciones y se va. No necesariamente rechazó la propuesta. Puede estar validando alternativas, esperando aprobación o simplemente haber abierto la página en un mal momento. El remarketing existe para retomar esa conversación, pero funciona únicamente cuando el mensaje reconoce lo que ocurrió antes.</p>
+<p class="drop-cap">Una persona entra a tu sitio, mira una página de servicio, compara dos opciones y se va. No necesariamente rechazó la propuesta: puede estar validando alternativas, esperando una aprobación o simplemente haber abierto la página en un mal momento. El remarketing existe para retomar esa conversación, pero solo funciona cuando el mensaje reconoce lo que ocurrió antes.</p>
 
-<p>El error habitual es tratar a toda visita como una venta perdida y perseguirla durante semanas con el mismo anuncio. Una estrategia seria hace lo contrario: diferencia señales de intención, excluye a quien ya convirtió, controla la frecuencia y mide resultados incrementales, no solo conversiones atribuidas por la plataforma.</p>
+<p>El error habitual es tratar a toda visita como una venta perdida y perseguirla durante semanas con el mismo anuncio. Una estrategia seria hace lo contrario: distingue señales de intención, excluye a quien ya convirtió, controla la frecuencia y mide resultados incrementales, no solo las conversiones que atribuye la plataforma. En esta guía verás cómo montarlo paso a paso; lo que viene de documentación oficial de Google, Meta y LinkedIn está enlazado en las fuentes, y lo demás es criterio de trabajo y se indica como tal.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/goal.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Respuesta corta</span>
+    <p>Empieza con una sola conversión bien definida, dos a cuatro audiencias separadas por intención, una exclusión de quien ya compró y un mensaje distinto para cada momento. Mide contra un grupo de control antes de escalar presupuesto.</p>
+  </div>
+</div>
 
 <h2 id="que-es">Qué es el remarketing y cómo funciona</h2>
-<p>El <strong>remarketing</strong> es una estrategia para volver a impactar con publicidad a personas que ya interactuaron con un sitio, una aplicación, una tienda o contenidos de una marca. Google utiliza actualmente el término «segmentos de tus datos» para estas audiencias; Meta las denomina audiencias personalizadas. En ambos casos, la lógica es similar: una etiqueta registra acciones permitidas por la configuración de privacidad, esas acciones alimentan segmentos y las campañas muestran anuncios a quienes cumplen las reglas.</p>
+<p>El <strong>remarketing</strong> es una estrategia para volver a impactar con publicidad a personas que ya interactuaron con un sitio, una aplicación, una tienda o los contenidos de una marca. Google usa actualmente el término «segmentos de tus datos» para estas audiencias; Meta las llama audiencias personalizadas. En ambos casos la lógica es la misma: una etiqueta registra las acciones que permite la configuración de privacidad, esas acciones alimentan segmentos y las campañas muestran anuncios solo a quienes cumplen las reglas.</p>
 
-<p>En la conversación diaria, <em>remarketing</em> y <em>retargeting</em> se usan como sinónimos. Si se quiere ser preciso, retargeting suele referirse a impactos publicitarios basados en comportamiento, mientras remarketing también puede incluir correo, CRM y otros canales. Para planear una campaña, la diferencia importa menos que responder tres preguntas: <strong>qué hizo la persona, qué necesita ahora y cuándo deja de tener sentido insistir</strong>.</p>
+<figure class="ed-fig" id="fig-flujo">
+  <svg viewBox="0 0 760 210" role="img" aria-labelledby="fr-t fr-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fr-t">Cómo funciona una campaña de remarketing</title>
+    <desc id="fr-d">Flujo de cinco etapas: la persona visita el sitio, una etiqueta registra el evento si hay consentimiento, un segmento aplica reglas de página, ventana y exclusión, la campaña muestra un anuncio distinto por segmento y, si la persona convierte, sale de la audiencia.</desc>
+    <defs><marker id="fr-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <g>
+      <rect class="f2" x="0" y="20" width="128" height="170" rx="8"/><text class="h" x="64" y="44" text-anchor="middle">1 · Visita</text>
+      <text x="64" y="76" text-anchor="middle">Ve un servicio,</text><text x="64" y="98" text-anchor="middle">un producto o</text><text x="64" y="120" text-anchor="middle">inicia un formulario</text><text x="64" y="152" text-anchor="middle">y se va sin</text><text x="64" y="174" text-anchor="middle">convertir</text>
+      <rect class="f2" x="158" y="20" width="128" height="170" rx="8"/><text class="h" x="222" y="44" text-anchor="middle">2 · Etiqueta</text>
+      <text x="222" y="76" text-anchor="middle">Google, Meta o</text><text x="222" y="98" text-anchor="middle">LinkedIn registran</text><text x="222" y="120" text-anchor="middle">el evento</text><text x="222" y="152" text-anchor="middle">solo si hay</text><text x="222" y="174" text-anchor="middle">consentimiento</text>
+      <rect class="f2" x="316" y="20" width="128" height="170" rx="8"/><text class="h" x="380" y="44" text-anchor="middle">3 · Segmento</text>
+      <text x="380" y="76" text-anchor="middle">Reglas por página</text><text x="380" y="98" text-anchor="middle">o evento</text><text x="380" y="130" text-anchor="middle">Ventana en días</text><text x="380" y="162" text-anchor="middle">Exclusiones</text>
+      <rect class="f2" x="474" y="20" width="128" height="170" rx="8"/><text class="h" x="538" y="44" text-anchor="middle">4 · Anuncio</text>
+      <text x="538" y="76" text-anchor="middle">Un mensaje por</text><text x="538" y="98" text-anchor="middle">segmento</text><text x="538" y="130" text-anchor="middle">Tope de</text><text x="538" y="152" text-anchor="middle">frecuencia</text><text x="538" y="174" text-anchor="middle">Destino exacto</text>
+      <rect class="acc" x="632" y="20" width="128" height="170" rx="8"/><text class="h on-acc" x="696" y="44" text-anchor="middle">5 · Resultado</text>
+      <text class="on-acc" x="696" y="76" text-anchor="middle">Convierte y sale</text><text class="on-acc" x="696" y="98" text-anchor="middle">de la audiencia</text><text class="on-acc" x="696" y="130" text-anchor="middle">o agota la</text><text class="on-acc" x="696" y="152" text-anchor="middle">ventana y deja</text><text class="on-acc" x="696" y="174" text-anchor="middle">de verse</text>
+    </g>
+    <g class="arrows">
+      <line class="s1 arrow-l" x1="130" y1="105" x2="156" y2="105" marker-end="url(#fr-ar)"/>
+      <line class="s1 arrow-l" x1="288" y1="105" x2="314" y2="105" marker-end="url(#fr-ar)"/>
+      <line class="s1 arrow-l" x1="446" y1="105" x2="472" y2="105" marker-end="url(#fr-ar)"/>
+      <line class="s1 arrow-l" x1="604" y1="105" x2="630" y2="105" marker-end="url(#fr-ar)"/>
+    </g>
+  </svg>
+  <figcaption>Ciclo de una campaña de remarketing: cada etapa puede fallar sin que el anuncio tenga la culpa.</figcaption>
+</figure>
 
-<blockquote>El mejor remarketing no recuerda que estuviste ahí; resuelve la duda que impidió avanzar.
-  <cite>Apache Studio</cite>
-</blockquote>
+<p>En la conversación diaria, <em>remarketing</em> y <em>retargeting</em> se usan como sinónimos. Si se quiere ser preciso, retargeting suele referirse a anuncios basados en comportamiento, mientras que remarketing también puede incluir correo, CRM y otros canales de reactivación. Para planear una campaña la diferencia importa menos que responder tres preguntas: <strong>qué hizo la persona, qué necesita ahora y cuándo deja de tener sentido insistir</strong>.</p>
+
+<blockquote>El mejor remarketing no recuerda que estuviste ahí; resuelve la duda que impidió avanzar.<cite>Apache Studio</cite></blockquote>
+
+<h2 id="canales">Dónde hacerlo: qué pide cada plataforma</h2>
+<p>Cada plataforma construye sus audiencias con su propia etiqueta y tiene reglas distintas. Conocerlas evita descubrir, ya con presupuesto asignado, que tu audiencia es demasiado pequeña para publicarse.</p>
+
+<div class="ed-icon-row">
+  <img src="/img/real/blog/icons/facebook.webp" width="320" height="320" loading="lazy" alt="Facebook">
+  <img src="/img/real/blog/icons/instagram.webp" width="320" height="320" loading="lazy" alt="Instagram">
+  <img src="/img/real/blog/icons/linkedin.webp" width="320" height="320" loading="lazy" alt="LinkedIn">
+  <img src="/img/real/blog/icons/youtube.webp" width="320" height="320" loading="lazy" alt="YouTube">
+  <img src="/img/real/blog/icons/whatsapp.webp" width="320" height="320" loading="lazy" alt="WhatsApp">
+</div>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Requisitos documentados por cada plataforma (revisados en septiembre de 2026) y cuándo suele encajar cada canal (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Canal</th><th scope="col">Cómo se forma la audiencia</th><th scope="col">Dato documentado</th><th scope="col">Cuándo suele encajar</th></tr></thead>
+    <tbody>
+      <tr><td>Google Ads</td><td>Etiqueta de Google o audiencias de Analytics vinculadas a la cuenta</td><td>Duración por defecto de 30 días y máximo de 540; para publicarse requiere al menos 100 usuarios activos en los últimos 30 días</td><td>Búsqueda, YouTube y display cuando ya hay volumen de tráfico</td></tr>
+      <tr><td>Meta (Facebook e Instagram)</td><td>Meta Pixel y eventos del sitio, con reglas por URL o evento</td><td>La audiencia debe alcanzar un tamaño mínimo antes de poder usarse; permite excluir audiencias en el anuncio</td><td>Consumo, catálogos y servicios con decisión rápida</td></tr>
+      <tr><td>LinkedIn</td><td>Insight Tag instalada en el sitio</td><td>Mínimo de 300 miembros para activarse y hasta 48 horas de procesamiento</td><td>B2B con ciclos de decisión largos</td></tr>
+      <tr><td>Correo, CRM y WhatsApp</td><td>Lista propia de personas que aceptaron recibir mensajes</td><td>Depende del consentimiento y de las políticas de cada canal</td><td>Recompra, reactivación y seguimiento de leads</td></tr>
+    </tbody>
+  </table>
+</div>
 
 <h2 id="antes-de-invertir">Lo que debe estar listo antes de invertir</h2>
 <p>No empieces diseñando anuncios. Primero comprueba que puedes distinguir una visita casual de una acción con intención. Una implementación mínima suele incluir:</p>
 <ul class="ed-checklist">
-  <li>Etiqueta de Google o Meta Pixel instalada y comprobada en todas las páginas necesarias.</li>
+  <li>Etiqueta de Google, Meta Pixel o Insight Tag instalada y comprobada en todas las páginas necesarias.</li>
   <li>Eventos relevantes: vista de producto o servicio, inicio de formulario, envío, añadir al carrito, inicio de pago y compra.</li>
   <li>Una conversión principal claramente definida; no todas las interacciones deben contar como resultado.</li>
   <li>Exclusión de compradores, leads ya enviados, equipo interno y tráfico de prueba cuando sea posible.</li>
   <li>Aviso de privacidad y gestión de consentimiento acordes con los países donde operas.</li>
-  <li>Parámetros UTM consistentes y una fuente de verdad para ventas o leads, idealmente tienda o CRM.</li>
+  <li>Parámetros UTM consistentes y una fuente de verdad para ventas o leads, idealmente la tienda o el CRM.</li>
 </ul>
 
 <div class="ed-callout">
   <span class="ed-callout__label">Antes de lanzar</span>
-  <p>Si la campaña no puede reconocer una conversión, tampoco puede excluirla. El resultado es desperdicio de presupuesto y una experiencia molesta para el cliente.</p>
+  <p>Si la campaña no puede reconocer una conversión, tampoco puede excluirla. El resultado es presupuesto desperdiciado y una experiencia molesta para el cliente que ya compró.</p>
 </div>
 
-<p>Google permite crear audiencias de Analytics a partir de combinaciones de dimensiones, métricas y eventos, y exportarlas a Google Ads cuando ambas cuentas están vinculadas y la personalización publicitaria está activa. Meta permite crear audiencias personalizadas a partir de eventos estándar o personalizados del sitio. Esto hace que la calidad de la <a href="/servicios/implementacion-tecnica/">implementación técnica</a> determine la calidad de la segmentación.</p>
+<p>Google permite crear audiencias de Analytics a partir de combinaciones de dimensiones, métricas y eventos, y exportarlas a Google Ads cuando ambas cuentas están vinculadas y la personalización publicitaria está activa. Meta permite crear audiencias personalizadas a partir de eventos estándar o personalizados del sitio. Por eso la calidad de la <a href="/servicios/implementacion-tecnica/">implementación técnica</a> determina la calidad de la segmentación: si el evento «inició formulario» no se dispara bien, la audiencia de alta intención simplemente no existe.</p>
 
 <h2 id="segmentacion">Cómo segmentar por intención, no solo por visita</h2>
-<p>«Todos los visitantes de los últimos 30 días» puede servir para validar que la instalación funciona, pero rara vez es una buena audiencia final. Mezcla curiosos, candidatos, clientes y personas que llegaron por accidente. Conviene separar las audiencias según la distancia que existe entre la acción realizada y la conversión.</p>
+<p>«Todos los visitantes de los últimos 30 días» puede servir para validar que la instalación funciona, pero rara vez es una buena audiencia final: mezcla curiosos, candidatos, clientes y personas que llegaron por accidente. Conviene separar las audiencias según la distancia que hay entre la acción realizada y la conversión. Cuanto más cerca de comprar, más corta la ventana y más directo el mensaje.</p>
+
+<figure class="ed-fig" id="fig-escalera">
+  <svg viewBox="0 0 760 300" role="img" aria-labelledby="fe-t fe-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fe-t">Escalera de audiencias por intención</title>
+    <desc id="fe-d">Cuatro barras que se estrechan: visitó contenido informativo (7 a 30 días), vio un servicio o producto (7 a 21 días), inició un formulario o añadió al carrito (1 a 7 días) y compró (según la recompra).</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="298" rx="10"/>
+    <rect class="f2" x="60" y="20" width="640" height="52" rx="8"/><text class="h" x="380" y="42" text-anchor="middle">Intención baja · visitó una nota o página informativa</text><text x="380" y="60" text-anchor="middle">Ventana inicial: 7–30 días · mensaje: guía, comparación o caso</text>
+    <rect class="f3" x="130" y="82" width="500" height="52" rx="8"/><text class="h" x="380" y="104" text-anchor="middle">Intención media · vio un servicio, categoría o producto</text><text x="380" y="122" text-anchor="middle">Ventana inicial: 7–21 días · mensaje: beneficio y prueba</text>
+    <rect class="acc" x="200" y="144" width="360" height="52" rx="8"/><text class="h on-acc" x="380" y="166" text-anchor="middle">Intención alta · inició formulario o carrito</text><text class="on-acc" x="380" y="184" text-anchor="middle">Ventana inicial: 1–7 días · mensaje: resolver la objeción</text>
+    <rect class="f2" x="270" y="206" width="220" height="52" rx="8"/><text class="h" x="380" y="228" text-anchor="middle">Cliente · ya convirtió</text><text x="380" y="246" text-anchor="middle">Sale de la captación</text>
+    <text x="380" y="284" text-anchor="middle">Las ventanas son criterios iniciales de trabajo; se ajustan al ciclo real de compra.</text>
+  </svg>
+  <figcaption>Más cerca de la conversión, más corta la ventana y más directo el mensaje.</figcaption>
+</figure>
 
 <div class="ed-table-wrap">
   <table>
@@ -45,101 +116,218 @@
   </table>
 </div>
 
-<p>La duración debe reflejar el ciclo real. Para una compra de consumo frecuente, 30 días pueden ser demasiado; para consultoría B2B, pueden ser insuficientes. Revisa cuánto tarda normalmente una persona desde la primera visita hasta la venta y usa esa distribución como punto de partida. Si el volumen es pequeño, evita fragmentar tanto que cada segmento quede sin escala.</p>
+<p>La duración debe reflejar el ciclo real. Para una compra de consumo frecuente, 30 días pueden ser demasiado; para una consultoría B2B, pueden ser insuficientes. Revisa cuánto tarda normalmente una persona desde la primera visita hasta la venta y usa esa distribución como punto de partida. Si el volumen es pequeño, evita fragmentar tanto que cada segmento quede sin escala: recuerda que las plataformas exigen un mínimo de personas para publicar.</p>
+
+<h3 id="ejemplos">Dos ejemplos: tienda en línea y servicio B2B</h3>
+<p>El mismo esquema se traduce distinto según el negocio. Estos ejemplos son ilustrativos; no corresponden a ningún cliente ni son resultados reales.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Ejemplo ilustrativo con criterios iniciales de trabajo; sustituye por los datos de tu negocio.</caption>
+    <thead><tr><th scope="col">Decisión</th><th scope="col">Tienda en línea</th><th scope="col">Servicio B2B</th></tr></thead>
+    <tbody>
+      <tr><td>Conversión principal</td><td>Compra confirmada</td><td>Reunión agendada</td></tr>
+      <tr><td>Señal de alta intención</td><td>Carrito iniciado o pago sin terminar</td><td>Visita a la página del servicio más formulario abierto</td></tr>
+      <tr><td>Ventana de la audiencia alta</td><td>1–7 días</td><td>7–21 días (ciclo más largo)</td></tr>
+      <tr><td>Mensaje</td><td>Producto visto, envío, devoluciones y medios de pago</td><td>Caso relacionado, alcance, tiempos y qué pasa tras la llamada</td></tr>
+      <tr><td>Destino</td><td>Carrito o ficha del producto</td><td>Página del servicio con agenda visible</td></tr>
+      <tr><td>Exclusión</td><td>Compradores de los últimos días</td><td>Leads y clientes actuales</td></tr>
+      <tr><td>Canal habitual</td><td>Meta, Google y correo</td><td>LinkedIn, Google y correo</td></tr>
+    </tbody>
+  </table>
+</div>
 
 <h2 id="mensajes">Qué anuncio mostrar en cada momento</h2>
-<p>Una campaña de remarketing no debería repetir el anuncio de prospección. La persona ya conoce la marca; ahora necesita una razón para volver. El mensaje puede avanzar con la intención:</p>
-<ol>
-  <li><strong>Contexto.</strong> Recupera el tema o categoría consultada, sin afirmar de manera invasiva que vigilaste a la persona.</li>
-  <li><strong>Prueba.</strong> Muestra cómo funciona, un caso verificable, preguntas frecuentes o una comparación honesta.</li>
-  <li><strong>Reducción de riesgo.</strong> Explica tiempos, alcance, garantías aplicables, soporte o qué sucede después de contactar.</li>
-  <li><strong>Acción.</strong> Lleva a la página exacta que continúa el proceso, no siempre a la portada.</li>
-</ol>
+<p>Una campaña de remarketing no debería repetir el anuncio de prospección. La persona ya conoce la marca; ahora necesita una razón para volver. El mensaje avanza con la intención:</p>
 
-<p>En e-commerce, el remarketing dinámico puede mostrar productos vistos mediante identificadores y atributos enviados a la plataforma. En servicios, suele funcionar mejor una pieza que responda la objeción principal: costo, tiempo, integración, confianza o alcance. Un visitante que leyó sobre medición podría recibir una auditoría o checklist; quien inició el contacto necesita una ruta corta para terminarlo.</p>
+<div class="ed-cards cols-4">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-target.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>1 · Contexto</h3>
+    <p>Retoma el tema o la categoría consultada, sin afirmar de forma invasiva que vigilaste a la persona.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/data-analysis.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>2 · Prueba</h3>
+    <p>Muestra cómo funciona, un caso verificable, preguntas frecuentes o una comparación honesta.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>3 · Menos riesgo</h3>
+    <p>Explica tiempos, alcance, garantías aplicables, soporte y qué sucede después de contactar.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/rocket.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>4 · Acción</h3>
+    <p>Lleva a la página exacta que continúa el proceso, no siempre a la portada.</p>
+  </div>
+</div>
 
-<p>Evita atar toda la estrategia a descuentos. Descontar puede recuperar una venta, pero también enseñar a los clientes a abandonar el carrito para esperar una oferta. Antes prueba claridad, evidencia, facilidad de compra y asistencia.</p>
+<p>En e-commerce, el remarketing dinámico puede mostrar productos vistos mediante identificadores y atributos enviados a la plataforma. En servicios suele funcionar mejor una pieza que responda la objeción principal: costo, tiempo, integración, confianza o alcance. Un visitante que leyó sobre medición podría recibir una auditoría o un checklist; quien inició el contacto necesita una ruta corta para terminarlo.</p>
+
+<p>Evita atar toda la estrategia a los descuentos. Descontar puede recuperar una venta, pero también enseña a los clientes a abandonar el carrito para esperar una oferta. Antes prueba claridad, evidencia, facilidad de compra y asistencia.</p>
 
 <h2 id="frecuencia">Frecuencia, ventanas y fatiga publicitaria</h2>
-<p>La fatiga aparece cuando una persona ve demasiadas veces una creatividad sin avanzar. No existe una frecuencia universal: depende del canal, el ciclo, el tamaño de audiencia y la variedad de piezas. Como criterio operativo, vigila frecuencia junto con CTR, costo por resultado y conversiones. Si la frecuencia sube mientras la respuesta cae, rota la creatividad, acorta la ventana o amplía la audiencia; no aumentes presupuesto por reflejo.</p>
+<p>La fatiga aparece cuando una persona ve demasiadas veces una creatividad sin avanzar. No existe una frecuencia universal: depende del canal, del ciclo de compra, del tamaño de la audiencia y de cuántas piezas distintas tengas. Como criterio operativo, vigila la frecuencia junto con el CTR, el costo por resultado y las conversiones. Si la frecuencia sube mientras la respuesta cae, rota la creatividad, acorta la ventana o amplía la audiencia; no aumentes el presupuesto por reflejo.</p>
 
-<p>También conviene usar una secuencia. Durante los primeros días, muestra la pieza más cercana a la acción abandonada. Después cambia a prueba o educación. Finalmente deja de impactar o mueve a la persona a una audiencia de baja presión. La exclusión temporal puede proteger tanto el presupuesto como la percepción de marca.</p>
+<p>Google Ads permite fijar topes de frecuencia en campañas de display y de video, por día, semana o mes; en display solo cuentan las impresiones vistas y las campañas Demand Gen quedan fuera de esa opción. En otras plataformas el control es distinto, así que revisa qué puedes limitar en cada una antes de prometer «máximo tres impactos por persona».</p>
+
+<figure class="ed-fig" id="fig-secuencia">
+  <svg viewBox="0 0 760 210" role="img" aria-labelledby="fs-t fs-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fs-t">Ejemplo de secuencia de mensajes en tres etapas</title>
+    <desc id="fs-d">Tres bloques consecutivos: en los días 1 a 3 se retoma lo que dejó la persona, en los días 4 a 10 se muestra prueba y se resuelven objeciones, y en los días 11 a 21 se baja la presión con contenido útil. Después la persona sale de la audiencia.</desc>
+    <defs><marker id="fs-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="acc" x="0" y="20" width="220" height="150" rx="8"/><text class="h on-acc" x="110" y="46" text-anchor="middle">Días 1–3 · Retomar</text>
+    <text class="on-acc" x="110" y="78" text-anchor="middle">La misma página o</text><text class="on-acc" x="110" y="100" text-anchor="middle">producto que dejó</text><text class="on-acc" x="110" y="130" text-anchor="middle">Un solo mensaje claro</text><text class="on-acc" x="110" y="152" text-anchor="middle">y un botón directo</text>
+    <rect class="f3" x="250" y="20" width="220" height="150" rx="8"/><text class="h" x="360" y="46" text-anchor="middle">Días 4–10 · Convencer</text>
+    <text x="360" y="78" text-anchor="middle">Prueba, caso o</text><text x="360" y="100" text-anchor="middle">preguntas frecuentes</text><text x="360" y="130" text-anchor="middle">Respuesta a la</text><text x="360" y="152" text-anchor="middle">objeción principal</text>
+    <rect class="f2" x="500" y="20" width="200" height="150" rx="8"/><text class="h" x="600" y="46" text-anchor="middle">Días 11–21 · Aliviar</text>
+    <text x="600" y="78" text-anchor="middle">Contenido útil, no</text><text x="600" y="100" text-anchor="middle">una oferta más</text><text x="600" y="130" text-anchor="middle">Menos presión y</text><text x="600" y="152" text-anchor="middle">menos frecuencia</text>
+    <g class="arrows">
+      <line class="s1 arrow-l" x1="222" y1="95" x2="248" y2="95" marker-end="url(#fs-ar)"/>
+      <line class="s1 arrow-l" x1="472" y1="95" x2="498" y2="95" marker-end="url(#fs-ar)"/>
+      <line class="s1 arrow-l" x1="702" y1="95" x2="728" y2="95" marker-end="url(#fs-ar)"/>
+    </g>
+    <text x="745" y="120" text-anchor="end">Sale</text>
+    <text x="380" y="198" text-anchor="middle">Secuencia de ejemplo (criterio de trabajo): ajusta los días al ciclo de tu negocio.</text>
+  </svg>
+  <figcaption>Una secuencia evita repetir la misma pieza: cada etapa aporta información nueva y termina con una salida.</figcaption>
+</figure>
+
+<p>La exclusión temporal protege tanto el presupuesto como la percepción de marca. Si tras la última etapa la persona no avanzó, sácala de la captación durante un periodo y vuelve a invitarla con contenido nuevo, no con la misma oferta.</p>
 
 <h2 id="medicion">Cómo medir si el remarketing realmente recupera clientes</h2>
-<p>Las plataformas pueden atribuir una conversión después de una impresión o un clic, pero eso no demuestra por sí solo que la publicidad causó la venta. Las audiencias de remarketing ya tenían mayor intención; algunas personas habrían regresado sin ver anuncios. Por eso el ROAS reportado suele verse mejor que el de prospección.</p>
+<p>Las plataformas pueden atribuir una conversión después de una impresión o un clic, pero eso no demuestra por sí solo que la publicidad causó la venta. Las audiencias de remarketing ya tenían mayor intención y algunas personas habrían regresado sin ver anuncios. Por eso el ROAS reportado suele verse mejor que el de prospección, y por eso conviene distinguir <em>conversiones atribuidas</em> de <em>conversiones incrementales</em>.</p>
 
-<p>Evalúa al menos estos indicadores:</p>
-<ul>
-  <li><strong>Conversiones y costo por conversión</strong>, usando la misma definición que el negocio.</li>
-  <li><strong>Tasa de conversión posterior al clic</strong>, para detectar si la página cumple la promesa del anuncio.</li>
-  <li><strong>Frecuencia y alcance</strong>, para controlar saturación.</li>
-  <li><strong>Ingresos, margen o valor del lead</strong>, no solo cantidad de acciones.</li>
-  <li><strong>Conversiones asistidas o rutas</strong>, cuando la herramienta de medición lo permita.</li>
-  <li><strong>Incrementalidad</strong>: comparación con una audiencia de control no expuesta, si el volumen y la plataforma permiten hacerla.</li>
-</ul>
+<figure class="ed-fig" id="fig-incremental">
+  <svg viewBox="0 0 760 270" role="img" aria-labelledby="fi-t fi-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fi-t">Ejemplo hipotético de incrementalidad</title>
+    <desc id="fi-d">Tres barras: 20 ventas atribuidas por la plataforma, 14 ventas que habría tenido un grupo comparable sin ver anuncios y 6 ventas incrementales, que es la diferencia.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="268" rx="10"/>
+    <line class="s1" x1="70" y1="210" x2="700" y2="210"/>
+    <rect class="f3" x="140" y="50" width="130" height="160" rx="6"/><text class="h" x="205" y="40" text-anchor="middle">20</text><text x="205" y="232" text-anchor="middle">Ventas atribuidas</text><text x="205" y="250" text-anchor="middle">por la plataforma</text>
+    <rect class="f3" x="315" y="98" width="130" height="112" rx="6"/><text class="h" x="380" y="88" text-anchor="middle">14</text><text x="380" y="232" text-anchor="middle">Ventas sin ver anuncios</text><text x="380" y="250" text-anchor="middle">(grupo de control)</text>
+    <rect class="acc" x="490" y="162" width="130" height="48" rx="6"/><text class="h" x="555" y="152" text-anchor="middle">6</text><text x="555" y="232" text-anchor="middle">Ventas incrementales</text><text x="555" y="250" text-anchor="middle">(20 − 14)</text>
+  </svg>
+  <figcaption>Ejemplo hipotético: solo 6 de las 20 ventas atribuidas se explican por los anuncios.</figcaption>
+</figure>
 
-<p>Un ejemplo hipotético: una campaña reporta 20 ventas sobre una audiencia de visitantes. Si un grupo comparable no expuesto habría producido 14 ventas por retorno orgánico, la contribución incremental estimada es 6, no 20. Sin control no puedes conocer con precisión ese número, pero esta lógica evita asignar todo el mérito al último anuncio.</p>
+<p>Sin un grupo de control no puedes conocer con precisión ese número, pero la lógica evita asignar todo el mérito al último anuncio. Cuando el volumen lo permite, Google ofrece <em>Conversion Lift</em>, un experimento aleatorizado que divide a la audiencia en un grupo expuesto y otro que no ve los anuncios y calcula las conversiones incrementales. Si no tienes volumen para una prueba formal, una alternativa modesta es pausar el remarketing en una región o en un porcentaje de la audiencia durante un periodo y comparar las ventas totales, no solo las atribuidas.</p>
 
-<p>Centraliza estas lecturas en un <a href="/blog/dashboard-de-marketing-digital/">dashboard de marketing digital</a> y compara lo que dicen Google Ads o Meta con la tienda, el CRM y la <a href="/blog/analitica-de-marketing-digital/">analítica del sitio</a>.</p>
+<div class="ed-table-wrap">
+  <table>
+    <caption>Indicadores para evaluar una campaña de remarketing (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Indicador</th><th scope="col">Qué responde</th><th scope="col">Trampa habitual</th></tr></thead>
+    <tbody>
+      <tr><td>Conversiones y costo por conversión</td><td>Cuánto cuesta cada resultado</td><td>Usar una definición de conversión distinta a la del negocio</td></tr>
+      <tr><td>Tasa de conversión tras el clic</td><td>Si la página cumple la promesa del anuncio</td><td>Culpar al anuncio de un problema de la página de destino</td></tr>
+      <tr><td>Frecuencia y alcance</td><td>Si estás saturando a la audiencia</td><td>Leer la frecuencia sola, sin mirar el CTR ni el costo</td></tr>
+      <tr><td>Ingresos, margen o valor del lead</td><td>Qué valor real aporta</td><td>Contar acciones sin ponderar su calidad</td></tr>
+      <tr><td>Conversiones asistidas o rutas</td><td>Qué papel juega junto a otros canales</td><td>Repartir el mérito solo al último clic</td></tr>
+      <tr><td>Incrementalidad</td><td>Qué ventas no habrían ocurrido sin anuncios</td><td>Saltarse la comparación por falta de tiempo</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Centraliza estas lecturas en un <a href="/blog/dashboard-de-marketing-digital/">dashboard de marketing digital</a> y compara lo que dicen Google Ads o Meta con la tienda, el CRM y la <a href="/blog/analitica-de-marketing-digital/">analítica del sitio</a>. Si reportas cada mes a mano, revisa cómo <a href="/blog/automatizar-reportes-de-marketing/">automatizar tus reportes de marketing</a>.</p>
 
 <h2 id="privacidad">Privacidad y consentimiento: parte del diseño, no un trámite</h2>
-<p>El remarketing utiliza datos de comportamiento y debe implementarse respetando la normativa aplicable, las políticas de cada plataforma y las decisiones de consentimiento de las personas. Google documenta señales específicas para almacenamiento publicitario, datos de usuario y personalización; además, exige señales de consentimiento para ciertos usos de medición y personalización en el Espacio Económico Europeo.</p>
+<p>El remarketing utiliza datos de comportamiento y debe implementarse respetando la normativa aplicable, las políticas de cada plataforma y las decisiones de consentimiento de las personas. Google documenta señales específicas para almacenamiento publicitario, datos de usuario y personalización, y exige señales de consentimiento para ciertos usos de medición y personalización en el Espacio Económico Europeo.</p>
 
-<p>Esto no es asesoría legal. La configuración adecuada depende de dónde está la empresa, dónde están sus usuarios, qué datos recoge y con qué proveedores los comparte. En la práctica, alinea el banner de cookies, la política de privacidad y el comportamiento real de las etiquetas. Un banner que dice «rechazado» mientras los píxeles siguen enviando datos no es una solución.</p>
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">No es asesoría legal</span>
+    <p>La configuración adecuada depende de dónde está la empresa, dónde están sus usuarios, qué datos recoge y con qué proveedores los comparte. Alinea el banner de cookies, la política de privacidad y el comportamiento real de las etiquetas: un banner que dice «rechazado» mientras los píxeles siguen enviando datos no es una solución. Google también prohíbe implementar etiquetas de remarketing en páginas relacionadas con ofertas restringidas por sus políticas.</p>
+  </div>
+</div>
+
+<h2 id="diagnostico">Cuando no funciona: síntoma, causa probable y qué revisar</h2>
+<p>Antes de cambiar la creatividad, descarta los problemas de base. Esta tabla resume los diagnósticos más frecuentes:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Diagnóstico rápido de una campaña de remarketing (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Síntoma</th><th scope="col">Causa probable</th><th scope="col">Qué revisar</th></tr></thead>
+    <tbody>
+      <tr><td>La audiencia es pequeña o no se activa</td><td>Etiqueta mal instalada, falta de consentimiento, ventana corta o mínimo de la plataforma sin alcanzar</td><td>Estado de la etiqueta, banner de consentimiento y tamaño mínimo (100 usuarios activos en Google; 300 miembros en LinkedIn)</td></tr>
+      <tr><td>La frecuencia sube y el CTR cae</td><td>Fatiga publicitaria</td><td>Rotar piezas, acortar la ventana, fijar topes donde se pueda</td></tr>
+      <tr><td>Buen ROAS, pero las ventas totales no crecen</td><td>Atribución sin incrementalidad</td><td>Grupo de control, prueba de pausa o experimento de lift</td></tr>
+      <tr><td>Clientes que reciben anuncios de lo que ya compraron</td><td>Exclusiones ausentes o mal construidas</td><td>Audiencia de conversión excluida en cada campaña</td></tr>
+      <tr><td>Muchos clics y pocas conversiones</td><td>La página de destino no continúa el proceso</td><td>Destino exacto, velocidad de carga y longitud del formulario</td></tr>
+      <tr><td>El costo por conversión sube semana tras semana</td><td>Audiencia saturada o mensaje agotado</td><td>Ampliar la audiencia y renovar creatividades</td></tr>
+    </tbody>
+  </table>
+</div>
 
 <h2 id="errores">Ocho errores que encarecen una campaña de remarketing</h2>
 <ol>
-  <li><strong>Crear una sola audiencia.</strong> Ignora diferencias de intención y obliga a usar mensajes genéricos.</li>
-  <li><strong>No excluir conversiones.</strong> Sigue pagando por mostrar una oferta ya comprada o un formulario ya enviado.</li>
+  <li><strong>Crear una sola audiencia.</strong> Ignora las diferencias de intención y obliga a usar mensajes genéricos.</li>
+  <li><strong>No excluir conversiones.</strong> Sigues pagando por mostrar una oferta ya comprada o un formulario ya enviado.</li>
   <li><strong>Usar la misma ventana para todo.</strong> Un carrito abandonado y una visita al blog no pierden valor al mismo ritmo.</li>
   <li><strong>Repetir la creatividad de captación.</strong> No aporta información nueva a alguien que ya conoce la propuesta.</li>
   <li><strong>Enviar siempre a la portada.</strong> Obliga al visitante a reconstruir el camino que ya había recorrido.</li>
   <li><strong>Ignorar el consentimiento.</strong> Expone a la empresa y deteriora la calidad de las audiencias.</li>
-  <li><strong>Celebrar solo el ROAS de plataforma.</strong> Confunde atribución con impacto incremental.</li>
+  <li><strong>Celebrar solo el ROAS de la plataforma.</strong> Confunde atribución con impacto incremental.</li>
   <li><strong>Fragmentar una audiencia pequeña.</strong> Produce segmentos sin escala y resultados inestables.</li>
 </ol>
 
-<h2 id="plan">Plan de lanzamiento en siete pasos</h2>
-<ol>
-  <li>Define una sola conversión de negocio y su fuente de verdad.</li>
-  <li>Verifica etiquetas, eventos, consentimiento y exclusiones.</li>
-  <li>Crea de dos a cuatro segmentos basados en intención; empieza simple.</li>
-  <li>Asigna a cada segmento una objeción, un mensaje y una página de destino.</li>
-  <li>Fija presupuesto, ventana y reglas de frecuencia acordes con el tamaño de audiencia.</li>
-  <li>Revisa calidad de datos antes de juzgar anuncios.</li>
-  <li>Evalúa cada semana frecuencia, costo, valor e incrementalidad; rota o detén lo que no aporte.</li>
-</ol>
+<h2 id="plan">Plan de lanzamiento en cuatro semanas</h2>
+<p>Si vas a empezar de cero, este calendario evita saltar directo a los anuncios:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Calendario de lanzamiento propuesto (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Semana</th><th scope="col">Objetivo</th><th scope="col">Entregable</th></tr></thead>
+    <tbody>
+      <tr><td>1 · Medición</td><td>Definir la conversión y verificar etiquetas, eventos, consentimiento y exclusiones</td><td>Lista de eventos comprobados y una fuente de verdad para ventas o leads</td></tr>
+      <tr><td>2 · Audiencias</td><td>Crear de dos a cuatro segmentos por intención y asignar a cada uno una objeción, un mensaje y una página</td><td>Mapa de audiencias con ventanas y exclusiones</td></tr>
+      <tr><td>3 · Lanzamiento</td><td>Publicar con presupuesto acotado, tope de frecuencia donde exista y un grupo de control si el volumen lo permite</td><td>Campañas activas y tablero de seguimiento</td></tr>
+      <tr><td>4 · Evaluación</td><td>Revisar frecuencia, costo, valor e incrementalidad; rotar o detener lo que no aporte</td><td>Decisión de escalar, ajustar o pausar por segmento</td></tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="ed-callout">
   <span class="ed-callout__label">Decisión práctica</span>
   <p>Si hoy solo puedes crear una audiencia, empieza con quienes mostraron alta intención y no con todos los visitantes. El aprendizaje será más claro y el mensaje podrá ser específico.</p>
 </div>
 
-<p>El remarketing puede recuperar oportunidades, pero no corrige una oferta débil, una página confusa ni una medición rota. Antes de escalar, revisa el recorrido completo. En Apache Studio podemos ayudarte con <a href="/servicios/campanas-digitales/">campañas digitales</a>, medición y una estrategia de <a href="/blog/performance-marketing/">performance marketing</a> conectada a resultados de negocio.</p>
+<p>El remarketing puede recuperar oportunidades, pero no corrige una oferta débil, una página confusa ni una medición rota. Antes de escalar, revisa el recorrido completo. En Apache Studio podemos ayudarte con <a href="/servicios/campanas-digitales/">campañas digitales</a>, con la medición y con una estrategia de <a href="/blog/performance-marketing/">performance marketing</a> conectada a resultados de negocio; si quieres revisar tu caso, puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a>.</p>
 
 <div class="ed-faq" id="faq">
   <h2>Preguntas frecuentes</h2>
   <h3>¿Cuál es la diferencia entre remarketing y retargeting?</h3>
-  <p>En el uso cotidiano suelen ser sinónimos. Retargeting suele referirse específicamente a anuncios basados en interacciones previas, mientras remarketing también puede abarcar correo, CRM y otros canales de reactivación.</p>
+  <p>En el uso cotidiano suelen ser sinónimos. Retargeting suele referirse específicamente a anuncios basados en interacciones previas, mientras que remarketing también puede abarcar correo, CRM y otros canales de reactivación.</p>
   <h3>¿Cuánto tiempo debe durar una audiencia de remarketing?</h3>
-  <p>Debe corresponder al ciclo de compra. Una intención alta puede requerir pocos días; una decisión B2B puede tardar semanas o meses. Usa el tiempo real entre primera visita y conversión como referencia y ajusta según resultados.</p>
+  <p>Debe corresponder al ciclo de compra. Una intención alta puede requerir pocos días; una decisión B2B puede tardar semanas o meses. En Google Ads la duración por defecto es de 30 días y el máximo de 540. Usa el tiempo real entre la primera visita y la conversión como referencia y ajusta según resultados.</p>
+  <h3>¿Cuántas personas necesita una audiencia para poder usarse?</h3>
+  <p>Depende de la plataforma. Google Ads pide al menos 100 usuarios activos en los últimos 30 días y LinkedIn exige que la audiencia coincida con al menos 300 miembros. Meta indica que la audiencia debe alcanzar un tamaño mínimo antes de poder usarse; consulta su ayuda para la cifra vigente.</p>
   <h3>¿Puedo hacer remarketing sin instalar un píxel?</h3>
-  <p>Algunas plataformas permiten crear audiencias con interacciones ocurridas dentro de ellas, como reproducciones de video o formularios. Para segmentar acciones del sitio normalmente necesitas una etiqueta, una integración de servidor o una audiencia de clientes que cumpla las políticas aplicables.</p>
+  <p>Algunas plataformas permiten crear audiencias con interacciones ocurridas dentro de ellas, como reproducciones de video o formularios. Para segmentar acciones del sitio normalmente necesitas una etiqueta, una integración de servidor o una lista de clientes que cumpla las políticas aplicables.</p>
   <h3>¿Remarketing y anuncios dinámicos son lo mismo?</h3>
   <p>No. El remarketing define a quién volver a impactar. La publicidad dinámica adapta automáticamente productos o contenidos usando datos como identificadores, disponibilidad o precios.</p>
+  <h3>¿Cómo evito saturar a mi audiencia?</h3>
+  <p>Combina varias piezas en una secuencia, acorta la ventana de las audiencias de baja intención y fija topes de frecuencia donde la plataforma lo permita (Google Ads los ofrece en display y video). Vigila la frecuencia junto con el CTR y el costo por resultado.</p>
+  <h3>¿Cómo sé si el remarketing realmente generó ventas?</h3>
+  <p>Compara con un grupo que no vio los anuncios. Google Ads ofrece Conversion Lift para medir conversiones incrementales; si no tienes volumen para una prueba formal, compara las ventas totales de un periodo con y sin remarketing en una región o porcentaje de la audiencia.</p>
   <h3>¿Por qué mi audiencia aparece demasiado pequeña?</h3>
-  <p>Puede deberse a poco tráfico, una ventana corta, reglas demasiado restrictivas, etiquetas mal instaladas, falta de consentimiento o umbrales mínimos de la plataforma. Primero valida la recolección antes de ampliar reglas.</p>
+  <p>Puede deberse a poco tráfico, una ventana corta, reglas demasiado restrictivas, etiquetas mal instaladas, falta de consentimiento o umbrales mínimos de la plataforma. Primero valida la recolección antes de ampliar las reglas.</p>
 </div>
 
 <div class="ed-sources" id="fuentes">
   <h2>Fuentes</h2>
   <ul>
-    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/2454064?hl=en" rel="noopener">Create an audience segment that includes your website visitors</a>.</li>
-    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/2472738?hl=en" rel="noopener">How your data segments work</a>.</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/2454064?hl=en" rel="noopener">Create an audience segment that includes your website visitors</a> (requisitos de etiqueta y políticas).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/2472738?hl=en" rel="noopener">How your data segments work</a> (duración de 30 a 540 días y mínimo de 100 usuarios activos).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/6034106?hl=en" rel="noopener">Use frequency capping</a> (topes de frecuencia en display y video).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/12003020?hl=en" rel="noopener">About Conversion Lift</a> (medición de conversiones incrementales).</li>
     <li>Google Analytics Help — <a href="https://support.google.com/analytics/answer/9313634" rel="noopener">Enable remarketing with Google Analytics data</a>.</li>
     <li>Google Analytics Help — <a href="https://support.google.com/analytics/answer/13802165?hl=en" rel="noopener">Consent mode reference</a>.</li>
     <li>Meta Business Help Center — <a href="https://www.facebook.com/business/help/666509013483225" rel="noopener">Create a custom audience from website events</a>.</li>
     <li>Meta Business Help Center — <a href="https://www.facebook.com/business/help/952192354843755" rel="noopener">Set up and install the Meta Pixel</a>.</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/documentation/ads-commerce/marketing-api/audiences/guides/website-custom-audiences" rel="noopener">Website Custom Audiences</a> (reglas por URL o evento y exclusiones).</li>
+    <li>LinkedIn Marketing Solutions Help — <a href="https://www.linkedin.com/help/lms/answer/a420433" rel="noopener">Get started with LinkedIn website retargeting</a> (Insight Tag y mínimo de 300 miembros).</li>
   </ul>
-  <p>Documentación consultada en septiembre de 2026. Las interfaces, requisitos y nombres de producto pueden cambiar.</p>
+  <p>Datos verificados en septiembre de 2026. Las herramientas y sus requisitos cambian: si encuentras algo desactualizado, escríbenos.</p>
 </div>

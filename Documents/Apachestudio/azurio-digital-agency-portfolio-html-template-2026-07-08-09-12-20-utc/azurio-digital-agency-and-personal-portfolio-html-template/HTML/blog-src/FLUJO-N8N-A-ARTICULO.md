@@ -100,3 +100,26 @@ El SQL para añadir los enlaces está en `blog-src/supabase/enlaces-a-articulos-
 ## 7. Formato de la nota corta
 
 La nota de Supabase se publica con los mismos componentes que el artículo (letra capital `<p class="drop-cap">`, `ed-callout`, `ed-cards`, `ed-table-wrap`, `<blockquote>`, `<ol>` de pasos, `ed-checklist`) y termina con el bloque `.articulo-completo`. Se arma a partir del artículo completo (ver `blog-src/supabase/notas-ricas.sql`), no del texto plano de n8n.
+
+## 8. Barra de calidad (por qué existe)
+
+La nota que llega de n8n es un borrador corto (unas 300 palabras, sin diagramas). Si quien construye el
+artículo se limita a "ordenar" ese texto, sale un artículo mediocre. La regla es: **la nota da el tema y
+el punto de partida; el artículo se investiga, se amplía y se reescribe si hace falta**.
+
+`python scripts/build_blog.py --check` avisa con `CALIDAD` cuando un artículo queda por debajo del base:
+
+| Requisito | Mínimo |
+|---|---|
+| Palabras (sin SVG) | 1500 (objetivo 2000-2500) |
+| Diagramas SVG o tarjetas `ed-cards` | 2 |
+| Tablas `ed-table-wrap` | 2 |
+| Callout, checklist, letra capital | 1 de cada uno |
+| Preguntas frecuentes / fuentes oficiales | 4 / 3 |
+
+El mismo estándar está en el «conocimiento del proyecto» de Lovable, para que lo aplique al crear
+`blog-src/<slug>/`. Lovable no puede ejecutar el generador: después de que escriba las fuentes hay que
+correr `python scripts/build_blog.py` (crea la página, el listado, el sitemap y la imagen OG si falta).
+
+Artículo de referencia de esta barra: `remarketing-como-recuperar-clientes-260920` (reescrito a partir del
+borrador de Lovable) y `dashboard-de-marketing-digital`.

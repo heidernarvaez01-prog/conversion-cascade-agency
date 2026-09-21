@@ -33,6 +33,7 @@ SRC = ROOT / "blog-src"
 SITE = json.loads((SRC / "site.json").read_text(encoding="utf-8"))
 ORDER = json.loads((SRC / "posts.json").read_text(encoding="utf-8"))
 BASE = SITE["base_url"]
+MIN_PALABRAS = 1500  # profundidad mínima de un artículo completo (el base tiene ~2300)
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
          "septiembre", "octubre", "noviembre", "diciembre"]
 
@@ -482,6 +483,25 @@ def build(slug, write=True):
             warn(slug, f"related desconocido: {r}")
 
     faq, sources = extract_faq(body), extract_sources(body)
+    # Barra de calidad: el estándar es el artículo base (dashboard-de-marketing-digital, ~2300 palabras).
+    faltas = []
+    if words < MIN_PALABRAS:
+        faltas.append(f"{words} palabras (mínimo {MIN_PALABRAS})")
+    visuales = len(re.findall(r'<figure class="ed-fig|class="ed-cards', body))
+    if visuales < 2:
+        faltas.append(f"{visuales} diagramas/tarjetas (mínimo 2)")
+    if len(re.findall(r'class="ed-table-wrap"', body)) < 2:
+        faltas.append("menos de 2 tablas")
+    if 'class="ed-callout' not in body:
+        faltas.append("sin callout")
+    if 'class="ed-checklist"' not in body:
+        faltas.append("sin checklist")
+    if len(faq) < 4:
+        faltas.append(f"{len(faq)} preguntas frecuentes (mínimo 4)")
+    if len(sources) < 3:
+        faltas.append(f"{len(sources)} fuentes (mínimo 3)")
+    if faltas:
+        warn(slug, "CALIDAD por debajo del artículo base: " + "; ".join(faltas))
     jsonld = build_jsonld(post, words, faq, sources, og_abs)
     json.loads(jsonld)  # valida
     page = (SRC / "_page.html").read_text(encoding="utf-8")
