@@ -499,6 +499,62 @@ def build(slug, write=True):
     return post
 
 
+def fecha_listado(iso):
+    y, m, d = map(int, iso.split("-"))
+    return f"{d:02d} {MESES[m - 1].capitalize()}, {y}"
+
+
+def render_listing():
+    """Regenera el listado de /blog/ (una tarjeta por artículo de blog-src, más reciente primero)."""
+    p = ROOT / "blog" / "index.html"
+    s = p.read_text(encoding="utf-8")
+    ini, fin = "<!-- LISTADO:START -->", "<!-- LISTADO:END -->"
+    if ini not in s:
+        warn("blog/index", "faltan los marcadores LISTADO:START/END")
+        return
+    orden = sorted(ORDER, key=lambda sl: (POSTS[sl]["published"], ORDER.index(sl)), reverse=True)
+    tarjetas = []
+    for sl in orden:
+        p_ = POSTS[sl]
+        au = SITE["authors"][p_["author"]]["name"]
+        words = len(strip_tags(re.sub(r"<svg.*?</svg>", " ", p_["body"], flags=re.S)).split())
+        tarjetas.append(f'''                <article class="mxd-post post-simple">
+                  <div class="post-simple__divider top"></div>
+                  <a class="post-simple__container active-cursor-image active-cursor-permanent" data-cursor-image="{E(p_['hero']['src'])}" data-cursor-text="Leer artículo" href="/blog/{sl}/">
+                    <div class="container-fluid px-0 post-simple__inner">
+                      <div class="row gx-0">
+                        <div class="col-12">
+                          <div class="post-simple__meta">
+                            <span class="meta-tag comma-tag">{E(p_['section'])}</span>
+                            <span class="meta-time">{max(1, math.ceil(words / 200))} min</span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-xxl-7">
+                          <div class="post-simple__title">
+                            <h3>{E(p_['h1'])}</h3>
+                            <div class="post-simple__data">
+                              <span class="meta-author comma-tag">{E(au)}</span>
+                              <span class="meta-date">{fecha_listado(p_['published'])}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-xxl-5">
+                          <div class="post-simple__excerpt">
+                            <p class="t-medium">{E(p_['lead'])}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="post-simple__divider bottom"></div>
+                </article>''')
+    nuevo = ini + "\n" + "\n".join(tarjetas) + "\n                " + fin
+    s = re.sub(re.escape(ini) + ".*?" + re.escape(fin), lambda m: nuevo, s, flags=re.S)
+    s = re.sub(r'(<h1 class="large">Blog<sup>)\(\d+\)(</sup>)', lambda m: f"{m.group(1)}({len(orden)}){m.group(2)}", s)
+    p.write_text(s, encoding="utf-8")
+    print(f"listado de /blog/: {len(orden)} tarjetas")
+
+
 def update_sitemap():
     p = ROOT / "public" / "sitemap.xml"
     if not p.exists():
@@ -524,6 +580,7 @@ if __name__ == "__main__":
         build(s, write=not check)
     if not check and not args:
         update_sitemap()
+        render_listing()
     if warnings:
         print("\nAVISOS:")
         print("\n".join("  - " + w for w in warnings))

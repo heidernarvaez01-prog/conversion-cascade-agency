@@ -106,7 +106,8 @@
 
     pedir('?select=titulo,slug,resumen,imagen_portada,fecha_publicacion,contenido&estado=eq.publicado&order=fecha_publicacion.desc&limit=50')
       .then(function (arts) {
-        if (!arts.length) return;
+        arts = (arts || []).filter(function (a) { return !enlaceCompleto(a.contenido); });
+        if (!MOSTRAR_NOTAS_SIN_ARTICULO || !arts.length) return;
         var frag = document.createDocumentFragment();
         arts.forEach(function (a) {
           var art = document.createElement('article');
@@ -142,6 +143,11 @@
 
   /* ---------- Detalle /blog/articulo/?slug= (mismo diseño que los artículos de blog-src) ---------- */
   var BASE = 'https://apachestudio.mx';
+
+  /* Las notas que ya tienen artículo completo (bloque .articulo-completo) no se listan y redirigen a él:
+     así el blog muestra un solo diseño y URLs limpias (/blog/slug/). Pon true para listar también las notas
+     que todavía no tienen artículo (se abren en /blog/articulo/?slug=). */
+  var MOSTRAR_NOTAS_SIN_ARTICULO = false;
 
   var AUTOR = {
     nombre: 'Heider Narváez',
@@ -192,6 +198,10 @@
     ]).then(function (r) {
       var a = r[0][0];
       if (!a) { window.location.replace('/blog/'); return; }
+
+      /* Si la nota tiene artículo completo, ese es el destino (URL limpia y mismo diseño en todo el blog). */
+      var completo = enlaceCompleto(a.contenido);
+      if (completo) { window.location.replace(completo.href); return; }
 
       var todas = r[1] || [];
       var full = enlaceCompleto(a.contenido);
