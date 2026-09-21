@@ -1,46 +1,139 @@
-<p class="drop-cap">Casi todas las novedades de Google Ads de los últimos años empujan en la misma dirección: que las campañas se optimicen con tus propios datos (compras, leads, ventas fuera de línea) y no solo con lo que ocurre en el navegador. El anuncio del 13 de septiembre de 2026 sobre Data Manager va en esa línea, con integraciones nuevas y herramientas para auditar la calidad de los datos. Antes de entusiasmarse con las cifras, conviene entender qué se anunció y qué tendrías que tener listo para aprovecharlo.</p>
+<p class="drop-cap">Casi todas las novedades de Google Ads de los últimos años empujan en la misma dirección: que las campañas se optimicen con tus propios datos (compras, leads, ventas fuera de línea) y no solo con lo que ocurre en el navegador. El anuncio del 13 de septiembre de 2026 sobre Data Manager va en esa línea, con integraciones nuevas y herramientas para auditar la calidad de los datos. Antes de entusiasmarte con las cifras, conviene entender qué se anunció, qué tendrías que tener listo y qué ventanas de tiempo pueden dejar tus ventas fuera de la optimización.</p>
 
-<p>Este artículo resume las novedades según Google y Social Media Today, aclara qué cifras son afirmaciones de la propia empresa y propone una lista de preparación para negocios que quieran conectar sus datos propios a sus campañas.</p>
+<p>En esta guía verás qué es Data Manager, qué anunció Google, cómo funcionan las conversiones mejoradas y la importación de conversiones fuera de línea, qué ventanas documenta Google, cómo prepararte y cómo probar el efecto sin creerle a ciegas a ninguna métrica. Lo que proviene de documentación oficial o de la prensa especializada está enlazado en las fuentes; los ejemplos son hipotéticos y el resto es criterio de trabajo.</p>
 
-<h2 id="que-anuncio">Qué anunció Google</h2>
-<p>Según el resumen publicado por Social Media Today el 13 de septiembre de 2026, las novedades incluyen:</p>
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/goal.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Respuesta corta</span>
+    <p>Empieza por medir bien tus conversiones y por conectar una sola fuente de ventas reales. Revisa que tu ciclo de venta quepa en las ventanas de importación de Google (63 o 90 días) y comprueba el efecto con un grupo de comparación en lugar de fiarte de la cifra promedio que publica la propia empresa.</p>
+  </div>
+</div>
+
+<h2 id="que-es">Qué es Google Ads Data Manager</h2>
+<p>Según la ayuda de Google, Data Manager es una herramienta de importación y gestión de datos con una interfaz de apuntar y hacer clic, que permite traer datos de clientes de fuera de Google y activarlos en sus productos. Su ventaja principal es que <strong>conectas una fuente una vez y la activas en varios destinos</strong>: entre las fuentes admitidas están BigQuery y HubSpot, y entre los destinos, Customer Match y la importación de conversiones fuera de línea. También existe la Data Manager API, que envía datos propios (conversiones y señales de audiencia) a los productos publicitarios de Google mediante una sola integración.</p>
+
+<figure class="ed-fig" id="fig-flujo">
+  <svg viewBox="0 0 760 210" role="img" aria-labelledby="fd-t fd-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fd-t">Del dato propio a la decisión con Data Manager</title>
+    <desc id="fd-d">Cuatro etapas: tus datos (CRM, ventas, apps y BigQuery), Data Manager (conexión única, diagnóstico y consentimiento), destinos (conversiones fuera de línea, conversiones mejoradas, Customer Match, Analytics y Display &amp; Video 360) y decisiones (pujas inteligentes, medición y presupuesto).</desc>
+    <defs><marker id="fd-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <g>
+      <rect class="f2" x="0" y="20" width="160" height="170" rx="8"/><text class="h" x="80" y="44" text-anchor="middle">1 · Tus datos</text>
+      <text x="80" y="76" text-anchor="middle">CRM, como HubSpot</text><text x="80" y="98" text-anchor="middle">Ventas y tienda</text><text x="80" y="120" text-anchor="middle">Apps</text><text x="80" y="142" text-anchor="middle">BigQuery</text>
+      <rect class="f2" x="200" y="20" width="160" height="170" rx="8"/><text class="h" x="280" y="44" text-anchor="middle">2 · Data Manager</text>
+      <text x="280" y="76" text-anchor="middle">Conexión única</text><text x="280" y="98" text-anchor="middle">Diagnóstico de</text><text x="280" y="120" text-anchor="middle">calidad de datos</text><text x="280" y="142" text-anchor="middle">Ajustes de permisos</text>
+      <rect class="f2" x="400" y="20" width="180" height="170" rx="8"/><text class="h" x="490" y="44" text-anchor="middle">3 · Destinos</text>
+      <text x="490" y="76" text-anchor="middle">Conversiones offline</text><text x="490" y="98" text-anchor="middle">Conversiones mejoradas</text><text x="490" y="120" text-anchor="middle">Customer Match</text><text x="490" y="142" text-anchor="middle">Analytics y DV360</text>
+      <rect class="acc" x="620" y="20" width="140" height="170" rx="8"/><text class="h on-acc" x="690" y="44" text-anchor="middle">4 · Decisión</text>
+      <text class="on-acc" x="690" y="76" text-anchor="middle">Pujas inteligentes</text><text class="on-acc" x="690" y="98" text-anchor="middle">Medición y</text><text class="on-acc" x="690" y="120" text-anchor="middle">pruebas</text><text class="on-acc" x="690" y="142" text-anchor="middle">Presupuesto</text>
+    </g>
+    <g class="arrows">
+      <line class="s1 arrow-l" x1="162" y1="105" x2="198" y2="105" marker-end="url(#fd-ar)"/>
+      <line class="s1 arrow-l" x1="362" y1="105" x2="398" y2="105" marker-end="url(#fd-ar)"/>
+      <line class="s1 arrow-l" x1="582" y1="105" x2="618" y2="105" marker-end="url(#fd-ar)"/>
+    </g>
+  </svg>
+  <figcaption>Cada etapa puede fallar: la calidad de la decisión final depende de la primera.</figcaption>
+</figure>
+
+<h2 id="que-anuncio">Qué anunció Google el 13 de septiembre de 2026</h2>
+<p>Según el resumen publicado por Social Media Today, las novedades incluyen:</p>
+
 <div class="ed-cards">
   <div class="ed-card">
     <img src="/img/real/blog/icons/networking.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
     <h3>Integraciones</h3>
-    <p>Información de Data Manager hacia Google Analytics y Display &amp; Video 360, y más opciones de conexión por API basadas en un estándar de IAB Tech Lab.</p>
+    <p>Información de Data Manager hacia Google Analytics y Display &amp; Video 360, una API ampliada basada en el estándar ECAPI de IAB Tech Lab y diagnósticos integrados de problemas de datos.</p>
   </div>
   <div class="ed-card">
     <img src="/img/real/blog/icons/business-chart.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
     <h3>Métrica de aporte de datos</h3>
-    <p>Una métrica en Google Ads que calcula conversiones adicionales atribuibles a datos propios («Data Strength Uplift»).</p>
+    <p>Una métrica en Google Ads que calcula conversiones adicionales atribuidas a fuentes de datos propios («Data Strength Uplift»).</p>
   </div>
   <div class="ed-card">
     <img src="/img/real/blog/icons/data-analysis.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
     <h3>Meridian con IA</h3>
-    <p>Capacidades de agentes para auditar la calidad de los datos, resolver errores y orientar la construcción de modelos de mezcla de medios.</p>
+    <p>Capacidades de agentes para auditar la calidad de los datos, resolver errores y orientar la construcción de modelos, más señales de marca y acceso ampliado a la biblioteca GeoX.</p>
   </div>
 </div>
-<p>Google también incorporó conversiones mejoradas en Google Analytics y en Display &amp; Video 360, y amplió el acceso a su biblioteca GeoX para experimentos causales por geografía.</p>
+
+<p>Google también desplegó las conversiones mejoradas en Google Analytics y en Display &amp; Video 360. Conviene separar lo que es una herramienta que puedes usar hoy de lo que es un anuncio:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Cómo tratar cada novedad (segunda y tercera columnas: criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Novedad</th><th scope="col">Qué implica</th><th scope="col">Cómo tratarla</th></tr></thead>
+    <tbody>
+      <tr><td>Conversiones mejoradas en Analytics y DV360</td><td>Más lugares donde tus datos propios ayudan a medir</td><td>Revisa si tu cuenta ya las tiene disponibles y prueba en una sola propiedad</td></tr>
+      <tr><td>Data Strength Uplift</td><td>Métrica de Google Ads que atribuye conversiones a datos propios</td><td>Úsala como señal, no como prueba: la calcula la propia plataforma</td></tr>
+      <tr><td>Diagnósticos integrados</td><td>Avisos de problemas de datos dentro de la herramienta</td><td>Revísalos cada semana mientras estabilizas la conexión</td></tr>
+      <tr><td>Meridian con agentes de IA</td><td>Ayuda para auditar datos y construir modelos de mezcla de medios</td><td>Es para equipos con analistas; no lo necesitas para empezar</td></tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="ed-callout has-icon">
   <img src="/img/real/blog/icons/notification.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
   <div>
     <span class="ed-callout__label">Sobre la cifra de 26 %</span>
-    <p>Google afirma que los anunciantes que conectan datos fuera de línea y de apps a Data Manager ven, en promedio, un aumento de 26 % en ROAS incremental. Es un dato de la propia empresa, sin metodología independiente; tómalo como una hipótesis para probar, no como una promesa.</p>
+    <p>Google afirma que los anunciantes que conectan datos fuera de línea y de aplicaciones a Data Manager ven, en promedio, un aumento de 26 % en ROAS incremental. Es un dato de la propia empresa, sin metodología independiente y sin distinguir tamaños ni sectores; tómalo como una hipótesis para probar en tu cuenta, no como una promesa.</p>
   </div>
 </div>
 
-<h2 id="que-significa">Qué significa para un negocio</h2>
-<p>La idea de fondo es simple: cuanto mejor sea la información que le das a la plataforma sobre qué clientes valen más, mejor puede optimizar. Esto depende de tener datos propios ordenados:</p>
+<h2 id="conversiones">Los dos usos que importan primero</h2>
+<p>Antes de hablar de Meridian o de modelos, la mayor parte del valor para una pyme está en dos prácticas que ya existen y que Data Manager simplifica.</p>
+
+<h3 id="mejoradas">Conversiones mejoradas</h3>
+<p>Según Google, las conversiones mejoradas complementan una conversión ya medida enviando datos propios de la conversión, como correo, teléfono, nombre o dirección, después de cifrarlos con hash. Los datos se normalizan (por ejemplo, sin espacios, en minúsculas y con teléfonos en formato E.164) y se cifran con SHA256 antes de enviarse. Existen dos variantes: las <strong>conversiones mejoradas para web</strong>, que miden ventas o acciones que ocurren en tu sitio, y las <strong>conversiones mejoradas para leads</strong>, que vinculan un lead captado en el sitio con la venta que ocurre después, fuera de línea.</p>
+
+<h3 id="offline">Importación de conversiones fuera de línea</h3>
+<p>Es la práctica de avisar a Google Ads qué leads terminaron comprando, para que optimice hacia los que valen y no hacia los formularios más baratos. Google documenta ventanas de tiempo que conviene conocer antes de diseñar el proceso:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Diferencias entre dos formas de importar ventas, según la ayuda de Google Ads (revisada en septiembre de 2026).</caption>
+    <thead><tr><th scope="col">Aspecto</th><th scope="col">Importación con GCLID</th><th scope="col">Conversiones mejoradas para leads</th></tr></thead>
+    <tbody>
+      <tr><td>Identificador</td><td>Identificador de clic de Google (GCLID) guardado con el lead; exige el etiquetado automático</td><td>Datos del lead aportados por el usuario (por ejemplo, correo), con hash</td></tr>
+      <tr><td>Ventana para subir la venta</td><td>No se importa lo subido más de 90 días después del último clic</td><td>No se importa lo subido más de 63 días después del último clic</td></tr>
+      <tr><td>Datos mínimos por conversión</td><td>Identificador, nombre de la conversión y fecha y hora</td><td>Identificador, nombre de la conversión y fecha y hora</td></tr>
+      <tr><td>Formato</td><td>Archivos o API</td><td>Solo admite archivos de Google Ads Data Manager</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<figure class="ed-fig" id="fig-ventanas">
+  <svg viewBox="0 0 760 220" role="img" aria-labelledby="fv-t fv-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fv-t">Ventanas de subida de ventas fuera de línea</title>
+    <desc id="fv-d">Desde el último clic (día 0), las conversiones mejoradas para leads aceptan ventas subidas hasta 63 días después y la importación con GCLID hasta 90 días después.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="218" rx="10"/>
+    <line class="s1" x1="40" y1="110" x2="720" y2="110"/>
+    <circle class="pin" cx="40" cy="110" r="6"/><circle class="pin" cx="468" cy="110" r="6"/><circle class="pin" cx="652" cy="110" r="6"/>
+    <text x="40" y="100" text-anchor="middle">día 0</text><text x="468" y="100" text-anchor="middle">día 63</text><text x="652" y="100" text-anchor="middle">día 90</text>
+    <line class="acc-s" x1="40" y1="80" x2="468" y2="80"/><line class="s1" x1="40" y1="74" x2="40" y2="86"/><line class="s1" x1="468" y1="74" x2="468" y2="86"/>
+    <text class="h" x="254" y="40" text-anchor="middle">Hasta 63 días después del último clic</text><text x="254" y="58" text-anchor="middle">Conversiones mejoradas para leads</text>
+    <line class="acc-s" x1="40" y1="140" x2="652" y2="140"/><line class="s1" x1="40" y1="134" x2="40" y2="146"/><line class="s1" x1="652" y1="134" x2="652" y2="146"/>
+    <text class="h" x="346" y="168" text-anchor="middle">Hasta 90 días después del último clic</text><text x="346" y="186" text-anchor="middle">Importación con GCLID</text>
+    <text x="380" y="210" text-anchor="middle">Si tu ciclo de venta es más largo, sube antes una conversión intermedia.</text>
+  </svg>
+  <figcaption>Una venta que cierra fuera de la ventana no llega a la optimización.</figcaption>
+</figure>
+
+<p>Esto tiene una consecuencia práctica para negocios B2B o de compras grandes: <strong>si tu ciclo de venta suele pasar de 63 o 90 días, la venta final llega tarde para Google</strong>. Como criterio de trabajo, sube conversiones intermedias que ocurran antes, como un lead cualificado, una reunión realizada o una propuesta enviada, y asígnales un valor estimado con tu tasa histórica de cierre.</p>
+
+<h2 id="preparacion">Qué necesitas tener listo</h2>
+<p>La idea de fondo es simple: cuanto mejor sea la información que le das a la plataforma sobre qué clientes valen más, mejor puede optimizar. Google recomienda, en su guía de Data Strength, cuatro bases: implementar la etiqueta de Google o Tag Manager, vincular Google Analytics con Google Ads, conectar los datos fuera de línea del CRM mediante Data Manager y añadir valores de transacción a las conversiones. La guía no define niveles ni una escala numérica de Data Strength, así que no la trates como una puntuación que persigues, sino como una lista de trabajo.</p>
 
 <div class="ed-table-wrap">
   <table>
     <caption>Qué necesitas para aprovechar el uso de datos propios en campañas (criterio de trabajo).</caption>
     <thead><tr><th scope="col">Requisito</th><th scope="col">Por qué importa</th><th scope="col">Cómo verificarlo</th></tr></thead>
     <tbody>
-      <tr><td>Conversiones bien medidas</td><td>Es la base de cualquier optimización</td><td>Auditar eventos duplicados y valores</td></tr>
-      <tr><td>Datos de ventas fuera de línea (CRM)</td><td>Distingue leads que compran de leads que no</td><td>Cruzar lead, venta y monto con un identificador</td></tr>
+      <tr><td>Conversiones bien medidas</td><td>Es la base de cualquier optimización</td><td>Auditar eventos duplicados y valores (guía de <a href="/blog/implementacion-tecnica/">implementación técnica</a>)</td></tr>
+      <tr><td>Identificador guardado con cada lead</td><td>Sin GCLID o dato de contacto no se puede vincular la venta con el anuncio</td><td>Confirmar que el formulario lo captura y que el CRM lo conserva</td></tr>
+      <tr><td>Datos de ventas fuera de línea en el CRM</td><td>Distingue leads que compran de leads que no</td><td>Cruzar lead, venta, monto y fecha con un identificador</td></tr>
+      <tr><td>Ciclo de venta frente a las ventanas</td><td>Lo que llega fuera de plazo no se importa</td><td>Calcular cuántos días pasan del clic a la venta</td></tr>
       <tr><td>Consentimiento y aviso de privacidad</td><td>Se trata de datos de personas</td><td>Revisar con tu asesor legal</td></tr>
       <tr><td>Un responsable de los datos</td><td>Las conexiones se rompen y cambian</td><td>Definir quién revisa la calidad cada mes</td></tr>
     </tbody>
@@ -49,45 +142,75 @@
 
 <h2 id="como-empezar">Cómo empezar sin complicarte</h2>
 <ol>
-  <li><strong>Empieza por la medición.</strong> Corrige lo que falla en tus conversiones antes de sumar datos nuevos (lee nuestra guía de <a href="/blog/implementacion-tecnica/">implementación técnica</a>).</li>
-  <li><strong>Define qué es un cliente valioso</strong> para tu negocio (compra, monto, recompra).</li>
-  <li><strong>Conecta una sola fuente primero,</strong> por ejemplo ventas cerradas desde tu CRM.</li>
-  <li><strong>Prueba con una campaña</strong> y compara contra otra sin ese dato durante varias semanas.</li>
-  <li><strong>Evalúa con ventas reales,</strong> no solo con la métrica que reporta la plataforma.</li>
+  <li><strong>Empieza por la medición.</strong> Corrige lo que falla en tus conversiones antes de sumar datos nuevos.</li>
+  <li><strong>Define qué es un cliente valioso</strong> para tu negocio (compra, monto, recompra) y cuánto tarda en aparecer.</li>
+  <li><strong>Verifica que guardas el identificador del clic o el dato de contacto</strong> en cada lead.</li>
+  <li><strong>Conecta una sola fuente primero,</strong> por ejemplo ventas cerradas desde tu CRM, y revisa los diagnósticos.</li>
+  <li><strong>Sube la conversión que ocurra dentro de la ventana:</strong> venta final si tu ciclo es corto, conversión intermedia si es largo.</li>
+  <li><strong>Prueba con una campaña</strong> y compara contra otra sin ese dato durante varias semanas (mira cómo medir la contribución real en nuestra guía de <a href="/blog/remarketing-como-recuperar-clientes-260920/">remarketing</a>).</li>
+  <li><strong>Evalúa con ventas reales</strong> y con tu CRM, no solo con la métrica que reporta la plataforma.</li>
 </ol>
 
+<h2 id="privacidad">Privacidad y consentimiento</h2>
+<p>Los datos que se conectan son datos de personas. Data Manager permite configurar ajustes predeterminados para los datos personales que llegan por etiquetas del sitio y para la información importada, pero la responsabilidad de tener permiso para usarlos sigue siendo tuya. Además, que los datos se envíen con hash no los convierte en anónimos: es una medida técnica de protección, no una base legal.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">No es asesoría legal</span>
+    <p>Antes de subir datos de clientes, confirma con tu asesor legal que tu aviso de privacidad y tu consentimiento cubren el uso publicitario en cada país donde operas (por ejemplo, México y Colombia), y limita los datos a lo estrictamente necesario para vincular la conversión.</p>
+  </div>
+</div>
+
 <h2 id="errores">Errores frecuentes</h2>
-<ul>
-  <li>Subir datos sucios o duplicados y esperar que la plataforma los corrija.</li>
-  <li>Enviar datos personales sin consentimiento ni base legal.</li>
-  <li>Evaluar solo con la métrica de la plataforma que reporta la mejora.</li>
-</ul>
+<ol>
+  <li><strong>Subir datos sucios o duplicados</strong> y esperar que la plataforma los corrija.</li>
+  <li><strong>No guardar el identificador del clic</strong> y descubrirlo cuando ya hay cientos de leads sin vincular.</li>
+  <li><strong>Ignorar las ventanas de 63 y 90 días</strong> y subir ventas que ya no se importan.</li>
+  <li><strong>Enviar datos personales sin consentimiento</strong> ni base legal.</li>
+  <li><strong>Evaluar solo con la métrica de la plataforma</strong> que reporta la mejora.</li>
+  <li><strong>Conectar varias fuentes a la vez</strong> y no saber cuál rompió la medición.</li>
+  <li><strong>No asignar un responsable</strong> de revisar los diagnósticos.</li>
+</ol>
 
 <h2 id="checklist">Checklist</h2>
 <ul class="ed-checklist">
   <li>Las conversiones actuales están validadas contra ventas reales.</li>
+  <li>Cada lead guarda el identificador de clic o un dato de contacto para vincularlo.</li>
+  <li>Sabes cuántos días pasan de tu clic a tu venta y qué ventana te corresponde.</li>
   <li>Tienes claro qué datos del CRM se pueden usar y con qué consentimiento.</li>
   <li>Definiste una prueba con grupo de comparación.</li>
-  <li>Hay un responsable de la calidad de los datos.</li>
+  <li>Hay un responsable de la calidad de los datos y de revisar los diagnósticos.</li>
 </ul>
 
-<p>Si necesitas ordenar tu medición antes de conectar datos propios, cuéntanos tu caso en una <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">llamada</a>.</p>
+<p>Si necesitas ordenar tu medición antes de conectar datos propios, revisa la guía de <a href="/blog/analitica-de-marketing-digital/">analítica de marketing digital</a> y la de <a href="/blog/performance-marketing/">performance marketing</a>, o cuéntanos tu caso en una <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">llamada</a>. En Apache Studio armamos la <a href="/servicios/implementacion-tecnica/">implementación técnica</a> y los <a href="/servicios/dashboards-y-reportes/">dashboards y reportes</a> que hacen posible esa medición.</p>
 
 <div class="ed-faq" id="faq">
   <h2>Preguntas frecuentes</h2>
   <h3>¿Qué es Google Data Manager?</h3>
-  <p>Es la plataforma de Google para conectar datos propios (de ventas, apps y CRM) con sus productos de publicidad y analítica.</p>
+  <p>Es la herramienta de Google para importar datos propios (de ventas, apps y CRM) y activarlos en sus productos de publicidad y analítica. Permite conectar una fuente una vez y usarla en varios destinos, como Customer Match y la importación de conversiones fuera de línea.</p>
   <h3>¿Cuánto mejorará mi ROAS con datos propios?</h3>
-  <p>No se puede prometer. Google publica un promedio de 26 % de aumento en ROAS incremental, pero es una cifra de la propia empresa; mide el efecto en tu caso con una prueba.</p>
+  <p>No se puede prometer. Google publica un promedio de 26 % de aumento en ROAS incremental para quienes conectan datos fuera de línea y de apps, pero es una cifra de la propia empresa; mide el efecto en tu caso con una prueba con grupo de comparación.</p>
+  <h3>¿Qué diferencia hay entre conversiones mejoradas para web y para leads?</h3>
+  <p>Las de web complementan las conversiones que ocurren en tu sitio con datos propios cifrados. Las de leads vinculan un lead captado en el sitio con la venta que ocurre después, fuera de línea.</p>
+  <h3>¿Cuánto tiempo tengo para subir una venta a Google Ads?</h3>
+  <p>Según la ayuda de Google, no se importan las conversiones subidas más de 90 días después del último clic con GCLID, ni más de 63 días después en el caso de las conversiones mejoradas para leads.</p>
+  <h3>¿Qué hago si mi ciclo de venta es más largo que esas ventanas?</h3>
+  <p>Sube una conversión intermedia que ocurra antes, como un lead cualificado o una reunión realizada, con un valor estimado a partir de tu tasa histórica de cierre, y evalúa después el efecto sobre las ventas reales.</p>
   <h3>¿Necesito consentimiento para subir datos de clientes?</h3>
-  <p>Normalmente sí, o una base legal equivalente según tu país. Consulta a tu asesor legal antes de enviar datos personales.</p>
+  <p>Normalmente sí, o una base legal equivalente según tu país. El hash es una protección técnica, no una autorización. Consulta a tu asesor legal antes de enviar datos personales.</p>
+  <h3>¿Data Strength es una puntuación que debo maximizar?</h3>
+  <p>La guía de Google la presenta como un conjunto de prácticas (conectar fuentes, enviar valores y activar automatizaciones) y no define niveles numéricos. Úsala como lista de trabajo y valida los resultados con ventas.</p>
 </div>
 
 <div class="ed-sources" id="fuentes">
   <h2>Fuentes</h2>
   <ul>
     <li>Social Media Today — <a href="https://www.socialmediatoday.com/news/google-updates-data-manager-platform/830234/" rel="noopener">Google updates Data Manager platform</a> (13 de septiembre de 2026).</li>
-    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/9888656" rel="noopener">About enhanced conversions</a>.</li>
+    <li>Google Ads Data Manager Help — <a href="https://support.google.com/google-ads-data-manager/answer/13761872?hl=en" rel="noopener">About Google Ads Data Manager</a> (fuentes, destinos y conexión única).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/9888656" rel="noopener">About enhanced conversions</a> (conversiones mejoradas para web y para leads, y cifrado con hash).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/15081888?hl=en" rel="noopener">Guidelines for importing offline conversions</a> (ventanas de 90 y 63 días).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/16517525" rel="noopener">Data Strength best practices</a> (bases recomendadas).</li>
   </ul>
-  <p>Datos verificados en septiembre de 2026. Los nombres y funciones de Google cambian con frecuencia: si encuentras algo desactualizado, escríbenos.</p>
+  <p>Datos verificados en septiembre de 2026. Los nombres, ventanas y funciones de Google cambian con frecuencia: si encuentras algo desactualizado, escríbenos.</p>
 </div>
