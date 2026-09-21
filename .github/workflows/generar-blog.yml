@@ -1,0 +1,78 @@
+# Genera las páginas del blog cada vez que cambia su fuente (blog-src/) o el generador.
+#
+# Por qué existe: Lovable (o quien sea) escribe blog-src/<slug>/{meta.json,body.html} y registra el slug
+# en posts.json, pero no puede ejecutar Python. Esta acción corre scripts/build_blog.py y sube el
+# resultado (blog/<slug>/index.html, listado /blog/, sitemap e imagen OG que falte), así que un artículo
+# nuevo queda publicado sin pasos manuales. Vite descubre solo las carpetas blog/<slug>/ (vite.config.ts).
+#
+# Sin bucles: el commit del bot solo toca blog/, public/sitemap.xml e img/real/blog/og/, que no están en
+# `paths`, y los pushes hechos con GITHUB_TOKEN no disparan otros workflows.
+name: Generar blog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Documents/Apachestudio/**/HTML/blog-src/**"
+      - "Documents/Apachestudio/**/HTML/scripts/build_blog.py"
+      - "Documents/Apachestudio/**/HTML/scripts/make_og.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generar-blog
+  cancel-in-progress: false
+
+env:
+  SITE_DIR: Documents/Apachestudio/azurio-digital-agency-portfolio-html-template-2026-07-08-09-12-20-utc/azurio-digital-agency-and-personal-portfolio-html-template/HTML
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar Pillow (imágenes OG)
+        run: pip install pillow
+
+      - name: Generar imágenes OG faltantes y páginas
+        working-directory: ${{ env.SITE_DIR }}
+        shell: bash   # con pipefail: si el generador falla, el paso falla aunque pase por tee
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          python scripts/make_og.py --faltantes
+          python scripts/build_blog.py | tee "$RUNNER_TEMP/build.log"
+
+      - name: Resumen de avisos de calidad
+        if: always()
+        run: |
+          {
+            echo "### Avisos del generador"
+            if grep -q "^AVISOS:" "$RUNNER_TEMP/build.log" 2>/dev/null; then
+              echo '```'
+              sed -n '/^AVISOS:/,$p' "$RUNNER_TEMP/build.log"
+              echo '```'
+            else
+              echo "Sin avisos."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Subir lo generado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- "$SITE_DIR/blog" "$SITE_DIR/public/sitemap.xml" "$SITE_DIR/img/real/blog/og"
+          if git diff --cached --quiet; then
+            echo "El blog ya está generado; no hay cambios."
+          else
+            git commit -m "Blog: páginas generadas automáticamente [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

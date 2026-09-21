@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Genera las imágenes Open Graph (1200x630) de los artículos: img/real/blog/og/<slug>.jpg
 
-Uso (desde HTML/):  python scripts/make_og.py [slug ...]   (sin argumentos: todos)
-Requiere Pillow y la fuente Segoe UI (Windows). Estilo: fondo azul de marca, título grande,
-categoría y firma. Se genera solo cuando cambia el título; el resultado se versiona.
+Uso (desde HTML/):  python scripts/make_og.py [--faltantes] [slug ...]   (sin slugs: todos)
+Requiere Pillow. Fuente: Segoe UI (Windows) o, si no existe, DejaVu/Liberation (Linux; es lo que usa
+la acción de GitHub). Estilo: fondo azul de marca, título grande, categoría y firma.
+Con --faltantes solo genera las imágenes que aún no existen (así lo usa la acción de GitHub).
 """
 import json
 import pathlib
@@ -15,8 +16,12 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "blog-src"
 OUT = ROOT / "img" / "real" / "blog" / "og"
 BLUE, PINK, WHITE, SOFT = (0, 43, 186), (247, 62, 155), (255, 255, 255), (186, 200, 245)
-FONT_BOLD = "C:/Windows/Fonts/segoeuib.ttf"
-FONT_SEMI = "C:/Windows/Fonts/seguisb.ttf"
+FUENTES_BOLD = ["C:/Windows/Fonts/segoeuib.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"]
+FUENTES_SEMI = ["C:/Windows/Fonts/seguisb.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"]
+FONT_BOLD = next((f for f in FUENTES_BOLD if pathlib.Path(f).exists()), FUENTES_BOLD[0])
+FONT_SEMI = next((f for f in FUENTES_SEMI if pathlib.Path(f).exists()), FUENTES_SEMI[0])
 
 
 def wrap(draw, text, font, max_w):
@@ -65,6 +70,9 @@ def make(slug):
 
 
 if __name__ == "__main__":
-    slugs = sys.argv[1:] or json.loads((SRC / "posts.json").read_text(encoding="utf-8"))
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    slugs = args or json.loads((SRC / "posts.json").read_text(encoding="utf-8"))
     for s in slugs:
+        if "--faltantes" in sys.argv and (OUT / f"{s}.jpg").exists():
+            continue
         make(s)

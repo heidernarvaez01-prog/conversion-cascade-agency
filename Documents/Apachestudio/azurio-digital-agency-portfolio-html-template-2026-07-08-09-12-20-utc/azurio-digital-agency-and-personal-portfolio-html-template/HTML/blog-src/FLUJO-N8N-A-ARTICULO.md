@@ -118,8 +118,23 @@ el punto de partida; el artículo se investiga, se amplía y se reescribe si hac
 | Preguntas frecuentes / fuentes oficiales | 4 / 3 |
 
 El mismo estándar está en el «conocimiento del proyecto» de Lovable, para que lo aplique al crear
-`blog-src/<slug>/`. Lovable no puede ejecutar el generador: después de que escriba las fuentes hay que
-correr `python scripts/build_blog.py` (crea la página, el listado, el sitemap y la imagen OG si falta).
+`blog-src/<slug>/`.
+
+## 9. Publicación automática (acción de GitHub)
+
+Lovable no puede ejecutar Python, pero no hace falta: `.github/workflows/generar-blog.yml` corre en cada
+push que toque `blog-src/` (o el generador) y hace lo siguiente:
+
+1. `python scripts/make_og.py --faltantes` crea la imagen para compartir de los artículos que no la tengan.
+2. `python scripts/build_blog.py` genera `blog/<slug>/index.html`, el listado de `/blog/`, el sitemap y los
+   contadores de categoría.
+3. Sube el resultado como commit del bot («Blog: páginas generadas automáticamente [skip ci]»).
+4. Vite descubre solo las carpetas `blog/<slug>/` (`vite.config.ts`), sin listar cada página a mano.
+
+Lo único que Lovable debe hacer: escribir `meta.json` y `body.html`, y **añadir el slug al final de
+`posts.json`**. Los avisos `CALIDAD` aparecen en el resumen de la ejecución (pestaña Actions → «Generar
+blog»). Para regenerar todo a mano: Actions → «Generar blog» → Run workflow. En local sigue valiendo
+`python scripts/build_blog.py` (antes de subir cambios propios, haz `git pull` para traer lo del bot).
 
 Artículo de referencia de esta barra: `remarketing-como-recuperar-clientes-260920` (reescrito a partir del
 borrador de Lovable) y `dashboard-de-marketing-digital`.
