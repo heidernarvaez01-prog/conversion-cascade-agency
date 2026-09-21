@@ -96,3 +96,7 @@ El SQL para añadir los enlaces está en `blog-src/supabase/enlaces-a-articulos-
 - **LinkedIn, tamaño de audiencia:** mínimo técnico 300; sugeridos 50,000 en general, 300,000 en Sponsored Content y mensajes, 60,000–400,000 en text ads; empezar amplio y afinar (LinkedIn Marketing Solutions Help `a423690`).
 - **Meta, guías de fin de año 2026:** guía de IA, de agencias, explicativa creativa, para pymes (con checklist) y playbook para anunciantes avanzados; Black Friday es el 27 de noviembre de 2026 (Social Media Today `/830741/`).
 - **Reddit, guía para pymes:** 11 páginas sobre conducta de descubrimiento; categorías más buscadas; cifras de la guía: 75 % usa Reddit para reseñas honestas al buscar regalos, +120 % en menciones de «small business» en r/gifts en 2025 (Social Media Today `/830738/`; son cifras de Reddit).
+
+## 7. Formato de la nota corta
+
+La nota de Supabase se publica con los mismos componentes que el artículo (letra capital `<p class="drop-cap">`, `ed-callout`, `ed-cards`, `ed-table-wrap`, `<blockquote>`, `<ol>` de pasos, `ed-checklist`) y termina con el bloque `.articulo-completo`. Se arma a partir del artículo completo (ver `blog-src/supabase/notas-ricas.sql`), no del texto plano de n8n.
