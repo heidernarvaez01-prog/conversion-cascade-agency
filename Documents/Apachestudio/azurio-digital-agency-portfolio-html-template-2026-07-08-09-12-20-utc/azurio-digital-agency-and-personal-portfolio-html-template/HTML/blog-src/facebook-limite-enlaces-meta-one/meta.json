@@ -3,17 +3,18 @@
   "published": "2026-09-20",
   "modified": "2026-09-20",
   "author": "heider-narvaez",
-  "title": "Facebook y el límite de enlaces: qué es cierto",
-  "h1": "Facebook limita los enlaces en páginas: qué está confirmado y cómo ajustar tu estrategia",
-  "description": "Meta prueba un límite de dos publicaciones con enlace al mes en algunas páginas. Qué confirmó Meta, qué reportan usuarios y cómo ajustar tu plan de contenido.",
-  "keywords": "Facebook límite de enlaces, Meta One for Business, páginas de Facebook, tráfico web, estrategia de contenido",
+  "title": "Facebook y los enlaces: límite, Meta One y qué hacer",
+  "h1": "Facebook limita los enlaces en páginas: qué está confirmado, qué cuesta Meta One y cómo ajustar tu estrategia",
+  "description": "Meta prueba un límite de dos enlaces al mes en páginas de Facebook y lanzó Meta One. Qué es oficial, qué es reporte, cuánto cuesta y cómo medir con UTM.",
+  "keywords": "Facebook límite de enlaces, Meta One for Business, precio Meta One, páginas de Facebook, enlaces en comentarios, UTM, tráfico web, estrategia de contenido",
   "section": "Redes sociales",
   "tags": [
     "Facebook",
     "Meta One",
-    "Tráfico"
+    "Tráfico",
+    "UTM"
   ],
-  "lead": "Separamos lo confirmado por Meta de lo reportado por administradores y proponemos cómo depender menos de los enlaces de Facebook.",
+  "lead": "Qué confirmó Meta y qué solo reportan usuarios, cuánto cuestan los planes de Meta One, cómo medir el valor de tus enlaces y qué alternativas probar.",
   "hero": {
     "src": "/img/real/blog/photos/hero-facebook-enlaces.jpg",
     "alt": "Manos sosteniendo un teléfono con emojis y reacciones flotando sobre la pantalla",
@@ -22,11 +23,13 @@
   "related": [
     "threads-vs-x-audiencia-marcas",
     "analitica-de-marketing-digital",
-    "automatizar-reportes-de-marketing"
+    "meta-business-agent-whatsapp"
   ],
   "about": [
     "Facebook",
-    "Meta One for Business"
+    "Meta One for Business",
+    "Enlaces en redes sociales",
+    "Medición con UTM"
   ],
   "crumb": "Facebook y enlaces"
 }
