@@ -3,17 +3,18 @@
   "published": "2026-09-20",
   "modified": "2026-09-20",
   "author": "heider-narvaez",
-  "title": "Festividades 2026: guías de Meta y calendario de plan",
-  "h1": "Festividades 2026: qué publicó Meta y cómo planificar tu temporada hacia atrás",
-  "description": "Meta publicó guías de planificación para las festividades 2026. Qué incluyen, cómo usarlas con criterio y un calendario de plan hacia atrás para tu negocio.",
-  "keywords": "festividades 2026, planificación de temporada, guías de Meta, campañas de fin de año, publicidad en Meta",
+  "title": "Fin de año 2026: plan de campañas en Meta y Buen Fin",
+  "h1": "Temporada de fin de año 2026: cómo planear tus campañas en Meta con las fechas de México y Colombia",
+  "description": "Plan de temporada 2026 para Meta Ads: fechas del Buen Fin y Black Friday, aprendizaje de la plataforma, presupuesto por conjunto y ROAS de equilibrio.",
+  "keywords": "campañas de fin de año 2026, Buen Fin 2026, Black Friday Meta Ads, planificación de temporada, ROAS de equilibrio, aprendizaje de Meta Ads",
   "section": "Performance",
   "tags": [
     "Meta",
+    "Buen Fin",
     "Temporada",
     "Planificación"
   ],
-  "lead": "Qué recursos publicó Meta, un calendario de trabajo hacia atrás y los errores que más cuestan en el pico de ventas.",
+  "lead": "Un calendario con las fechas reales de México y Colombia, las reglas de aprendizaje de Meta, cuánto presupuestar por conjunto y cómo calcular tu ROAS de equilibrio.",
   "hero": {
     "src": "/img/real/blog/photos/hero-festividades-compras.jpg",
     "alt": "Persona comprando ropa con una pantalla interactiva en una tienda",
@@ -21,12 +22,14 @@
   },
   "related": [
     "performance-marketing",
-    "reddit-festividades-2026-guia",
-    "implementacion-tecnica"
+    "remarketing-como-recuperar-clientes-260920",
+    "reddit-festividades-2026-guia"
   ],
   "about": [
     "Festividades 2026",
-    "Planificación de campañas"
+    "Buen Fin",
+    "Planificación de campañas",
+    "Meta Ads"
   ],
   "crumb": "Festividades 2026"
 }
