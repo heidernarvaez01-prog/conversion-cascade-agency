@@ -1,21 +1,28 @@
-<p class="drop-cap">Responder rápido por WhatsApp suele ser la diferencia entre cerrar una venta y perderla, pero pocas pymes pueden atender mensajes a cualquier hora. Meta puso a disposición en todo el mundo su agente de IA para WhatsApp Business, «Meta Business Agent», con una configuración que promete tomar minutos. Antes de activarlo conviene saber qué hace, qué le tienes que dar y cómo mantener a una persona en el circuito.</p>
+<p class="drop-cap">Responder rápido por WhatsApp suele ser la diferencia entre cerrar una venta y perderla, pero pocas pymes pueden atender mensajes a cualquier hora. Meta anunció en junio de 2026 la disponibilidad global de su agente de IA, «Meta Business Agent», con una configuración que promete tomar minutos. Lo que muchas guías no cuentan es que las condiciones cambiaron: desde el 1 de agosto de 2026 sus mensajes tienen costo, y a partir del 1 de octubre otros mensajes que antes eran gratuitos también se cobran.</p>
 
-<p>Este artículo resume lo que Meta y la prensa especializada han publicado, propone una forma ordenada de configurarlo y señala los errores que hemos visto con atención automatizada. Las funciones y precios pueden cambiar; confirma siempre en la aplicación.</p>
+<p>En esta guía verás qué hace el agente, cuánto cuesta según la documentación oficial de Meta, cómo configurarlo por etapas, qué exige la política de WhatsApp para automatizar la atención y cómo medir si te conviene. Las cifras y reglas provienen de fuentes enlazadas al final; los ejemplos con números son hipotéticos y el resto es criterio de trabajo. Precios y funciones cambian, así que confirma siempre en tu cuenta.</p>
 
-<h2 id="que-es">Qué es Meta Business Agent</h2>
-<p>Según el sitio de WhatsApp Business y TechCrunch, el agente responde preguntas específicas de tu negocio, recomienda productos de tu catálogo, agenda citas, califica leads y puede transferir la conversación a una persona. Responde en el idioma del cliente con el tono que elijas, y ofrece al dueño resúmenes matutinos y avisos de conversaciones sin atender. Meta indica que más de un millón de negocios lo usan ya en WhatsApp y Messenger.</p>
-<p>La disponibilidad global se anunció en junio de 2026, después de casi dos años de pruebas en países como India y México.</p>
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Respuesta corta</span>
+    <p>El agente sirve para preguntas frecuentes, catálogo y citas, pero ya no es gratuito: Meta cobra por token (unos 4 a 5 centavos de dólar por mensaje, según su documentación). Empieza en modo de sugerencias, define cuándo pasa a una persona y mide el costo por conversación antes de activarlo del todo.</p>
+  </div>
+</div>
+
+<h2 id="que-es">Qué es Meta Business Agent y qué hace</h2>
+<p>Según el sitio de WhatsApp Business y TechCrunch, el agente responde preguntas específicas de tu negocio, recomienda productos de tu catálogo, agenda citas, califica leads y puede transferir la conversación a una persona. Responde en el idioma local del cliente con el tono que definas y ofrece al dueño un resumen matutino de los chats sin atender. Meta indica que más de un millón de negocios ya usan un agente en WhatsApp y Messenger. TechCrunch informa que estuvo en pruebas durante casi dos años en países como India y México y que está disponible en WhatsApp Business y en los mensajes de Instagram.</p>
 
 <div class="ed-cards">
   <div class="ed-card">
     <img src="/img/real/blog/icons/whatsapp.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
     <h3>Responde</h3>
-    <p>Preguntas frecuentes de tu negocio, con la información que le proporciones.</p>
+    <p>Preguntas frecuentes de tu negocio, con la información que le proporciones y en el tono que elijas.</p>
   </div>
   <div class="ed-card">
     <img src="/img/real/blog/icons/business-target.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
     <h3>Vende y califica</h3>
-    <p>Recomienda productos del catálogo, agenda citas y califica leads.</p>
+    <p>Recomienda productos del catálogo, agenda citas y califica leads que llegan por mensaje.</p>
   </div>
   <div class="ed-card">
     <img src="/img/real/blog/icons/briefcase.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
@@ -24,8 +31,78 @@
   </div>
 </div>
 
-<h2 id="como-configurarlo">Cómo configurarlo</h2>
+<p>Meta también menciona conexiones con «cientos de sistemas» como Shopify y Zendesk y funciones en desarrollo, como gestión de calendario e investigación de mercado. Trata lo que aún no está disponible como planes, no como capacidades.</p>
+
+<figure class="ed-fig" id="fig-conversacion">
+  <svg viewBox="0 0 760 230" role="img" aria-labelledby="fw-t fw-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fw-t">Cómo debería fluir una conversación con el agente</title>
+    <desc id="fw-d">El cliente escribe, el agente responde con la información cargada; si la consulta es una pregunta frecuente se resuelve y se registra, y si es una queja, un pago, un caso especial o una duda que el agente no resuelve, se transfiere a una persona.</desc>
+    <defs><marker id="fw-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="f2" x="0" y="70" width="150" height="90" rx="8"/><text class="h" x="75" y="100" text-anchor="middle">1 · Cliente</text><text x="75" y="126" text-anchor="middle">Escribe por</text><text x="75" y="146" text-anchor="middle">WhatsApp</text>
+    <rect class="f3" x="200" y="70" width="170" height="90" rx="8"/><text class="h" x="285" y="100" text-anchor="middle">2 · Agente</text><text x="285" y="126" text-anchor="middle">Responde con lo que</text><text x="285" y="146" text-anchor="middle">le cargaste</text>
+    <rect class="f2" x="430" y="10" width="330" height="80" rx="8"/><text class="h" x="595" y="38" text-anchor="middle">3a · Se resuelve</text><text x="595" y="62" text-anchor="middle">Pregunta frecuente, catálogo o cita:</text><text x="595" y="80" text-anchor="middle">queda registrada</text>
+    <rect class="acc" x="430" y="140" width="330" height="80" rx="8"/><text class="h on-acc" x="595" y="168" text-anchor="middle">3b · Pasa a una persona</text><text class="on-acc" x="595" y="192" text-anchor="middle">Queja, pago, caso especial o duda</text><text class="on-acc" x="595" y="210" text-anchor="middle">que el agente no resuelve</text>
+    <g class="arrows">
+      <line class="s1 arrow-l" x1="152" y1="115" x2="198" y2="115" marker-end="url(#fw-ar)"/>
+      <line class="s1 arrow-l" x1="372" y1="100" x2="428" y2="60" marker-end="url(#fw-ar)"/>
+      <line class="s1 arrow-l" x1="372" y1="130" x2="428" y2="170" marker-end="url(#fw-ar)"/>
+    </g>
+  </svg>
+  <figcaption>La salida hacia una persona no es un lujo: la política de WhatsApp la exige cuando automatizas.</figcaption>
+</figure>
+
+<h2 id="precio">Cuánto cuesta y qué cambió en 2026</h2>
+<p>Este es el punto donde más se desactualizan las guías. En su anuncio de junio, Meta decía que empezar con el agente era gratuito y que en los meses siguientes se ofrecería mediante planes de pago. La página de precios para desarrolladores de Meta detalla el calendario vigente:</p>
+
+<figure class="ed-fig" id="fig-precio">
+  <svg viewBox="0 0 760 200" role="img" aria-labelledby="fq-t fq-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="fq-t">Cambios de precio de WhatsApp en 2026</title>
+    <desc id="fq-d">Tres hitos: el 3 de junio de 2026 se anuncia la disponibilidad global del agente; el 1 de agosto empieza el cobro por token de los mensajes del agente; el 1 de octubre se empiezan a cobrar por mensaje los mensajes de servicio y los de utilidad enviados como respuesta dentro de la ventana de 24 horas.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="198" rx="10"/>
+    <line class="s1" x1="60" y1="90" x2="700" y2="90"/>
+    <circle class="pin" cx="120" cy="90" r="8"/><circle class="pin" cx="380" cy="90" r="8"/><circle class="pin" cx="640" cy="90" r="8"/>
+    <text class="h" x="120" y="50" text-anchor="middle">3 de junio</text><text x="120" y="130" text-anchor="middle">Disponibilidad global</text><text x="120" y="150" text-anchor="middle">del agente</text>
+    <text class="h" x="380" y="50" text-anchor="middle">1 de agosto</text><text x="380" y="130" text-anchor="middle">Los mensajes del agente</text><text x="380" y="150" text-anchor="middle">se cobran por token</text>
+    <text class="h" x="640" y="50" text-anchor="middle">1 de octubre</text><text x="640" y="130" text-anchor="middle">Se cobran los mensajes de</text><text x="640" y="150" text-anchor="middle">servicio y los de utilidad</text><text x="640" y="170" text-anchor="middle">como respuesta</text>
+  </svg>
+  <figcaption>Calendario de precios de 2026 según la documentación de Meta para desarrolladores.</figcaption>
+</figure>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Qué cobra Meta y desde cuándo, según su página de precios para desarrolladores (revisada en septiembre de 2026).</caption>
+    <thead><tr><th scope="col">Desde</th><th scope="col">Concepto</th><th scope="col">Qué indica Meta</th></tr></thead>
+    <tbody>
+      <tr><td>1 de agosto de 2026</td><td>Mensajes de Meta Business Agent</td><td>Cobro por token con una tarifa global de 2.00 dólares por millón de tokens; un mensaje consume normalmente entre 20,000 y 25,000 tokens, es decir, entre 4 y 5 centavos de dólar por mensaje</td></tr>
+      <tr><td>1 de octubre de 2026</td><td>Mensajes de servicio</td><td>Cobro por mensaje, con tarifas iguales a las de utilidad y autenticación por mercado y sin descuentos por volumen; aplica a respuestas sin plantilla de personas o de IA de terceros</td></tr>
+      <tr><td>1 de octubre de 2026</td><td>Mensajes de utilidad enviados como respuesta dentro de la ventana de 24 horas</td><td>Cobro por mensaje; desde el 1 de julio de 2025 eran gratuitos</td></tr>
+      <tr><td>Se mantiene</td><td>Ventana de entrada gratuita de 72 horas (anuncios que llevan a WhatsApp)</td><td>Sigue disponible para mensajes con plantilla; no cubre el cobro por tokens del agente</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Para dimensionar el costo, la cuenta es directa: 2 dólares entre un millón de tokens da 0.000002 dólares por token, así que 20,000 tokens cuestan 0.04 dólares y 25,000 cuestan 0.05. Ese cobro es <strong>por mensaje que envía el agente</strong>, no por conversación, y un mensaje largo o con más contexto consume más tokens.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Simulación hipotética con la tarifa de Meta (entre 0.04 y 0.05 dólares por mensaje del agente). El costo real depende de los tokens de cada mensaje.</caption>
+    <thead><tr><th scope="col">Mensajes del agente al mes</th><th scope="col">Costo estimado en dólares</th></tr></thead>
+    <tbody>
+      <tr><td>500</td><td>20 a 25</td></tr>
+      <tr><td>2,000</td><td>80 a 100</td></tr>
+      <tr><td>10,000</td><td>400 a 500</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ed-callout">
+  <span class="ed-callout__label">Información que se contradice</span>
+  <p>TechCrunch informó en junio que Meta planeaba incorporar el agente a sus suscripciones de WhatsApp Business y cobrar por tokens a las empresas grandes, mientras que la página de precios para desarrolladores habla de un cobro por token para las empresas que usan la plataforma del agente. Como las condiciones cambian, revisa en tu cuenta de WhatsApp Business qué modalidad y qué tarifa te aplican antes de activar el agente.</p>
+</div>
+
+<h2 id="configurar">Cómo configurarlo por etapas</h2>
 <p>El proceso básico que describen las fuentes es sencillo: en la aplicación WhatsApp Business se abre la sección de herramientas, se elige el agente de IA y se continúa con un código QR desde el teléfono. Después se configura desde un chat llamado «Tu agente de IA», donde puedes entrenarlo con información nueva y controlar cómo responde. Hay tres modos de operación:</p>
+
 <div class="ed-table-wrap">
   <table>
     <caption>Modos de operación según la descripción de WhatsApp (confirma nombres y opciones en tu aplicación).</caption>
@@ -38,60 +115,101 @@
   </table>
 </div>
 
-<div class="ed-callout has-icon">
-  <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
-  <div>
-    <span class="ed-callout__label">Precio</span>
-    <p>Meta indica que por ahora es gratuito y que en los próximos meses se ofrecerá mediante sus planes de pago, con opciones por tamaño de negocio. Confirma las condiciones vigentes antes de basar tu operación en él.</p>
-  </div>
-</div>
-
-<h2 id="pasos">Guía paso a paso</h2>
+<h3 id="pasos">Guía paso a paso</h3>
 <ol>
   <li><strong>Reúne tus preguntas frecuentes reales</strong> revisando los últimos meses de conversaciones (precios, horarios, envíos, garantías).</li>
-  <li><strong>Escribe respuestas claras y actualizadas</strong> y una guía de tono (cercano, formal, con o sin emojis).</li>
+  <li><strong>Escribe respuestas claras y actualizadas</strong> y una guía de tono (cercano o formal, con o sin emojis).</li>
   <li><strong>Carga tu catálogo</strong> con nombres, precios y disponibilidad correctos.</li>
-  <li><strong>Empieza en modo «Sugerencias»</strong> y revisa durante una o dos semanas qué tan acertadas son las respuestas.</li>
-  <li><strong>Define cuándo debe pasar a una persona:</strong> quejas, pagos, casos especiales y cualquier duda que el agente no resuelva.</li>
+  <li><strong>Empieza en modo «Sugerencias»</strong> durante una o dos semanas y anota qué tan acertadas son las respuestas.</li>
+  <li><strong>Define cuándo pasa a una persona</strong> y quién responde en ese caso, con horarios reales.</li>
   <li><strong>Activa las respuestas directas</strong> solo para lo que ya validaste y revisa las conversaciones cada semana.</li>
 </ol>
 
-<h2 id="errores">Errores frecuentes</h2>
+<h2 id="politica">Lo que exige la política de WhatsApp</h2>
+<p>Automatizar la atención no te libera de las reglas de la plataforma. Tres puntos de las políticas oficiales conviene tener claros:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Reglas de WhatsApp relevantes para atención automatizada.</caption>
+    <thead><tr><th scope="col">Regla</th><th scope="col">Qué implica para tu negocio</th></tr></thead>
+    <tbody>
+      <tr><td>Consentimiento (opt-in)</td><td>Solo puedes escribir a personas que te dieron su número y que aceptaron recibir mensajes tuyos; tú eres responsable de cómo obtienes ese permiso</td></tr>
+      <tr><td>Escalamiento a una persona</td><td>Puedes automatizar durante la ventana de 24 horas, pero debes ofrecer vías de escalamiento rápidas, claras y directas (una persona, un teléfono, un correo o un canal web)</td></tr>
+      <tr><td>Asistentes de IA de propósito general</td><td>Desde el 15 de enero de 2026 están prohibidos en la plataforma para empresas; siguen permitidos los bots de soporte, reservas, seguimiento de pedidos y ventas</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Si contratas a un proveedor para conectar un asistente a WhatsApp, pregúntale explícitamente que el agente esté limitado a procesos de tu negocio y no funcione como asistente genérico. Y revisa con quien maneje tus datos qué información de clientes procesa el agente y qué debe decir tu aviso de privacidad; no es asesoría legal.</p>
+
+<h2 id="humano">Cuándo debe intervenir una persona</h2>
+<p>Un buen agente resuelve lo repetitivo y sabe cuándo callarse. Estos son los casos que como criterio de trabajo conviene reservar para una persona:</p>
+
 <ul>
-  <li><strong>Cargar información desactualizada:</strong> el agente repetirá precios y horarios equivocados con mucha seguridad.</li>
-  <li><strong>No definir el paso a una persona</strong> y dejar clientes atrapados en respuestas automáticas.</li>
-  <li><strong>No revisar las conversaciones</strong> para ajustar el tono y corregir errores.</li>
-  <li><strong>Ignorar la privacidad:</strong> confirma qué datos de clientes procesa el agente y qué avisas en tu aviso de privacidad.</li>
-  <li><strong>Medir solo mensajes respondidos</strong> y no citas, ventas o satisfacción.</li>
+  <li><strong>Quejas y clientes molestos:</strong> una respuesta automática puede empeorar la situación.</li>
+  <li><strong>Pagos, reembolsos y datos sensibles:</strong> requieren verificación y no deben improvisarse.</li>
+  <li><strong>Casos especiales o excepciones de precio:</strong> deciden margen y relación con el cliente.</li>
+  <li><strong>Cualquier duda que el agente no resuelva o repita dos veces:</strong> mejor pasar el control que insistir.</li>
+  <li><strong>Mensajes con riesgo legal o de salud:</strong> no se dejan a una respuesta automática.</li>
 </ul>
 
-<h2 id="metricas">Qué medir</h2>
-<ul>
-  <li><strong>Tiempo de primera respuesta,</strong> antes y después.</li>
-  <li><strong>Conversaciones resueltas sin intervención</strong> y las que pasaron a una persona.</li>
-  <li><strong>Citas, cotizaciones y ventas</strong> originadas en WhatsApp.</li>
-  <li><strong>Quejas o mensajes de «quiero hablar con una persona»</strong> como señal de fricción.</li>
-</ul>
+<h2 id="medir">Cómo saber si te conviene</h2>
+<p>Con el nuevo esquema de precios, la decisión se vuelve numérica. Compara el costo del agente con el de atender esas mismas conversaciones a mano y con el valor de las ventas que se recuperan al responder a tiempo. Mide, como mínimo:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Indicadores para evaluar el agente (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Indicador</th><th scope="col">Qué responde</th><th scope="col">Trampa habitual</th></tr></thead>
+    <tbody>
+      <tr><td>Tiempo de primera respuesta</td><td>Cuánto mejoró la velocidad de atención</td><td>Medirlo solo en horario laboral</td></tr>
+      <tr><td>Conversaciones resueltas sin intervención</td><td>Qué proporción del trabajo absorbe el agente</td><td>Contar como resueltas las que el cliente abandonó</td></tr>
+      <tr><td>Pases a una persona</td><td>Dónde falla o duda el agente</td><td>Ignorarlos en lugar de usarlos para mejorar la base de respuestas</td></tr>
+      <tr><td>Citas, cotizaciones y ventas originadas</td><td>Valor real del canal</td><td>Contar mensajes respondidos en lugar de resultados</td></tr>
+      <tr><td>Costo del agente por conversación resuelta</td><td>Si la cuenta cierra con los precios de Meta</td><td>Compararlo solo con un sueldo, sin considerar las ventas perdidas por no responder</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Si necesitas consolidar estas cifras con las de tus campañas y tu CRM, un <a href="/blog/dashboard-de-marketing-digital/">dashboard de marketing digital</a> las une en un solo lugar, y puedes <a href="/blog/automatizar-reportes-de-marketing/">automatizar el reporte</a> para no armarlo cada mes. Para ver cómo encaja WhatsApp en el resto de tus flujos de atención, lee nuestra guía de <a href="/blog/automatizacion-de-marketing/">automatización de marketing</a> y la de <a href="/blog/ai-en-marketing-digital/">IA en marketing digital</a>.</p>
+
+<h2 id="errores">Errores frecuentes</h2>
+<ol>
+  <li><strong>Activarlo sin conocer el costo.</strong> Desde agosto cada mensaje del agente tiene precio y el gasto crece con el volumen.</li>
+  <li><strong>Cargar información desactualizada.</strong> El agente repetirá precios y horarios equivocados con mucha seguridad.</li>
+  <li><strong>No definir el paso a una persona.</strong> Además de frustrar clientes, la política de WhatsApp pide vías de escalamiento claras.</li>
+  <li><strong>No revisar las conversaciones.</strong> Sin revisión semanal, los errores se repiten.</li>
+  <li><strong>Escribir a personas sin su permiso.</strong> El opt-in es una condición de la plataforma, no una recomendación.</li>
+  <li><strong>Usar un asistente genérico conectado por un proveedor.</strong> Está prohibido en la plataforma para empresas desde el 15 de enero de 2026.</li>
+  <li><strong>Medir solo mensajes respondidos.</strong> Lo que importa son las citas, las ventas y la satisfacción.</li>
+</ol>
 
 <h2 id="checklist">Checklist</h2>
 <ul class="ed-checklist">
-  <li>Tienes preguntas frecuentes y respuestas actualizadas por escrito.</li>
-  <li>El catálogo y los precios están al día.</li>
+  <li>Conoces la tarifa vigente del agente y cuánto costaría tu volumen mensual.</li>
+  <li>Tienes preguntas frecuentes, catálogo y precios actualizados por escrito.</li>
   <li>Probaste el agente en modo «Sugerencias» antes de activarlo.</li>
-  <li>Definiste cuándo y cómo se transfiere a una persona.</li>
-  <li>Revisas conversaciones y métricas cada semana.</li>
+  <li>Definiste cuándo y a quién se transfiere una conversación, con horarios reales.</li>
+  <li>Cuentas con el permiso (opt-in) de las personas a quienes escribes primero.</li>
+  <li>Tu aviso de privacidad refleja el uso del agente.</li>
+  <li>Revisas conversaciones, pases a persona y costo cada semana.</li>
 </ul>
 
-<p>Para ver cómo se conecta WhatsApp con el resto de tus flujos de atención, lee nuestra guía de <a href="/blog/automatizacion-de-marketing/">automatización de marketing</a>.</p>
+<p>Si quieres diseñar la atención por WhatsApp de tu negocio, con reglas claras de escalamiento y medición de resultados, en Apache Studio te ayudamos con <a href="/servicios/campanas-digitales/">campañas digitales</a> y flujos de atención; puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a> para revisar tu caso.</p>
 
 <div class="ed-faq" id="faq">
   <h2>Preguntas frecuentes</h2>
   <h3>¿Qué es Meta Business Agent?</h3>
-  <p>Es el agente de IA de Meta para WhatsApp Business que responde preguntas, recomienda productos del catálogo, agenda citas, califica leads y puede transferir a una persona.</p>
-  <h3>¿Cuánto cuesta?</h3>
-  <p>Según Meta, por ahora es gratuito y en los próximos meses se ofrecerá mediante sus planes de pago. Confirma las condiciones vigentes.</p>
+  <p>Es el agente de IA de Meta para WhatsApp Business y otras superficies de Meta. Responde preguntas, recomienda productos del catálogo, agenda citas, califica leads y puede transferir a una persona.</p>
+  <h3>¿Cuánto cuesta Meta Business Agent?</h3>
+  <p>Según la documentación de precios de Meta, desde el 1 de agosto de 2026 sus mensajes se cobran por token, con una tarifa de 2.00 dólares por millón de tokens; un mensaje consume normalmente entre 20,000 y 25,000 tokens, lo que equivale a entre 4 y 5 centavos de dólar por mensaje. Confirma la tarifa aplicable a tu cuenta.</p>
+  <h3>¿Sigue siendo gratuito el agente?</h3>
+  <p>En su anuncio de junio, Meta dijo que empezar era gratuito y que después se ofrecería con planes de pago. La documentación de precios indica cobro por token desde el 1 de agosto de 2026, así que no debes darlo por gratuito.</p>
+  <h3>¿Qué cambia el 1 de octubre de 2026?</h3>
+  <p>Meta empezará a cobrar por mensaje los mensajes de servicio (respuestas sin plantilla de personas o de IA de terceros) y los mensajes de utilidad enviados como respuesta dentro de la ventana de 24 horas, que antes eran gratuitos.</p>
   <h3>¿Reemplaza a mi equipo de atención?</h3>
-  <p>No. Es útil para preguntas frecuentes y tareas repetitivas; las quejas, los casos complejos y las ventas delicadas deben pasar a una persona.</p>
+  <p>No. Es útil para preguntas frecuentes y tareas repetitivas; las quejas, los pagos y los casos complejos deben pasar a una persona, y la política de WhatsApp exige vías de escalamiento claras.</p>
+  <h3>¿Puedo conectar cualquier asistente de IA a WhatsApp?</h3>
+  <p>No. Desde el 15 de enero de 2026 WhatsApp prohíbe los asistentes de IA de propósito general en su plataforma para empresas. Siguen permitidos los bots de soporte, reservas, seguimiento de pedidos y ventas.</p>
   <h3>¿Necesito saber programar?</h3>
   <p>No para la configuración básica, que se hace desde la aplicación. Para integraciones avanzadas con otros sistemas puedes necesitar apoyo técnico.</p>
 </div>
@@ -99,9 +217,13 @@
 <div class="ed-sources" id="fuentes">
   <h2>Fuentes</h2>
   <ul>
-    <li>WhatsApp Business — <a href="https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/" rel="noopener">Conversations 2026: Introducing Meta Business Agent on WhatsApp</a>.</li>
+    <li>WhatsApp Business — <a href="https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/" rel="noopener">Conversations 2026: Introducing Meta Business Agent on WhatsApp</a> (funciones, controles y anuncio de planes de pago).</li>
     <li>TechCrunch — <a href="https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/" rel="noopener">Meta's AI agent for WhatsApp Business is now available globally</a> (3 de junio de 2026).</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages" rel="noopener">Upcoming pricing updates for Meta Business Agent, service and utility messages</a> (cobro por token desde el 1 de agosto y cambios del 1 de octubre).</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" rel="noopener">Pricing on the WhatsApp Business Platform</a> (categorías de mensajes y ventana de 24 horas).</li>
+    <li>WhatsApp Business — <a href="https://whatsappbusiness.com/es-la/policy/" rel="noopener">Política de mensajería de WhatsApp Business</a> (opt-in y escalamiento durante la automatización).</li>
+    <li>TechCrunch — <a href="https://techcrunch.com/2025/10/18/whatssapp-changes-its-terms-to-bar-general-purpose-chatbots-from-its-platform" rel="noopener">WhatsApp changes its terms to bar general-purpose chatbots from its platform</a> (18 de octubre de 2025).</li>
     <li>WhatsApp Help Center — <a href="https://faq.whatsapp.com/1153795669452207/" rel="noopener">How to set up Meta Business Agent</a>.</li>
   </ul>
-  <p>Datos verificados en septiembre de 2026. Las funciones, la disponibilidad y los precios cambian: si encuentras algo desactualizado, escríbenos.</p>
+  <p>Datos verificados en septiembre de 2026. Los precios, funciones y políticas cambian con frecuencia: si encuentras algo desactualizado, escríbenos.</p>
 </div>
