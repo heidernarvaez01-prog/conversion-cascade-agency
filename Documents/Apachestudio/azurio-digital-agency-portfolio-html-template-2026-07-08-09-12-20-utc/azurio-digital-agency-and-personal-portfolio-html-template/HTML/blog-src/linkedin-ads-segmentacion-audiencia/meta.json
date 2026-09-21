@@ -3,17 +3,18 @@
   "published": "2026-09-20",
   "modified": "2026-09-20",
   "author": "heider-narvaez",
-  "title": "LinkedIn Ads: tamaño de audiencia y segmentación B2B",
-  "h1": "LinkedIn Ads: cómo segmentar tu audiencia según las recomendaciones oficiales",
-  "description": "LinkedIn recomienda audiencias de 50 mil a 300 mil miembros según el formato. Cómo segmentar campañas B2B sin quedarte con una audiencia demasiado estrecha.",
-  "keywords": "LinkedIn Ads segmentación, tamaño de audiencia LinkedIn, Campaign Manager, publicidad B2B, Sponsored Content",
+  "title": "LinkedIn Ads: segmentación B2B y tamaño de audiencia",
+  "h1": "LinkedIn Ads: cómo segmentar tu audiencia B2B sin quedarte corto, con las cifras oficiales",
+  "description": "Guía de segmentación en LinkedIn Ads: facetas, tamaño de audiencia por formato, Matched Audiences, presupuesto y un plan de prueba de cuatro semanas.",
+  "keywords": "LinkedIn Ads segmentación, tamaño de audiencia LinkedIn, Matched Audiences, Insight Tag, publicidad B2B, Campaign Manager, audiencia demasiado estrecha",
   "section": "Performance",
   "tags": [
     "LinkedIn Ads",
     "B2B",
-    "Segmentación"
+    "Segmentación",
+    "Matched Audiences"
   ],
-  "lead": "Las cifras oficiales de tamaño de audiencia, un ejemplo de cómo ampliar una audiencia estrecha y un plan de prueba de cuatro semanas.",
+  "lead": "Facetas, tamaños de audiencia por formato, cómo se combinan los criterios, audiencias propias, presupuesto y un plan de prueba de cuatro semanas.",
   "hero": {
     "src": "/img/real/blog/photos/hero-linkedin-b2b.jpg",
     "alt": "Equipo trabajando con laptops alrededor de una mesa en una terraza",
@@ -21,12 +22,13 @@
   },
   "related": [
     "performance-marketing",
-    "analitica-de-marketing-digital",
-    "google-data-manager-datos-propios"
+    "remarketing-como-recuperar-clientes-260920",
+    "analitica-de-marketing-digital"
   ],
   "about": [
     "LinkedIn Ads",
-    "Publicidad B2B"
+    "Publicidad B2B",
+    "Segmentación de audiencias"
   ],
   "crumb": "LinkedIn Ads"
 }
