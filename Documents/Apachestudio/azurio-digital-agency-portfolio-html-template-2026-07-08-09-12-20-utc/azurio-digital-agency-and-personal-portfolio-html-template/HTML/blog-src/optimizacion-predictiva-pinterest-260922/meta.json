@@ -1,0 +1,20 @@
+{
+  "slug": "optimizacion-predictiva-pinterest-260922",
+  "title": "Pinterest Ads: qué es el campaign optimization score",
+  "h1": "Optimización predictiva en Pinterest: cómo usar el nuevo puntaje de campaña",
+  "description": "Qué mide el campaign optimization score de Pinterest Ads, cómo se relaciona con Performance+ y cuándo seguir o ignorar sus recomendaciones.",
+  "keywords": "Pinterest Ads, campaign optimization score, Pinterest Performance+, publicidad en Pinterest, optimización de campañas Pinterest, anuncios en Pinterest",
+  "section": "Performance",
+  "tags": ["Pinterest", "Performance+", "Publicidad digital", "Performance"],
+  "published": "2026-09-22",
+  "modified": "2026-09-24",
+  "lead": "Pinterest añadió a Ads Manager un puntaje que predice qué tan bien está armada una campaña. Qué mide de verdad, por qué empuja hacia Performance+ y cómo usarlo sin entregarle el criterio a la máquina.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-pinterest-optimizacion-campanas.jpg",
+    "alt": "Especialista en marketing revisando un tablero visual de pines y la configuración de una campaña en un monitor grande",
+    "caption": "El puntaje ayuda a revisar la configuración; la estrategia sigue siendo tuya. Imagen ilustrativa."
+  },
+  "related": ["pinterest-nvidia-busqueda-visual-ia", "performance-marketing", "meta-festividades-2026-plan"],
+  "about": ["Pinterest Ads", "Campaign optimization score", "Pinterest Performance+"],
+  "author": "heider-narvaez"
+}
