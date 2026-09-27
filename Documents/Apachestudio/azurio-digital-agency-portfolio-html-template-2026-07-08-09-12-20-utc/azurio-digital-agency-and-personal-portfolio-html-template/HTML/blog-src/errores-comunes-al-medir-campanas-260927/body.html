@@ -1,0 +1,175 @@
+<p class="drop-cap">Cuando auditamos una cuenta de publicidad, casi nunca empezamos por los anuncios. Empezamos por la medición. La razón es sencilla: Google Ads y Meta ya no solo reportan resultados, también <strong>aprenden</strong> de ellos. Las estrategias de puja automática deciden a quién mostrar tus anuncios y cuánto pagar según las conversiones que les envías. Si esas conversiones están duplicadas, mal definidas o no llegan, el algoritmo optimiza con información falsa. Y lo hace con mucha eficiencia: te consigue más de lo que le pediste, aunque lo que le pediste no sea una venta.</p>
+
+<p>Este artículo recoge los errores de medición que más vemos en negocios de México y Colombia, explica por qué ocurren y cómo detectarlos con herramientas gratuitas. Lo que está documentado por Google o Meta está enlazado en Fuentes; lo que es experiencia de auditoría lo marcamos como criterio de trabajo.</p>
+
+<h2 id="por-que-importa">Por qué un error de medición cuesta más de lo que parece</h2>
+<p>Un reporte equivocado es un problema de información. Una conversión equivocada conectada a una puja automática es un problema de dinero. Supón que marcas como conversión la visita a la página de «gracias», pero esa página también se carga cuando alguien recarga el navegador. Cada recarga suma una conversión. El costo por conversión se ve excelente, el algoritmo busca más personas «parecidas» a quienes recargan páginas y el presupuesto se va hacia un público que no compra. Google lo advierte en su documentación: las estrategias de Smart Bidding dependen de datos de conversión precisos.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Idea clave</span>
+    <p>Antes de subir presupuesto, confirma tres cosas: que la conversión representa valor real, que se cuenta una sola vez y que llega a la plataforma que optimiza. Si falla una, escalar solo amplifica el error.</p>
+  </div>
+</div>
+
+<figure class="ed-fig" id="fig-cadena">
+  <svg viewBox="0 0 760 260" role="img" aria-labelledby="em-t em-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="em-t">Cadena de medición de una campaña</title>
+    <desc id="em-d">Cuatro eslabones: la acción del usuario en el sitio, la etiqueta que la registra, la plataforma que recibe la conversión y la puja automática que aprende de ella. Un error en cualquier eslabón contamina los siguientes.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="258" rx="10"/>
+    <g>
+      <rect class="f2" x="24" y="55" width="164" height="130" rx="8"/>
+      <circle class="pin" cx="106" cy="55" r="14"/><text class="pin-t" x="106" y="60" text-anchor="middle">1</text>
+      <text x="106" y="105" text-anchor="middle">Acción</text>
+      <text x="106" y="133" text-anchor="middle">compra, formulario,</text>
+      <text x="106" y="153" text-anchor="middle">clic a WhatsApp</text>
+    </g>
+    <g>
+      <rect class="f2" x="208" y="55" width="164" height="130" rx="8"/>
+      <circle class="pin" cx="290" cy="55" r="14"/><text class="pin-t" x="290" y="60" text-anchor="middle">2</text>
+      <text x="290" y="105" text-anchor="middle">Etiqueta</text>
+      <text x="290" y="133" text-anchor="middle">GTM, gtag, píxel,</text>
+      <text x="290" y="153" text-anchor="middle">API de conversiones</text>
+    </g>
+    <g>
+      <rect class="f2" x="392" y="55" width="164" height="130" rx="8"/>
+      <circle class="pin" cx="474" cy="55" r="14"/><text class="pin-t" x="474" y="60" text-anchor="middle">3</text>
+      <text x="474" y="105" text-anchor="middle">Plataforma</text>
+      <text x="474" y="133" text-anchor="middle">GA4, Google Ads,</text>
+      <text x="474" y="153" text-anchor="middle">Meta</text>
+    </g>
+    <g>
+      <rect class="acc" x="576" y="55" width="164" height="130" rx="8"/>
+      <circle class="pin" cx="658" cy="55" r="14"/><text class="pin-t" x="658" y="60" text-anchor="middle">4</text>
+      <text x="658" y="105" text-anchor="middle">Puja</text>
+      <text x="658" y="133" text-anchor="middle">el algoritmo aprende</text>
+      <text x="658" y="153" text-anchor="middle">de lo que recibe</text>
+    </g>
+    <text x="380" y="230" text-anchor="middle">Un error en el eslabón 1 o 2 se paga en el eslabón 4.</text>
+  </svg>
+  <figcaption>La medición es una cadena: la calidad del último eslabón depende de los anteriores. Esquema de Apache Studio.</figcaption>
+</figure>
+
+<h2 id="errores-principales">Los errores más frecuentes</h2>
+<div class="ed-cards">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/notification.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Etiquetas duplicadas</h3>
+    <p>El mismo evento se dispara desde el código del sitio y desde Google Tag Manager, o dos veces por un plugin. Resultado: conversiones infladas.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-target.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Conversiones sin valor</h3>
+    <p>Se optimiza a clics en «contacto», visitas a una página o tiempo en sitio. Son señales débiles que el algoritmo consigue fácil y barato.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Consentimiento mal resuelto</h3>
+    <p>El banner de cookies bloquea todo sin modo de consentimiento, o no bloquea nada. En el primer caso pierdes datos; en el segundo, arriesgas cumplimiento.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/pie-chart.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Primarias y secundarias mezcladas</h3>
+    <p>En Google Ads, todas las acciones se marcan como principales y la puja optimiza a microacciones en lugar de ventas.</p>
+  </div>
+</div>
+
+<h2 id="tabla-errores">Diagnóstico: síntoma, causa y cómo revisarlo</h2>
+<div class="ed-table-wrap">
+  <table>
+    <caption>Errores de medición habituales y forma de detectarlos (criterio de trabajo basado en auditorías).</caption>
+    <thead><tr><th scope="col">Síntoma</th><th scope="col">Causa probable</th><th scope="col">Cómo revisarlo</th></tr></thead>
+    <tbody>
+      <tr><td>Más conversiones en Ads que ventas reales</td><td>Etiqueta duplicada o recuento «todas» en lugar de «una»</td><td>Modo vista previa de GTM; configuración de recuento en Google Ads</td></tr>
+      <tr><td>Conversiones en cero de repente</td><td>Cambio en el sitio, formulario nuevo o etiqueta pausada</td><td>Diagnóstico de etiquetas en Google Ads; Test Events en Meta</td></tr>
+      <tr><td>CPA bajísimo pero sin ventas</td><td>Conversión principal de poco valor</td><td>Revisar qué acciones son principales y cuáles secundarias</td></tr>
+      <tr><td>Tráfico pagado como «directo» en GA4</td><td>Redirecciones que pierden gclid o UTM</td><td>Probar el anuncio y revisar la URL de llegada</td></tr>
+      <tr><td>Meta reporta el doble que GA4</td><td>Ventanas de atribución distintas o píxel + API sin deduplicar</td><td>Revisar el event_id de deduplicación y la configuración de atribución</td></tr>
+      <tr><td>Datos bajos en ciertos países o navegadores</td><td>Consentimiento o bloqueadores</td><td>Revisar modo de consentimiento y considerar conversiones mejoradas o del lado del servidor</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="etiquetas">Etiquetas mal configuradas: los casos típicos</h2>
+<p><strong>Duplicación.</strong> Es el error más común. Un desarrollador instaló gtag en el código, luego alguien agregó Google Tag Manager con la misma etiqueta, y el plugin del e-commerce añade un tercer disparo. En la vista previa de Tag Manager y con Tag Assistant de Google se ve rápidamente cuántas veces se envía cada evento.</p>
+<p><strong>Disparo en el momento equivocado.</strong> La conversión se registra al hacer clic en «enviar», aunque el formulario falle la validación. Lo correcto es dispararla cuando el envío fue exitoso: en la página de confirmación, con un evento del propio formulario o, mejor aún, desde el servidor.</p>
+<p><strong>Sitios que cambian sin avisar.</strong> Se rediseña la página, cambia el ID de un botón o se reemplaza el formulario, y la etiqueta deja de disparar. Por eso recomendamos, como criterio de trabajo, revisar las conversiones después de cada cambio en el sitio y configurar alertas cuando caen a cero.</p>
+<p><strong>Píxel y API de conversiones sin deduplicar.</strong> Meta recomienda usar ambos, pero exige un <code>event_id</code> compartido para no contar dos veces el mismo evento. Si falta, los resultados se inflan.</p>
+<p>Profundizamos en la instalación correcta en nuestra guía de <a href="/blog/implementacion-tecnica/">implementación técnica</a> y en <a href="/blog/analitica-de-marketing-digital/">analítica de marketing digital</a>.</p>
+
+<h2 id="conversiones">Conversiones mal definidas</h2>
+<p>El segundo gran grupo de errores no es técnico, es de criterio. Una conversión debería representar algo que el negocio pagaría por conseguir. En la práctica vemos campañas optimizadas a «visitó la página de contacto», «pasó 60 segundos en el sitio» o «hizo scroll hasta el 75%». Son acciones fáciles de conseguir y el algoritmo encuentra rápidamente a las personas que las hacen, que no son necesariamente las que compran.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Jerarquía orientativa de conversiones por tipo de negocio (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Tipo de negocio</th><th scope="col">Conversión principal</th><th scope="col">Secundarias (observar, no optimizar)</th></tr></thead>
+    <tbody>
+      <tr><td>E-commerce</td><td>Compra con valor</td><td>Añadir al carrito, inicio de pago</td></tr>
+      <tr><td>Servicios B2B</td><td>Formulario calificado o reunión agendada</td><td>Descarga de recurso, visita a precios</td></tr>
+      <tr><td>Negocio local</td><td>Llamada o conversación de WhatsApp de más de cierto tiempo, o reserva</td><td>Clic en cómo llegar, visita a la ficha</td></tr>
+      <tr><td>Generación de prospectos con CRM</td><td>Prospecto calificado importado desde el CRM</td><td>Formulario enviado</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Google Ads permite marcar acciones como principales (usadas para pujar) o secundarias (solo observación). Meta permite elegir el evento de optimización del conjunto de anuncios. Usa esa distinción: observa todo, pero optimiza solo a lo que vale.</p>
+
+<h2 id="ejemplo">Ejemplo aplicado (ilustrativo)</h2>
+<p>Una empresa hipotética de servicios contables en Bogotá invierte en Google Ads y ve 120 conversiones al mes con un costo por conversión atractivo. Al revisar, descubre que la conversión principal es el clic en el botón de WhatsApp, que se dispara también desde el pie de página en cada visita móvil, y que el mismo evento está instalado dos veces. Las conversiones reales —conversaciones que terminan en cotización— son 18. Tras corregir la duplicación, mover el clic a secundaria e importar las cotizaciones como conversión principal, el costo por conversión «sube» en el reporte, pero el presupuesto empieza a ir hacia búsquedas con intención de contratar. Las cifras son <strong>ilustrativas</strong>; el patrón es el que encontramos con frecuencia.</p>
+
+<h2 id="paso-a-paso">Paso a paso para auditar tu medición</h2>
+<h3>1. Inventario</h3>
+<p>Lista todas las conversiones configuradas en GA4, Google Ads y Meta. Anota cuáles son principales y qué acción del sitio representan.</p>
+<h3>2. Prueba real</h3>
+<p>Haz tú mismo una compra, un formulario o un clic a WhatsApp con la vista previa de GTM activa y Tag Assistant abierto. Verifica que cada evento se envíe una sola vez y con los datos correctos (valor, moneda, ID de transacción).</p>
+<h3>3. Revisa la plataforma</h3>
+<p>En Google Ads, consulta el estado y diagnóstico de cada acción de conversión. En Meta, usa la herramienta Test Events del Administrador de eventos y revisa la calidad de coincidencia.</p>
+<h3>4. Cruza con la realidad</h3>
+<p>Compara las conversiones de un mes con tus ventas o prospectos reales. Diferencias grandes indican duplicación, eventos de poco valor o atribución mal entendida.</p>
+<h3>5. Corrige y documenta</h3>
+<p>Deja por escrito qué mide cada etiqueta, dónde se dispara y quién la mantiene. La documentación evita que el próximo cambio del sitio rompa la medición.</p>
+
+<h2 id="plan">Plan de cuatro semanas</h2>
+<p><strong>Semana 1:</strong> inventario y prueba real de todas las conversiones. <strong>Semana 2:</strong> eliminar duplicados, corregir disparadores y definir conversiones principales y secundarias. <strong>Semana 3:</strong> revisar consentimiento, deduplicación del píxel con la API de conversiones y conversiones mejoradas. <strong>Semana 4:</strong> comparar conversiones con ventas reales, documentar y configurar alertas. Ten en cuenta que al cambiar la conversión principal las pujas automáticas pasan por un periodo de aprendizaje; evita cambios adicionales mientras tanto.</p>
+
+<h2 id="checklist">Checklist de medición antes de invertir más</h2>
+<ul class="ed-checklist">
+  <li>Cada conversión principal representa valor real para el negocio.</li>
+  <li>Ningún evento se dispara dos veces (verificado en vista previa).</li>
+  <li>La conversión se registra solo cuando la acción fue exitosa.</li>
+  <li>Las compras envían valor, moneda e ID de transacción.</li>
+  <li>El píxel y la API de conversiones comparten event_id.</li>
+  <li>El banner de cookies está integrado con el modo de consentimiento.</li>
+  <li>Las conversiones del mes se parecen a las ventas o prospectos reales.</li>
+  <li>Existe una alerta si las conversiones caen a cero.</li>
+</ul>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Cómo sé si tengo etiquetas duplicadas?</h3>
+  <p>Activa la vista previa de Google Tag Manager o Tag Assistant, realiza la acción y cuenta cuántas veces se envía el evento. Si aparece más de una vez, hay duplicación.</p>
+  <h3>¿Es normal que Meta y GA4 no coincidan?</h3>
+  <p>Sí. Usan reglas de atribución distintas y ven partes diferentes del recorrido. Lo que no es normal son diferencias enormes y crecientes sin explicación.</p>
+  <h3>¿Qué conversión debo usar si vendo por WhatsApp?</h3>
+  <p>El clic al botón es una señal débil. Como criterio de trabajo, úsalo como secundaria y, cuando sea posible, importa como principal las conversaciones calificadas o ventas desde tu CRM.</p>
+  <h3>¿Necesito medición del lado del servidor?</h3>
+  <p>No siempre, pero ayuda cuando hay pérdida de datos por bloqueadores o consentimiento. Empieza por corregir lo básico; el servidor mejora una medición correcta, no arregla una rota.</p>
+  <h3>¿Cada cuánto debo auditar?</h3>
+  <p>Después de cualquier cambio en el sitio y, como mínimo, una revisión completa por trimestre.</p>
+</div>
+
+<p>Si quieres que revisemos tu medición, en Apache Studio lo hacemos dentro de nuestro servicio de <a href="/servicios/implementacion-tecnica/">implementación técnica</a>, antes de optimizar tus <a href="/servicios/campanas-digitales/">campañas digitales</a>.</p>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Ayuda de Google Ads — <a href="https://support.google.com/google-ads/answer/1722022" rel="noopener">Acerca del seguimiento de conversiones</a>.</li>
+    <li>Ayuda de Google Ads — <a href="https://support.google.com/google-ads/answer/11461796" rel="noopener">Acciones de conversión principales y secundarias</a>.</li>
+    <li>Ayuda de Google Tag Manager — <a href="https://support.google.com/tagmanager/answer/6107056" rel="noopener">Vista previa y depuración de contenedores</a>.</li>
+    <li>Google Developers — <a href="https://developers.google.com/tag-platform/security/guides/consent" rel="noopener">Modo de consentimiento</a>.</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" rel="noopener">Deduplicación de eventos del píxel y del servidor</a>.</li>
+  </ul>
+  <p>Datos verificados en septiembre de 2026. Los ejemplos numéricos son ilustrativos.</p>
+</div>
