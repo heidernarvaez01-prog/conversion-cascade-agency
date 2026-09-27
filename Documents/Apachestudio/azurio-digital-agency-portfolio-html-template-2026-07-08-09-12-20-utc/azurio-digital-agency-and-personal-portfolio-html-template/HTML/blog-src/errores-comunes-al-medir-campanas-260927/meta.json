@@ -1,0 +1,20 @@
+{
+  "slug": "errores-comunes-al-medir-campanas-260927",
+  "title": "Errores comunes al medir campañas: conversiones y etiquetas",
+  "h1": "Errores comunes al medir campañas: conversiones y etiquetas mal configuradas",
+  "description": "Los fallos de medición que más dinero cuestan en Google Ads, Meta y GA4: etiquetas duplicadas, conversiones mal definidas, consentimiento y atribución. Con diagnóstico y checklist.",
+  "keywords": "errores al medir campañas, conversiones mal configuradas, etiquetas duplicadas, Google Tag Manager errores, GA4 conversiones, píxel de Meta, auditoría de medición",
+  "section": "Analítica",
+  "tags": ["Medición", "GA4", "Google Tag Manager", "Conversiones"],
+  "published": "2026-09-27",
+  "modified": "2026-09-27",
+  "lead": "Una campaña mal medida no solo reporta números falsos: entrena a los algoritmos de puja con datos equivocados. Estos son los errores que más vemos al auditar cuentas y cómo detectarlos antes de subir presupuesto.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-errores-medicion-campanas.jpg",
+    "alt": "Analista de marketing revisa las etiquetas de seguimiento de un sitio web en su portátil junto a un embudo de conversión dibujado en una libreta",
+    "caption": "Antes de optimizar una campaña, hay que confirmar que mide lo correcto. Imagen ilustrativa."
+  },
+  "related": ["medir-redes-sociales-ventas-260926", "implementacion-tecnica", "analitica-de-marketing-digital"],
+  "about": ["Google Analytics 4", "Google Tag Manager", "Seguimiento de conversiones"],
+  "author": "heider-narvaez"
+}
