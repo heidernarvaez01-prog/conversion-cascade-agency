@@ -1,0 +1,20 @@
+{
+  "slug": "mejora-procesos-muse-ai-meta-260930",
+  "title": "Muse de Meta para pymes: qué hace y cómo prepararte",
+  "h1": "Muse de Meta para pequeñas empresas: qué hace, qué no y cómo preparar tu negocio",
+  "description": "Qué es Muse for Small Business de Meta, qué conectores trae, dónde está disponible y cómo preparar tus procesos y datos antes de delegar tareas a un agente de IA.",
+  "keywords": "Muse Meta, Muse for Small Business, agente de IA para negocios, IA para pymes, automatizar procesos con IA, Meta IA negocios",
+  "section": "Inteligencia artificial",
+  "tags": ["IA", "Meta", "Automatización", "Pymes"],
+  "published": "2026-09-30",
+  "modified": "2026-09-30",
+  "lead": "Meta convirtió a Muse en un agente que trabaja con tus cuentas de Instagram, Facebook, anuncios y herramientas como Shopify o QuickBooks. Antes de emocionarte, conviene saber qué hace realmente, dónde está disponible y qué tienes que ordenar en tu negocio para sacarle provecho.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-muse-meta-pymes.jpg",
+    "alt": "Dueña de una panadería revisa en su laptop un asistente de IA y en una tableta las estadísticas de sus redes sociales",
+    "caption": "Un agente de IA rinde tanto como el orden de los datos que le conectas. Foto ilustrativa."
+  },
+  "related": ["ai-en-marketing-digital", "automatizacion-de-marketing", "meta-business-agent-whatsapp"],
+  "about": ["Inteligencia artificial", "Agentes de IA", "Automatización de procesos"],
+  "author": "heider-narvaez"
+}
