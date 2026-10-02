@@ -1,0 +1,160 @@
+<p class="drop-cap">Muchos negocios tienen un tesoro guardado en un cajón digital: cientos de correos de clientes que compraron alguna vez, dejaron sus datos para una factura o se registraron en la tienda en línea. Esa lista casi nunca se usa, o se usa mal: un correo masivo en diciembre con «¡Felices fiestas, 20 % de descuento!» y luego silencio hasta el año siguiente. Mientras tanto, se invierte cada mes en anuncios para conseguir clientes nuevos, en plataformas cuyo alcance y costo no controlas. El email marketing bien hecho no compite con los anuncios: aprovecha lo que los anuncios ya te consiguieron.</p>
+
+<p>Esta guía está pensada para un negocio de México o Colombia que ya vende, ya tiene clientes y quiere empezar con correo sin convertirse en una empresa de spam. Separamos los requisitos documentados por Google y Yahoo y la normativa de datos (enlazados en Fuentes) de lo que es criterio de trabajo nuestro.</p>
+
+<h2 id="por-que">Por qué el correo sigue funcionando con clientes actuales</h2>
+<p>Hay tres razones prácticas. La primera es la <strong>propiedad</strong>: tu lista de correos es tuya. Si mañana cambia el algoritmo de Instagram o suben los costos de Meta, la lista sigue ahí. La segunda es la <strong>relación previa</strong>: quien ya te compró conoce tu producto y tu servicio, así que un correo relevante no tiene que convencer desde cero. La tercera es la <strong>medición</strong>: cada correo puede llevar enlaces con UTM y conectarse con las ventas en tu tienda o en Google Analytics 4.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/goal.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Idea clave</span>
+    <p>El email marketing no consiste en enviar más correos, sino en enviar el correo que esa persona esperaría recibir de ti, en el momento en que le sirve. Relevancia antes que frecuencia.</p>
+  </div>
+</div>
+
+<h2 id="consentimiento">Primero, el consentimiento y las reglas</h2>
+<p>Antes de enviar un solo correo, conviene revisar dos frentes: la ley de datos personales y las reglas de los proveedores de correo.</p>
+<p>En lo legal, en México la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y en Colombia la Ley 1581 de 2012 exigen informar el uso de los datos y respetar el derecho a oponerse. En la práctica: tu aviso de privacidad debe mencionar que usarás el correo para comunicaciones comerciales y cada correo debe permitir darse de baja. Consulta con tu asesor legal; esto no es asesoría jurídica.</p>
+<p>En lo técnico, Google y Yahoo publicaron requisitos para remitentes masivos que incluyen autenticar el dominio (SPF, DKIM y DMARC), ofrecer baja con un clic en los envíos comerciales y mantener baja la tasa de spam reportada. Google indica en su guía que los remitentes deben mantener esa tasa por debajo de 0.3 %. Si no cumples, tus correos pueden terminar en la carpeta de spam o ser rechazados.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Requisitos básicos antes de enviar (fuentes en la sección final).</caption>
+    <thead><tr><th scope="col">Requisito</th><th scope="col">Qué es</th><th scope="col">Quién lo pide</th><th scope="col">Cómo cumplirlo</th></tr></thead>
+    <tbody>
+      <tr><td>Consentimiento e información</td><td>El cliente sabe que recibirá correos comerciales</td><td>Ley de datos de cada país</td><td>Aviso de privacidad y casilla clara en el registro</td></tr>
+      <tr><td>SPF y DKIM</td><td>Registros que prueban que el correo sale de tu dominio</td><td>Google, Yahoo</td><td>Configurarlos en el DNS con tu plataforma de envío</td></tr>
+      <tr><td>DMARC</td><td>Política sobre qué hacer con correos no autenticados</td><td>Google, Yahoo (envíos masivos)</td><td>Registro DMARC en el DNS, al menos en modo monitoreo</td></tr>
+      <tr><td>Baja con un clic</td><td>Darse de baja sin iniciar sesión ni pasos extra</td><td>Google, Yahoo</td><td>Función nativa de la plataforma de email</td></tr>
+      <tr><td>Correo desde tu dominio</td><td>Enviar desde hola@tunegocio.com, no desde Gmail</td><td>Buena práctica de entregabilidad</td><td>Correo corporativo y dominio verificado</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="segmentos">Segmenta con lo que ya sabes de tus clientes</h2>
+<p>No necesitas datos sofisticados para segmentar. Con la fecha de la última compra, lo que compró y cuántas veces compró puedes armar segmentos útiles. Es una versión simple del análisis de recencia, frecuencia y valor.</p>
+
+<figure class="ed-fig" id="fig-segmentos">
+  <svg viewBox="0 0 760 270" role="img" aria-labelledby="em-t em-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="em-t">Cuatro segmentos básicos de clientes para email marketing</title>
+    <desc id="em-d">Cuadrícula de cuatro segmentos: clientes nuevos que requieren bienvenida, clientes recurrentes que merecen reconocimiento, clientes en riesgo que no compran hace tiempo y clientes inactivos a los que se envía reactivación.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="268" rx="10"/>
+    <g><rect class="f2" x="30" y="30" width="340" height="95" rx="8"/><text x="200" y="70" text-anchor="middle">Nuevos: 1 compra reciente</text><text x="200" y="98" text-anchor="middle">→ bienvenida y uso del producto</text></g>
+    <g><rect class="acc" x="390" y="30" width="340" height="95" rx="8"/><text x="560" y="70" text-anchor="middle">Recurrentes: varias compras</text><text x="560" y="98" text-anchor="middle">→ reconocimiento y novedades</text></g>
+    <g><rect class="f2" x="30" y="145" width="340" height="95" rx="8"/><text x="200" y="185" text-anchor="middle">En riesgo: compraban y pararon</text><text x="200" y="213" text-anchor="middle">→ recordatorio y motivo para volver</text></g>
+    <g><rect class="f2" x="390" y="145" width="340" height="95" rx="8"/><text x="560" y="185" text-anchor="middle">Inactivos: sin abrir ni comprar</text><text x="560" y="213" text-anchor="middle">→ reactivación o baja de la lista</text></g>
+  </svg>
+  <figcaption>Segmentación básica por comportamiento de compra (criterio de trabajo).</figcaption>
+</figure>
+
+<p>Define «reciente» y «en riesgo» según tu ciclo de compra. Una cafetería de especialidad puede considerar en riesgo a quien no compra en un mes; una tienda de muebles, a quien no compra en dos años.</p>
+
+<h2 id="correos">Los cuatro correos que todo negocio debería tener</h2>
+<div class="ed-cards cols-4">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-launch.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Bienvenida</h3>
+    <p>Se envía al registrarse o tras la primera compra. Agradece, explica qué esperar y da un consejo de uso.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/credit-card.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Poscompra</h3>
+    <p>Unos días después: cómo aprovechar el producto, pedir reseña o resolver dudas.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/notification.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Recompra</h3>
+    <p>Cuando, según tu ciclo, el cliente debería necesitar el producto otra vez.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/money-bag.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Reactivación</h3>
+    <p>Para quien dejó de comprar: novedades reales o un motivo concreto para volver.</p>
+  </div>
+</div>
+<p>Estos cuatro correos se configuran una vez como automatizaciones y trabajan solos. Encima de ellos puedes enviar un boletín periódico con novedades, pero el boletín es el complemento, no la base.</p>
+
+<h2 id="plataformas">Cómo elegir plataforma</h2>
+<p>Hay muchas opciones —Mailchimp, Brevo, Klaviyo, MailerLite, entre otras— y sus planes y precios cambian con frecuencia, así que revisa la página oficial de cada una antes de decidir. Los criterios que usamos son estos:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Criterios para elegir plataforma de email marketing (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Criterio</th><th scope="col">Por qué importa</th><th scope="col">Qué preguntar</th></tr></thead>
+    <tbody>
+      <tr><td>Integración con tu tienda</td><td>Sin ella no puedes segmentar por compras</td><td>¿Se conecta con Shopify, WooCommerce o tu sistema?</td></tr>
+      <tr><td>Automatizaciones</td><td>Los cuatro correos esenciales dependen de ellas</td><td>¿Incluye flujos en el plan que puedo pagar?</td></tr>
+      <tr><td>Autenticación de dominio</td><td>Requisito de Google y Yahoo</td><td>¿Guía la configuración de SPF, DKIM y DMARC?</td></tr>
+      <tr><td>Precio por contactos</td><td>El costo crece con la lista</td><td>¿Cuánto cuesta al duplicar mis contactos?</td></tr>
+      <tr><td>Idioma y soporte</td><td>Resolver problemas rápido</td><td>¿Tiene soporte y plantillas en español?</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="paso-a-paso">Paso a paso para empezar</h2>
+<h3>1. Reúne y limpia la lista</h3>
+<p>Junta correos de tu tienda, facturación y formularios. Elimina duplicados y direcciones con errores evidentes. Quédate solo con quienes tienen una relación real contigo.</p>
+<h3>2. Revisa tu aviso de privacidad</h3>
+<p>Que diga que usarás el correo para comunicaciones comerciales y cómo darse de baja.</p>
+<h3>3. Configura el dominio</h3>
+<p>SPF, DKIM y DMARC con la guía de tu plataforma. Es una configuración de una sola vez que protege todos tus envíos.</p>
+<h3>4. Crea la bienvenida y la poscompra</h3>
+<p>Empieza por los dos correos más fáciles y valiosos. Agrega recompra y reactivación cuando tengas datos de ciclos.</p>
+<h3>5. Mide con enlaces UTM</h3>
+<p>Cada enlace con <code>utm_source=email</code> y <code>utm_medium=email</code>, para ver en GA4 qué ventas vinieron del correo.</p>
+
+<h2 id="metricas">Qué medir (y qué no tanto)</h2>
+<p>La tasa de apertura perdió precisión desde que algunos clientes de correo, como Apple Mail con su protección de privacidad, precargan las imágenes y registran aperturas que no ocurrieron. Úsala como tendencia, no como verdad. Prioriza los <strong>clics</strong>, las <strong>ventas atribuidas</strong> con UTM, las <strong>bajas</strong> y los <strong>reportes de spam</strong>. Si las bajas suben después de un envío, el mensaje no era relevante para ese segmento.</p>
+
+<h2 id="ejemplo">Ejemplo aplicado (ilustrativo)</h2>
+<p>Una tienda de café de especialidad en Bogotá tiene 1,200 clientes con correo en su tienda en línea. El escenario es hipotético. En vez de un boletín mensual igual para todos, configura un correo poscompra a los cinco días con recomendaciones de preparación, y un correo de recompra a las tres semanas, que es lo que tarda en terminarse una bolsa típica. A quien no compra en tres meses le envía una reactivación con el nuevo origen del mes. Con UTM en cada enlace puede ver en GA4 cuántas ventas vienen de cada correo y decidir cuál mejorar primero.</p>
+
+<blockquote>El mejor correo comercial es el que el cliente habría buscado si no se lo hubieras enviado.<cite>Apache Studio</cite></blockquote>
+
+<h2 id="errores">Errores frecuentes</h2>
+<ul>
+  <li><strong>Comprar listas.</strong> Además del problema legal, dispara los reportes de spam y daña la reputación de tu dominio.</li>
+  <li><strong>Enviar desde un Gmail personal.</strong> Sin dominio propio y autenticado, la entregabilidad sufre.</li>
+  <li><strong>Mismo mensaje para todos.</strong> El cliente de hace tres años y el de ayer no necesitan lo mismo.</li>
+  <li><strong>Solo descuentos.</strong> Si cada correo es una promoción, enseñas a tus clientes a esperar rebajas para comprar.</li>
+  <li><strong>No probar.</strong> Las pruebas A/B de asunto o de llamado a la acción son sencillas en casi todas las plataformas; úsalas.</li>
+</ul>
+
+<h2 id="plan">Plan de cuatro semanas</h2>
+<ul class="ed-checklist">
+  <li>Semana 1: reuní, limpié y deduplicé mi lista de clientes.</li>
+  <li>Semana 1: actualicé mi aviso de privacidad y el formulario de registro.</li>
+  <li>Semana 2: elegí plataforma y configuré SPF, DKIM y DMARC.</li>
+  <li>Semana 2: separé la lista en nuevos, recurrentes, en riesgo e inactivos.</li>
+  <li>Semana 3: activé los correos de bienvenida y poscompra.</li>
+  <li>Semana 4: activé recompra y reactivación con enlaces UTM.</li>
+  <li>Semana 4: revisé clics, ventas atribuidas, bajas y reportes de spam.</li>
+</ul>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Puedo enviar correos a clientes que me compraron pero no se suscribieron?</h3>
+  <p>Depende de lo que informaste al recabar sus datos y de la ley de tu país. Si tu aviso de privacidad contempla comunicaciones comerciales y ofreces baja en cada correo, suele ser viable; confírmalo con tu asesor legal.</p>
+  <h3>¿Con qué frecuencia debo enviar?</h3>
+  <p>No hay una frecuencia oficial. Como criterio de trabajo, empieza con las automatizaciones y un boletín mensual; aumenta solo si clics y bajas se mantienen sanos.</p>
+  <h3>¿Qué es DMARC y por qué me lo piden?</h3>
+  <p>Es un registro de tu dominio que indica qué hacer con correos que no pasan la autenticación. Google y Yahoo lo exigen a remitentes masivos para combatir la suplantación.</p>
+  <h3>¿El email marketing reemplaza a las redes sociales?</h3>
+  <p>No. Las redes y los anuncios atraen; el correo retiene y hace volver. Funcionan mejor juntos, como explicamos en <a href="/blog/remarketing-como-recuperar-clientes-260920/">remarketing para recuperar clientes</a>.</p>
+</div>
+
+<p>Si quieres configurar tu dominio, tus automatizaciones y la medición de ventas por correo, lo hacemos desde la <a href="/servicios/implementacion-tecnica/">implementación técnica</a> y lo integramos a tus <a href="/servicios/dashboards-y-reportes/">dashboards y reportes</a>.</p>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Ayuda de Google — <a href="https://support.google.com/a/answer/81126" rel="noopener">Directrices para remitentes de correo electrónico</a>.</li>
+    <li>Yahoo Sender Hub — <a href="https://senders.yahooinc.com/best-practices/" rel="noopener">Sender best practices</a>.</li>
+    <li>Apple — <a href="https://support.apple.com/es-mx/guide/mail/mlhl03be2866/mac" rel="noopener">Protección de la privacidad en Mail</a>.</li>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/10917952" rel="noopener">Parámetros UTM en GA4</a>.</li>
+    <li>Cámara de Diputados de México — <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf" rel="noopener">Ley Federal de Protección de Datos Personales en Posesión de los Particulares</a>.</li>
+    <li>Función Pública de Colombia — <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981" rel="noopener">Ley 1581 de 2012</a>.</li>
+  </ul>
+  <p>Datos verificados en octubre de 2026. El ejemplo aplicado es ilustrativo.</p>
+</div>

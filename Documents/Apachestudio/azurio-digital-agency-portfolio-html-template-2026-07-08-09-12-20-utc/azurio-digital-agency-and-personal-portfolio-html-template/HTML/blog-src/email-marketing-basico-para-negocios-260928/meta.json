@@ -1,0 +1,20 @@
+{
+  "slug": "email-marketing-basico-para-negocios-260928",
+  "title": "Email marketing básico para negocios con clientes",
+  "h1": "Email marketing básico para negocios que ya tienen clientes",
+  "description": "Cómo empezar con email marketing usando la base de clientes que ya tienes: consentimiento, segmentos, cuatro correos esenciales, entregabilidad y métricas útiles.",
+  "keywords": "email marketing para negocios, email marketing básico, newsletter para clientes, segmentación de correos, entregabilidad email, recompra email marketing",
+  "section": "Estrategia",
+  "tags": ["Email marketing", "Retención", "Clientes", "Automatización"],
+  "published": "2026-09-28",
+  "modified": "2026-09-28",
+  "lead": "Conseguir un cliente nuevo cuesta; venderle otra vez a quien ya te compró suele costar menos. El correo sigue siendo el canal que tú controlas. Esta guía te muestra cómo empezar con lo que ya tienes, sin enviar spam.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-email-marketing-clientes.jpg",
+    "alt": "Dueña de una tienda de ropa diseña un boletín por correo en su laptop sobre el mostrador junto a paquetes listos para enviar",
+    "caption": "Tu base de clientes es un activo que no depende del algoritmo. Foto ilustrativa."
+  },
+  "related": ["automatizacion-de-marketing", "remarketing-como-recuperar-clientes-260920", "oferta-clara-que-convierta-anuncios-260921"],
+  "about": ["Email marketing", "Retención de clientes", "Marketing relacional"],
+  "author": "heider-narvaez"
+}

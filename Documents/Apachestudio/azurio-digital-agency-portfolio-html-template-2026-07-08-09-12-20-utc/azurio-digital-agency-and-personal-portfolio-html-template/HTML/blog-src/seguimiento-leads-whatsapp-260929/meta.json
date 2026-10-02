@@ -1,0 +1,20 @@
+{
+  "slug": "seguimiento-leads-whatsapp-260929",
+  "title": "Seguimiento de leads por WhatsApp sin perder ninguno",
+  "h1": "Cómo dar seguimiento a tus leads por WhatsApp sin perder ninguno",
+  "description": "Sistema práctico para dar seguimiento a prospectos por WhatsApp Business: etiquetas, cadencia de mensajes, plantillas, reglas de la ventana de 24 horas y medición.",
+  "keywords": "seguimiento de leads WhatsApp, WhatsApp Business ventas, etiquetas WhatsApp Business, cadencia de seguimiento, plantillas WhatsApp, prospectos WhatsApp",
+  "section": "Automatización",
+  "tags": ["WhatsApp", "Ventas", "Leads", "CRM"],
+  "published": "2026-09-29",
+  "modified": "2026-09-29",
+  "lead": "La mayoría de los negocios no pierde clientes por mal producto, sino por olvidar contestar. Esta guía te da un sistema de etiquetas, cadencia y registro para que ningún prospecto de WhatsApp se quede en visto.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-seguimiento-leads-whatsapp.jpg",
+    "alt": "Asesora de ventas revisa conversaciones de WhatsApp en su teléfono junto a un cuaderno con etapas de seguimiento y una hoja de cálculo en la laptop",
+    "caption": "Un buen seguimiento combina conversación, registro y calendario. Foto ilustrativa."
+  },
+  "related": ["meta-business-agent-whatsapp", "medir-redes-sociales-ventas-260926", "automatizacion-de-marketing"],
+  "about": ["WhatsApp Business", "Gestión de prospectos", "Ventas conversacionales"],
+  "author": "heider-narvaez"
+}
