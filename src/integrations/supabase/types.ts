@@ -18,9 +18,18 @@ export type Database = {
         Row: {
           contenido: string
           estado: string | null
+          faq: Json | null
+          fecha_actualizacion: string | null
           fecha_publicacion: string | null
           id: string
           imagen_portada: string | null
+          intencion: string | null
+          json_ld: string | null
+          keyword_principal: string | null
+          keywords_secundarias: string[] | null
+          meta_description: string | null
+          meta_title: string | null
+          pilar: string | null
           resumen: string | null
           slug: string
           titulo: string
@@ -28,9 +37,18 @@ export type Database = {
         Insert: {
           contenido: string
           estado?: string | null
+          faq?: Json | null
+          fecha_actualizacion?: string | null
           fecha_publicacion?: string | null
           id?: string
           imagen_portada?: string | null
+          intencion?: string | null
+          json_ld?: string | null
+          keyword_principal?: string | null
+          keywords_secundarias?: string[] | null
+          meta_description?: string | null
+          meta_title?: string | null
+          pilar?: string | null
           resumen?: string | null
           slug: string
           titulo: string
@@ -38,9 +56,18 @@ export type Database = {
         Update: {
           contenido?: string
           estado?: string | null
+          faq?: Json | null
+          fecha_actualizacion?: string | null
           fecha_publicacion?: string | null
           id?: string
           imagen_portada?: string | null
+          intencion?: string | null
+          json_ld?: string | null
+          keyword_principal?: string | null
+          keywords_secundarias?: string[] | null
+          meta_description?: string | null
+          meta_title?: string | null
+          pilar?: string | null
           resumen?: string | null
           slug?: string
           titulo?: string
