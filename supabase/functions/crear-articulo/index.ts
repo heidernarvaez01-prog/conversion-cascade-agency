@@ -99,6 +99,15 @@ Deno.serve(async (req) => {
       resumen: resumen || null,
       imagen_portada: imagen_portada || null,
       estado,
+      meta_title: meta_title || null,
+      meta_description: meta_description || null,
+      keyword_principal: keyword_principal || null,
+      keywords_secundarias,
+      pilar: pilar || null,
+      intencion: intencion || null,
+      faq,
+      json_ld: json_ld || null,
+      fecha_actualizacion: new Date().toISOString(),
     })
     .select()
     .single()
