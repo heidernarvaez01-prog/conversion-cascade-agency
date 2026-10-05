@@ -1,0 +1,33 @@
+{
+  "slug": "sitio-web-listo-campanas-261004",
+  "title": "Sitio web listo para campañas: auditoría antes de invertir",
+  "h1": "Cómo saber si tu sitio web está listo para recibir campañas: auditoría antes de invertir",
+  "description": "Revisa velocidad (Core Web Vitals), móvil, mensaje, medición y requisitos de Google Ads antes de lanzar. Incluye semáforo y auditoría de 30 minutos.",
+  "keywords": "sitio web listo para campañas, página de destino, landing page Google Ads, Core Web Vitals, experiencia en la página de destino, auditoría web antes de campañas, medición de conversiones",
+  "section": "Desarrollo web",
+  "tags": [
+    "Sitio web",
+    "Landing page",
+    "Core Web Vitals",
+    "Medición"
+  ],
+  "published": "2026-10-04",
+  "modified": "2026-10-05",
+  "lead": "Antes de pagar por clics, revisa a dónde llegan: velocidad, móvil, mensaje, acción, medición y requisitos de la plataforma, con un semáforo para decidir si lanzas.",
+  "hero": {
+    "src": "/img/real/blog/photos/woman-using-digital-mall-directory-inside.jpg",
+    "alt": "Mujer con bolsa de compras usando una pantalla táctil interactiva en un centro comercial",
+    "caption": "Quien llega desde un anuncio espera encontrar lo que busca al primer toque. Imagen ilustrativa."
+  },
+  "related": [
+    "errores-comunes-al-medir-campanas-260927",
+    "implementacion-tecnica",
+    "meta-ads-o-google-ads-segun-negocio-261003"
+  ],
+  "about": [
+    "Páginas de destino",
+    "Core Web Vitals",
+    "Medición de conversiones"
+  ],
+  "author": "heider-narvaez"
+}

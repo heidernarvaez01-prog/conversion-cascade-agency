@@ -171,6 +171,111 @@
       "temas": [
         "remarketing"
       ]
+    },
+    "branding-concept-with-mind-map-and": {
+      "origen": "Fotos de Relleno/branding-concept-with-mind-map-and-business-charts-2026-03-13-04-37-30-utc.jpg",
+      "alt": "Mapa mental de marca con notas adhesivas de colores que dicen sitio web, en línea, diseño y análisis, junto a un informe con gráficas",
+      "temas": []
+    },
+    "business-1": {
+      "origen": "Fotos de Relleno/BUSINESS 1.png",
+      "alt": "",
+      "temas": []
+    },
+    "creative-team-collaborating-on-business-strategy": {
+      "origen": "Fotos de Relleno/creative-team-collaborating-on-business-strategy-2026-03-18-08-14-25-utc.jpg",
+      "alt": "Tres personas marcan con plumones recortes de periódicos y revistas sobre una mesa mientras planifican la selección de medios",
+      "temas": []
+    },
+    "creative-team-developing-ux-design-for": {
+      "origen": "Fotos de Relleno/creative-team-developing-ux-design-for-application-2026-01-07-00-50-05-utc.jpg",
+      "alt": "Manos de varias personas ordenan bocetos de pantallas de aplicación y diagramas de flujo sobre una mesa de trabajo",
+      "temas": []
+    },
+    "enthusiastic-people-pointing-and-speaking-into": {
+      "origen": "Fotos de Relleno/enthusiastic-people-pointing-and-speaking-into-meg-2026-03-24-14-13-30-utc.jpg",
+      "alt": "",
+      "temas": []
+    },
+    "fondo": {
+      "origen": "Fotos de Relleno/Fondo.png",
+      "alt": "",
+      "temas": []
+    },
+    "fondo3": {
+      "origen": "Fotos de Relleno/Fondo3.png",
+      "alt": "",
+      "temas": []
+    },
+    "fondo4": {
+      "origen": "Fotos de Relleno/Fondo4.png",
+      "alt": "",
+      "temas": []
+    },
+    "four-fashionable-young-adults-smiling-and": {
+      "origen": "Fotos de Relleno/four-fashionable-young-adults-smiling-and-posing-t-2026-03-25-10-21-36-utc.jpg",
+      "alt": "",
+      "temas": []
+    },
+    "friends-enjoying-a-walk-in-the": {
+      "origen": "Fotos de Relleno/friends-enjoying-a-walk-in-the-city-2026-01-08-22-56-11-utc.jpg",
+      "alt": "",
+      "temas": []
+    },
+    "icon": {
+      "origen": "Fotos de Relleno/icon.png",
+      "alt": "",
+      "temas": []
+    },
+    "imagen": {
+      "origen": "Fotos de Relleno/Imagen.png",
+      "alt": "",
+      "temas": []
+    },
+    "imagen5": {
+      "origen": "Fotos de Relleno/Imagen5.png",
+      "alt": "",
+      "temas": []
+    },
+    "imagen7": {
+      "origen": "Fotos de Relleno/Imagen7.png",
+      "alt": "",
+      "temas": []
+    },
+    "people-dancing-and-posing-on-mobile": {
+      "origen": "Fotos de Relleno/people-dancing-and-posing-on-mobile-phone-screen-2026-03-25-06-41-26-utc.jpg",
+      "alt": "",
+      "temas": []
+    },
+    "pngwing-com-1": {
+      "origen": "Fotos de Relleno/pngwing.com (1).png",
+      "alt": "",
+      "temas": []
+    },
+    "pngwing-com-5": {
+      "origen": "Fotos de Relleno/pngwing.com (5).png",
+      "alt": "",
+      "temas": []
+    },
+    "pngwing-com-6": {
+      "origen": "Fotos de Relleno/pngwing.com (6).png",
+      "alt": "",
+      "temas": []
+    },
+    "pngwing-com-7": {
+      "origen": "Fotos de Relleno/pngwing.com (7).png",
+      "alt": "",
+      "temas": []
+    },
+    "woman-using-digital-mall-directory-inside": {
+      "origen": "Fotos de Relleno/woman-using-digital-mall-directory-inside-shopping-2026-01-05-06-07-12-utc.jpg",
+      "alt": "Mujer con bolsa de compras usando una pantalla táctil interactiva en un centro comercial",
+      "temas": []
+    },
+    "young-businesswoman-showing-something": {
+      "origen": "Fotos de Relleno/young-businesswoman-showing-something.jpg",
+      "alt": "",
+      "temas": []
     }
   },
   "iconos": {
@@ -251,6 +356,48 @@
     },
     "credit-card": {
       "origen": "Iconos Business/Credit Card 3D Icon.png"
+    },
+    "business-book": {
+      "origen": "Iconos Business/Business Book 3D Icon.png"
+    },
+    "business-insurance": {
+      "origen": "Iconos Business/Business Insurance 3D Icon.png"
+    },
+    "business-startup": {
+      "origen": "Iconos Business/Business Startup 3D Icon.png"
+    },
+    "businesss-loss": {
+      "origen": "Iconos Business/Businesss Loss 3D Icon.png"
+    },
+    "pie-chart-infograpich": {
+      "origen": "Iconos Business/Pie Chart Infograpich 3D Icon.png"
+    },
+    "behance": {
+      "origen": "Iconos Redes Sociales/Behance 3D Icon.png"
+    },
+    "clubhouse": {
+      "origen": "Iconos Redes Sociales/Clubhouse 3D Icon.png"
+    },
+    "discord": {
+      "origen": "Iconos Redes Sociales/Discord 3D Icon.png"
+    },
+    "dribbble": {
+      "origen": "Iconos Redes Sociales/Dribbble 3D Icon.png"
+    },
+    "line": {
+      "origen": "Iconos Redes Sociales/Line 3D Icon.png"
+    },
+    "quora": {
+      "origen": "Iconos Redes Sociales/Quora 3D Icon.png"
+    },
+    "slack": {
+      "origen": "Iconos Redes Sociales/Slack 3D Icon.png"
+    },
+    "snapchat": {
+      "origen": "Iconos Redes Sociales/Snapchat 3D Icon.png"
+    },
+    "wechat": {
+      "origen": "Iconos Redes Sociales/WeChat 3D Icon.png"
     }
   }
 }

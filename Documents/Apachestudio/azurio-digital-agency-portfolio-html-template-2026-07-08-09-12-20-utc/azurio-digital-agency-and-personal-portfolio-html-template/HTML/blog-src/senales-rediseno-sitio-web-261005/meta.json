@@ -1,0 +1,33 @@
+{
+  "slug": "senales-rediseno-sitio-web-261005",
+  "title": "Rediseño web: 8 señales para saber si lo necesitas",
+  "h1": "Señales de que tu sitio web necesita un rediseño (y cuándo conviene optimizar en su lugar)",
+  "description": "Ocho señales medibles para decidir si rediseñar, optimizar o reconstruir tu sitio, qué línea base guardar y cómo cambiar sin perder posicionamiento en Google.",
+  "keywords": "rediseño de sitio web, señales de que necesitas rediseñar tu web, cuándo rediseñar un sitio web, rediseño web y SEO, redirecciones 301, Core Web Vitals, optimizar o rediseñar",
+  "section": "Desarrollo web",
+  "tags": [
+    "Rediseño web",
+    "SEO",
+    "Core Web Vitals",
+    "Desarrollo web"
+  ],
+  "published": "2026-10-05",
+  "modified": "2026-10-05",
+  "lead": "Ocho señales que se pueden medir, cómo elegir entre optimizar, rediseñar o reconstruir, qué línea base guardar y cómo proteger tu posicionamiento al cambiar de sitio.",
+  "hero": {
+    "src": "/img/real/blog/photos/creative-team-developing-ux-design-for.jpg",
+    "alt": "Manos de varias personas ordenan bocetos de pantallas de aplicación y diagramas de flujo sobre una mesa de trabajo",
+    "caption": "Un rediseño empieza con la estructura y el recorrido, no con los colores. Imagen ilustrativa."
+  },
+  "related": [
+    "sitio-web-listo-campanas-261004",
+    "implementacion-tecnica",
+    "analitica-de-marketing-digital"
+  ],
+  "about": [
+    "Rediseño de sitios web",
+    "Migración y SEO",
+    "Core Web Vitals"
+  ],
+  "author": "heider-narvaez"
+}

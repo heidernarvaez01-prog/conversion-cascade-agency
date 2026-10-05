@@ -1,0 +1,227 @@
+<p class="drop-cap">Hay campañas que fracasan sin que el anuncio tenga la culpa. Alguien hace clic, llega a una página que tarda cuatro segundos en cargar, no encuentra lo que el anuncio prometía y se va; o llena el formulario y la conversión nunca se registra, de modo que la plataforma «aprende» con datos incompletos. Cada clic cuesta dinero, y el sitio es donde se decide si ese dinero se convierte en clientes. Por eso lo primero que conviene revisar antes de invertir en publicidad no es la campaña, sino el lugar al que envía.</p>
+
+<p>En esta guía verás cómo saber si tu sitio está listo para recibir campañas: qué exige Google a las páginas de destino, qué umbrales de velocidad son razonables, cómo comprobar tu medición antes de gastar, qué revisar en el mensaje y la conversión, y una rutina de auditoría con un semáforo para decidir si lanzas. Lo verificado en documentación oficial está enlazado en las fuentes; lo demás es criterio de trabajo.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/goal.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Respuesta corta</span>
+    <p>Tu sitio está listo cuando carga rápido en móvil, el mensaje de la página coincide con el anuncio, hay una acción clara y, sobre todo, la conversión se registra y llega a tu analítica. Si falla la medición, no lances: gastarás y no sabrás qué funcionó.</p>
+  </div>
+</div>
+
+<h2 id="por-que">Por qué el sitio decide el resultado de la campaña</h2>
+<p>Los anuncios compran visitas; el sitio las convierte. Google Ads lo refleja en una métrica llamada <strong>experiencia en la página de destino</strong>, que según su ayuda es uno de los tres componentes del Nivel de Calidad y mide qué tan relevante y útil es tu página para quien hace clic en el anuncio. Se califica como «por encima del promedio», «promedio» o «por debajo del promedio» frente a otros anunciantes cuyos anuncios aparecieron en las mismas búsquedas durante los 90 días previos. Google aclara que el Nivel de Calidad no es un dato que entre directamente en la subasta, sino una herramienta de diagnóstico, pero una calificación baja suele señalar una página que conviene mejorar.</p>
+
+<div class="ed-cards cols-4">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/rocket.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Rápido</h3>
+    <p>Carga en pocos segundos en un teléfono con conexión promedio y no se mueve mientras cargan los elementos.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-target.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Claro</h3>
+    <p>Dice lo mismo que el anuncio, explica la oferta en segundos y propone una sola acción.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/data-analysis.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Medible</h3>
+    <p>Cada conversión importante se registra, llega a tu analítica y se puede atribuir a su campaña.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Confiable</h3>
+    <p>Cumple las políticas de la plataforma, protege los datos del visitante y da confianza para dejar sus datos.</p>
+  </div>
+</div>
+
+<figure class="ed-fig" id="fig-ruta">
+  <svg viewBox="0 0 760 230" role="img" aria-labelledby="rs-t rs-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="rs-t">El recorrido del clic y los cinco puntos a revisar</title>
+    <desc id="rs-d">Cinco etapas: el anuncio promete algo concreto, la página carga rápido en móvil, el mensaje coincide con el anuncio, existe una acción clara y la conversión se registra en la analítica. Cada etapa tiene una revisión.</desc>
+    <defs><marker id="rs-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <rect class="f2" x="0" y="20" width="136" height="170" rx="8"/><text class="h" x="68" y="46" text-anchor="middle">1 · Anuncio</text><text x="68" y="78" text-anchor="middle">Promete algo</text><text x="68" y="98" text-anchor="middle">concreto y</text><text x="68" y="118" text-anchor="middle">enlaza a la</text><text x="68" y="138" text-anchor="middle">página exacta</text>
+    <rect class="f2" x="156" y="20" width="136" height="170" rx="8"/><text class="h" x="224" y="46" text-anchor="middle">2 · Carga</text><text x="224" y="78" text-anchor="middle">Rápida en móvil</text><text x="224" y="98" text-anchor="middle">sin saltos de</text><text x="224" y="118" text-anchor="middle">diseño</text>
+    <rect class="f2" x="312" y="20" width="136" height="170" rx="8"/><text class="h" x="380" y="46" text-anchor="middle">3 · Mensaje</text><text x="380" y="78" text-anchor="middle">Coincide con</text><text x="380" y="98" text-anchor="middle">el anuncio y</text><text x="380" y="118" text-anchor="middle">explica la oferta</text>
+    <rect class="f3" x="468" y="20" width="136" height="170" rx="8"/><text class="h" x="536" y="46" text-anchor="middle">4 · Acción</text><text x="536" y="78" text-anchor="middle">Un botón claro</text><text x="536" y="98" text-anchor="middle">y un formulario</text><text x="536" y="118" text-anchor="middle">corto</text>
+    <rect class="acc" x="624" y="20" width="136" height="170" rx="8"/><text class="h on-acc" x="692" y="46" text-anchor="middle">5 · Registro</text><text class="on-acc" x="692" y="78" text-anchor="middle">La conversión</text><text class="on-acc" x="692" y="98" text-anchor="middle">llega a la</text><text class="on-acc" x="692" y="118" text-anchor="middle">analítica con</text><text class="on-acc" x="692" y="138" text-anchor="middle">su origen</text>
+    <g class="arrows">
+      <line class="s1 arrow-l" x1="138" y1="105" x2="154" y2="105" marker-end="url(#rs-ar)"/>
+      <line class="s1 arrow-l" x1="294" y1="105" x2="310" y2="105" marker-end="url(#rs-ar)"/>
+      <line class="s1 arrow-l" x1="450" y1="105" x2="466" y2="105" marker-end="url(#rs-ar)"/>
+      <line class="s1 arrow-l" x1="606" y1="105" x2="622" y2="105" marker-end="url(#rs-ar)"/>
+    </g>
+    <text x="380" y="218" text-anchor="middle">Si falla un eslabón, el resto del recorrido pierde valor.</text>
+  </svg>
+  <figcaption>Una revisión por cada etapa, antes de gastar un peso en clics.</figcaption>
+</figure>
+
+<h2 id="velocidad">1. Velocidad: los umbrales que conviene cumplir</h2>
+<p>Google define tres métricas de experiencia de página llamadas Core Web Vitals y publica un umbral «bueno» para cada una, que debe cumplirse en el percentil 75 de las visitas, segmentando móvil y escritorio. Son una referencia objetiva para saber si tu página es lenta:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Umbrales «buenos» de Core Web Vitals según web.dev (revisados en octubre de 2026). La columna de causas habituales es criterio de trabajo.</caption>
+    <thead><tr><th scope="col">Métrica</th><th scope="col">Qué mide</th><th scope="col">Umbral bueno</th><th scope="col">Causas habituales de fallo</th></tr></thead>
+    <tbody>
+      <tr><td>LCP (Largest Contentful Paint)</td><td>Carga: cuándo aparece el elemento principal</td><td>2.5 segundos o menos</td><td>Imágenes pesadas sin comprimir, servidor lento, mucho código antes del contenido</td></tr>
+      <tr><td>INP (Interaction to Next Paint)</td><td>Interactividad: qué tan rápido responde la página a un toque o clic</td><td>200 milisegundos o menos</td><td>Exceso de scripts de terceros, chat y widgets pesados</td></tr>
+      <tr><td>CLS (Cumulative Layout Shift)</td><td>Estabilidad visual: cuánto se mueve el contenido al cargar</td><td>0.1 o menos</td><td>Imágenes sin dimensiones, banners y anuncios que aparecen y empujan el texto</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Mide tu página de destino, no solo tu portada, con una herramienta como PageSpeed Insights y revisa los datos en móvil. Si fallas en alguna métrica, empieza por lo que más pesa: comprime imágenes, retira scripts que no usas y reserva espacio para los elementos que cargan después. Un sitio que debe cuidar su rendimiento a largo plazo necesita además un responsable, algo que cubre un servicio de <a href="/servicios/mantenimiento-web/">mantenimiento web</a>.</p>
+
+<h2 id="movil">2. Móvil: lo que ve Google es lo que ve el teléfono</h2>
+<p>Según la documentación de Google Search, la búsqueda usa la versión móvil del contenido de un sitio, rastreada con el agente de teléfonos inteligentes, para indexar y posicionar, lo que se llama indexación móvil primero. Su recomendación es que el sitio móvil tenga el mismo contenido principal que el de escritorio, con los mismos encabezados, datos estructurados y metadatos. Para una campaña, la implicación es directa: revisa en tu analítica qué parte de tus visitas llega desde un teléfono (en muchos sitios es la mayoría) y prueba el recorrido completo desde uno, con datos móviles y no solo con wifi.</p>
+
+<h3 id="movil-revision">Qué revisar en el teléfono</h3>
+<ul>
+  <li>El botón principal se ve sin hacer scroll y es fácil de tocar con el pulgar.</li>
+  <li>El texto se lee sin ampliar la pantalla.</li>
+  <li>El formulario es corto, usa el teclado adecuado (numérico para teléfono, de correo para email) y se puede enviar sin errores.</li>
+  <li>No hay ventanas emergentes que tapen la pantalla.</li>
+  <li>El número de teléfono y el botón de WhatsApp funcionan con un toque.</li>
+</ul>
+
+<h2 id="mensaje">3. Mensaje y acción: que la página continúe lo que prometió el anuncio</h2>
+<p>El motivo más frecuente de rebote en campañas es la falta de coincidencia: el anuncio habla de una promoción o un servicio específico y la página abre con una portada general. Como criterio de trabajo, cada anuncio debe llevar a una página que repita su promesa en el primer vistazo y que ofrezca <strong>una sola acción principal</strong>.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Revisión de mensaje y acción (criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Elemento</th><th scope="col">Qué debe cumplir</th><th scope="col">Señal de problema</th></tr></thead>
+    <tbody>
+      <tr><td>Título de la página</td><td>Repite la promesa o el servicio del anuncio con las mismas palabras</td><td>Titular genérico o de marca que no menciona la oferta</td></tr>
+      <tr><td>Primer pantallazo</td><td>Explica qué ofreces, para quién y qué hacer, sin hacer scroll</td><td>Un carrusel de imágenes sin mensaje o texto demasiado largo</td></tr>
+      <tr><td>Acción principal</td><td>Un solo botón visible: agendar, cotizar, comprar o escribir</td><td>Cinco botones distintos que compiten</td></tr>
+      <tr><td>Formulario</td><td>Pide solo lo necesario para dar seguimiento</td><td>Más de cinco o seis campos para un primer contacto</td></tr>
+      <tr><td>Prueba y confianza</td><td>Reseñas, casos verificables, garantías o datos de contacto reales</td><td>Testimonios inventados o sin contexto</td></tr>
+      <tr><td>Página de gracias</td><td>Confirma el envío, indica qué sigue y es la que registra la conversión</td><td>El formulario muestra un mensaje en la misma página y no hay dirección que medir</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="medicion">4. Medición: la revisión que no puedes saltarte</h2>
+<p>Este es el punto donde más campañas se pierden. Si la conversión no se registra bien, la plataforma optimiza con datos equivocados y tú tomas decisiones a ciegas. Antes de lanzar, comprueba cada evento de punta a punta:</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Cómo verificar la medición antes de lanzar (herramientas según la documentación oficial; el orden es criterio de trabajo).</caption>
+    <thead><tr><th scope="col">Qué comprobar</th><th scope="col">Cómo</th><th scope="col">Resultado esperado</th></tr></thead>
+    <tbody>
+      <tr><td>Etiquetas de Google Tag Manager</td><td>Usar el modo de vista previa (Preview): abre Tag Assistant, conecta tu sitio y muestra qué etiquetas se dispararon y en qué orden antes de publicar</td><td>La etiqueta de conversión se dispara una sola vez, en la acción correcta</td></tr>
+      <tr><td>Píxel y API de conversiones de Meta</td><td>Revisar con la extensión de Chrome de Meta (antes Meta Pixel Helper) y con la herramienta de eventos de prueba del Administrador de eventos</td><td>Los eventos llegan con sus parámetros (valor, moneda, identificadores)</td></tr>
+      <tr><td>Conversiones en tu analítica</td><td>Hacer una conversión real de prueba y confirmar que aparece con su fuente</td><td>La conversión aparece con el origen y la campaña correctos</td></tr>
+      <tr><td>Parámetros UTM</td><td>Abrir tu propio anuncio de prueba y revisar que llegan los parámetros</td><td>Ningún tráfico queda como «(not set)»</td></tr>
+      <tr><td>Consentimiento y privacidad</td><td>Probar con el aviso aceptado y rechazado</td><td>Las etiquetas respetan la decisión del visitante</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Si quieres profundizar en los fallos más frecuentes, como etiquetas duplicadas, conversiones mal definidas o eventos que cuentan dos veces, lee nuestra guía de <a href="/blog/errores-comunes-al-medir-campanas-260927/">errores comunes al medir campañas</a>. Y si necesitas dejar toda la medición configurada y verificada, ese es el trabajo de la <a href="/servicios/implementacion-tecnica/">implementación técnica</a> con Google Tag Manager y GA4.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/notification.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Prueba con una conversión real</span>
+    <p>Antes de gastar, completa tú mismo el formulario o la compra más pequeña posible y sigue el rastro: ¿llegó a tu correo o CRM?, ¿apareció en GA4?, ¿la vio la plataforma de anuncios? Es la prueba más barata y la que más campañas habría salvado.</p>
+  </div>
+</div>
+
+<h2 id="politicas">5. Requisitos de las plataformas: que tu página no sea rechazada</h2>
+<p>Los anuncios también se rechazan por problemas del destino. Según los requisitos de destino de Google Ads, la página debe funcionar correctamente en los navegadores y dispositivos habituales, no devolver errores HTTP al rastreador de anuncios de Google (AdsBot), contener contenido original y útil, ser fácil de navegar y segura y, si muestras un número de teléfono, este debe estar verificado y activo. Un destino que no cumple recibe una advertencia de 7 días antes de que la cuenta se suspenda.</p>
+
+<ul class="ed-checklist">
+  <li>Ningún enlace de los anuncios lleva a una página con error 404 o 500.</li>
+  <li>El sitio carga con HTTPS y sin avisos de seguridad del navegador.</li>
+  <li>La página tiene contenido propio y útil, no solo un formulario o enlaces.</li>
+  <li>El teléfono y el correo de contacto funcionan y pertenecen al negocio.</li>
+  <li>Hay aviso de privacidad y los datos de contacto legales visibles.</li>
+</ul>
+
+<h2 id="semaforo">El semáforo: ¿lanzas o esperas?</h2>
+<p>Con la información anterior puedes decidir con un criterio simple, en lugar de depender de una impresión general:</p>
+
+<figure class="ed-fig" id="fig-semaforo">
+  <svg viewBox="0 0 760 250" role="img" aria-labelledby="sm-t sm-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="sm-t">Semáforo de preparación del sitio</title>
+    <desc id="sm-d">Tres estados: listo para lanzar si se cumplen velocidad, mensaje, acción y medición; lanzar con ajustes si falla algo no crítico como un formulario largo o imágenes pesadas; no lanzar si la conversión no se registra o el destino tiene errores.</desc>
+    <rect class="acc" x="0" y="10" width="240" height="230" rx="10"/><text class="h on-acc" x="120" y="40" text-anchor="middle">Listo para lanzar</text>
+    <text class="on-acc" x="120" y="82" text-anchor="middle">Cumple los umbrales</text><text class="on-acc" x="120" y="104" text-anchor="middle">de velocidad en móvil</text><text class="on-acc" x="120" y="136" text-anchor="middle">Mensaje y acción claros</text><text class="on-acc" x="120" y="168" text-anchor="middle">Conversión verificada</text><text class="on-acc" x="120" y="200" text-anchor="middle">de punta a punta</text>
+    <rect class="f3" x="260" y="10" width="240" height="230" rx="10"/><text class="h" x="380" y="40" text-anchor="middle">Lanzar con ajustes</text>
+    <text x="380" y="82" text-anchor="middle">Falla algo no crítico:</text><text x="380" y="104" text-anchor="middle">formulario largo,</text><text x="380" y="126" text-anchor="middle">imágenes pesadas o</text><text x="380" y="148" text-anchor="middle">textos poco claros</text><text x="380" y="190" text-anchor="middle">Lanza con presupuesto</text><text x="380" y="212" text-anchor="middle">bajo y corrige en paralelo</text>
+    <rect class="f2" x="520" y="10" width="240" height="230" rx="10"/><text class="h" x="640" y="40" text-anchor="middle">No lanzar todavía</text>
+    <text x="640" y="82" text-anchor="middle">La conversión no se</text><text x="640" y="104" text-anchor="middle">registra</text><text x="640" y="136" text-anchor="middle">El destino devuelve</text><text x="640" y="158" text-anchor="middle">errores o no carga</text><text x="640" y="190" text-anchor="middle">Corrige primero:</text><text x="640" y="212" text-anchor="middle">no gastes a ciegas</text>
+  </svg>
+  <figcaption>Criterio de trabajo: lo crítico es la medición y que el destino funcione.</figcaption>
+</figure>
+
+<h2 id="auditoria">Una auditoría de 30 minutos</h2>
+<p>Si quieres una rutina rápida antes de lanzar cualquier campaña, este orden evita lo más grave primero:</p>
+
+<ol>
+  <li><strong>Minutos 1 a 5:</strong> abre la página de destino desde tu anuncio de prueba en un teléfono y recorre la acción principal.</li>
+  <li><strong>Minutos 6 a 10:</strong> mide la velocidad en móvil y anota LCP, INP y CLS.</li>
+  <li><strong>Minutos 11 a 20:</strong> activa el modo de vista previa de Tag Manager, haz una conversión de prueba y verifica que el evento se dispara una sola vez.</li>
+  <li><strong>Minutos 21 a 25:</strong> revisa que el evento llega a tu analítica y a la plataforma de anuncios, con la fuente correcta.</li>
+  <li><strong>Minutos 26 a 30:</strong> confirma que los enlaces no devuelven errores y que el aviso de privacidad está visible.</li>
+</ol>
+
+<h2 id="errores">Errores frecuentes antes de lanzar</h2>
+<ol>
+  <li><strong>Mandar todo el tráfico a la portada.</strong> Obliga al visitante a buscar lo que el anuncio prometía.</li>
+  <li><strong>No probar la conversión de punta a punta.</strong> Se descubre cuando ya se gastó.</li>
+  <li><strong>Probar solo en escritorio.</strong> Si tu analítica muestra tráfico móvil importante, esa es la experiencia que debes cuidar primero.</li>
+  <li><strong>Formularios largos para un primer contacto.</strong> Cada campo extra baja la tasa de envío.</li>
+  <li><strong>Etiquetas duplicadas.</strong> Una conversión cuenta dos veces y distorsiona las pujas automáticas.</li>
+  <li><strong>Ignorar a un tercero que ralentiza la página.</strong> Chat, mapas y píxeles pueden pesar más que el contenido.</li>
+  <li><strong>No dar seguimiento a los leads.</strong> De nada sirve un sitio listo si nadie responde a tiempo; revisa cómo <a href="/blog/seguimiento-leads-whatsapp-260929/">dar seguimiento a tus leads por WhatsApp</a>.</li>
+</ol>
+
+<h2 id="checklist">Checklist de lanzamiento</h2>
+<ul class="ed-checklist">
+  <li>La página de destino cumple los umbrales de LCP, INP y CLS en móvil.</li>
+  <li>El contenido móvil es equivalente al de escritorio.</li>
+  <li>El título y el primer pantallazo repiten la promesa del anuncio.</li>
+  <li>Hay una sola acción principal y el formulario es corto.</li>
+  <li>Las etiquetas fueron probadas en vista previa y se disparan una sola vez.</li>
+  <li>Una conversión real de prueba llegó a la analítica, a la plataforma de anuncios y a tu CRM.</li>
+  <li>Los enlaces no devuelven errores y el destino cumple los requisitos de la plataforma.</li>
+  <li>Hay aviso de privacidad y un proceso para responder a los leads.</li>
+</ul>
+
+<p>Si tu sitio todavía no cumple, el siguiente paso es corregirlo antes de invertir. En Apache Studio construimos sitios con medición integrada con nuestro servicio de <a href="/servicios/desarrollo-web/">desarrollo web</a>, los mantenemos con el de <a href="/servicios/mantenimiento-web/">mantenimiento web</a> y dejamos las conversiones verificadas con la <a href="/servicios/implementacion-tecnica/">implementación técnica</a>. Puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a> para revisar tu caso. Si todavía estás decidiendo la plataforma de anuncios, lee antes <a href="/blog/meta-ads-o-google-ads-segun-negocio-261003/">Meta Ads o Google Ads: cuál conviene según tu negocio</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Cómo sé si mi sitio web está listo para recibir campañas?</h3>
+  <p>Si carga rápido en móvil, el mensaje coincide con el anuncio, hay una acción clara y la conversión se registra de punta a punta en tu analítica y en la plataforma de anuncios. La medición es el punto crítico: sin ella, no lances.</p>
+  <h3>¿Qué tan rápido debe cargar mi página de destino?</h3>
+  <p>Google define como bueno que el elemento principal cargue en 2.5 segundos o menos (LCP), que la página responda en 200 milisegundos o menos (INP) y que el diseño no se mueva más de 0.1 (CLS), evaluado en el percentil 75 de las visitas.</p>
+  <h3>¿Importa la página de destino para Google Ads?</h3>
+  <p>Sí. La experiencia en la página de destino es uno de los tres componentes del Nivel de Calidad y se califica como por encima del promedio, promedio o por debajo del promedio. Además, el destino debe cumplir requisitos de funcionamiento, contenido y seguridad.</p>
+  <h3>¿Puedo mandar el tráfico a mi portada?</h3>
+  <p>Puedes, pero suele convertir peor que una página específica. Si el anuncio habla de un servicio o una promoción, la página debe abrir con esa misma promesa y una acción clara.</p>
+  <h3>¿Cómo compruebo que mis conversiones se registran?</h3>
+  <p>Con el modo de vista previa de Google Tag Manager y su Tag Assistant, que muestran qué etiquetas se disparan y cuándo; con la extensión de Meta y la herramienta de eventos de prueba; y completando tú mismo una conversión real para seguirla hasta tu analítica y tu CRM.</p>
+  <h3>¿Qué pasa si lanzo antes de arreglar la medición?</h3>
+  <p>Pagas por clics sin saber cuáles generan ventas, y las pujas automáticas optimizan con datos incompletos o duplicados. Corregirla después obliga a reiniciar el aprendizaje de las campañas.</p>
+  <h3>¿Es necesario tener una página de gracias?</h3>
+  <p>No es obligatorio, pero es la forma más sencilla y confiable de medir una conversión de formulario: una dirección propia que se visita solo cuando el envío fue exitoso y que además confirma al visitante qué sigue.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>web.dev — <a href="https://web.dev/articles/vitals" rel="noopener">Web Vitals</a> (umbrales de LCP, INP y CLS y percentil 75).</li>
+    <li>Google Ads Help — <a href="https://support.google.com/google-ads/answer/2404197?hl=en" rel="noopener">About landing page experience</a> (componente del Nivel de Calidad y calificaciones).</li>
+    <li>Google Ads Policy Help — <a href="https://support.google.com/adspolicy/answer/6368661?hl=en" rel="noopener">Destination requirements</a> (funcionamiento, contenido, teléfonos y advertencia de 7 días).</li>
+    <li>Google Search Central — <a href="https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing" rel="noopener">Mobile-first indexing best practices</a> (contenido equivalente en móvil).</li>
+    <li>Google Tag Manager Help — <a href="https://support.google.com/tagmanager/answer/6107056?hl=en" rel="noopener">Preview and debug containers</a> (modo de vista previa y Tag Assistant).</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/documentation/meta-pixel/support/pixel-helper" rel="noopener">Meta Pixel Helper</a> (verificación de eventos y parámetros).</li>
+  </ul>
+  <p>Datos verificados en octubre de 2026. Los umbrales y requisitos de las plataformas cambian: si encuentras algo desactualizado, escríbenos.</p>
+</div>
