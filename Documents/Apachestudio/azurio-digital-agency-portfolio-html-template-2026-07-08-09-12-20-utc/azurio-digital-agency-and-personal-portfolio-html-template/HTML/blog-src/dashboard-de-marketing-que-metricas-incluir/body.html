@@ -1,0 +1,173 @@
+<p class="drop-cap">La pregunta que más nos hacen al empezar un tablero no es «¿qué herramienta uso?», sino «¿qué pongo?». Y la respuesta honesta es: depende de lo que quieras decidir. Un dashboard de marketing que mezcla impresiones, seguidores, sesiones, tasa de rebote, clics y ventas en una sola pantalla parece completo, pero no ayuda a nadie a tomar una decisión el lunes por la mañana. Las métricas correctas cambian según el objetivo: una tienda en línea, una empresa que vende por formulario o WhatsApp y una marca que está entrando a un mercado nuevo necesitan tableros distintos, aunque usen las mismas plataformas.</p>
+
+<p>En este artículo te damos un criterio práctico para elegir qué métricas incluir según tu objetivo, cómo ordenarlas por niveles y qué errores evitar. Si buscas el paso a paso técnico para construir el tablero en Looker Studio, lo explicamos en la guía <a href="/blog/dashboard-de-marketing-digital/">Dashboard de marketing digital: qué medir y cómo armarlo en Looker Studio</a>. Aquí nos enfocamos en la decisión previa: el contenido. Lo que proviene de documentación oficial está enlazado en Fuentes; lo demás es criterio de trabajo de nuestro equipo.</p>
+
+<h2 id="principio">El principio: una pregunta, una métrica, una decisión</h2>
+<p>Antes de abrir cualquier herramienta, escribe las tres o cuatro preguntas que el tablero debe responder. Por ejemplo: «¿estamos vendiendo más que el mes pasado?», «¿qué canal trae clientes más baratos?», «¿dónde se cae la gente antes de comprar?». Cada métrica del tablero debe responder una de esas preguntas y, sobre todo, debe poder disparar una acción. Si una cifra sube o baja y nadie haría nada distinto, no pertenece a la vista principal.</p>
+<p>Este filtro elimina de inmediato muchas métricas de vanidad. Los seguidores, las impresiones o las sesiones no son inútiles, pero son contexto, no resultado. Su lugar está en un segundo nivel del tablero, para explicar por qué cambió el resultado, no para celebrarlo.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/business-target.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Idea clave</span>
+    <p>Un dashboard útil cabe en una pantalla y se lee en dos minutos. Si necesitas desplazarte para entender si vas bien o mal, tienes demasiadas métricas arriba.</p>
+  </div>
+</div>
+
+<h2 id="niveles">Cómo ordenar las métricas: tres niveles</h2>
+<p>Como criterio de trabajo, organizamos cualquier tablero en tres niveles. Arriba van los resultados de negocio (ventas, leads calificados, ingresos). En medio, los indicadores de eficiencia (costo por adquisición, tasa de conversión, retorno de la inversión publicitaria). Abajo, los indicadores de actividad y diagnóstico por canal (clics, alcance, CTR, sesiones). Quien dirige el negocio lee el primer nivel; quien opera las campañas trabaja con el segundo y el tercero.</p>
+
+<figure class="ed-fig" id="fig-piramide">
+  <svg viewBox="0 0 760 300" role="img" aria-labelledby="dm-t dm-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="dm-t">Pirámide de métricas de un dashboard de marketing</title>
+    <desc id="dm-d">Tres niveles: arriba resultados de negocio como ventas e ingresos; en medio eficiencia como costo por adquisición, tasa de conversión y ROAS; abajo actividad y diagnóstico como clics, alcance, CTR y sesiones.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="298" rx="10"/>
+    <rect class="acc" x="260" y="30" width="240" height="70" rx="8"/>
+    <text x="380" y="60" text-anchor="middle">1. Resultado</text>
+    <text x="380" y="84" text-anchor="middle">ventas, leads, ingresos</text>
+    <rect class="f2" x="160" y="115" width="440" height="70" rx="8"/>
+    <text x="380" y="145" text-anchor="middle">2. Eficiencia</text>
+    <text x="380" y="169" text-anchor="middle">CPA, tasa de conversión, ROAS, ticket</text>
+    <rect class="f2" x="60" y="200" width="640" height="70" rx="8"/>
+    <text x="380" y="230" text-anchor="middle">3. Actividad y diagnóstico</text>
+    <text x="380" y="254" text-anchor="middle">clics, alcance, CTR, sesiones, frecuencia</text>
+  </svg>
+  <figcaption>Arriba lo que decide el negocio; abajo lo que explica por qué cambió. Esquema de Apache Studio.</figcaption>
+</figure>
+
+<h2 id="por-objetivo">Qué métricas incluir según tu objetivo</h2>
+<p>Estos son los cuatro objetivos más comunes que vemos en negocios de México y Colombia. Elige el principal; si tienes dos, haz dos pestañas en lugar de mezclarlos en una sola vista.</p>
+
+<div class="ed-cards">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/credit-card.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Ventas en línea</h3>
+    <p>Ingresos, número de pedidos, ticket promedio, tasa de conversión del sitio y ROAS por canal. Diagnóstico: abandono de carrito y productos más vistos.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/networking.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Generación de leads</h3>
+    <p>Leads totales, leads calificados, costo por lead calificado, tasa de cierre y tiempo de respuesta. Diagnóstico: formularios iniciados frente a enviados.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-chart.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Tráfico y contenido</h3>
+    <p>Usuarios orgánicos, páginas de entrada con más interacción, clics desde Search Console y eventos clave atribuidos al contenido.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/rocket.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Reconocimiento de marca</h3>
+    <p>Alcance único, frecuencia, búsquedas de la marca, tráfico directo y visualizaciones completas de video. Aquí la venta llega después.</p>
+  </div>
+</div>
+
+<div class="ed-table-wrap">
+  <table>
+    <thead><tr><th>Objetivo</th><th>Nivel 1: resultado</th><th>Nivel 2: eficiencia</th><th>Nivel 3: diagnóstico</th></tr></thead>
+    <tbody>
+      <tr><td>Ecommerce</td><td>Ingresos y pedidos</td><td>ROAS, ticket promedio, tasa de conversión</td><td>Carritos abandonados, CTR, costo por clic</td></tr>
+      <tr><td>Leads B2B o servicios</td><td>Leads calificados y ventas cerradas</td><td>Costo por lead calificado, tasa de cierre</td><td>Formularios iniciados, conversaciones de WhatsApp, CTR</td></tr>
+      <tr><td>Negocio local</td><td>Llamadas, visitas, reservas</td><td>Costo por llamada o reserva</td><td>Solicitudes de ruta, vistas del perfil, clics</td></tr>
+      <tr><td>Contenido / SEO</td><td>Eventos clave desde orgánico</td><td>Tasa de conversión por página</td><td>Clics, impresiones y posición en Search Console</td></tr>
+      <tr><td>Marca</td><td>Búsquedas de marca y tráfico directo</td><td>Costo por mil personas alcanzadas</td><td>Frecuencia, visualizaciones de video</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="leads">El caso más común: vendes por formulario o WhatsApp</h3>
+<p>Para la mayoría de las empresas de servicios, el tablero falla en el mismo punto: cuenta leads, pero no sabe cuáles se convirtieron en clientes. Un lead de 50 pesos que nunca contesta es más caro que uno de 300 que compra. Por eso recomendamos, como criterio de trabajo, que el nivel 1 muestre leads calificados y ventas, aunque esos datos vengan de una hoja de cálculo o del CRM y se actualicen a mano al principio. En GA4 puedes marcar eventos como «eventos clave» (antes llamados conversiones) para separar lo que importa del resto de la actividad, como explica la ayuda oficial de Google Analytics.</p>
+<p>Si atiendes por WhatsApp, revisa nuestra guía de <a href="/blog/seguimiento-leads-whatsapp-260929/">seguimiento de leads en WhatsApp</a>: sin ese registro, el tablero se queda en el clic al botón.</p>
+
+<h2 id="por-canal">Métricas por canal: qué traer de cada plataforma</h2>
+<p>Cada plataforma reporta con sus propias reglas de atribución, así que no esperes que sumen lo mismo. La solución práctica es usar GA4 (o tu CRM) como fuente de verdad para el resultado y las plataformas para la eficiencia de cada canal.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <thead><tr><th>Fuente</th><th>Qué traer al tablero</th><th>Para qué sirve</th></tr></thead>
+    <tbody>
+      <tr><td>Google Analytics 4</td><td>Usuarios, eventos clave, ingresos, fuente/medio</td><td>Comparar canales con una misma regla</td></tr>
+      <tr><td>Google Ads</td><td>Costo, conversiones, costo por conversión, cuota de impresiones</td><td>Eficiencia de búsqueda y Performance Max</td></tr>
+      <tr><td>Meta Ads</td><td>Gasto, resultados, costo por resultado, frecuencia</td><td>Eficiencia y saturación de audiencia</td></tr>
+      <tr><td>Search Console</td><td>Clics, impresiones, CTR, posición media</td><td>Salud del canal orgánico</td></tr>
+      <tr><td>CRM u hoja de ventas</td><td>Leads calificados, ventas, ingresos por cliente</td><td>Cerrar el ciclo entre marketing y ventas</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Looker Studio se conecta de forma nativa a GA4, Google Ads, Search Console y Google Sheets; para Meta suele necesitarse un conector de terceros o una exportación. Si quieres que el tablero se actualice solo, revisa cómo <a href="/blog/automatizar-reportes-de-marketing/">automatizar reportes de marketing</a>.</p>
+
+<h2 id="paso-a-paso">Paso a paso para definir tu tablero</h2>
+<ol>
+  <li><strong>Escribe el objetivo del trimestre</strong> en una frase con número: «conseguir 40 clientes nuevos», no «crecer».</li>
+  <li><strong>Lista las preguntas</strong> que dirección hará cada semana sobre ese objetivo.</li>
+  <li><strong>Asigna una métrica a cada pregunta</strong> y su fuente (GA4, Ads, CRM).</li>
+  <li><strong>Define la meta o el rango aceptable</strong> de cada métrica, para que el tablero indique si vas bien.</li>
+  <li><strong>Valida la medición</strong> antes de diseñar: si los eventos están duplicados, el tablero solo hará más visible el error. Para eso sirve una <a href="/blog/auditoria-tracking-ga4-gtm/">auditoría de tracking GA4 y GTM</a>.</li>
+  <li><strong>Diseña la vista principal</strong> con el nivel 1 y 2; deja el nivel 3 en páginas de detalle por canal.</li>
+  <li><strong>Agenda una revisión semanal</strong> de 20 minutos. Un tablero que nadie mira no existe.</li>
+</ol>
+
+<h2 id="ejemplo">Ejemplo ilustrativo: una clínica dental en Bogotá</h2>
+<p><em>Caso hipotético para mostrar el criterio; las cifras son ilustrativas.</em> Una clínica invierte en Google Ads y Meta para conseguir citas de valoración. Su primer tablero mostraba alcance, seguidores, clics y «mensajes iniciados». Al reorganizarlo por objetivo, el nivel 1 pasó a ser «citas agendadas» y «pacientes que iniciaron tratamiento»; el nivel 2, «costo por cita» y «tasa de asistencia»; y el nivel 3 quedó con CTR, costo por clic y frecuencia por campaña. Con esa vista, la clínica podría notar que Meta genera más mensajes pero Google trae más citas que se presentan, una conclusión imposible de ver con el tablero original.</p>
+
+<h2 id="errores">Errores frecuentes al elegir métricas</h2>
+<ul>
+  <li><strong>Copiar la plantilla de otro negocio.</strong> El tablero de una tienda no sirve a una consultora.</li>
+  <li><strong>Mezclar atribuciones sin aclararlo.</strong> Sumar las conversiones de Meta y Google suele contar dos veces la misma venta.</li>
+  <li><strong>Mostrar totales sin comparación.</strong> Una cifra sin el periodo anterior o sin meta no dice si vas bien.</li>
+  <li><strong>Usar promedios que esconden problemas.</strong> Un ROAS global puede ocultar una campaña que pierde dinero.</li>
+  <li><strong>Tener demasiados KPIs.</strong> Como criterio de trabajo, no más de seis métricas en la vista principal.</li>
+  <li><strong>No documentar las definiciones.</strong> Si «lead» significa cosas distintas para marketing y ventas, el tablero genera discusiones en lugar de decisiones.</li>
+</ul>
+
+<h2 id="plan">Plan de 4 semanas para tener tu tablero</h2>
+<div class="ed-table-wrap">
+  <table>
+    <thead><tr><th>Semana</th><th>Trabajo</th><th>Entregable</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Objetivo, preguntas y definiciones de cada métrica</td><td>Documento de una página con KPIs y metas</td></tr>
+      <tr><td>2</td><td>Auditoría de medición y corrección de eventos clave</td><td>Eventos verificados en GA4 y plataformas</td></tr>
+      <tr><td>3</td><td>Conexión de fuentes y diseño de la vista principal</td><td>Primera versión del tablero</td></tr>
+      <tr><td>4</td><td>Revisión con dirección y ajustes</td><td>Tablero aprobado y rutina semanal agendada</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="checklist">Checklist de un dashboard bien planteado</h2>
+<ul class="ed-checklist">
+  <li>El objetivo principal está escrito con número y fecha.</li>
+  <li>La vista principal tiene seis métricas o menos.</li>
+  <li>Cada métrica tiene meta o comparación con el periodo anterior.</li>
+  <li>El resultado se mide con una sola fuente de verdad.</li>
+  <li>Las definiciones de lead, venta y conversión están documentadas.</li>
+  <li>Los eventos se auditaron antes de construir el tablero.</li>
+  <li>Hay una persona responsable y una revisión semanal agendada.</li>
+</ul>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Cuántas métricas debe tener un dashboard de marketing?</h3>
+  <p>Como criterio de trabajo, entre cuatro y seis en la vista principal. El resto puede vivir en páginas de detalle por canal.</p>
+  <h3>¿Qué diferencia hay entre una métrica y un KPI?</h3>
+  <p>Una métrica es cualquier dato medible; un KPI es la métrica que elegiste para juzgar si cumples tu objetivo. Todos los KPIs son métricas, pero no al revés.</p>
+  <h3>¿Debo incluir seguidores y alcance?</h3>
+  <p>Solo si tu objetivo es reconocimiento de marca. En tableros de ventas o leads, van en el nivel de diagnóstico.</p>
+  <h3>¿Por qué GA4 y Meta muestran conversiones distintas?</h3>
+  <p>Porque usan modelos y ventanas de atribución diferentes. Elige una fuente de verdad para el resultado y usa cada plataforma para comparar su propia eficiencia.</p>
+  <h3>¿Cada cuánto actualizar el tablero?</h3>
+  <p>Los datos pueden actualizarse a diario, pero la revisión con decisiones funciona mejor semanal. Cambiar campañas cada día por ruido suele empeorar los resultados.</p>
+</div>
+
+<p>Si quieres un tablero que responda tus preguntas de negocio sin armarlo tú, en Apache Studio lo hacemos dentro de nuestro servicio de <a href="/servicios/dashboards-y-reportes/">dashboards y reportes</a>, con la medición revisada en <a href="/servicios/implementacion-tecnica/">implementación técnica</a>.</p>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/9267568" rel="noopener">Acerca de los eventos clave</a>.</li>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/9267735" rel="noopener">Eventos recomendados</a>.</li>
+    <li>Ayuda de Looker Studio — <a href="https://support.google.com/looker-studio/answer/6283323" rel="noopener">Conectarse a datos</a>.</li>
+    <li>Ayuda de Google Ads — <a href="https://support.google.com/google-ads/answer/1722022" rel="noopener">Acerca del seguimiento de conversiones</a>.</li>
+    <li>Ayuda de Search Console — <a href="https://support.google.com/webmasters/answer/7576553" rel="noopener">Informe de rendimiento</a>.</li>
+  </ul>
+  <p>Datos verificados en octubre de 2026. Los ejemplos numéricos son ilustrativos.</p>
+</div>
