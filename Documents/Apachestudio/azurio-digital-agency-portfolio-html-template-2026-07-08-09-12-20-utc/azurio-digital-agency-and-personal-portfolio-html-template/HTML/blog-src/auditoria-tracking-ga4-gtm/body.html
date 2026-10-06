@@ -1,0 +1,174 @@
+<p class="drop-cap">Casi todas las cuentas que auditamos tienen algo en común: alguien instaló Google Analytics 4 y Google Tag Manager hace tiempo, el sitio cambió varias veces desde entonces y nadie volvió a revisar si las etiquetas siguen midiendo lo que deberían. El resultado no siempre es evidente. Los reportes siguen mostrando números, las campañas siguen gastando y el problema aparece cuando alguien pregunta por qué GA4 dice 80 ventas y la tienda registra 50, o por qué el costo por lead se ve excelente pero ventas se queja de que nadie contesta.</p>
+
+<p>Una auditoría de tracking es la revisión sistemática de esa cadena: qué se mide, cómo se dispara, adónde llega y si representa valor real. En esta guía te mostramos el orden en que la hacemos, qué revisar en cada capa y cómo documentar los hallazgos. Lo que proviene de la documentación de Google y Meta está enlazado en Fuentes; lo demás es criterio de trabajo de nuestro equipo.</p>
+
+<h2 id="que-es">Qué es una auditoría de tracking y cuándo hacerla</h2>
+<p>Es una revisión técnica y de negocio a la vez. Técnica, porque comprueba que las etiquetas se disparan una sola vez, con los datos correctos y respetando el consentimiento. De negocio, porque confirma que lo que se mide como conversión es algo que le importa a la empresa. Como criterio de trabajo, recomendamos hacerla en cuatro momentos: antes de aumentar presupuesto, después de un rediseño o cambio de plataforma, cuando los números de dos fuentes divergen sin explicación y, como mínimo, una vez por trimestre.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/secure.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Idea clave</span>
+    <p>Las pujas automáticas de Google Ads y Meta aprenden de las conversiones que reciben. Una medición rota no solo da reportes falsos: entrena al algoritmo para buscar a las personas equivocadas.</p>
+  </div>
+</div>
+
+<h2 id="capas">Las cinco capas que revisamos</h2>
+<p>Auditar en orden evita perder tiempo. No tiene sentido revisar los informes de GA4 si el contenedor de GTM dispara las etiquetas dos veces. Trabajamos de la base hacia arriba.</p>
+
+<figure class="ed-fig" id="fig-capas">
+  <svg viewBox="0 0 760 260" role="img" aria-labelledby="at-t at-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="at-t">Orden de una auditoría de tracking</title>
+    <desc id="at-d">Cinco pasos en secuencia: instalación y contenedor, eventos y parámetros, eventos clave y conversiones, consentimiento y dominios, y plataformas publicitarias. Se revisan en ese orden porque cada capa depende de la anterior.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="258" rx="10"/>
+    <g><rect class="f2" x="20" y="60" width="132" height="120" rx="8"/><circle class="pin" cx="86" cy="60" r="14"/><text class="pin-t" x="86" y="65" text-anchor="middle">1</text><text x="86" y="110" text-anchor="middle">Instalación</text><text x="86" y="135" text-anchor="middle">y contenedor</text></g>
+    <g><rect class="f2" x="167" y="60" width="132" height="120" rx="8"/><circle class="pin" cx="233" cy="60" r="14"/><text class="pin-t" x="233" y="65" text-anchor="middle">2</text><text x="233" y="110" text-anchor="middle">Eventos y</text><text x="233" y="135" text-anchor="middle">parámetros</text></g>
+    <g><rect class="f2" x="314" y="60" width="132" height="120" rx="8"/><circle class="pin" cx="380" cy="60" r="14"/><text class="pin-t" x="380" y="65" text-anchor="middle">3</text><text x="380" y="110" text-anchor="middle">Eventos clave</text><text x="380" y="135" text-anchor="middle">y valor</text></g>
+    <g><rect class="f2" x="461" y="60" width="132" height="120" rx="8"/><circle class="pin" cx="527" cy="60" r="14"/><text class="pin-t" x="527" y="65" text-anchor="middle">4</text><text x="527" y="110" text-anchor="middle">Consentimiento</text><text x="527" y="135" text-anchor="middle">y dominios</text></g>
+    <g><rect class="acc" x="608" y="60" width="132" height="120" rx="8"/><circle class="pin" cx="674" cy="60" r="14"/><text class="pin-t" x="674" y="65" text-anchor="middle">5</text><text x="674" y="110" text-anchor="middle">Plataformas</text><text x="674" y="135" text-anchor="middle">Ads y Meta</text></g>
+    <text x="380" y="225" text-anchor="middle">Si una capa falla, las siguientes heredan el error.</text>
+  </svg>
+  <figcaption>El orden importa: se audita de la instalación hacia las plataformas publicitarias. Esquema de Apache Studio.</figcaption>
+</figure>
+
+<div class="ed-cards cols-4">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-book.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Contenedor</h3>
+    <p>Una sola instalación de GTM y de GA4, sin código duplicado en el tema o en plugins.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/notification.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Eventos</h3>
+    <p>Nombres consistentes, parámetros útiles y disparo solo cuando la acción fue exitosa.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/goal.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Conversiones</h3>
+    <p>Pocos eventos clave que representen valor, con valor y moneda cuando aplica.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/data-analysis.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Plataformas</h3>
+    <p>Google Ads y Meta reciben las mismas acciones, deduplicadas y sin inflar.</p>
+  </div>
+</div>
+
+<h2 id="paso-a-paso">Paso a paso de la auditoría</h2>
+
+<h3 id="paso-1">1. Inventario y contenedor de Google Tag Manager</h3>
+<p>Empieza por saber qué hay instalado. Revisa el código fuente del sitio y busca más de un identificador de GA4 (G-XXXX) o de contenedor (GTM-XXXX). Es común encontrar el código de GA4 pegado en el tema y, además, una etiqueta de GA4 dentro de GTM: eso duplica todas las páginas vistas. Dentro de GTM, revisa que cada etiqueta tenga un propósito, elimina las pausadas desde hace meses, ordena por carpetas y confirma quién tiene acceso. Un contenedor con usuarios de agencias anteriores con permiso de publicación es un riesgo.</p>
+<p>Usa el modo de vista previa de GTM (Tag Assistant) para navegar el sitio y ver qué etiquetas se disparan en cada página. La ayuda oficial de Tag Manager explica cómo activarlo y leer los resultados.</p>
+
+<h3 id="paso-2">2. Eventos y parámetros en GA4</h3>
+<p>Abre DebugView en GA4 mientras recorres el sitio en modo de vista previa. Comprueba que cada acción genera un evento, una sola vez, con los parámetros esperados. Revisa también la medición mejorada: GA4 puede registrar automáticamente desplazamiento, clics salientes, búsquedas en el sitio, formularios y reproducción de video. Si además creaste esos mismos eventos en GTM, se duplican.</p>
+<p>Para comercio electrónico, valida que <code>purchase</code> incluya <code>transaction_id</code>, <code>value</code>, <code>currency</code> e <code>items</code>, como indica la lista de eventos recomendados. Sin <code>transaction_id</code>, una recarga de la página de gracias puede registrar la compra otra vez.</p>
+
+<h3 id="paso-3">3. Eventos clave y valor</h3>
+<p>En GA4, los eventos clave (antes «conversiones») deben ser pocos y significativos. Marcar como clave el desplazamiento al 90 % o la visita a «Contacto» infla los resultados y confunde a quien lee el reporte. Como criterio de trabajo, deja como clave la compra, el formulario enviado con éxito, la llamada o el inicio de conversación calificado, y mantén el resto como eventos normales.</p>
+
+<h3 id="paso-4">4. Consentimiento, dominios y referencias</h3>
+<p>Revisa cómo interactúa el banner de cookies con las etiquetas. El modo de consentimiento de Google permite ajustar el comportamiento de las etiquetas según la elección del usuario; un banner que bloquea todo sin esa configuración elimina datos, y uno que no bloquea nada puede incumplir la normativa aplicable. Después, revisa el recorrido entre dominios: si el pago ocurre en una pasarela externa o tienes un subdominio de agenda, configura la medición multidominio y la lista de referencias no deseadas para que la venta no se atribuya a la pasarela.</p>
+
+<h3 id="paso-5">5. Google Ads y Meta</h3>
+<p>En Google Ads, revisa qué acciones son principales (las que usa la puja) y cuáles secundarias. Un error frecuente es tener la conversión de GA4 importada y la etiqueta nativa de Ads midiendo la misma compra, ambas como principales. En Meta, si usas píxel y API de conversiones a la vez, cada evento debe compartir <code>event_id</code> para que Meta lo deduplique, como explica su documentación para desarrolladores.</p>
+
+<h2 id="hallazgos">Tabla de hallazgos frecuentes</h2>
+<div class="ed-table-wrap">
+  <table>
+    <thead><tr><th>Síntoma</th><th>Causa probable</th><th>Cómo comprobarlo</th></tr></thead>
+    <tbody>
+      <tr><td>Páginas vistas casi el doble de lo esperado</td><td>GA4 instalado en el código y en GTM</td><td>Vista previa de GTM y código fuente</td></tr>
+      <tr><td>Más compras en GA4 que en la tienda</td><td>Falta <code>transaction_id</code> o la página de gracias se recarga</td><td>DebugView y comparación por ID de pedido</td></tr>
+      <tr><td>Ventas atribuidas a la pasarela de pago</td><td>Sin referencias no deseadas ni multidominio</td><td>Informe de fuente/medio de la compra</td></tr>
+      <tr><td>Costo por lead muy bajo pero pocas ventas</td><td>Conversión en el clic, no en el envío exitoso</td><td>Probar el formulario con error y ver si se dispara</td></tr>
+      <tr><td>Conversiones caen a cero tras un cambio</td><td>Selector o URL de la regla cambió con el rediseño</td><td>Vista previa en la página afectada</td></tr>
+      <tr><td>Meta reporta más compras que GA4</td><td>Píxel y API sin deduplicar, además de atribución distinta</td><td>Administrador de eventos y <code>event_id</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="herramientas">Herramientas que usamos (todas gratuitas)</h2>
+<div class="ed-table-wrap">
+  <table>
+    <thead><tr><th>Herramienta</th><th>Para qué</th></tr></thead>
+    <tbody>
+      <tr><td>Vista previa de GTM / Tag Assistant</td><td>Ver qué etiquetas se disparan y con qué datos</td></tr>
+      <tr><td>DebugView de GA4</td><td>Confirmar eventos y parámetros en tiempo real</td></tr>
+      <tr><td>Herramientas de desarrollador del navegador</td><td>Revisar solicitudes de red a GA4, Ads y Meta</td></tr>
+      <tr><td>Administrador de eventos de Meta</td><td>Probar eventos y revisar deduplicación</td></tr>
+      <tr><td>Diagnóstico de conversiones de Google Ads</td><td>Ver el estado de cada acción de conversión</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="ejemplo">Ejemplo ilustrativo: una tienda en Guadalajara</h2>
+<p><em>Caso hipotético; las cifras son ilustrativas.</em> Una tienda de ropa nota que GA4 registra 120 compras al mes y su plataforma de ecommerce, 85. La auditoría encuentra tres causas: el evento <code>purchase</code> sin <code>transaction_id</code>, de modo que las recargas cuentan como compras nuevas; una etiqueta de GA4 adicional que instaló un plugin; y la pasarela de pago sin excluir como referencia, que se queda con el crédito de una parte de las ventas. Tras corregirlo, las cifras se acercan y, sobre todo, Google Ads deja de optimizar hacia compras que no existieron.</p>
+
+<h2 id="errores">Errores frecuentes al auditar</h2>
+<ul>
+  <li><strong>Revisar solo los informes.</strong> Los reportes muestran el efecto; la causa está en el contenedor y en las solicitudes de red.</li>
+  <li><strong>Probar solo en escritorio.</strong> Menús, formularios y botones de WhatsApp cambian en móvil y a veces rompen las reglas de disparo.</li>
+  <li><strong>No probar el camino de error.</strong> Envía un formulario incompleto: si la conversión se dispara, está mal.</li>
+  <li><strong>Corregir sin documentar.</strong> Sin un registro de cambios, el siguiente rediseño vuelve a romper lo mismo.</li>
+  <li><strong>Esperar coincidencia exacta entre plataformas.</strong> Diferencias moderadas son normales por atribución; lo que hay que explicar son las grandes y crecientes.</li>
+</ul>
+
+<h2 id="plan">Plan de 4 semanas</h2>
+<div class="ed-table-wrap">
+  <table>
+    <thead><tr><th>Semana</th><th>Trabajo</th><th>Entregable</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Inventario de etiquetas, accesos y acciones de negocio</td><td>Mapa de medición: qué se mide y dónde</td></tr>
+      <tr><td>2</td><td>Pruebas en vista previa y DebugView, escritorio y móvil</td><td>Lista de hallazgos priorizada</td></tr>
+      <tr><td>3</td><td>Correcciones en GTM, GA4, consentimiento y plataformas</td><td>Contenedor publicado con notas de versión</td></tr>
+      <tr><td>4</td><td>Validación con datos reales y alertas</td><td>Comparación fuente a fuente y documentación final</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="checklist">Checklist de auditoría de tracking</h2>
+<ul class="ed-checklist">
+  <li>Existe una sola instalación de GA4 y de GTM en el sitio.</li>
+  <li>Solo personas actuales tienen permiso de publicación en GTM.</li>
+  <li>Cada evento se dispara una vez y solo cuando la acción fue exitosa.</li>
+  <li>Las compras envían <code>transaction_id</code>, valor y moneda.</li>
+  <li>Los eventos clave representan valor de negocio.</li>
+  <li>El banner de cookies está integrado con el modo de consentimiento.</li>
+  <li>La pasarela de pago y otros dominios propios no roban atribución.</li>
+  <li>Google Ads no cuenta la misma conversión dos veces como principal.</li>
+  <li>Píxel y API de conversiones de Meta comparten <code>event_id</code>.</li>
+  <li>Los cambios quedan documentados en las versiones del contenedor.</li>
+</ul>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Cuánto tarda una auditoría de tracking?</h3>
+  <p>Depende del tamaño del sitio y del número de plataformas. Como referencia de trabajo, un sitio de servicios se revisa en pocos días y un ecommerce con varias integraciones puede requerir las cuatro semanas del plan.</p>
+  <h3>¿Puedo hacerla yo sin conocimientos técnicos?</h3>
+  <p>Puedes hacer el inventario y probar formularios con la vista previa de GTM. Las correcciones en el contenedor y la deduplicación conviene dejarlas a alguien con experiencia.</p>
+  <h3>¿Necesito GTM si ya tengo GA4?</h3>
+  <p>No es obligatorio, pero facilita controlar todas las etiquetas desde un solo lugar, probar antes de publicar y mantener un historial de versiones.</p>
+  <h3>¿La auditoría arregla la diferencia entre Meta y GA4?</h3>
+  <p>Reduce las diferencias causadas por errores, como duplicados. Las que se deben a modelos de atribución distintos seguirán existiendo, y es normal.</p>
+  <h3>¿Qué hago después de la auditoría?</h3>
+  <p>Construir un tablero confiable. Te explicamos qué incluir en <a href="/blog/dashboard-de-marketing-que-metricas-incluir/">Dashboard de marketing: qué métricas incluir según tu objetivo</a>.</p>
+</div>
+
+<p>Si prefieres que lo revisemos por ti, en Apache Studio hacemos esta auditoría dentro de nuestro servicio de <a href="/servicios/implementacion-tecnica/">implementación técnica</a>, antes de optimizar tus <a href="/servicios/campanas-digitales/">campañas digitales</a>. También puedes leer los <a href="/blog/errores-comunes-al-medir-campanas-260927/">errores comunes al medir campañas</a>.</p>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Ayuda de Google Tag Manager — <a href="https://support.google.com/tagmanager/answer/6107056" rel="noopener">Vista previa y depuración de contenedores</a>.</li>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/7201382" rel="noopener">Supervisar eventos en DebugView</a>.</li>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/9216061" rel="noopener">Medición mejorada</a>.</li>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/9267735" rel="noopener">Eventos recomendados</a>.</li>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/10071811" rel="noopener">Configurar la medición multidominio</a>.</li>
+    <li>Ayuda de Google Analytics — <a href="https://support.google.com/analytics/answer/10327750" rel="noopener">Identificar referencias no deseadas</a>.</li>
+    <li>Google Developers — <a href="https://developers.google.com/tag-platform/security/guides/consent" rel="noopener">Modo de consentimiento</a>.</li>
+    <li>Ayuda de Google Ads — <a href="https://support.google.com/google-ads/answer/11461796" rel="noopener">Acciones de conversión principales y secundarias</a>.</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" rel="noopener">Deduplicación de eventos del píxel y del servidor</a>.</li>
+  </ul>
+  <p>Datos verificados en octubre de 2026. Los ejemplos numéricos son ilustrativos.</p>
+</div>
