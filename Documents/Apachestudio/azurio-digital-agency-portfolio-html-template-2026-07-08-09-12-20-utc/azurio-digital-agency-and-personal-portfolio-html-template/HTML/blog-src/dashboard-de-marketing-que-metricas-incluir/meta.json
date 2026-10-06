@@ -1,0 +1,20 @@
+{
+  "slug": "dashboard-de-marketing-que-metricas-incluir",
+  "title": "Dashboard de marketing: qué métricas incluir según objetivo",
+  "h1": "Dashboard de marketing: qué métricas incluir según tu objetivo",
+  "description": "Qué métricas poner en tu dashboard de marketing según busques ventas, leads, tráfico o marca: KPIs por objetivo, por canal, errores y plantilla de 4 semanas.",
+  "keywords": "dashboard de marketing, métricas de marketing, KPIs de marketing, qué métricas medir, dashboard por objetivo, métricas de ecommerce, métricas de generación de leads, Looker Studio",
+  "section": "Analítica",
+  "tags": ["Dashboards", "KPIs", "GA4", "Looker Studio"],
+  "published": "2026-10-06",
+  "modified": "2026-10-06",
+  "lead": "Un dashboard no se arma con las métricas que ofrece la herramienta, sino con las preguntas que tu negocio necesita responder cada semana. Esta guía te dice qué incluir según tu objetivo y qué dejar fuera.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-metricas-dashboard-objetivo.jpg",
+    "alt": "Responsable de marketing analiza en un monitor un tablero con gráficas de barras, anillos de progreso y un mapa de audiencias",
+    "caption": "Un buen tablero responde preguntas de negocio, no acumula gráficas. Imagen ilustrativa."
+  },
+  "related": ["dashboard-de-marketing-digital", "automatizar-reportes-de-marketing", "medir-redes-sociales-ventas-260926"],
+  "about": ["Dashboard de marketing", "Indicadores clave de rendimiento", "Google Analytics 4"],
+  "author": "heider-narvaez"
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "auditoria-tracking-ga4-gtm",
+  "title": "Auditoría de tracking GA4 y GTM: guía completa",
+  "h1": "Auditoría de tracking GA4 y GTM: guía completa paso a paso",
+  "description": "Cómo auditar tu medición en GA4 y Google Tag Manager: contenedor, eventos, conversiones, consentimiento, dominios y píxeles, con checklist y plan de 4 semanas.",
+  "keywords": "auditoría de tracking, auditoría GA4, auditoría Google Tag Manager, revisar etiquetas GTM, eventos GA4, eventos clave, modo de consentimiento, medición de conversiones",
+  "section": "Analítica",
+  "tags": ["GA4", "Google Tag Manager", "Medición", "Conversiones"],
+  "published": "2026-10-05",
+  "modified": "2026-10-06",
+  "lead": "Si no confías en tus números, ninguna decisión de presupuesto es segura. Esta es la auditoría que hacemos antes de tocar una campaña: qué revisar en Google Tag Manager y GA4, en qué orden y cómo saber si está bien.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-auditoria-tracking-ga4-gtm.jpg",
+    "alt": "Analista revisa de noche en su portátil el código del sitio y el panel de solicitudes de red, junto a una libreta con una lista de verificación",
+    "caption": "Una auditoría de tracking se hace con método y lista de verificación. Imagen ilustrativa."
+  },
+  "related": ["errores-comunes-al-medir-campanas-260927", "implementacion-tecnica", "analitica-de-marketing-digital"],
+  "about": ["Google Analytics 4", "Google Tag Manager", "Auditoría de medición"],
+  "author": "heider-narvaez"
+}
