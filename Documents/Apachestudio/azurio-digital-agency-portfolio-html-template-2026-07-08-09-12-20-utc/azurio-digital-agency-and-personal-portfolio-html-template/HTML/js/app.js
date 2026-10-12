@@ -218,6 +218,7 @@ function mxdPageTransition() {
       href.startsWith("#") ||
       href.startsWith("mailto") ||
       href.startsWith("tel") ||
+      link.classList.contains("mxd-menu__hamburger") ||
       link.target === "_blank" ||
       link.hasAttribute("download")
     ) return;
