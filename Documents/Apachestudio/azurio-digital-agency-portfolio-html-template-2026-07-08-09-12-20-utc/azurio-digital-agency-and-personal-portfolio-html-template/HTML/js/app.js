@@ -218,6 +218,7 @@ function mxdPageTransition() {
       href.startsWith("#") ||
       href.startsWith("mailto") ||
       href.startsWith("tel") ||
+      link.classList.contains("mxd-menu__hamburger") ||
       link.target === "_blank" ||
       link.hasAttribute("download")
     ) return;
@@ -3790,4 +3791,52 @@ function mxdHeroTyped() {
 // --------------------------------------------- //
 // Hero Typed.js Plugin Settings - About Me Page End
 // --------------------------------------------- //
+
+// Shared navigation is inserted before DOMContentLoaded initializes effects.
+// Downloads deliberately bypass page transitions through the download attribute.
+(() => {
+  const createCredentialLink = (className) => {
+    const link = document.createElement("a");
+    link.className = className;
+    link.href = "/credenciales.pdf";
+    link.download = "APaCHe-Studio-Credenciales.pdf";
+    link.setAttribute("aria-label", "Descargar Credenciales en PDF");
+    const caption = document.createElement("span");
+    caption.textContent = "Descargar Credenciales";
+    link.append(caption);
+    return link;
+  };
+  document.querySelectorAll(".menu-contact__list").forEach((list, index) => {
+    if (index !== 0 || list.querySelector('[href="/credenciales.pdf"]')) return;
+    const item = document.createElement("li");
+    item.append(createCredentialLink("tag tag-m"));
+    list.prepend(item);
+  });
+  const footerList = document.querySelector("footer .mxd-footer-nav02__list ul, footer .mxd-footer-nav__list ul, footer .mxd-footer__nav ul");
+  if (footerList && !footerList.querySelector('[href="/credenciales.pdf"]')) {
+    const item = document.createElement("li");
+    item.append(createCredentialLink("anim-uni-slide-down"));
+    footerList.append(item);
+  }
+  // Keep APaCHe 360 outside the main submenu; it is discoverable in the directory.
+  const serviceLink = document.querySelector('.submenu a[href="/servicios/"]');
+  const item = serviceLink?.closest("li");
+  const list = item?.parentElement;
+  if (!list || !item) return;
+  [
+    ["ecosistema-digital", "Ecosistema digital"],
+    ["mantenimiento-web", "Mantenimiento web"],
+  ].forEach(([slug, label]) => {
+    const href = `/servicios/${slug}/`;
+    if (list.querySelector(`a[href="${href}"]`)) return;
+    const added = document.createElement("li");
+    added.className = "submenu__item";
+    const link = document.createElement("a");
+    link.href = href;
+    link.textContent = label;
+    if (window.location.pathname === href) added.classList.add("active");
+    added.append(link);
+    list.insertBefore(added, item);
+  });
+})();
 
