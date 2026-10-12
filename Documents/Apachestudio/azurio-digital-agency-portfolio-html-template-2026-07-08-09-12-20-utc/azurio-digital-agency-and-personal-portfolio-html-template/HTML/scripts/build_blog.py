@@ -261,7 +261,7 @@ def render_article(post, body, minutes):
                           <span class="author-role">{E(au['role'])}</span>
                           <p>{E(au['bio'])}</p>
                           <p>{E(au['bio2'])}</p>
-                          <p class="author-links">{li_link}<a href="/nosotros/">Conoce Apache Studio</a></p>
+                          <p class="author-links">{li_link}<a href="/nosotros/">Conoce APaCHe Studio</a></p>
                         </div>
                       </div>
                     </aside>
@@ -321,9 +321,9 @@ def render_article(post, body, minutes):
                   <h3 class="widget-title">Síguenos</h3>
                   <div class="textwidget">
                     <ul class="social">
-                      <li><a href="{E(soc['linkedin'])}" target="_blank" rel="noopener" aria-label="LinkedIn de Apache Studio"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i></a></li>
-                      <li><a href="{E(soc['facebook'])}" target="_blank" rel="noopener" aria-label="Facebook de Apache Studio"><i class="pw-icon-facebook" aria-hidden="true"></i></a></li>
-                      <li><a href="{E(soc['instagram'])}" target="_blank" rel="noopener" aria-label="Instagram de Apache Studio"><i class="pw-icon-instagram" aria-hidden="true"></i></a></li>
+                      <li><a href="{E(soc['linkedin'])}" target="_blank" rel="noopener" aria-label="LinkedIn de APaCHe Studio"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i></a></li>
+                      <li><a href="{E(soc['facebook'])}" target="_blank" rel="noopener" aria-label="Facebook de APaCHe Studio"><i class="pw-icon-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="{E(soc['instagram'])}" target="_blank" rel="noopener" aria-label="Instagram de APaCHe Studio"><i class="pw-icon-instagram" aria-hidden="true"></i></a></li>
                     </ul>
                   </div>
                 </aside>

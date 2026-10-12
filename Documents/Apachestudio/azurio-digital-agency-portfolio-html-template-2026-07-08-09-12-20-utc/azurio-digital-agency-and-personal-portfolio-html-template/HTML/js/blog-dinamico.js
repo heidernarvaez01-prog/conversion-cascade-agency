@@ -124,7 +124,7 @@
                   '<div class="col-12 col-xxl-7"><div class="post-simple__title">' +
                     '<h3>' + esc(a.titulo) + '</h3>' +
                     '<div class="post-simple__data">' +
-                      '<span class="meta-author comma-tag">Equipo Apache Studio</span>' +
+                      '<span class="meta-author comma-tag">Equipo APaCHe Studio</span>' +
                       '<span class="meta-date">' + esc(fecha(a.fecha_publicacion)) + '</span>' +
                     '</div>' +
                   '</div></div>' +
@@ -212,7 +212,7 @@
       var descr = a.resumen || a.titulo;
 
       /* --- SEO: si existe el artículo completo, es la versión canónica --- */
-      document.title = a.titulo + ' | Apache Studio';
+      document.title = a.titulo + ' | APaCHe Studio';
       set('meta[name="description"]', 'content', descr);
       set('meta[property="og:title"]', 'content', a.titulo);
       set('meta[property="og:description"]', 'content', descr);
@@ -233,7 +233,7 @@
         articleSection: 'Insights',
         author: { '@type': 'Person', name: AUTOR.nombre, url: AUTOR.linkedin, sameAs: [AUTOR.linkedin], image: BASE + AUTOR.foto },
         publisher: {
-          '@type': 'Organization', name: 'Apache Studio', url: BASE + '/',
+          '@type': 'Organization', name: 'APaCHe Studio', url: BASE + '/',
           logo: { '@type': 'ImageObject', url: BASE + '/img/favicon/icon.svg' }
         }
       });
@@ -298,7 +298,7 @@
               '<div class="author-img"><img src="' + esc(AUTOR.foto) + '" width="480" height="480" alt="Retrato en blanco y negro de ' + esc(AUTOR.nombre) + '" loading="lazy"></div>' +
               '<div class="author-info"><h4 class="author-name">' + esc(AUTOR.nombre) + '</h4><span class="author-role">' + esc(AUTOR.rol) + '</span>' +
                 '<p>' + esc(AUTOR.bio) + '</p>' +
-                '<p class="author-links"><a class="author-social" href="' + esc(AUTOR.linkedin) + '" target="_blank" rel="me noopener" aria-label="Perfil de ' + esc(AUTOR.nombre) + ' en LinkedIn"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i><span>LinkedIn</span></a><a href="/nosotros/">Conoce Apache Studio</a></p>' +
+                '<p class="author-links"><a class="author-social" href="' + esc(AUTOR.linkedin) + '" target="_blank" rel="me noopener" aria-label="Perfil de ' + esc(AUTOR.nombre) + ' en LinkedIn"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i><span>LinkedIn</span></a><a href="/nosotros/">Conoce APaCHe Studio</a></p>' +
               '</div></div></aside>' +
             (otras.length ? '<div class="yarpp-related"><h3>Te puede interesar</h3><div class="yarpp-thumbnails-horizontal">' + tarjetas(otras.slice(0, 3)) + '</div></div>' : '') +
             '<div class="ed-question" id="pregunta"><h3 class="section-title">Pregunta sobre esta nota</h3>' +
@@ -320,9 +320,9 @@
             '<p class="author-links"><a class="author-social" href="' + esc(AUTOR.linkedin) + '" target="_blank" rel="me noopener" aria-label="Perfil de ' + esc(AUTOR.nombre) + ' en LinkedIn"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i><span>LinkedIn</span></a></p>' +
           '</div></aside>' +
           '<aside class="widget widget_text"><h3 class="widget-title">Síguenos</h3><div class="textwidget"><ul class="social">' +
-            '<li><a href="https://www.linkedin.com/company/118984525/" target="_blank" rel="noopener" aria-label="LinkedIn de Apache Studio"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i></a></li>' +
-            '<li><a href="https://www.facebook.com/profile.php?id=61584792540737" target="_blank" rel="noopener" aria-label="Facebook de Apache Studio"><i class="pw-icon-facebook" aria-hidden="true"></i></a></li>' +
-            '<li><a href="https://www.instagram.com/apachestudio.mx/" target="_blank" rel="noopener" aria-label="Instagram de Apache Studio"><i class="pw-icon-instagram" aria-hidden="true"></i></a></li>' +
+            '<li><a href="https://www.linkedin.com/company/118984525/" target="_blank" rel="noopener" aria-label="LinkedIn de APaCHe Studio"><i class="pw-icon-linkedin-squared" aria-hidden="true"></i></a></li>' +
+            '<li><a href="https://www.facebook.com/profile.php?id=61584792540737" target="_blank" rel="noopener" aria-label="Facebook de APaCHe Studio"><i class="pw-icon-facebook" aria-hidden="true"></i></a></li>' +
+            '<li><a href="https://www.instagram.com/apachestudio.mx/" target="_blank" rel="noopener" aria-label="Instagram de APaCHe Studio"><i class="pw-icon-instagram" aria-hidden="true"></i></a></li>' +
           '</ul></div></aside>' +
           (otras.length > 3 ? '<aside class="widget widget_widget_tptn_pop"><h3 class="widget-title">Más notas</h3><div class="tptn_posts tptn_posts_widget"><ul>' +
             otras.slice(3, 6).map(function (n) {

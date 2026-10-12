@@ -1,11 +1,11 @@
 {
   "base_url": "https://apachestudio.mx",
-  "name": "Apache Studio",
+  "name": "APaCHe Studio",
   "locale_og": "es_MX",
   "language": "es-MX",
   "logo": "/img/favicon/icon.svg",
   "default_og": "/img/og-image.jpg",
-  "blog_name": "Blog de Apache Studio",
+  "blog_name": "Blog de APaCHe Studio",
   "same_as": [
     "https://www.linkedin.com/company/118984525/",
     "https://www.facebook.com/profile.php?id=61584792540737",

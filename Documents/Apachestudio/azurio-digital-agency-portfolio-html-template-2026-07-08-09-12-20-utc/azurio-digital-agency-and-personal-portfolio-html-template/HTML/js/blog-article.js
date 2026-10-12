@@ -1,4 +1,4 @@
-/* Apache Studio - comportamiento de la página de artículo (layout "ed-blog").
+/* APaCHe Studio - comportamiento de la página de artículo (layout "ed-blog").
  * Vanilla JS, sin dependencias: copiar enlace (funciona también con contenido cargado después,
  * como las notas dinámicas) y resaltar el índice al hacer scroll. */
 (function () {

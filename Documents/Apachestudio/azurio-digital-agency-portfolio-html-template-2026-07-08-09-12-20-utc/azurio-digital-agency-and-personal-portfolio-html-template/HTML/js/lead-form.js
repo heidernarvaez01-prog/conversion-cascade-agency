@@ -1,4 +1,4 @@
-/* Apache Studio - envío del formulario de contacto al backend (Lovable Cloud) */
+/* APaCHe Studio - envío del formulario de contacto al backend (Lovable Cloud) */
 (function () {
   "use strict";
 
