@@ -1,0 +1,155 @@
+<p class="drop-cap">Hay una escena que se repite en casi todos los negocios que empiezan a invertir en publicidad: el administrador de anuncios muestra conversiones, el ROAS se ve sano y la agencia está contenta. Pero al cerrar el mes, la caja no refleja ese entusiasmo. Nadie mintió necesariamente. Lo que pasa es que la plataforma mide lo que puede ver, con sus propias reglas, y tu negocio vive de lo que efectivamente se cobró. Entre ambas cosas hay una distancia que, si no la mides, se come tu presupuesto en silencio.</p>
+
+<p>Esta guía te da un método para saber si tu <strong>inversión en anuncios</strong> te deja ventas y, más importante, utilidad. No necesitas ser analista: necesitas tres números bien definidos, un registro honesto de dónde viene cada venta y una prueba sencilla de vez en cuando. Lo que proviene de la documentación de Google y Meta está enlazado en Fuentes; lo demás es criterio de trabajo nuestro.</p>
+
+<h2 id="por-que">Por qué lo que dice la plataforma no coincide con tus ventas</h2>
+<p>Google Ads y Meta Ads atribuyen conversiones con sus propios modelos y ventanas. Meta, por ejemplo, permite configurar ventanas de atribución por clic y por visualización; Google Ads usa la conversión asociada a la interacción con el anuncio según el modelo elegido. Si una persona vio tu anuncio en Instagram, buscó tu marca en Google y compró, es posible que <em>ambas</em> plataformas reclamen esa misma venta. Sumar lo que reporta cada una casi siempre da más ventas de las que tuviste.</p>
+<p>A eso se suman las brechas técnicas: navegadores que bloquean cookies, personas que rechazan el consentimiento, compras que se cierran por WhatsApp o por teléfono y que la plataforma nunca ve, devoluciones que nadie descuenta. Por eso la pregunta correcta no es «¿qué dice el panel?», sino «¿qué dice el panel comparado con mis ventas reales?».</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Lo que mide cada fuente. Criterio de trabajo.</caption>
+    <thead><tr><th scope="col">Fuente</th><th scope="col">Qué ve bien</th><th scope="col">Qué no ve</th></tr></thead>
+    <tbody>
+      <tr><td>Meta Ads</td><td>Interacciones con sus anuncios y eventos del píxel o API de conversiones</td><td>Ventas por teléfono, devoluciones, lo que pasa en otros canales</td></tr>
+      <tr><td>Google Ads</td><td>Clics en anuncios y conversiones etiquetadas o importadas</td><td>Influencia de redes sociales previa a la búsqueda</td></tr>
+      <tr><td>Google Analytics 4</td><td>Recorrido en tu sitio y fuente de la sesión</td><td>Ventas fuera del sitio si no se envían como eventos</td></tr>
+      <tr><td>Tu CRM o sistema de ventas</td><td>Ventas cobradas, montos reales, devoluciones</td><td>De qué anuncio vino, si no lo registras</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<blockquote>El panel de anuncios es un testigo, no el juez. El juez es tu registro de ventas cobradas.<cite>APaCHe Studio</cite></blockquote>
+
+<h2 id="tres-numeros">Los tres números que necesitas</h2>
+<p>Antes de mirar cualquier campaña, calcula estos tres números de tu negocio. Sin ellos, ningún ROAS significa nada.</p>
+
+<div class="ed-cards">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/money-bag.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Margen bruto</h3>
+    <p>Lo que te queda de cada venta después del costo del producto o servicio. Es el dinero disponible para pagar publicidad y utilidad.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-target.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Costo por venta máximo</h3>
+    <p>Cuánto puedes pagar en anuncios por cada venta sin perder dinero. Es tu margen por venta menos la utilidad que quieres conservar.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-chart.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>ROAS de equilibrio</h3>
+    <p>El retorno mínimo para no perder: 1 dividido entre tu margen. Con 40 % de margen, el equilibrio es un ROAS de 2.5.</p>
+  </div>
+</div>
+
+<p>El <strong>ROAS</strong> (retorno sobre la inversión publicitaria) se calcula dividiendo los ingresos atribuidos entre lo invertido en anuncios. Es una métrica de ingresos, no de utilidad: un ROAS de 3 puede ser excelente para un negocio con 60 % de margen y una pérdida para uno con 25 %. Por eso el ROAS de equilibrio cambia de negocio a negocio, y copiar el «ROAS bueno» de otro sector es una de las formas más rápidas de quemar presupuesto.</p>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/business-profit.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Idea clave</span>
+    <p>No preguntes si tu ROAS es alto. Pregunta si está <strong>por encima de tu ROAS de equilibrio</strong>, calculado con tu margen real.</p>
+  </div>
+</div>
+
+<h2 id="paso-a-paso">Paso a paso para comprobarlo</h2>
+<ol>
+  <li><strong>Define qué es una venta.</strong> Pedido pagado, no carrito ni formulario. Si vendes servicios, contrato firmado o primer pago. Lo que no se cobra no cuenta.</li>
+  <li><strong>Configura bien las conversiones.</strong> En Google Ads y Meta, marca como conversión principal la acción más cercana al dinero que puedas medir, con su valor. Si cierras ventas fuera de línea, ambas plataformas permiten importar o enviar conversiones desde tu CRM (importación de conversiones sin conexión en Google Ads; API de conversiones en Meta).</li>
+  <li><strong>Etiqueta todos tus enlaces con UTM.</strong> Así GA4 y tu CRM saben de qué campaña vino cada visita o contacto. Te lo explicamos en <a href="/blog/medir-redes-sociales-ventas-260926/">cómo medir si tus redes sociales generan ventas</a>.</li>
+  <li><strong>Registra el origen en cada venta.</strong> En la tienda, en WhatsApp o por teléfono, pregunta y anota «¿cómo nos conociste?» junto con el UTM cuando exista.</li>
+  <li><strong>Concilia cada mes.</strong> Pon lado a lado las ventas que reporta cada plataforma, las que ve GA4 y las que registró tu sistema. La diferencia te dice cuánto confiar en cada panel.</li>
+  <li><strong>Calcula el resultado real.</strong> Ventas cobradas atribuibles a anuncios, menos devoluciones, multiplicadas por tu margen, menos la inversión. Eso es lo que te dejó la publicidad.</li>
+  <li><strong>Haz una prueba de incrementalidad.</strong> Explicada en la siguiente sección.</li>
+</ol>
+
+<figure class="ed-fig" id="fig-conciliacion">
+  <svg viewBox="0 0 760 280" role="img" aria-labelledby="con-t con-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="con-t">Conciliación mensual de ventas entre plataformas y registro propio</title>
+    <desc id="con-d">Tres fuentes, Meta Ads, Google Ads y Google Analytics 4, se comparan contra el registro de ventas cobradas del negocio para obtener el resultado real de la publicidad.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="278" rx="10"/>
+    <g><rect class="f2" x="20" y="30" width="170" height="60" rx="8"/><text x="105" y="57" text-anchor="middle">Meta Ads</text><text x="105" y="77" text-anchor="middle">ventas atribuidas</text></g>
+    <g><rect class="f2" x="20" y="110" width="170" height="60" rx="8"/><text x="105" y="137" text-anchor="middle">Google Ads</text><text x="105" y="157" text-anchor="middle">ventas atribuidas</text></g>
+    <g><rect class="f2" x="20" y="190" width="170" height="60" rx="8"/><text x="105" y="217" text-anchor="middle">GA4</text><text x="105" y="237" text-anchor="middle">fuente de sesión</text></g>
+    <g><rect class="acc" x="290" y="100" width="190" height="80" rx="8"/><text x="385" y="133" text-anchor="middle">Conciliación</text><text x="385" y="155" text-anchor="middle">vs. ventas cobradas</text></g>
+    <g><rect class="f2" x="560" y="100" width="180" height="80" rx="8"/><text x="650" y="133" text-anchor="middle">Resultado real</text><text x="650" y="155" text-anchor="middle">margen − inversión</text></g>
+    <path class="ln" d="M190 60 L290 125 M190 140 H290 M190 220 L290 155 M480 140 H560"/>
+  </svg>
+  <figcaption>Ilustración: cada panel reporta su versión; la conciliación contra ventas cobradas da el número que importa.</figcaption>
+</figure>
+
+<h2 id="incrementalidad">La prueba que más dice: ¿qué pasa si apago?</h2>
+<p>Atribución responde «¿a quién le doy el crédito?». Incrementalidad responde algo más útil: «¿cuántas de estas ventas no habrían ocurrido sin el anuncio?». Las campañas de marca en buscadores y el remarketing, por ejemplo, suelen verse muy rentables porque llegan a personas que ya iban a comprar.</p>
+<p>Google Ads y Meta ofrecen herramientas de experimentos y estudios de conversión incremental para cuentas que cumplen sus requisitos. Si tu cuenta no califica, una versión casera, siempre como criterio de trabajo y con cautela, es esta: elige una campaña, páusala durante dos o tres semanas en una región o en un periodo comparable, y observa si tus ventas totales caen en proporción a lo que la campaña decía generar. Si apagas una campaña que «generaba» 40 ventas al mes y tus ventas totales apenas se mueven, ya sabes cuánto aportaba de verdad.</p>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Cómo leer el resultado de una pausa controlada. Criterio de trabajo.</caption>
+    <thead><tr><th scope="col">Lo que pasa al pausar</th><th scope="col">Lectura probable</th><th scope="col">Decisión</th></tr></thead>
+    <tbody>
+      <tr><td>Las ventas caen cerca de lo que reportaba la campaña</td><td>La campaña es incremental</td><td>Reactivar y considerar escalar</td></tr>
+      <tr><td>Las ventas caen menos de la mitad de lo reportado</td><td>Parte del crédito era de otros canales</td><td>Reducir presupuesto o cambiar público</td></tr>
+      <tr><td>Las ventas casi no cambian</td><td>La campaña cosechaba ventas que ya iban a ocurrir</td><td>Replantear o mover el presupuesto</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="ejemplo">Ejemplo aplicado (hipotético)</h2>
+<p>Una tienda en línea de café de especialidad en Bogotá invierte 4 millones de pesos al mes en anuncios. Meta reporta 18 millones en ventas atribuidas y Google otros 10 millones: un ROAS combinado aparente de 7. Su margen bruto es de 35 %, así que su ROAS de equilibrio es de 2.86. Al conciliar con su sistema de ventas, el mes cerró con 20 millones totales, de los cuales 6 millones vinieron de clientes recurrentes que compraron por correo. Las ventas atribuibles a anuncios rondan entonces los 14 millones, no 28. Con 35 % de margen, eso deja 4.9 millones de margen contra 4 millones de inversión: la publicidad es rentable, pero mucho menos de lo que sugería el panel. La decisión no es apagar, sino revisar qué campañas aportan ese margen y cuáles solo duplican crédito. Las cifras son ilustrativas.</p>
+
+<h2 id="errores">Errores frecuentes</h2>
+<ol>
+  <li><strong>Sumar lo que reporta cada plataforma.</strong> Duplica ventas y da una rentabilidad que no existe.</li>
+  <li><strong>Optimizar por clics o formularios.</strong> Atraes volumen barato que no compra. Lo detallamos en <a href="/blog/errores-comunes-al-medir-campanas-260927/">errores comunes al medir campañas</a>.</li>
+  <li><strong>Ignorar el margen.</strong> Un ROAS alto con margen bajo puede ser una pérdida.</li>
+  <li><strong>No descontar devoluciones ni cancelaciones.</strong> Sobre todo en pago contra entrega.</li>
+  <li><strong>Juzgar en una semana.</strong> Las campañas necesitan tiempo y volumen para estabilizarse; decide con periodos comparables.</li>
+  <li><strong>No registrar ventas fuera del sitio.</strong> WhatsApp y teléfono quedan como «ventas sin origen» y la publicidad parece peor o mejor de lo que es.</li>
+</ol>
+
+<h2 id="plan">Plan de 4 semanas</h2>
+<ol>
+  <li><strong>Semana 1:</strong> calcula margen, costo por venta máximo y ROAS de equilibrio. Define qué cuenta como venta.</li>
+  <li><strong>Semana 2:</strong> revisa conversiones en Google Ads y Meta, etiqueta enlaces con UTM y agrega el campo de origen en tu registro de ventas.</li>
+  <li><strong>Semana 3:</strong> haz la primera conciliación del mes anterior y detecta la campaña con más diferencia entre panel y realidad.</li>
+  <li><strong>Semana 4:</strong> diseña una pausa controlada o un experimento sobre esa campaña y define cómo vas a leer el resultado.</li>
+</ol>
+
+<h2 id="checklist">Checklist mensual</h2>
+<ul class="ed-checklist">
+  <li>Conozco mi margen bruto y mi ROAS de equilibrio.</li>
+  <li>La conversión principal en cada plataforma es una venta o lo más cercano al cobro.</li>
+  <li>Todos los enlaces de anuncios llevan UTM.</li>
+  <li>Cada venta registra su origen, incluidas las de WhatsApp y teléfono.</li>
+  <li>Concilio plataformas contra ventas cobradas una vez al mes.</li>
+  <li>Descuento devoluciones y cancelaciones.</li>
+  <li>Hago al menos una prueba de incrementalidad por trimestre.</li>
+</ul>
+
+<p>Si quieres profundizar en cómo se gestiona el presupuesto con este enfoque, lee nuestra guía de <a href="/blog/performance-marketing/">performance marketing</a> y la de <a href="/blog/dashboard-de-marketing-digital/">dashboard de marketing digital</a> para tener estos números a la vista. Si prefieres que lo montemos contigo, la conciliación y el tablero son parte de <a href="/servicios/campanas-digitales/">campañas digitales</a> y <a href="/servicios/dashboards-y-reportes/">dashboards y reportes</a>, o puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Qué es un buen ROAS?</h3>
+  <p>No existe un número universal. Un buen ROAS es el que supera tu ROAS de equilibrio, que se calcula como 1 dividido entre tu margen bruto, y además deja la utilidad que buscas.</p>
+  <h3>¿Por qué Meta y Google reportan más ventas de las que tuve?</h3>
+  <p>Porque cada plataforma atribuye con sus propias reglas y ventanas, y una misma venta puede ser reclamada por las dos. Por eso hay que conciliar contra tus ventas cobradas.</p>
+  <h3>¿Cómo mido ventas que cierro por WhatsApp?</h3>
+  <p>Registra el origen de cada conversación y venta en tu CRM o una hoja, y si el volumen lo justifica, envía esas ventas a Google Ads y Meta mediante importación de conversiones o la API de conversiones.</p>
+  <h3>¿Cada cuánto debo revisar la rentabilidad de los anuncios?</h3>
+  <p>Las métricas de campaña se revisan semanalmente, pero la rentabilidad real conviene evaluarla por mes, con periodos comparables y después de descontar devoluciones.</p>
+  <h3>¿Puedo saber si una campaña realmente aporta ventas?</h3>
+  <p>Sí, con pruebas de incrementalidad: experimentos de las plataformas cuando tu cuenta califica, o pausas controladas comparando periodos o regiones.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Ads Ayuda — <a href="https://support.google.com/google-ads/answer/6268632" rel="noopener">Acerca de los modelos de atribución</a> (cómo se asigna el crédito de una conversión).</li>
+    <li>Google Ads Ayuda — <a href="https://support.google.com/google-ads/answer/2401634" rel="noopener">Importar conversiones sin conexión</a> (envío de ventas cerradas fuera del sitio).</li>
+    <li>Meta Business — <a href="https://www.facebook.com/business/help/458681590974355" rel="noopener">Acerca de la configuración de atribución</a> (ventanas por clic y por visualización).</li>
+    <li>Meta for Developers — <a href="https://developers.facebook.com/docs/marketing-api/conversions-api" rel="noopener">API de conversiones</a> (envío de eventos desde el servidor o CRM).</li>
+    <li>Google Ads Ayuda — <a href="https://support.google.com/google-ads/answer/10682041" rel="noopener">Acerca de los experimentos</a> (pruebas controladas de campañas).</li>
+  </ul>
+  <p>Datos verificados en octubre de 2026. Las herramientas cambian: si encuentras algo desactualizado, escríbenos.</p>
+</div>

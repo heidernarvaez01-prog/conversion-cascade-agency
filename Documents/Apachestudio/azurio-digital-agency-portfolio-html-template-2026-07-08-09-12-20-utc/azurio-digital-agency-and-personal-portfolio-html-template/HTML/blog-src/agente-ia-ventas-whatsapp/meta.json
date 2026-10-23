@@ -1,0 +1,20 @@
+{
+  "slug": "agente-ia-ventas-whatsapp",
+  "title": "Agente de IA para ventas por WhatsApp: guía completa",
+  "h1": "Agente de IA para ventas por WhatsApp: qué hace, qué datos necesita y cuándo pasar a un humano",
+  "description": "Cómo funciona un agente de IA para vender por WhatsApp: tareas que sí delega, datos que necesita, reglas para escalar a una persona y métricas para medirlo.",
+  "keywords": "agente de IA para ventas, agente de IA WhatsApp, chatbot de ventas WhatsApp, IA para ventas, WhatsApp Business API, automatizar ventas WhatsApp",
+  "section": "Automatización",
+  "tags": ["WhatsApp", "Inteligencia artificial", "Ventas", "Automatización"],
+  "published": "2026-10-22",
+  "modified": "2026-10-23",
+  "lead": "Un agente de IA puede contestar a las 11 de la noche, calificar prospectos y agendar citas. También puede inventar un precio si no lo preparas bien. Esta guía explica qué delegarle, qué darle de comer y cuándo debe pasarle la conversación a una persona.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-agente-ia-ventas-whatsapp.jpg",
+    "alt": "Dueña de una tienda de ropa revisa en su teléfono una conversación de WhatsApp atendida por un asistente y en la laptop un tablero con etapas de venta",
+    "caption": "El agente atiende; la persona decide los casos que importan. Imagen ilustrativa."
+  },
+  "related": ["meta-business-agent-whatsapp", "seguimiento-leads-whatsapp-260929", "ai-en-marketing-digital"],
+  "about": ["Agentes de IA", "WhatsApp Business", "Ventas conversacionales"],
+  "author": "heider-narvaez"
+}

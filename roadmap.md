@@ -7,3 +7,5 @@
 - [x] Blog: artículos Muse, WhatsApp y email creados
 - [ ] Blog: reescribir y optimizar los ocho artículos recientes con voz experta, fuentes verificables y SEO natural
 - [ ] SEO de marca: declarar a Google "agencia de marketing digital" + "agencia de analítica de datos de marketing digital" (JSON-LD Organization, títulos, descripciones)
+- [x] Blog: artículos agente IA WhatsApp e inversión en anuncios creados y enlazados
+- [ ] Blog: 16 notas pendientes más (por lotes de 2)
