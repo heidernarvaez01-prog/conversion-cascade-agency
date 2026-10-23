@@ -1,0 +1,153 @@
+<p class="drop-cap">El reporte del mes llega con buenas noticias: las visitas al sitio subieron 80 %. Todos celebran hasta que alguien pregunta lo incómodo: «¿y las ventas?». Iguales. A veces, peores. Es una de las conversaciones más comunes que tenemos con dueños de negocio, y casi siempre tiene la misma raíz: medimos el tráfico como si fuera el resultado, cuando en realidad es solo la materia prima. Más visitas de las personas equivocadas, o visitas que llegan a una página que no las ayuda a comprar, no se convierten en dinero.</p>
+
+<p>Esta guía te ayuda a leer tu tráfico con otros ojos: cómo distinguir visitas que compran de visitas que solo pasan, dónde se pierde la venta dentro del sitio y qué revisar en Google Analytics 4 para encontrar el problema. Lo que viene de la documentación de Google está en Fuentes; lo demás es criterio de trabajo.</p>
+
+<h2 id="por-que">Por qué más tráfico no siempre significa más ventas</h2>
+<p>Las ventas en un sitio son, de forma simplificada, <strong>visitas × tasa de conversión × ticket promedio</strong>. Si duplicas las visitas pero la tasa de conversión cae a la mitad, vendes lo mismo. Y eso pasa con frecuencia por cuatro razones:</p>
+<ol>
+  <li><strong>Intención equivocada.</strong> Un artículo que posiciona por «qué es» atrae curiosos, no compradores. Una campaña de alcance barato trae gente que no buscaba nada.</li>
+  <li><strong>Público fuera de mercado.</strong> Visitas de países o ciudades donde no vendes ni entregas.</li>
+  <li><strong>Página de destino que no corresponde.</strong> El anuncio promete una oferta y la página muestra el inicio genérico.</li>
+  <li><strong>Fricción.</strong> Página lenta en celular, formulario largo, costos de envío que aparecen al final, falta de confianza.</li>
+</ol>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Fuentes de tráfico según la intención típica de la visita. Criterio de trabajo.</caption>
+    <thead><tr><th scope="col">Fuente</th><th scope="col">Intención típica</th><th scope="col">Qué esperar</th></tr></thead>
+    <tbody>
+      <tr><td>Búsqueda de tu marca</td><td>Muy alta</td><td>Alta conversión; ya te conocen</td></tr>
+      <tr><td>Búsqueda de producto o servicio con ciudad</td><td>Alta</td><td>Buena conversión si la página responde</td></tr>
+      <tr><td>Búsqueda informativa («qué es», «cómo»)</td><td>Baja a media</td><td>Pocas ventas inmediatas; sirve para remarketing y confianza</td></tr>
+      <tr><td>Anuncios de alcance o tráfico</td><td>Baja</td><td>Mucho volumen, poca conversión</td></tr>
+      <tr><td>Remarketing</td><td>Alta</td><td>Conversión alta; cuidado con atribuirle ventas que ya iban a pasar</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<blockquote>No necesitas más visitas: necesitas que las visitas correctas encuentren rápido una razón para comprar.<cite>APaCHe Studio</cite></blockquote>
+
+<h2 id="ga4">Qué revisar en Google Analytics 4</h2>
+<p>GA4 cambió las métricas respecto a la versión anterior. En lugar de la tasa de rebote clásica, pone en el centro la <strong>tasa de interacción</strong>: Google define una sesión con interacción como la que dura más de 10 segundos, tiene un evento clave o tiene al menos dos vistas de página. Y las acciones que más te importan (compra, formulario, clic a WhatsApp) se marcan como <strong>eventos clave</strong>.</p>
+
+<div class="ed-cards">
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/data-analysis.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Eventos clave por fuente</h3>
+    <p>En el informe de adquisición de tráfico, compara eventos clave y tasa de eventos clave por canal, no solo sesiones.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/pie-chart.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Página de destino</h3>
+    <p>Revisa qué páginas reciben más visitas y cuáles convierten. Una página con mucho tráfico y cero eventos clave es tu primera tarea.</p>
+  </div>
+  <div class="ed-card">
+    <img src="/img/real/blog/icons/business-chart.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+    <h3>Dispositivo y ubicación</h3>
+    <p>Si en celular la conversión es muy inferior que en computadora, el problema suele ser la experiencia móvil.</p>
+  </div>
+</div>
+
+<div class="ed-callout has-icon">
+  <img src="/img/real/blog/icons/goal.webp" width="320" height="320" loading="lazy" alt="" aria-hidden="true">
+  <div>
+    <span class="ed-callout__label">Idea clave</span>
+    <p>Antes de leer cualquier informe, confirma que los <strong>eventos clave están bien configurados</strong>. Si la compra o el formulario no se registran, todo análisis posterior es una suposición.</p>
+  </div>
+</div>
+
+<h2 id="embudo">Dónde se pierde la venta: el embudo del sitio</h2>
+<p>Divide el recorrido en pasos y mide cuántas personas pasan de uno a otro. En una tienda: vista de producto, agregar al carrito, iniciar pago, compra. En servicios: vista de página de servicio, clic en contacto, formulario enviado. GA4 permite construir exploraciones de embudo para ver la caída entre pasos, y su implementación de comercio electrónico registra eventos estándar como <em>view_item</em>, <em>add_to_cart</em>, <em>begin_checkout</em> y <em>purchase</em>.</p>
+
+<figure class="ed-fig" id="fig-embudo-sitio">
+  <svg viewBox="0 0 760 260" role="img" aria-labelledby="tv-t tv-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="tv-t">Embudo de un sitio de comercio electrónico</title>
+    <desc id="tv-d">Cuatro pasos en secuencia: vista de producto, agregar al carrito, iniciar pago y compra; en cada paso se identifica la principal causa de abandono.</desc>
+    <rect class="f1 frame" x="1" y="1" width="758" height="258" rx="10"/>
+    <g><rect class="f2" x="20" y="60" width="160" height="80" rx="8"/><text x="100" y="95" text-anchor="middle">Vista de producto</text><text x="100" y="118" text-anchor="middle">view_item</text></g>
+    <g><rect class="f2" x="205" y="60" width="160" height="80" rx="8"/><text x="285" y="95" text-anchor="middle">Al carrito</text><text x="285" y="118" text-anchor="middle">add_to_cart</text></g>
+    <g><rect class="f2" x="390" y="60" width="160" height="80" rx="8"/><text x="470" y="95" text-anchor="middle">Inicia pago</text><text x="470" y="118" text-anchor="middle">begin_checkout</text></g>
+    <g><rect class="acc" x="575" y="60" width="160" height="80" rx="8"/><text x="655" y="95" text-anchor="middle">Compra</text><text x="655" y="118" text-anchor="middle">purchase</text></g>
+    <path class="ln" d="M180 100 H205 M365 100 H390 M550 100 H575"/>
+    <text x="100" y="185" text-anchor="middle">precio, fotos</text>
+    <text x="285" y="185" text-anchor="middle">envío, confianza</text>
+    <text x="470" y="185" text-anchor="middle">formulario, pago</text>
+    <text x="655" y="185" text-anchor="middle">confirmación</text>
+  </svg>
+  <figcaption>Ilustración: cada paso tiene una causa típica de abandono; medirlos por separado dice dónde actuar.</figcaption>
+</figure>
+
+<div class="ed-table-wrap">
+  <table>
+    <caption>Síntomas, causa probable y primera acción. Criterio de trabajo.</caption>
+    <thead><tr><th scope="col">Síntoma</th><th scope="col">Causa probable</th><th scope="col">Primera acción</th></tr></thead>
+    <tbody>
+      <tr><td>Mucho tráfico, baja interacción</td><td>Intención equivocada o página lenta</td><td>Revisar fuente y velocidad móvil</td></tr>
+      <tr><td>Buena interacción, pocos carritos</td><td>Precio, fotos o información insuficiente</td><td>Mejorar ficha de producto y oferta</td></tr>
+      <tr><td>Muchos carritos, pocas compras</td><td>Costos sorpresa o pago complicado</td><td>Mostrar envío antes y simplificar pago</td></tr>
+      <tr><td>Muchas visitas a servicios, pocos contactos</td><td>Llamada a la acción débil o formulario largo</td><td>Botón visible, WhatsApp y formulario corto</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="velocidad">La velocidad sí importa</h2>
+<p>Google publica las Core Web Vitals como métricas de experiencia de página: tiempo de carga del elemento principal, capacidad de respuesta a la interacción y estabilidad visual. Una página que tarda en mostrarse en celular pierde visitas antes de que puedan ver tu oferta. Revisa tus páginas con más tráfico en PageSpeed Insights y prioriza las que reciben anuncios.</p>
+
+<h2 id="ejemplo">Ejemplo aplicado (hipotético)</h2>
+<p>Una tienda de accesorios para bicicleta en Querétaro duplica sus visitas con un artículo de blog que posiciona bien y una campaña de tráfico barata. Las ventas no se mueven. Al revisar GA4 descubre que el 60 % del nuevo tráfico es de países donde no envía, que la campaña de tráfico tiene la menor tasa de interacción y que en celular la mitad de quienes agregan al carrito abandonan en el paso del envío, donde aparece un costo que no estaba visible. Las acciones: excluir países, cambiar la campaña a objetivo de ventas, mostrar el costo de envío en la ficha y agregar enlaces del artículo a productos relacionados. Cifras ilustrativas.</p>
+
+<h2 id="valor-indirecto">El tráfico que no vende hoy, pero vende después</h2>
+<p>No todo el tráfico sin venta inmediata es inútil. Una persona que llega a un artículo informativo puede volver semanas después a comprar, buscar tu marca o responder a un anuncio de remarketing. El error no es tener ese tráfico; es contarlo como si fuera venta o, al contrario, descartarlo sin conectarlo con nada. Para que el tráfico de descubrimiento aporte, conviene darle un siguiente paso: enlaces internos a productos o servicios relacionados, una invitación a suscribirse al boletín o al canal de WhatsApp y audiencias de remarketing que recuerden tu oferta. En GA4 puedes observar las rutas de conversión para ver qué canales aparecen antes de la compra, aunque no sean el último clic. Así distingues entre tráfico que no aporta nada y tráfico que prepara la venta.</p>
+
+<h2 id="errores">Errores frecuentes</h2>
+<ol>
+  <li><strong>Reportar sesiones como resultado.</strong> El resultado son ventas o contactos.</li>
+  <li><strong>Comprar tráfico barato.</strong> Campañas de tráfico optimizan clics, no compras.</li>
+  <li><strong>Mandar anuncios al inicio del sitio.</strong> Cada anuncio merece una página que continúe su promesa.</li>
+  <li><strong>No medir el móvil por separado.</strong> Es donde suele estar el problema.</li>
+  <li><strong>Eventos clave mal configurados.</strong> Lo revisamos en nuestra <a href="/blog/auditoria-tracking-ga4-gtm/">auditoría de tracking</a>.</li>
+</ol>
+
+<h2 id="plan">Diagnóstico en 4 semanas</h2>
+<ol>
+  <li><strong>Semana 1:</strong> verifica eventos clave y separa tráfico por fuente, dispositivo y país.</li>
+  <li><strong>Semana 2:</strong> identifica las cinco páginas con más tráfico y menos eventos clave.</li>
+  <li><strong>Semana 3:</strong> arma el embudo y encuentra el paso con mayor caída.</li>
+  <li><strong>Semana 4:</strong> corrige ese paso (velocidad, información, formulario) y mide de nuevo.</li>
+</ol>
+
+<h2 id="checklist">Checklist</h2>
+<ul class="ed-checklist">
+  <li>Compras, formularios y clics a WhatsApp están marcados como eventos clave.</li>
+  <li>Reviso conversiones por fuente, no solo sesiones.</li>
+  <li>Excluí países o zonas donde no vendo.</li>
+  <li>Cada campaña tiene una página de destino propia.</li>
+  <li>Revisé la velocidad móvil de mis páginas principales.</li>
+  <li>Costos de envío y condiciones son visibles antes del pago.</li>
+  <li>Tengo un embudo con la caída entre pasos.</li>
+</ul>
+
+<p>Para preparar tu sitio antes de invertir, lee <a href="/blog/sitio-web-listo-campanas-261004/">si tu sitio está listo para campañas</a> y, si sospechas que es momento de renovarlo, <a href="/blog/senales-rediseno-sitio-web-261005/">señales de que necesitas un rediseño</a>. Si quieres que hagamos el diagnóstico contigo, lo hacemos en <a href="/servicios/implementacion-tecnica/">implementación técnica</a> y <a href="/servicios/desarrollo-web/">desarrollo web</a>, o puedes <a href="https://tidycal.com/m4ggodn/estrategia-marketing-cultura-ai-driven-1g6vvq0" rel="noopener">agendar una llamada</a>.</p>
+
+<div class="ed-faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <h3>¿Qué es una buena tasa de conversión?</h3>
+  <p>Varía mucho por sector, precio y fuente de tráfico. Compárate contra ti mismo: tu tasa por canal y por mes, y busca mejorarla paso a paso.</p>
+  <h3>¿Por qué tengo muchas visitas y pocas ventas?</h3>
+  <p>Las causas más comunes son tráfico con poca intención de compra, páginas de destino que no corresponden al anuncio, experiencia móvil deficiente y costos o requisitos que aparecen tarde.</p>
+  <h3>¿Qué es un evento clave en GA4?</h3>
+  <p>Es un evento que marcas como importante para tu negocio, como una compra o un formulario enviado. GA4 los usa para reportar conversiones por fuente y campaña.</p>
+  <h3>¿El tráfico del blog sirve si no vende directamente?</h3>
+  <p>Sí, si lo conectas: enlaces a productos o servicios relacionados, captura de correos y audiencias de remarketing. Solo no lo cuentes como venta.</p>
+</div>
+
+<div class="ed-sources" id="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Google Analytics Ayuda — <a href="https://support.google.com/analytics/answer/12195621" rel="noopener">Sesiones con interacción y tasa de interacción</a> (definición en GA4).</li>
+    <li>Google Analytics Ayuda — <a href="https://support.google.com/analytics/answer/9267568" rel="noopener">Acerca de los eventos clave</a>.</li>
+    <li>Google for Developers — <a href="https://developers.google.com/analytics/devguides/collection/ga4/ecommerce" rel="noopener">Medir el comercio electrónico en GA4</a> (eventos view_item, add_to_cart, begin_checkout, purchase).</li>
+    <li>web.dev — <a href="https://web.dev/articles/vitals" rel="noopener">Core Web Vitals</a> (métricas de experiencia de página).</li>
+  </ul>
+  <p>Datos verificados en octubre de 2026. Las herramientas cambian: si encuentras algo desactualizado, escríbenos.</p>
+</div>

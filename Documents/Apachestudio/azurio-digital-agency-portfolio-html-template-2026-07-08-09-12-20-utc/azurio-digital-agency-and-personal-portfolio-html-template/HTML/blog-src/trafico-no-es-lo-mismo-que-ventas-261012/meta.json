@@ -1,0 +1,31 @@
+{
+  "slug": "trafico-no-es-lo-mismo-que-ventas-261012",
+  "title": "Tráfico no es lo mismo que ventas: qué medir",
+  "h1": "Más visitas no significa más ventas: cómo leer el tráfico de tu sitio",
+  "description": "Por qué subir el tráfico no garantiza ventas: calidad de visitas, intención, eventos clave en GA4, velocidad y fricción en la página, con diagnóstico paso a paso.",
+  "keywords": "tráfico web y ventas, tasa de conversión, calidad del tráfico, GA4 eventos clave, conversión sitio web",
+  "section": "Analítica",
+  "tags": [
+    "GA4",
+    "Conversión",
+    "Tráfico"
+  ],
+  "published": "2026-10-12",
+  "modified": "2026-10-23",
+  "lead": "Doblar las visitas y no vender más es más común de lo que parece. Esta guía te enseña a distinguir tráfico que compra de tráfico que solo pasa, y dónde se pierde la venta.",
+  "hero": {
+    "src": "/img/real/blog/photos/hero-trafico-vs-ventas.jpg",
+    "alt": "Emprendedora observa en su laptop una gráfica de visitas en aumento junto a una nota con un carrito vacío",
+    "caption": "Más visitas sin ventas es una pregunta, no un logro. Imagen ilustrativa."
+  },
+  "related": [
+    "errores-comunes-al-medir-campanas-260927",
+    "sitio-web-listo-campanas-261004",
+    "analitica-de-marketing-digital"
+  ],
+  "about": [
+    "Tasa de conversión",
+    "Google Analytics 4"
+  ],
+  "author": "heider-narvaez"
+}
